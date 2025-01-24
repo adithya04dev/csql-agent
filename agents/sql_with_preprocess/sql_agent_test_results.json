@@ -1,0 +1,52 @@
+[
+  {
+    "query": "Show me batting stats of Dhoni vs. Australia.",
+    "response": "SELECT\n    SUM(CASE WHEN hdata.bat = 'MS Dhoni' THEN hdata.batruns ELSE 0 END) AS total_runs,\n    COUNT(CASE WHEN hdata.bat = 'MS Dhoni' THEN 1 ELSE NULL END) AS total_innings,\n    SUM(CASE WHEN hdata.bat = 'MS Dhoni' AND hdata.bat_out = TRUE THEN 1 ELSE 0 END) AS total_outs,\n    SUM(CASE WHEN hdata.bat = 'MS Dhoni' THEN hdata.ballfaced ELSE 0 END) AS total_balls_faced,\n    MAX(CASE WHEN hdata.bat = 'MS Dhoni' THEN hdata.batruns ELSE 0 END) AS highest_score,\n   AVG(CASE WHEN hdata.bat = 'MS Dhoni' THEN hdata.batruns ELSE NULL END) as batting_average\nFROM\n    hdata\nWHERE\n    hdata.team_bowl = 'Australia';",
+    "time_taken": 23.96
+  },
+  {
+    "query": "How many runs did Sachin baby score at Eden Gardens,kolkata?",
+    "response": "SELECT\n  SUM(batruns)\nFROM hdata\nWHERE\n  bat = 'Sachin Baby' AND ground = 'Eden Gardens, Kolkata';",
+    "time_taken": 16.49
+  },
+  {
+    "query": "Give me the top 5 players from India who've taken the most wickets.",
+    "response": "SELECT\n  p_bowl,\n  COUNT(CASE WHEN out = TRUE THEN 1 END) AS total_wickets\nFROM hdata\nWHERE\n  team_bowl = 'India'\nGROUP BY\n  p_bowl\nORDER BY\n  total_wickets DESC\nLIMIT 5;",
+    "time_taken": 12.08
+  },
+  {
+    "query": "Who has the highest strike rate in T20 matches?",
+    "response": "SELECT\n    p_bat,\n    SUM(batruns) AS total_runs,\n    SUM(ballfaced) AS total_balls,\n    CAST(SUM(batruns) AS REAL) * 100 / SUM(ballfaced) AS strike_rate\nFROM\n    hdata\nWHERE\n    competition LIKE '%T20%'\nGROUP BY\n    p_bat\nHAVING\n    SUM(ballfaced) > 0\nORDER BY\n    strike_rate DESC\nLIMIT 1;",
+    "time_taken": 15.25
+  },
+  {
+    "query": "Fetch me the bowlers with the best economy rate in ODIs.",
+    "response": "SELECT\n    p_bowl,\n    bowl,\n    SUM(bowlruns) AS total_runs_conceded,\n    SUM(cur_bowl_ovr) AS total_overs_bowled,\n    (SUM(bowlruns) / SUM(cur_bowl_ovr)) AS economy_rate\nFROM\n    hdata\nWHERE\n    competition = 'ODI'\nGROUP BY\n    p_bowl, bowl\nHAVING\n    SUM(cur_bowl_ovr) > 0  -- To avoid division by zero and consider only bowlers who have bowled\nORDER BY\n    economy_rate ASC\nLIMIT 10;",
+    "time_taken": 15.17
+  },
+  {
+    "query": "Find all matches where Kohli was dismissed for a duck.",
+    "response": "SELECT\n  p_match\nFROM\n  hdata\nWHERE\n  bat = 'Virat Kohli' AND out = TRUE AND score = 0;",
+    "time_taken": 11.16
+  },
+  {
+    "query": "List the grounds in England where Rohit scored centuries.",
+    "response": "SELECT DISTINCT\n  hdata.ground\nFROM hdata\nWHERE\n  hdata.country = 'England' AND hdata.bat = 'Rohit Sharma' AND hdata.batruns >= 100;",
+    "time_taken": 15.1
+  },
+  {
+    "query": "Who are the left-handed batsmen in the database?",
+    "response": "SELECT DISTINCT bat\nFROM hdata\nWHERE bat_hand = 'LHB';",
+    "time_taken": 17.44
+  },
+  {
+    "query": "Which teams played in the 2011 World Cup final?",
+    "response": null,
+    "time_taken": 29.79
+  },
+  {
+    "query": "Show me the biggest six-hitters in the IPL.",
+    "response": "Error: 429 Resource has been exhausted (e.g. check quota).",
+    "time_taken": 37.7
+  }
+]

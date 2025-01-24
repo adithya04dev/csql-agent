@@ -1,0 +1,14 @@
+langgraph
+langchain
+langchain-openai
+langchain-google-genai
+langsmith
+pandas
+google-cloud-bigquery[pandas]
+db_dtypes
+python-dotenv
+google-cloud-bigquery-storage
+langchain-community
+faiss-cpu
+langchain-mistralai
+rich

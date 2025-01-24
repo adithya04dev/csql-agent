@@ -1,0 +1,162 @@
+{
+  "player_search": [
+    {
+      "query": "fazal haq faroo bowling stats for srh",
+      "response": "SELECT\n    COUNT(DISTINCT hdata.p_match) AS matches_played,\n    SUM(CASE WHEN hdata.out = TRUE THEN 1 ELSE 0 END) AS total_wickets,\n    SUM(hdata.bowlruns) AS total_runs_conceded,\n    SUM(hdata.cur_bowl_ovr) AS total_overs_bowled,\n    (SUM(hdata.bowlruns) / SUM(hdata.cur_bowl_ovr)) AS economy_rate,\n    SUM(CASE WHEN hdata.noball = 1 THEN 1 ELSE 0 END) AS total_noballs,\n    SUM(CASE WHEN hdata.wide = 1 THEN 1 ELSE 0 END) AS total_wides\nFROM\n    hdata\nWHERE\n    hdata.p_bowl = (SELECT p_bowl FROM hdata WHERE bowl = 'Fazalhaq Farooqi' LIMIT 1)\n    AND hdata.bowl_style IN ('RAP', 'LAP');",
+      "time_taken": 21.67,
+      "category": "player_search"
+    },
+    {
+      "query": "virat Kohli's batting statistics",
+      "response": "SELECT\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN hdata.score ELSE 0 END) AS total_runs,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN 1 ELSE 0 END) AS total_balls_faced,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' AND hdata.out = TRUE THEN 1 ELSE 0 END) AS total_dismissals,\n    COUNT(DISTINCT CASE WHEN hdata.bat = 'Virat Kohli' THEN hdata.p_match ELSE NULL END) AS matches_played,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN hdata.batruns ELSE 0 END) AS total_career_runs,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN hdata.ballfaced ELSE 0 END) AS total_career_balls_faced,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' AND hdata.bat_out = TRUE THEN 1 ELSE 0 END) AS total_career_dismissals\nFROM\n    hdata;",
+      "time_taken": 21.64,
+      "category": "player_search"
+    },
+    {
+      "query": "M.S. Dhoni's career performance",
+      "response": "SELECT \n    team_bowl,\n    SUM(batruns) AS runs_scored,\n   COUNT(CASE WHEN bat_out = TRUE THEN 1 END) AS times_out,\n    CAST(SUM(batruns) AS REAL) / COUNT(CASE WHEN bat_out = TRUE THEN 1 END) AS batting_average\nFROM \n    hdata\nWHERE \n    bat = 'MS Dhoni'\nGROUP BY \n    team_bowl\nORDER BY\n    runs_scored DESC;",
+      "time_taken": 20.09,
+      "category": "player_search"
+    },
+    {
+      "query": "steve Smith's batting average by year",
+      "response": "SELECT\n    year,\n    CAST(SUM(CASE WHEN p_bat = (SELECT p_bat FROM hdata WHERE bat = 'Steve Smith' LIMIT 1) THEN batruns ELSE 0 END) AS REAL) / \n    SUM(CASE WHEN p_bat = (SELECT p_bat FROM hdata WHERE bat = 'Steve Smith' LIMIT 1) THEN CASE WHEN bat_out = TRUE THEN 1 ELSE 0 END ELSE 0 END) AS batting_average\nFROM\n    hdata\nWHERE\n    p_bat = (SELECT p_bat FROM hdata WHERE bat = 'Steve Smith' LIMIT 1)\nGROUP BY\n    year\nORDER BY\n    year;",
+      "time_taken": 14.38,
+      "category": "player_search"
+    },
+    {
+      "query": "ishant Sharma's bowling records",
+      "response": "SELECT\n    p_bowl,\n    team_bowl,\n    COUNT(ball_id) AS balls_bowled,\n    SUM(CASE WHEN outcome = 'wicket' THEN 1 ELSE 0 END) AS wickets,\n    SUM(score + wide + noball + byes + legbyes) AS runs_conceded,\n    SUM(CASE WHEN noball = 1 THEN 1 ELSE 0 END) AS noballs,\n    SUM(CASE WHEN wide = 1 THEN 1 ELSE 0 END) AS wides,\n     SUM(CASE WHEN outcome = 'dot' THEN 1 ELSE 0 END) AS dots,\n    SUM(byes) AS byes,\n    SUM(legbyes) AS legbyes,\n    MAX(cur_bowl_ovr) as overs_bowled,\n    AVG(cur_bowl_runs) as avg_runs_per_over,\n    AVG(cur_bowl_wkts) as avg_wickets_per_over\nFROM\n    hdata\nWHERE\n    bat = 'Ishant Sharma'  OR bowl = 'Ishant Sharma'\n    AND bowl_style IN ('LB', 'OB', 'LWS', 'LAP')\nGROUP BY\n    p_bowl,\n    team_bowl\nORDER BY\n    wickets DESC;",
+      "time_taken": 27.64,
+      "category": "player_search"
+    },
+    {
+      "query": "shadab khan's performance in 2023",
+      "response": "Error: 429 Resource has been exhausted (e.g. check quota).",
+      "time_taken": 15.97,
+      "category": "player_search"
+    },
+    {
+      "query": "sachin tendulkar's stats by batting position",
+      "response": "SELECT\n    hdata.bat,\n    COUNT(DISTINCT hdata.p_match) AS matches_played,\n    SUM(hdata.batruns) AS total_runs,\n    SUM(CASE WHEN hdata.bat_out = TRUE THEN 1 ELSE 0 END) AS total_outs,\n    SUM(hdata.ballfaced) AS total_balls_faced,\n    CAST(SUM(hdata.batruns) AS REAL) / SUM(CASE WHEN hdata.bat_out = TRUE THEN 1 ELSE 0 END) AS batting_average,\n    (SUM(hdata.batruns) * 100.0) / SUM(hdata.ballfaced) AS strike_rate,\n    MAX(hdata.batruns) AS highest_score\nFROM\n    hdata\nWHERE\n    hdata.bat = 'Sachin Tendulkar'\nGROUP BY\n    hdata.bat\nORDER BY\n    total_runs DESC;",
+      "time_taken": 17.21,
+      "category": "player_search"
+    },
+    {
+      "query": "sourav ganguly's (dada) career statistics",
+      "response": "SELECT\n    COUNT(DISTINCT p_match) AS total_matches_played\nFROM\n    hdata\nWHERE\n    bat = 'Sourav Ganguly' OR bowl = 'Sourav Ganguly';",
+      "time_taken": 22.85,
+      "category": "player_search"
+    }
+  ],
+  "head_to_head": [
+    {
+      "query": "virat Kohli vs James Anderson head-to-head stats",
+      "response": "SELECT\n    COUNT(DISTINCT hdata.p_match) AS matches_played,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN 1 ELSE 0 END) AS virat_kohli_innings,\n    SUM(CASE WHEN hdata.bowl = 'James Anderson' THEN 1 ELSE 0 END) AS james_anderson_innings,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN hdata.score ELSE 0 END) AS virat_kohli_runs,\n    SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN hdata.ballfaced ELSE 0 END) AS virat_kohli_balls_faced,\n   SUM(CASE WHEN hdata.bat = 'Virat Kohli' AND hdata.out = TRUE THEN 1 ELSE 0 END) AS virat_kohli_outs,\n    SUM(CASE WHEN hdata.bowl = 'James Anderson' THEN hdata.bowlruns ELSE 0 END) AS james_anderson_runs_conceded,\n    SUM(CASE WHEN hdata.bowl = 'James Anderson' THEN 1 ELSE 0 END) AS james_anderson_balls_bowled,\n    SUM(CASE WHEN hdata.bowl = 'James Anderson' AND hdata.out = TRUE AND hdata.bat = 'Virat Kohli' THEN 1 ELSE 0 END) AS virat_kohli_dismissals_by_anderson,\n     SUM(CASE WHEN hdata.bowl = 'James Anderson' AND hdata.out = TRUE AND hdata.bat = 'Virat Kohli' THEN 1 ELSE 0 END) * 1.0 / \n       NULLIF(SUM(CASE WHEN hdata.bat = 'Virat Kohli' THEN 1 ELSE 0 END),0) AS dismissal_rate\nFROM\n    hdata\nWHERE\n    (hdata.bat = 'Virat Kohli' AND hdata.bowl = 'James Anderson') OR (hdata.bat = 'James Anderson' AND hdata.bowl = 'Virat Kohli');",
+      "time_taken": 22.12,
+      "category": "head_to_head"
+    },
+    {
+      "query": "david Warner vs Indian bowlers statistics",
+      "response": "SELECT\n    SUM(CASE WHEN hdata.bat = 'David Warner' THEN hdata.score ELSE 0 END) AS total_runs,\n    SUM(CASE WHEN hdata.bat = 'David Warner' THEN 1 ELSE 0 END) AS balls_faced,\n    COUNT(CASE WHEN hdata.bat = 'David Warner' AND hdata.out = TRUE THEN 1 END) AS dismissals,\n    COUNT(DISTINCT CASE WHEN hdata.bat = 'David Warner' THEN hdata.p_match END) AS matches_played\nFROM\n    hdata\nWHERE\n    hdata.bat = 'David Warner' AND hdata.team_bowl = 'India';",
+      "time_taken": 21.18,
+      "category": "head_to_head"
+    },
+    {
+      "query": "r Ashwin's LBW dismissals against left-handers",
+      "response": "SELECT\n    COUNT(hdata.ball_id)\nFROM\n    hdata\nJOIN\n    player p_bat ON hdata.p_bat = p_bat.player_id\nJOIN\n    player p_bowl ON hdata.p_bowl = p_bowl.player_id\nWHERE\n    p_bowl.player_name = 'Ravichandran Ashwin'\n    AND hdata.dismissal = 'leg before wicket'\n    AND p_bat.bat_hand = 'LHB';",
+      "time_taken": 32.15,
+      "category": "head_to_head"
+    },
+    {
+      "query": "fast bowlers' performance against Sachin Tendulkar",
+      "response": null,
+      "time_taken": 45.14,
+      "category": "head_to_head"
+    },
+    {
+      "query": "leg spinners' record against Steve Smith",
+      "response": "SELECT\n    COUNT(CASE WHEN h.out = TRUE THEN 1 END) AS wickets,\n    COUNT(h.ball_id) AS balls_faced,\n    SUM(h.score) AS runs_scored,\n    COUNT(DISTINCT h.p_match) AS matches_played\nFROM\n    hdata h\nWHERE\n    h.bowl_style = 'LWS'\n    AND h.bat = 'Steven Smith';",
+      "time_taken": 20.34,
+      "category": "head_to_head"
+    }
+  ],
+  "leaderboard": [
+    {
+      "query": "most caught behind dismissals in Tests",
+      "response": "SELECT\n    p_out,\n    COUNT(*) AS caught_behind_dismissals\nFROM\n    hdata\nWHERE\n    dismissal = 'caught behind'\n    AND competition = 'Test'\nGROUP BY\n    p_out\nORDER BY\n    caught_behind_dismissals DESC\nLIMIT 1;",
+      "time_taken": 7.19,
+      "category": "leaderboard"
+    },
+    {
+      "query": "top cover drive players in ODIs",
+      "response": "WITH CoverDriveShots AS (\n  SELECT\n      p_bat,\n      bat,\n      score,\n      ball_id\n  FROM\n      hdata\n  WHERE\n      wagonZone IN (3, 4, 5)\n      AND shot IS NOT NULL\n       AND competition LIKE '%ODI%'\n       AND max_balls = 300\n\n),\nPlayerCoverDriveStats AS (\n    SELECT\n        p_bat,\n        bat,\n        SUM(score) AS total_cover_drive_runs,\n        COUNT(ball_id) AS total_cover_drive_balls\n    FROM\n        CoverDriveShots\n    GROUP BY\n        p_bat, bat\n)\nSELECT\n    pcs.bat,\n    pcs.total_cover_drive_runs,\n    pcs.total_cover_drive_balls,\n    CASE\n        WHEN pcs.total_cover_drive_balls > 0 THEN CAST(pcs.total_cover_drive_runs AS REAL) / pcs.total_cover_drive_balls\n        ELSE 0\n    END AS cover_drive_average\nFROM\n    PlayerCoverDriveStats pcs\nORDER BY\n    cover_drive_average DESC;",
+      "time_taken": 35.02,
+      "category": "leaderboard"
+    },
+    {
+      "query": "best bowling averages in T20s",
+      "response": "SELECT\n    p_bowl,\n    AVG(CASE WHEN cur_bowl_wkts > 0 THEN CAST(cur_bowl_runs AS REAL) / cur_bowl_wkts ELSE NULL END) AS bowling_average\nFROM\n    hdata\nWHERE\n    competition LIKE '%T20%'\nGROUP BY\n    p_bowl\nHAVING\n    COUNT(DISTINCT p_match) >= 10  -- At least 10 matches played\nORDER BY\n    bowling_average ASC\nLIMIT 10;",
+      "time_taken": 8.87,
+      "category": "leaderboard"
+    },
+    {
+      "query": "highest run-scorers in 2023",
+      "response": "Error: 429 Resource has been exhausted (e.g. check quota).",
+      "time_taken": 3.59,
+      "category": "leaderboard"
+    }
+  ],
+  "venue_stats": [
+    {
+      "query": "match statistics at Lord's Cricket Ground",
+      "response": "Error: 429 Resource has been exhausted (e.g. check quota).",
+      "time_taken": 3.61,
+      "category": "venue_stats"
+    },
+    {
+      "query": "M Chinnaswamy Stadium batting averages",
+      "response": "SELECT\n  AVG(batruns)\nFROM\n  hdata\nWHERE\n  ground IN ('M Chinnaswamy Stadium', 'M Chinnaswamy Stadium, Bangalore', 'M Chinnaswamy Stadium, Bengaluru');",
+      "time_taken": 17.42,
+      "category": "venue_stats"
+    },
+    {
+      "query": "Melbourne Cricket Ground (MCG) records",
+      "response": "Error: 'tool_call_id'",
+      "time_taken": 30.51,
+      "category": "venue_stats"
+    },
+    {
+      "query": "Sydney Cricket Ground (SCG) match history",
+      "response": "SELECT\n    *\nFROM\n    hdata\nWHERE\n    ground = 'Sydney Cricket Ground';",
+      "time_taken": 15.36,
+      "category": "venue_stats"
+    }
+  ],
+  "team_stats": [
+    {
+      "query": "Australia vs New Zealand head-to-head record",
+      "response": "SELECT\n    CASE\n        WHEN winner = 'Australia' THEN 'Australia'\n        WHEN winner = 'New Zealand' THEN 'New Zealand'\n        ELSE 'Tie/No Result'  -- Handle cases where there's no clear winner\n    END AS winner,\n    COUNT(*) AS match_count\nFROM\n    hdata\nWHERE\n    (team_bat = 'Australia' AND team_bowl = 'New Zealand' OR team_bat = 'New Zealand' AND team_bowl = 'Australia') \nGROUP BY\n    winner\nORDER BY\n    match_count DESC;",
+      "time_taken": 16.75,
+      "category": "team_stats"
+    },
+    {
+      "query": "Chennai Super Kings (CSK) IPL statistics",
+      "response": "SELECT\n  COUNT(DISTINCT p_match) AS matches_played,\n  SUM(CASE WHEN winner = 'Chennai Super Kings' THEN 1 ELSE 0 END) AS matches_won,\n  SUM(CASE WHEN team_bat = 'Chennai Super Kings' THEN batruns ELSE 0 END) AS total_runs_scored,\n    SUM(CASE WHEN team_bowl = 'Chennai Super Kings' THEN bowlruns ELSE 0 END) AS total_runs_conceded,\n  SUM(CASE WHEN team_bat = 'Chennai Super Kings' THEN ballfaced ELSE 0 END) AS total_balls_faced,\n  SUM(CASE WHEN team_bowl = 'Chennai Super Kings' THEN 1 ELSE 0 END) AS total_balls_bowled,\n    SUM(CASE WHEN team_bat = 'Chennai Super Kings' AND bat_out = TRUE THEN 1 ELSE 0 END) AS total_wickets_lost,\n    SUM(CASE WHEN team_bowl = 'Chennai Super Kings' AND out = TRUE THEN 1 ELSE 0 END) AS total_wickets_taken\nFROM hdata\nWHERE\n  team_bat = 'Chennai Super Kings' OR team_bowl = 'Chennai Super Kings';",
+      "time_taken": 13.72,
+      "category": "team_stats"
+    },
+    {
+      "query": "Royal Challengers Bangalore (RCB) performance analysis",
+      "response": "",
+      "time_taken": 53.66,
+      "category": "team_stats"
+    },
+    {
+      "query": "India's win-loss record by venue",
+      "response": "SELECT\n    ground,\n    SUM(CASE WHEN winner = 'India' THEN 1 ELSE 0 END) AS wins,\n    COUNT(*) - SUM(CASE WHEN winner = 'India' THEN 1 ELSE 0 END) AS losses\nFROM\n    hdata\nWHERE\n    winner IS NOT NULL\nGROUP BY\n    ground\nORDER BY\n    wins DESC;",
+      "time_taken": 7.24,
+      "category": "team_stats"
+    }
+  ]
+}

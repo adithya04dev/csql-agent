@@ -1,0 +1,233 @@
+	
+p_match
+INTEGER	NULLABLE	-	-	-	
+-
+-
+inns
+INTEGER	NULLABLE	-	-	-	
+-
+-
+bat
+STRING	NULLABLE	-	-	-	
+-
+-
+p_bat
+INTEGER	NULLABLE	-	-	-	
+-
+-
+team_bat
+STRING	NULLABLE	-	-	-	
+-
+-
+bowl
+STRING	NULLABLE	-	-	-	
+-
+-
+p_bowl
+INTEGER	NULLABLE	-	-	-	
+-
+-
+team_bowl
+STRING	NULLABLE	-	-	-	
+-
+-
+ball
+INTEGER	NULLABLE	-	-	-	
+-
+-
+ball_id
+FLOAT	NULLABLE	-	-	-	
+-
+-
+outcome
+STRING	NULLABLE	-	-	-	
+-
+-
+score
+INTEGER	NULLABLE	-	-	-	
+-
+-
+out
+BOOLEAN	NULLABLE	-	-	-	
+-
+-	
+dismissal
+STRING	NULLABLE	-	-	-	
+-
+-
+p_out
+INTEGER	NULLABLE	-	-	-	
+-
+-
+over
+INTEGER	NULLABLE	-	-	-	
+-
+-
+noball
+INTEGER	NULLABLE	-	-	-	
+-
+-
+wide
+INTEGER	NULLABLE	-	-	-	
+-
+-
+byes
+INTEGER	NULLABLE	-	-	-	
+-
+-
+legbyes
+INTEGER	NULLABLE	-	-	-	
+-
+-
+cur_bat_runs
+INTEGER	NULLABLE	-	-	-	
+-
+-
+cur_bat_bf
+INTEGER	NULLABLE	-	-	-	
+-
+-
+cur_bowl_ovr
+FLOAT	NULLABLE	-	-	-	
+-
+-
+cur_bowl_wkts
+INTEGER	NULLABLE	-	-	-	
+-
+-
+cur_bowl_runs
+INTEGER	NULLABLE	-	-	-	
+-
+-
+inns_runs
+INTEGER	NULLABLE	-	-	-	
+-
+-
+inns_wkts
+INTEGER	NULLABLE	-	-	-	
+-
+-
+inns_balls
+INTEGER	NULLABLE	-	-	-	
+-
+-
+inns_runs_rem
+FLOAT	NULLABLE	-	-	-	
+-
+-
+inns_balls_rem
+INTEGER	NULLABLE	-	-	-	
+-
+-
+inns_rr
+FLOAT	NULLABLE	-	-	-	
+-
+-
+inns_rrr
+FLOAT	NULLABLE	-	-	-	
+-
+-
+target
+FLOAT	NULLABLE	-	-	-	
+-
+-
+max_balls
+INTEGER	NULLABLE	-	-	-	
+-
+-
+date
+DATE	NULLABLE	-	-	-	
+-
+-
+year
+INTEGER	NULLABLE	-	-	-	
+-
+-
+ground
+STRING	NULLABLE	-	-	-	
+-
+-
+country
+STRING	NULLABLE	-	-	-	
+-
+-
+winner
+STRING	NULLABLE	-	-	-	
+-
+-
+toss
+STRING	NULLABLE	-	-	-	
+-
+-
+competition
+STRING	NULLABLE	-	-	-	
+-
+-
+bat_hand
+STRING	NULLABLE	-	-	-	
+-
+-
+bowl_style
+STRING	NULLABLE	-	-	-	
+-
+-
+bowl_kind
+STRING	NULLABLE	-	-	-	
+-
+-
+batruns
+INTEGER	NULLABLE	-	-	-	
+-
+-
+ballfaced
+INTEGER	NULLABLE	-	-	-	
+-
+-
+bowlruns
+INTEGER	NULLABLE	-	-	-	
+-
+-
+bat_out
+BOOLEAN	NULLABLE	-	-	-	
+-
+-
+wagonX
+INTEGER	NULLABLE	-	-	-	
+-
+-
+wagonY
+INTEGER	NULLABLE	-	-	-	
+-
+-
+wagonZone
+INTEGER	NULLABLE	-	-	-	
+-
+-
+line
+STRING	NULLABLE	-	-	-	
+-
+-
+length
+STRING	NULLABLE	-	-	-	
+-
+-
+shot
+STRING	NULLABLE	-	-	-	
+-
+-
+control
+FLOAT	NULLABLE	-	-	-	
+-
+-
+predscore
+INTEGER	NULLABLE	-	-	-	
+-
+-
+wprob
+FLOAT	NULLABLE	-	-	-	
+-
+-
+variation
+STRING	NULLABLE	-	-	-	
+-
+-
