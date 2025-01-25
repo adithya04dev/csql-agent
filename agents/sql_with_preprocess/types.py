@@ -18,6 +18,7 @@ class AgentState(TypedDict):
     
     change:bool
     attempts:int
+    sequence:str
 
 
 

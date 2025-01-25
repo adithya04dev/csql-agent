@@ -38,12 +38,11 @@ Below are the agents and their routing guidelines:
    - Examples: "show stats for that player", "compare these two teams" etc.
 
 3. **chatbot agent**  
-   - Handle conversation flow and clarifications
-   - Can route to search/sql if user provides additional context
+   - Handles conversation flow ..if the user is just talking casually that doesnt need any search/sql.
    - Examples: greetings, system questions etc but ready to route elsewhere if cricket queries appear
 
 4. **FINISH**  
-   - Route here when ALL steps are complete
+   - Route here when ALL steps are complete or users response is to be needed.
    - The query has been fully resolved through potentially multiple agent interactions
 
 Multi-Turn Routing Examples:
@@ -97,7 +96,6 @@ Remember:
         goto = response.next
         if goto == "FINISH":
             goto = END
-
-        return Command(goto=goto,update={'messages':HumanMessage(f"Supervisor routed to {goto} agent")})
+        return Command(goto=goto,update={'messages':HumanMessage(f"Supervisor routed to {goto} agent"),'sequence':f"{state['sequence']} {goto}"})
 
     return supervisor_node

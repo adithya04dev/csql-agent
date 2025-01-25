@@ -26,6 +26,7 @@ async def create_graph()->StateGraph:
     # llm=ChatMistralAI(model='mistral-large-2411')
     # Qwen/Qwen2.5-72B-Instruct
     llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+    # llm=ChatGoogleGenerativeAI(model='gemini-1.5-flash')
     # llm=ChatOpenAI(model='meta-llama/Llama-3.3-70B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
     # llm=ChatOpenAI(model='gpt-4o-mini')
     research_supervisor_node = await supervisor(llm, ["search", "sql","chatbot"])
@@ -63,7 +64,8 @@ async def runworkflow(query: str)->AgentState:
         table_name=None,
         docs_schema="",
         change="",
-        attempts=0
+        attempts=0,
+        sequence=''
     )
     
     # Run the graph with initial state

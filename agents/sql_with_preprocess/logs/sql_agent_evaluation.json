@@ -1,0 +1,92 @@
+[
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"M Chinnaswamy Stadium batting averages in ipl\":\n      [\n        \"M Chinnaswamy Stadium, Bangalore\",\n        \"ground\",\n        \"IPL\",\n        \"competition\"\n      ]\n}"
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\n\"Lord's Cricket Ground\":[\"Lord's, London\",\"ground\"]\n\n}"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"2023\": [\n        \"BBL 2023\",\n        \"CPL 2023\",\n        \"SL2020\"\n    ]\n}"
+  },
+  {
+    "question": "top cover drive players stats in 1-10 overs ",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"cover drive\" is a standard cricket shot, and it directly matches with \"COVER_DRIVE\" in the database.\n\nThe term \"1-10\" refers to the overs range, which typically corresponds to the early phase of an innings in cricket. During this phase, the fielding restrictions are in place, and the batting team aims to score quickly. In cricket analytics, this phase is often referred to as the \"Powerplay\" or the \"Mandatory Powerplay.\"\n\nHowever, the database values returned for \"1-10\" do not directly relate to the overs range but rather to fielding positions or shot types. This discrepancy suggests that the database might not have a direct column for overs range, or the search did not correctly interpret the query.\n\nIn cricket, the terms related to overs range typically include:\n\nPowerplay\nMandatory Powerplay\nFirst 10 overs\nTop order batting\n\nGiven the returned values, none directly match the typical terms used for the overs range in cricket. Therefore, it is essential to consider how the database might represent this phase of the game. If the database uses specific terms for the early phase of an innings, those terms should be identified and used for accurate queries.\n\nBased on the returned values and cricket knowledge, the most appropriate matches for the user's query are:\n\n\"cover drive\" matches with \"COVER_DRIVE\"\n\"1-10\" does not have a direct match in the returned values, indicating a potential need to rephrase the query or check the database schema for the correct representation of the overs range.\n\n{\n    \"cover drive\": [\"COVER_DRIVE\",\"shot\"],\n    \"1-10\": [ ]\n\n}"
+  },
+  {
+    "question": "most caught behind dismissals batters in uppal stadium ",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"caught behind\" in cricket typically refers to dismissals where the batsman is caught by the wicket-keeper or the slips, which are usually categorized under \"caught\" in cricket statistics. Therefore, the most appropriate match for \"caught behind\" is \"caught.\"\n\nRegarding the stadium, \"Uppal\" is a common term associated with the Rajiv Gandhi International Stadium in Hyderabad, India. This stadium is often referred to as the Uppal Stadium due to its location in the Uppal region of Hyderabad. Therefore, the most appropriate match for \"Uppal Stadium\" is \"Rajiv Gandhi International Stadium, Uppal, Hyderabad.\"\n\nThe final output, in the required JSON format, is as follows:\n\n```json\n{\n    \"uppal stadium\": [\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\" ],\n    \"caught behind\": [\"caught\",\"dismissal\"]\n}\n```"
+  },
+  {
+    "question": "leg spinners' bowling records against Steve Smith",
+    "sequence": " search sql __end__",
+    "search_result": "After analyzing the user's query and the search results, I have determined the following mappings:\n\n1. **Steve Smith**:\n   - The search returned multiple variations of \"Smith.\"\n   - Based on the context of the query, which mentions \"Steve Smith\" explicitly, the most appropriate match is **\"Steven Smith\".**\n\n2. **leg spinner**:\n   - The search returned multiple bowling styles.\n   - In cricket, \"leg spinner\" typically refers to a specific type of spin bowling. The most appropriate match from the results is **\"LB\"** (Leg Break).\n\nHere is the final mapping in JSON format:\n\n```json\n{\n    \"Steve Smith\": [\"Steven Smith\",\"player\"],\n    \"leg spinner\": [\"LB\",\"bowl_style\"]\n}\n```"
+  },
+  {
+    "question": "fast bowlers' performance against rohit sharma",
+    "sequence": " search sql __end__",
+    "search_result": "{\"search_term1\": [\"Rohit Sharma\",\"player\"], \"search_term2\": [\"pace bowler\",\"bowl_kind\"]}"
+  },
+  {
+    "question": "david Warner vs Indian bowlers statistics",
+    "sequence": " search sql __end__",
+    "search_result": "1. **Player Name Analysis:**\n   - The user's input is \"david Warner\".\n   - The database returns multiple similar names:\n     - \"David Warner\"\n     - \"Jared Warner\"\n     - \"Kane Williamson\"\n     - \"Shane Watson\"\n     - \"Dawid Malan\"\n   - Based on the context and popularity in cricket, the most appropriate match is \"David Warner\".\n\n2. **Team Name Analysis:**\n   - The user's input is \"India\".\n   - The database returns the exact match: \"India\".\n\nConclusion:\n{\n\"david Warner\":[\"David Warner\",\"player\"],\n\"India\":[\"India\",\"team\"]\n}"
+  },
+  {
+    "question": "v Kohli vs James Anderson head-to-head stats",
+    "sequence": " search sql __end__",
+    "search_result": "To find the head-to-head stats between Virat Kohli and James Anderson, I first need to verify the player names in the database.\n\nFor Virat Kohli, the database has the following similar names:\n- Virat Kohli\n- Taruwar Kohli\n- Rohit Sharma\n- Rohit Kumar\n\nFor James Anderson, the database has the following similar names:\n- John Anderson\n- Corey Anderson\n- Kevlon Anderson\n- Jehu Anderson\n- Tom Anderson\n\nBased on the context of the query and the popularity of the players, the most appropriate matches are:\n\n- Virat Kohli (as it's an exact match)\n- James Anderson(though not exactly matching but most similar to query)\n\nSo, the standardized names for the query are:\n- Virat Kohli\n- James Anderson\n\nI need to clarify that the head-to-head stats typically refer to the performance of a batsman against a bowler. If you're looking for a comparison between Virat Kohli and James Anderson as players, please let me know, and I can adjust the query accordingly.\n\nThe table name to use for the query is \"hdata\".\n\nShould I proceed with this query to the Analysis Agent?"
+  },
+  {
+    "question": "steve Smith's batting average by year",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"steve Smith\": [\"Steven Smith\",\"player\"]\n}"
+  },
+  {
+    "question": "M.S. Dhoni's career performance",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"M.S. Dhoni\":[\"MS Dhoni\",\"player\"]\n\n}"
+  },
+  {
+    "question": "fazal haq faroo bowling stats for srh",
+    "sequence": " search sql __end__",
+    "search_result": "Fazalhaq Farooqi is a well-known Afghan cricketer who has played for the Sunrisers Hyderabad (SRH) in the Indian Premier League (IPL). Given the context of the query, it is likely that the user is referring to Fazalhaq Farooqi and the Sunrisers Hyderabad team.\nThe other returned values do not align with the context as well as these do.\n\nSo the final output is:\n\n{\n\"fazal haq faroo\":[\"Fazalhaq Farooqi\",\"player\"],\n\"srh\":[\"Sunrisers Hyderabad\",\"team\"]\n}"
+  },
+  {
+    "question": "shadab khan's performance in 2023",
+    "sequence": " search __end__",
+    "search_result": "My apologies, but it appears the database does not include a column for the year. I am unable to process this request as a result. Please get in touch with the supervisory agent to discuss this matter further"
+  },
+  {
+    "question": "trav head  stats by year",
+    "sequence": " search sql __end__",
+    "search_result": "{\n  \"trav head\": [\"Travis Head\",\"player\"]\n}"
+  },
+  {
+    "question": "rcb batting stats",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"rcb\": [\"Royal Challengers Bangalore\",\"team\"]\n}"
+  },
+  {
+    "question": "Australia vs New Zealand head-to-head record",
+    "sequence": " search sql __end__",
+    "search_result": "Here, the search results are:\n\n**Australia**\n1. Australia\n2. Canada\n3. India\n4. New Zealand\n5. Sweden\n\n**New Zealand**\n1. New Zealand\n2. New Zealand A\n3. Auckland\n4. Wellington\n5. Cook Islands\n\nBy using the cricket domain knowledge and understanding the context:\n- For Australia, the appropriate match is \"Australia\".\n- For New Zealand, the appropriate matches are \"New Zealand\",\"New Zealand A\".\n\n**Final Output:**\n{\n    \"Australia\": [\"Australia\",\"team\" ],\n    \"New Zealand\": [\"New Zealand\",\"team\"],\n     \"New Zealand\": [\"New Zealand A\",\"team\"]\n}"
+  },
+  {
+    "question": "india win-loss record by venue",
+    "sequence": " search sql __end__",
+    "search_result": "India is a direct match that we can select.\nVenue:\nThere are many records in the venue section.\n\nThe final output is:\n{\n\"india\":[\"India\",\"team\"]\n}"
+  },
+  {
+    "question": "best bowling averages bowlers in hyderabad",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"hyderabad\"  could refer to:\n\nRajiv Gandhi International Stadium, Uppal, Hyderabad :most appropriate\n\nThe term \"bowling averages\" could refer to:\n\nbowl_avg\n\nThe term \"bowlers\" could refer to:\nbowler\n\n{\n\n\"hyderabad\": [\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n\"bowling averages\": [\"bowl_avg\",\"bowl_avg\"],\n\"bowlers\": [\"bowler\",\"bowler\"]\n\n}"
+  }
+]

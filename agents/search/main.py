@@ -57,14 +57,16 @@ Your Process:
 4. Return results in a clean JSON format compulsory:
    {
         "searched_term1": ["actual_database_value1","actual_database_column1"],
-          "searched_term2":[ "actual_database_value2",,"actual_database_column2"]
+          "searched_term2":[ "actual_database_value2","actual_database_column2"]
 
    }
 
 Guidelines:
 - Always use the search tool to verify terms
 - When multiple similar results are found:
-  -Use cricket domain knowledge to select the most appropriate match
+  -Use cricket domain knowledge to select the most appropriate match or matches .
+  -U may also reject and leave blank , if u dont find appropriate match.
+  -U can also return more than one matches if u find it appropriate.
 - If truly uncertain between multiple matches, return what u think might be most popular ones
 
 Detailed Example:
@@ -109,8 +111,10 @@ Final Output:
     "fast": ["Fast","bowl_kind"]
 }
 
-Remember: Your role is not just to search, but to intelligently interpret and standardize cricket terms for accurate database queries.""")
-        
+Remember: 
+-Your role is not just to search, but to intelligently interpret and standardize cricket terms for accurate database queries.
+-another point is to rely solely on the information provided by the user; you cannot communicate with them again.
+""")
         
     agent = create_react_agent(model=model, tools=[tool],state_modifier=messages)
 
