@@ -88,5 +88,360 @@
     "question": "best bowling averages bowlers in hyderabad",
     "sequence": " search sql __end__",
     "search_result": "The term \"hyderabad\"  could refer to:\n\nRajiv Gandhi International Stadium, Uppal, Hyderabad :most appropriate\n\nThe term \"bowling averages\" could refer to:\n\nbowl_avg\n\nThe term \"bowlers\" could refer to:\nbowler\n\n{\n\n\"hyderabad\": [\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n\"bowling averages\": [\"bowl_avg\",\"bowl_avg\"],\n\"bowlers\": [\"bowler\",\"bowler\"]\n\n}"
+  },
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"Lord's Cricket Ground\": [\"Lord's, London\", \"ground\"]\n}"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "top cover drive players stats in 1-10 overs ",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "most caught behind dismissals batters in uppal stadium ",
+    "sequence": " search sql __end__",
+    "search_result": "The user's query mentions \"caught behind\" as the dismissal type and \"uppal\" as the ground. Upon searching the database, we find the following matches:\n\n- For \"caught behind\" dismissals, the closest match is \"caught\" which is a standard cricket term for a dismissal where the batsman is out after the ball is caught by a fielder, typically the wicket-keeper, without bouncing.\n\n- For the ground \"uppal,\" the most relevant match is \"Rajiv Gandhi International Stadium, Uppal, Hyderabad.\" This stadium is a well-known cricket venue located in Uppal, Hyderabad, and has hosted numerous international and domestic cricket matches.\n\nBased on this analysis, the standardized terms for the user's query are:\n\n- Dismissal type: \"caught\"\n- Ground: \"Rajiv Gandhi International Stadium, Uppal, Hyderabad\"\n\n{\n    \"uppal\":[\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n    \"caught behind\":[\"caught\",\"dismissal\"]\n}"
+  },
+  {
+    "question": "leg spinners' bowling records against Steve Smith",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "fast bowlers' performance against rohit sharma",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "david Warner vs Indian bowlers statistics",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"david Warner\": [\"David Warner\",\"player\"],\n\"Indian\": [\"India\",\"team\"]\n}"
+  },
+  {
+    "question": "v Kohli vs James Anderson head-to-head stats",
+    "sequence": " search sql __end__",
+    "search_result": "Let's analyze the results and make appropriate selections based on the context provided.\n\n1. **V Kohli:**\n   - The term \"V Kohli\" is likely referring to a first name initial and last name. The most well-known cricketer fitting this description is \"Virat Kohli.\"\n\n2. **James Anderson:**\n   - For \"James Anderson,\" the closest match is not directly present. However, \"John Anderson\" is a similar name that could be a potential match. But given the popularity and context, it might be referring to the famous English bowler \"James Anderson\" which is not present in the table.\n\nBased on this analysis, the final standardized terms are:\n\n```json\n{\n    \"V Kohli\": [\"Virat Kohli\", \"player\"],\n    \"James Anderson\": []\n}\n```\n\nExplanation:\n- \"V Kohli\" is standardized to \"Virat Kohli\" as it is the most well-known and relevant match.\n- \"James Anderson\" returns empty as it not present in the table."
+  },
+  {
+    "question": "steve Smith's batting average by year",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "M.S. Dhoni's career performance",
+    "sequence": " search sql __end__",
+    "search_result": "Here the user is asking for M.S.Dhoni\nthe search has returned the following values:\n- MS Dhoni\n- Shikhar Dhawan\n- Rohit Dhiman\n- Yash Dhull\n- Dhruv Shorey\n\nAmong these, the most appropriate match is:\n- MS Dhoni\n\nFinal Output:\n{\n\"M.S.Dhoni\":[\"MS Dhoni\",\"player\"]\n}"
+  },
+  {
+    "question": "fazal haq faroo bowling stats for srh",
+    "sequence": " search sql __end__",
+    "search_result": "In the database, there are multiple similar entries for Fazal Haq Farooq in the player column and SRH in the team column.\n\nFor Fazal Haq Farooq, the closest matching name is \"Fazalhaq Farooqi\".\n\nFor SRH, the closest matching team name is \"Sunrisers Hyderabad\".\n\nSo the correct json is:\n\n{\n\"fazal haq faroo\":[\"Fazalhaq Farooqi\",\"player\"],\n\"srh\":[\"Sunrisers Hyderabad\",\"team\"]\n}"
+  },
+  {
+    "question": "shadab khan's performance in 2023",
+    "sequence": " search sql __end__",
+    "search_result": "1. **shadab khan**:\n   - The search returned multiple similar names, but based on the context , the most likely match is \"Shadab Khan\".\n\n2. **2023**:\n   - The search returned multiple competition names containing \"2023\". Considering the context of the query, which seeks 'Shadab Khan's performance in 2023', the relevant matches are \"BBL 2023\" and \"CPL 2023\" .\n\nShadab Khan has played in the BBL, and CPL 2023.\n\nHence the standardized values are :\n\n{\n    \"shadab khan\": [\"Shadab Khan\", \"player\"],\n    \"2023\": [[\"BBL 2023\",\"CPL 2023\"], \"competition\"]\n}"
+  },
+  {
+    "question": "trav head  stats by year",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "mcg batting stats by year ",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "Sydney bowling stats by batter type",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "rcb batting stats",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "Australia vs New Zealand head-to-head record",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"Australia\": [\"Australia\",\"team\"],\n    \"New Zealand\": [\"New Zealand\",\"team\"]\n}"
+  },
+  {
+    "question": "india win-loss record by venue",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "csk bowling stats in cheapuak by year wise",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "best bowling averages bowlers in hyderabad",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"Lord's\" is a well-known cricket ground in London, often referred to as the \"Home of Cricket.\" It is one of the most iconic and historic venues in the sport. The other grounds listed—Kennington Oval, St Lawrence Ground, Hagley Oval, and County Ground—are also notable cricket venues but are not referred to as \"Lord's.\"\n\nTherefore, the most appropriate match for \"Lord's\" in the context of cricket is:\n\n**Lord's, London**\n\nHere it is formatted in JSON:\n\n```json\n{\n  \"Lord's\": [\"Lord's, London\",\"ground\"]\n}\n```"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "top cover drive players stats in 1-10 overs ",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "most caught behind dismissals batters in uppal stadium ",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "leg spinners' bowling records against Steve Smith",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "fast bowlers' performance against rohit sharma",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "david Warner vs Indian bowlers statistics",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"david Warner\": [\"David Warner\",\"player\"],\n\"Indian\": [\"India\",\"team\"]\n}"
+  },
+  {
+    "question": "v Kohli vs James Anderson head-to-head stats",
+    "sequence": " search sql __end__",
+    "search_result": "The user query mentions a head-to-head comparison between \"v Kohli\" and \"James Anderson.\"\n\nFor \"v Kohli\":\n- The search returned multiple results, including \"Virat Kohli,\" \"Taruwar Kohli,\" \"Rohit Sharma,\" \"MS Dhoni,\" and \"Rohit Kumar.\"\n- Given the context of a high-profile head-to-head comparison, \"Virat Kohli\" is the most appropriate match, as he is a prominent Indian cricketer known for such comparisons.\n\nFor \"James Anderson\":\n- The search returned \"John Anderson,\" \"Corey Anderson,\" \"Kevlon Anderson,\" \"Jehu Anderson,\" and \"Tom Anders.\"\n- \"James Anderson\" is a well-known English bowler, but since his name isn't directly in the results, \"John Anderson\" could be the closest match if we assume a typo or nickname situation. However, without direct confirmation, this is a tentative match.\n\nThe final output in the required JSON format is:\n\n```json\n{\n  \"v Kohli vs James Anderson\": [\n    {\n      \"player1\": \"Virat Kohli\",\n      \"player2\": \"John Anderson\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "question": "steve Smith's batting average by year",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "M.S. Dhoni's career performance",
+    "sequence": " search sql __end__",
+    "search_result": "{\"MS Dhoni\": [\"MS Dhoni\", \"player\"]}"
+  },
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " search sql __end__",
+    "search_result": "For the term \"M Chinnaswamy Stadium,\" multiple similar values were found. Based on cricket domain knowledge and the context of the user's query, I've selected the most appropriate match:\n- **\"M Chinnaswamy Stadium, Bengaluru\"**: This is the official and most commonly recognized name for the stadium in Bengaluru, which is often referred to as \"M Chinnaswamy Stadium.\"\n\nFor the term \"ipl,\" the following similar value was found:\n- **\"IPL\"**: This is the standard abbreviation for the Indian Premier League, which matches the user's query.\n\n```json\n{\n  \"M Chinnaswamy Stadium\": [\"M Chinnaswamy Stadium, Bengaluru\",\"ground\"],\n  \"ipl\": [\"IPL\",\"competition\"]\n}\n```"
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search sql __end__",
+    "search_result": "{\"Lord's Cricket Ground\": [\"Lord's, London\",\"ground\"]}"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "most caught behind dismissals batters in uppal stadium ",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"uppal\": [\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n\"caught behind\": [\"caught\",\"dismissal\"]\n\n}"
+  },
+  {
+    "question": "leg spinners' bowling records against Steve Smith",
+    "sequence": " search sql __end__",
+    "search_result": "Now, returned values are:\n\nSteven Smith\nJamie Smith\nBen Smith\nGreg Smith\nConnor Smith\n\n\"leg spinner\" to:\n\nLB\nRAP\nOB\nLWS\nLAP\n\nAnalyzing these returned values:\n\nSteven Smith\nSteve Smith is a well-known cricket player,\nThe other Smiths (Jamie, Ben, Greg, and Connor) are not as widely recognized in cricket.\n\nLeg Spinner Bowling:\n\nLB: Leg Break\nRAP: Right-Arm Off-Spin\nOB: Off Break\nLWS: Left-Arm Wrist Spin\nLAP: Left-Arm Orthodox\n\nSelecting the most appropriate value:\n\nFor \"Steve Smith,\" the best match is \"Steven Smith\"\nFor \"leg spinner,\"\n\nLeg Break (LB)\nRight-Arm Off-Spin (RAP)\nOff Break (OB)\nLeft-Arm Wrist Spin (LWS)\nLeft-Arm Orthodox (LAP),\n\n\"LB\" (Leg Break) and \"LWS\" (Left-Arm Wrist Spin) are most appropriate matches as they are most common bowling styles for a leg spinner.\nHere is the final output in JSON format:\n```json\n{\n    \"Steve Smith\": [\"Steven Smith\", \"player\"],\n    \"leg spinner\": [[\"LB\", \"LWS\"], \"bowl_style\"]\n}\n```"
+  },
+  {
+    "question": "fast bowlers' performance against rohit sharma",
+    "sequence": " search sql __end__",
+    "search_result": "In the database, there are multiple players with names similar to \"rohit sharma\". However, based on the context of the query and common cricket knowledge, we can confidently select \"Rohit Sharma\" as the intended player.\n\nFor the term \"fast,\" the results include \"placeholder,\" \"spin bowler,\" \"pace bowler,\" and \"mixture/unknown\". The term \"fast\" in cricket typically refers to fast bowlers or pace bowlers. Therefore, the most appropriate match for \"fast\" in this context is \"pace bowler.\"\n\nBased on this analysis, the standardized and validated terms are:\n\n```json\n{\n    \"rohit sharma\": [\"Rohit Sharma\", \"player\"],\n    \"fast\": [\"pace bowler\", \"bowl_kind\"]\n}\n```"
+  },
+  {
+    "question": "david Warner vs Indian bowlers statistics",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"david Warner\": [\"David Warner\",\"player\" ],\n    \"indian\": [\"India\",\"team\"]\n\n}"
+  },
+  {
+    "question": "v Kohli vs James Anderson head-to-head stats",
+    "sequence": " search sql __end__",
+    "search_result": "The user wants to see the head-to-head stats of \"v Kohli\" and \"James Anderson\".\n\nUpon searching in the database the following results were found:\n\nsimilar values of v Kohli in database are:\n\n1.Virat Kohli\n2.Taruwar Kohli\n3.Rohit Sharma\n4.MS Dhoni\n5.Rohit Kumar\n\nsimilar values of Anderson in database are:\n\n1.Anderson Phillip\n2.John Anderson\n3.Andrew Banner\n4.Tom Anders\n5.Craig Alexander\n\nUpon careful analysis and considering the context of the user's query, and using cricket domain knowledge the most appropriate match to \"v Kohli\" is \"Virat Kohli\" as he is the most popular player among the mentioned ones and has played against Anderson.\n\nThe most appropriate match to \"Anderson\" is \"James Anderson\" as he is the most popular player among the mentioned ones and has played against Virat Kohli.\n\nTherefore the most appropriate search terms in the context of the users query will be:\n\n{\n    \"v Kohli\": [\"Virat Kohli\",\"player\" ],\n    \"Anderson\": [\"James Anderson\",\"player\"]\n}"
+  },
+  {
+    "question": "M.S. Dhoni's career performance",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"M.S. Dhoni\": [\"MS Dhoni\",\"player\"]\n}"
+  },
+  {
+    "question": "fazal haq faroo bowling stats for srh",
+    "sequence": " search sql __end__",
+    "search_result": "Now I will use cricket domain knowledge to select the most appropriate match or matches.\n\n1. For the term \"fazal haq faroo\":\n   - The closest and most relevant match is \"Fazalhaq Farooqi\". The other names do not closely match the given term.\n\n2. For the term \"srh\":\n   - The most appropriate match is \"Sunrisers Hyderabad\". The other options like \"Rajasthan Royals\", \"Royal Challengers Bangalore\", \"Rajasthan\", and \"Sunrisers Eastern Cape\" do not fit the context as well as \"Sunrisers Hyderabad\".\n\nThus the final json output will be\n\n{\n    \"fazal haq faroo\": [\"Fazalhaq Farooqi\",\"player\" ],\n    \"srh\": [\"Sunrisers Hyderabad\",\"team\"]\n}"
+  },
+  {
+    "question": "shadab khan's performance in 2023",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"shadab khan\" closely resembles \"Shadab Khan,\" a well-known Pakistani cricketer .\n\nThe term \"2023\" closely resembles \"BBL 2023\" and \"CPL 2023\" , both of which are well known cricket leagues happened in year 2023.\n\nHence the final output is:\n\n```json\n{\n    \"shadab khan\": [\"Shadab Khan\",\"player\" ],\n    \"2023\": [\"BBL 2023\",\"competition\"],\n    \"2023\": [\"CPL 2023\",\"competition\"]\n}\n```"
+  },
+  {
+    "question": "trav head  stats by year",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "mcg batting stats by year ",
+    "sequence": " search sql __end__",
+    "search_result": "{\n  \"MCG\": [\"Melbourne Cricket Ground\",\"ground\"]\n}"
+  },
+  {
+    "question": "india win-loss record by venue",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "csk bowling stats in cheapuak by year wise",
+    "sequence": " search sql __end__",
+    "search_result": "1. Analyzing the search results for \"csk\":\n\n   - The term \"csk\" in cricket is commonly known as \"Chennai Super Kings,\" which is a popular franchise in the Indian Premier League (IPL).\n   - Although there are other similar values like \"Kolkata Knight Riders\" and \"Karachi Kings,\" these are different franchises and not relevant to \"csk.\"\n   - \"Czech Republic\" is a country and not related to cricket franchises.\n   - \"Police Sports Club\" is not a well-known cricket franchise and does not match the context of \"csk.\"\n\n   Therefore, the most appropriate match for \"csk\" is \"Chennai Super Kings.\"\n\n2. Analyzing the search results for \"chepauk\":\n\n   - The term \"chepauk\" is commonly associated with the MA Chidambaram Stadium in Chennai, which is often referred to as Chepauk.\n   - Other results like \"County Ground, Chelmsford,\" \"Pukekura Park, New Plymouth,\" \"Terdthai Cricket Ground, Bangkok,\" and \"Zahur Ahmed Chowdhury Stadium, Chittagong\" do not match the context of \"chepauk.\"\n\n   Therefore, the most appropriate match for \"chepauk\" is \"MA Chidambaram Stadium, Chepauk, Chennai.\"\n\nConclusion:\n{\n    \"csk\": [\"Chennai Super Kings\",\"team\" ],\n\n    \"chepauk\": [\"MA Chidambaram Stadium, Chepauk, Chennai\",\"ground\"]\n\n}"
+  },
+  {
+    "question": "best bowling averages bowlers in hyderabad",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"hyderabad\" has matched with multiple values. Based on cricket knowledge, the most appropriate match is:\n\n\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\"\n\nSo, the final output is:\n\n{\n\"hyderabad\":[\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"]\n\n}"
+  },
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " search sql __end__",
+    "search_result": "After analyzing the search results, I've determined the appropriate standardized terms for your query. Here are the matches:\n\n{\n\"M Chinnaswamy Stadium batting averages in ipl\": [\n\"M Chinnaswamy Stadium, Bengaluru\",\"ground\",\n\"M Chinnaswamy Stadium, Bangalore\",\"ground\"\n\n,\"IPL\",\"competition\"]\n\n}\n\n- For \"M Chinnaswamy Stadium\", we found two relevant matches: \"M Chinnaswamy Stadium, Bengaluru\" and \"M Chinnaswamy Stadium, Bangalore\". Both refer to the same venue, with Bengaluru being the updated name for Bangalore.\n\n- For \"IPL\", we found an exact match: \"IPL\".\n\nThese standardized terms will help ensure accurate and efficient database queries."
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search sql __end__",
+    "search_result": "For the term \"Lord's Cricket Ground,\" the most relevant and popular match in the context of cricket is:\n\n\"Lord's, London\"\n\nThese terms are commonly used in cricket and are likely to be the intended references in the user's query.\n\n{\n\"Lord's Cricket Ground\": [\"Lord's, London\",\"ground\"]\n}\n\nIf you need any further assistance or have more queries, feel free to ask!"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"highest run-scorers batter\": [\"Aaron Finch\",\"player\" ],\n    \"highest run-scorers batter\": [\"Gary Ballance\",\"player\" ],\n    \"highest run-scorers batter\": [\"Michael Carberry\",\"player\" ],\n    \"highest run-scorers batter\": [\"Alastair Cook\",\"player\" ],\n    \"highest run-scorers batter\": [\"Marcus Trescothick\",\"player\" ],\n    \"2023\": [\"BBL 2023\",\"competition\" ],\n    \"2023\": [\"CPL 2023\",\"competition\" ],\n    \"2023\": [\"\",\"competition\" ]\n}"
+  },
+  {
+    "question": "most caught behind dismissals batters in uppal stadium ",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"uppal\": [\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n    \"caught behind\": [\"caught\",\"dismissal\"]\n}"
+  },
+  {
+    "question": "leg spinners' bowling records against Steve Smith",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"Steve Smith\": [\"Steve Smith\",\"player\" ],\n    \"leg spinners\": [\"LWS\",\"bowl_style\"]\n}"
+  },
+  {
+    "question": "fast bowlers' performance against rohit sharma",
+    "sequence": " search sql __end__",
+    "search_result": "Based on the provided information, it seems that there are some discrepancies and lack of clarity in the data. Let's address each point:\n\n1. **Values for \"rohit sharma\" in the table:**\n   - The values listed are: Rohit Sharma, Mohit Sharma, Rohit Dhiman, Rohit Kumar, Raghu Sharma.\n   - Based on cricket knowledge, the correct and relevant name here is **Rohit Sharma**, as he is a well-known international cricketer.\n\n2. **Values for \"fast\" in the table:**\n   - The values listed are: placeholder, spin bowler, pace bowler, mixture/unknown.\n   - The term \"fast\" typically refers to \"pace bowler\" in cricket terminology.\n\nTherefore, the most appropriate matches based on cricket domain knowledge are:\n\n- \"rohit sharma\" matches with \"Rohit Sharma\"\n- \"fast\" matches with \"pace bowler\"\n\n### Final Output:\n```json\n{\n  \"rohit sharma\": [\"Rohit Sharma\", \"player\"],\n  \"fast\": [\"pace bowler\", \"bowl_kind\"]\n}\n```"
+  },
+  {
+    "question": "david Warner vs Indian bowlers statistics",
+    "sequence": " search sql __end__",
+    "search_result": "Here are the similar values of the terms that you have provided:\n\n**david Warner**:\n- David Warner\n- Jared Warner\n- Kane Williamson\n- Shane Watson\n- Dawid Malan\n\n**Indian**:\n- India\n- Iran\n- Bengal\n- Pakistan\n- Easterns\n\nUser's query:\n- david Warner vs Indian bowlers statistics\n\n- In this query, \"david Warner\" is clearly mentioned as a player, and \"Indian\" refers to the team India.\n\n- Based on this context and the similar values provided, the most appropriate matches would be:\n- \"David Warner\" for the player\n- \"India\" for the team\n\nFinal output:\n\n```json\n\n{\n  \"david Warner\": [\"David Warner\",\"player\" ],\n  \"Indian\": [\"India\",\"team\"]\n}\n\n```"
+  },
+  {
+    "question": "v Kohli vs James Anderson head-to-head stats",
+    "sequence": " search sql __end__",
+    "search_result": "For \"v Kohli,\" the most likely match is \"Virat Kohli,\" as he is a well-known Indian cricketer and it aligns closely with the provided name.\n\nFor \"James Anderson,\" the most likely match is \"John Anderson\".\n\nSo, the corrected query should be:\n\n{\n  \"v Kohli\": [\"Virat Kohli\", \"player\"],\n  \"James Anderson\": [\"John Anderson\", \"player\"]\n}"
+  },
+  {
+    "question": "steve Smith's batting average by year",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"steve Smith's\": [\"Steven Smith\",\"player\"]\n}"
+  },
+  {
+    "question": "M.S. Dhoni's career performance",
+    "sequence": " search sql __end__",
+    "search_result": "{\n\"M.S. Dhoni\":[\"MS Dhoni\",\"player\"]\n\n}"
+  },
+  {
+    "question": "fazal haq faroo bowling stats for srh",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"fazal haq faroo\" matches closely with \"Fazalhaq Farooqi\" from the player column.\n\nThe term \"srh\" corresponds to \"Sunrisers Hyderabad\" from the team column.\n\nSo here is the cleaned input\n\n{\n\"fazal haq faroo\": [\"Fazalhaq Farooqi\",\"player\" ],\n\"srh\": [\"Sunrisers Hyderabad\",\"team\"]\n}"
+  },
+  {
+    "question": "shadab khan's performance in 2023",
+    "sequence": " search __end__",
+    "search_result": "My apologies for the confusion earlier.\n\nIt appears there was a misunderstanding regarding the database schema. The column 'date' does not exist in the database. To proceed with analyzing Shadab Khan's performance in 2023, I need a specific cricket-related attribute that corresponds to the year 2023. For example, if I know the particular tournament, match, or series that occurred in 2023, I can search for that instead. Unfortunately, without such information, I won't be able to perform the search accurately.\n\nPlease provide the specific cricket-related attribute linked to the year 2023 so I can assist you better."
+  },
+  {
+    "question": "trav head  stats by year",
+    "sequence": " search search sql __end__",
+    "search_result": "[ {\n  \"trav head\": [\"Travis Head\",\"player\"]\n\n}]"
+  },
+  {
+    "question": "mcg batting stats by year ",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"mcg\": [\"Melbourne Cricket Ground\",\"ground\"]\n}"
+  },
+  {
+    "question": "Sydney bowling stats by batter type",
+    "sequence": " search sql __end__",
+    "search_result": "User asked for Sydney bowling stats by batter type, and the table name is hdata.\n\nFirst, identify all terms needing validation:\n- Ground: \"Sydney\"\n- Batter type: \"batter type\"\n\nSearch Results Analysis:\n- Ground \"Sydney\" returns:\n\n   * \"Sydney Cricket Ground\"\n   * \"North Sydney Oval, Sydney\"\n   * \"Sydney Showground Stadium\"\n   * \"Docklands Stadium, Melbourne\"\n   * \"International Sports Stadium, Coffs Harbour\"\n\n   → Select \"Sydney Cricket Ground\",\"North Sydney Oval, Sydney\",\"Sydney Showground Stadium\" (as these are the grounds in Sydney only)\n\n- Batter type matches:\n\n   * \"-\"\n   * \"RHB\"\n   * \"LHB\"\n\n   → Select \"RHB\",\"LHB\" (As \"-\" doesnt represents any batter type)\n\nNow use cricket knowledge understanding to select the most appropriate ones based on the context and return results\nin json format\n\n{\n    \"Sydney\": [\n        [\"Sydney Cricket Ground\",\"ground\" ],\n        [\"North Sydney Oval, Sydney\",\"ground\"],\n        [\"Sydney Showground Stadium\",\"ground\"]\n    ],\n    \"batter type\": [\n        [\"RHB\",\"bat_hand\"],\n        [\"LHB\",\"bat_hand\"]\n    ]\n}"
+  },
+  {
+    "question": "rcb batting stats",
+    "sequence": " search sql __end__",
+    "search_result": "The term \"rcb\" in your query matches with multiple similar values in the database.\n\nHere are the possible interpretations:\n\nRoyal Challengers Bangalore\nRajasthan Royals\nRoyal Challengers Bengaluru\nBoost Region\nPrime Bank Cricket Club\nBased on the context of cricket analytics and the popularity of terms, the most relevant interpretation for \"rcb\" is:\n\n{\"rcb\": [\"Royal Challengers Bangalore\",\"team\"]}\n\nThis should help in accurately querying the database for the required statistics."
+  },
+  {
+    "question": "Australia vs New Zealand head-to-head record",
+    "sequence": " search sql __end__",
+    "search_result": "For the term \"Australia,\" the most relevant match is:\n\n\"Australia\"\n\nFor the term \"New Zealand,\" the most relevant matches are:\n\n\"New Zealand\"\n\nSo, the final JSON output is:\n\n{\n\n\"Australia\": [\"Australia\",\"team\"],\n\"New Zealand\": [\"New Zealand\",\"team\"]\n\n}"
+  },
+  {
+    "question": "india win-loss record by venue",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "csk bowling stats in cheapuak by year wise",
+    "sequence": " search sql __end__",
+    "search_result": "The user query  is  \"csk bowling stats in cheapuak by year wise and dont execute and table name as hdata\".\n\n1)Here first we have to identify the terms to validate:\n    -team: \"csk\"\n    -ground:\"chepuak\"\n\n2) Search Results Analysis:\n  -team \"csk\" returns multiple matches:\n    * \"Chennai Super Kings\"\n    * \"Kolkata Knight Riders\"\n    * \"Czech Republic\"\n    * \"Karachi Kings\"\n    * \"Police Sports Club\"\n\n  -ground \"chepuak\" returns:\n   * \"MA Chidambaram Stadium, Chepauk, Chennai\"\n   * \"County Ground, Chelmsford\\nplaceholder\"\n   * \"Queen's Park, Chesterfield\"\n   * \"Pukekura Park, New Plymouth\"\n\n  From the searching results  and using cricket domain knowledge, we can easily identify that\n    * For the term \"csk\", we can select \"Chennai Super Kings\" as it is the most popular and appropriate term.\n    * For the term \"chepuak\", we can select \"MA Chidambaram Stadium, Chepauk, Chennai\" as it is the most popular and appropriate term.\n\n3) Final Output:\n{\n    \"csk\": [\"Chennai Super Kings\",\"team\" ],\n    \"chepuak\": [\"MA Chidambaram Stadium, Chepauk, Chennai\",\"ground\"]\n}"
+  },
+  {
+    "question": "best bowling averages bowlers in hyderabad",
+    "sequence": " search sql __end__",
+    "search_result": "In the database, the word \"Hyderabad\" is most closely associated with \"Rajiv Gandhi International Stadium, Uppal, Hyderabad,\" in ground column.\n\nBy \"best bowling averages bowlers,\" the database suggests a few names like  \"Gary Ballance\",\n\"Bhuvneshwar Kumar\",\n\"Qasim Akram\",\n\"Shane Watson\",\n\"Shoaib Ali\",\n\nbut we will consider \"Bhuvneshwar Kumar\" as he plays for the Hyderabad team and has the best average in bowling.\n\nSo the returned json will be\n\n{\n\n\"hyderabad\":[\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n\n\"best bowling averages\":[\"Bhuvneshwar Kumar\",\"player\"]\n\n}"
   }
 ]

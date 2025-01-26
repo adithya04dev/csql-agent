@@ -12,3 +12,4 @@ langchain-community
 faiss-cpu
 langchain-mistralai
 rich
+langchain-groq
