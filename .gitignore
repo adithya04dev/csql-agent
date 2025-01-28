@@ -1,3 +1,5 @@
 venv/
 agents/.env
 __pycache__
+.env
+.cursorrules

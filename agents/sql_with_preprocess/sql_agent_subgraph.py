@@ -21,7 +21,9 @@ async def sql_agent_subgraph(state:AgentState)->AgentState:
 
 
     return Command(
-        update={'messages':HumanMessage(content=f"SQL Agent Response: {result['messages'][length:]}"),
+        update={'messages':[AIMessage(content=f"SQL Agent Response: {result['messages'][length:]}"),
+                            HumanMessage(content=f"next what should it be done?")],
+                
         'sql_query': result['sql_query'],
         'table_name': result['table_name'],
         'docs_schema': result['docs_schema'],

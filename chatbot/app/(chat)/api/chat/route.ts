@@ -41,6 +41,13 @@ const blocksTools: AllowedTools[] = [
   'updateDocument',
   'requestSuggestions',
 ];
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
+const provider = createOpenAICompatible({
+  name: 'provider-name',
+  apiKey: "hello",
+  baseURL: 'http://localhost:8000/api/v1/',
+  
+});
 
 const weatherTools: AllowedTools[] = ['getWeather'];
 const allTools: AllowedTools[] = [...blocksTools, ...weatherTools];
@@ -93,9 +100,10 @@ export async function POST(request: Request) {
         type: 'user-message-id',
         content: userMessageId,
       });
-
+      console.log("Starting streamText");
       const result = streamText({
-        model: customModel(model.apiIdentifier),
+        // model: customModel(model.apiIdentifier),
+        model: provider('provider-name'),
         system: systemPrompt,
         messages: coreMessages,
         maxSteps: 5,
@@ -111,12 +119,16 @@ export async function POST(request: Request) {
             model,
           }),
         },
+        
         onFinish: async ({ response }) => {
+          console.log("in finish block")
+          console.log(response.messages)
           if (session.user?.id) {
             try {
-              const responseMessagesWithoutIncompleteToolCalls =
-                sanitizeResponseMessages(response.messages);
+              // const responseMessagesWithoutIncompleteToolCalls =
+              //   sanitizeResponseMessages(response.messages);
 
+              const responseMessagesWithoutIncompleteToolCalls=response.messages;
               await saveMessages({
                 messages: responseMessagesWithoutIncompleteToolCalls.map(
                   (message) => {
@@ -143,6 +155,7 @@ export async function POST(request: Request) {
             }
           }
         },
+
         experimental_telemetry: {
           isEnabled: true,
           functionId: 'stream-text',
@@ -150,6 +163,8 @@ export async function POST(request: Request) {
       });
 
       result.mergeIntoDataStream(dataStream);
+      // console.log("Stream merged");
+
     },
   });
 }

@@ -19,6 +19,7 @@ async def get_response(state:AgentState):
 
     return Command(
         update={'messages':[
-            AIMessage(content=f"Chat Agent Response:\n {response.content}", name="chat_agent")
+            AIMessage(content=f"Chat Agent Response:\n {response.content}", name="chat_agent"),
+            HumanMessage(content=f"next what should it be done?")
         ]},
         goto='supervisor')
