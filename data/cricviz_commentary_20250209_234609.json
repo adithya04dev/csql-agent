@@ -1,0 +1,2916 @@
+{
+    "class_id": 6,
+    "class_name": "List A Twenty20",
+    "innings": [
+        {
+            "batting_team_abbreviation": "SEC",
+            "batting_team_id": 2942,
+            "batting_team_name": "Sunrisers Eastern Cape",
+            "bbb": [
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Markram, FOUR!",
+                                "message": "Markram drives a full toss on off stump for four. Sunrisers Eastern Cape won by 8 wickets with 4 balls remaining."
+                            },
+                            "overs_unique": "19.02",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Maphaka returns into the attack.",
+                                "ball_summary_text": "Maphaka to Markram, no run",
+                                "message": "Lovely quick bowling with the first ball. Markram drives a yorker on leg stump."
+                            },
+                            "overs_unique": "19.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "KT Maphaka",
+                    "extras_off_over": 0,
+                    "over_number": 20,
+                    "run_rate": "12.00",
+                    "runs_off_over": 4,
+                    "team_score": "177/2",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, 2 runs",
+                                "message": "Jordan Hermann pulls a short ball outside off to deep mid wicket for two runs. The formula is Sunrisers Eastern Cape need 3 runs off 6 balls."
+                            },
+                            "overs_unique": "18.06",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, no run",
+                                "message": "Mujeeb Ur Rahman bowls a back of a length ball on middle stump. Jordan Hermann misses a pull."
+                            },
+                            "overs_unique": "18.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, no run",
+                                "message": "Mujeeb Ur Rahman bowls a back of a length ball outside off. Jordan Hermann goes down the pitch and drives back to the bowler."
+                            },
+                            "overs_unique": "18.04",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, SIX!",
+                                "message": "Short ball outside off. Jordan Hermann goes onto the back foot and pulls for six."
+                            },
+                            "overs_unique": "18.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, no run",
+                                "message": "Mujeeb Ur Rahman delivers a short ball on off stump. Jordan Hermann cuts to wicketkeeper. The story now is Sunrisers Eastern Cape need 11 runs off 10 balls."
+                            },
+                            "overs_unique": "18.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Mujeeb Ur Rahman comes back on.",
+                                "ball_summary_text": "Mujeeb Ur Rahman to Markram, 1 run",
+                                "message": "Markram cuts a back of a length ball outside off to deep cover for one run. A single, moments away from the conclusion."
+                            },
+                            "overs_unique": "18.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "Mujeeb Ur Rahman",
+                    "extras_off_over": 0,
+                    "over_number": 19,
+                    "run_rate": "9.00",
+                    "runs_off_over": 9,
+                    "team_score": "173/2",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Markram, 1 run",
+                                "message": "A single to end the over, 7 runs from it. Markram late cuts a short ball outside off to gully for one run."
+                            },
+                            "overs_unique": "17.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Markram, no run",
+                                "message": "Mistake in the field. Length ball on off stump. Markram goes down the pitch and drives in the air. Rubin Hermann drops the catch at extra cover. Batter gets some good fortune."
+                            },
+                            "overs_unique": "17.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, 1 run",
+                                "message": "Jordan Hermann drives a yorker wide outside off to long off for one run."
+                            },
+                            "overs_unique": "17.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, 2 runs",
+                                "message": "Jordan Hermann pulls a length ball on off stump to long on for two runs."
+                            },
+                            "overs_unique": "17.03",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, 2 runs",
+                                "message": "Jordan Hermann flicks a length ball on leg stump to deep mid wicket for two runs."
+                            },
+                            "overs_unique": "17.02",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Fortuin continues.",
+                                "ball_summary_text": "Fortuin to Markram, 1 run",
+                                "message": "Markram pushes a back of a length ball on off stump to long off for one run."
+                            },
+                            "overs_unique": "17.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "BC Fortuin",
+                    "extras_off_over": 0,
+                    "over_number": 18,
+                    "run_rate": "7.00",
+                    "runs_off_over": 7,
+                    "team_score": "164/2",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Markram, 1 run",
+                                "message": "Length ball on off stump. Markram goes onto the front foot and drives to long off for one run."
+                            },
+                            "overs_unique": "16.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, 1 leg bye",
+                                "message": "Short ball down leg. Jordan Hermann misses an attempted pull. Leg bye adds one to the total."
+                            },
+                            "overs_unique": "16.05",
+                            "runs": 1,
+                            "scoring": "1ˡᵇ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, FOUR!",
+                                "message": "Length ball on leg stump. Jordan Hermann reverse sweeps for four."
+                            },
+                            "overs_unique": "16.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, SIX!",
+                                "message": "This brings up the one-hundred-and-fifty for Sunrisers Eastern Cape in style. Length ball wide outside off. Jordan Hermann drives for six. Agricultural stuff from Jordan Hermann who is striking at 136, moves to 52 off 38 balls. Perfect way to bring up the fifty. Three sixes for this batter."
+                            },
+                            "overs_unique": "16.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, no run",
+                                "message": "Short ball on off stump. Jordan Hermann cuts to extra cover."
+                            },
+                            "overs_unique": "16.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Wellalage resumes.",
+                                "ball_summary_text": "Wellalage to Markram, 1 run",
+                                "message": "Wellalage delivers a short ball outside off. Markram late cuts to backward point for one run."
+                            },
+                            "overs_unique": "16.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "DN Wellalage",
+                    "extras_off_over": 1,
+                    "over_number": 17,
+                    "run_rate": "12.00",
+                    "runs_off_over": 13,
+                    "team_score": "157/2",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, no run",
+                                "message": "Fortuin delivers a length ball outside off. Jordan Hermann cuts to extra cover. 4 runs in the over, 144/2 after 16 overs. WinViz implies that this game is 84% on the side of the batting team."
+                            },
+                            "overs_unique": "15.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, 2 runs",
+                                "message": "Arm ball outside off. Jordan Hermann drives to long off for two runs."
+                            },
+                            "overs_unique": "15.05",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Markram, 1 run",
+                                "message": "Fortuin delivers a length ball on off stump. Markram drives to deep extra cover for one run."
+                            },
+                            "overs_unique": "15.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, 1 run",
+                                "message": "Fortuin bowls an arm ball down leg. Jordan Hermann drives to long off for one run."
+                            },
+                            "overs_unique": "15.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Jordan Hermann, no run",
+                                "message": "Another dot. Length ball outside off. Jordan Hermann misses an attempted cut."
+                            },
+                            "overs_unique": "15.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Fortuin returns.",
+                                "ball_summary_text": "Fortuin to Jordan Hermann, no run",
+                                "message": "Fortuin delivers a length ball on off stump. Jordan Hermann goes onto the front foot and drives to mid off."
+                            },
+                            "overs_unique": "15.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "BC Fortuin",
+                    "extras_off_over": 0,
+                    "over_number": 16,
+                    "run_rate": "4.00",
+                    "runs_off_over": 4,
+                    "team_score": "144/2",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Markram, no run",
+                                "message": "Markram drives a back of a length ball outside off to cover. Brilliant fielding by Galiem. Fielders keeping alert despite the predicament. End of over. 3 runs from it with the wicket."
+                            },
+                            "overs_unique": "14.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, 1 run",
+                                "message": "Wellalage delivers a length ball on middle stump. Jordan Hermann goes onto the front foot and drives to long off for one run."
+                            },
+                            "overs_unique": "14.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Markram, 1 run",
+                                "message": "Markram drives a short ball outside off to deep cover for one run."
+                            },
+                            "overs_unique": "14.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Markram, right-handed bat, is next in.",
+                                "ball_summary_text": "Wellalage to Markram, no run",
+                                "message": "Short ball outside off. Markram cuts to backward point."
+                            },
+                            "overs_unique": "14.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to de Zorzi, OUT!",
+                                "message": "de Zorzi is out after putting it all on the line for these 49 balls, ending up with 78 runs. Short ball on leg stump. de Zorzi pulls to deep mid wicket and is caught.  With a strike-rate of 159 that was a ruthless knock by de Zorzi. Purpose of this innings was to get the batting side in the driving seat."
+                            },
+                            "overs_unique": "14.02",
+                            "runs": 0,
+                            "scoring": "W"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Wellalage resumes.",
+                                "ball_summary_text": "Wellalage to Jordan Hermann, 1 run",
+                                "message": "This over starts with a single. Back of a length ball on leg stump. Jordan Hermann cuts to long off for one run."
+                            },
+                            "overs_unique": "14.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "DN Wellalage",
+                    "extras_off_over": 0,
+                    "over_number": 15,
+                    "run_rate": "3.00",
+                    "runs_off_over": 3,
+                    "team_score": "140/2",
+                    "wickets_off_over": 1
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, SIX!",
+                                "message": "de Zorzi slog-sweeps a length ball outside off for six."
+                            },
+                            "overs_unique": "13.06",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, no run",
+                                "message": "de Zorzi drives a length ball outside off back to the bowler."
+                            },
+                            "overs_unique": "13.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, FOUR!",
+                                "message": "Back of a length ball outside off. de Zorzi reverse sweeps for four."
+                            },
+                            "overs_unique": "13.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, 1 run",
+                                "message": "These batters have now put on 100 runs in their partnership. Jordan Hermann flicks a half volley on off stump to long on for one run."
+                            },
+                            "overs_unique": "13.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, 1 run",
+                                "message": "Back of a length ball outside off. de Zorzi cuts to backward point for one run. Run out attempt by Fortuin but missed the stumps. A chance for a runout goes begging. Fielder misfires with the throw."
+                            },
+                            "overs_unique": "13.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Mujeeb Ur Rahman comes back on.",
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, no run",
+                                "message": "This over starts with a dot. Length ball on leg stump. de Zorzi misses. Cheaper start to this over for Paarl Royals."
+                            },
+                            "overs_unique": "13.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "Mujeeb Ur Rahman",
+                    "extras_off_over": 0,
+                    "over_number": 14,
+                    "run_rate": "12.00",
+                    "runs_off_over": 12,
+                    "team_score": "137/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, 2 runs",
+                                "message": "Batters get up and down the wicket to end the over. Jordan Hermann scoops a length ball on off stump to fine leg for two runs."
+                            },
+                            "overs_unique": "12.06",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to de Zorzi, 1 run",
+                                "message": "Wellalage delivers a back of a length ball outside off. de Zorzi cuts to deep extra cover for one run.  Sunrisers Eastern Cape need to get 53 runs from 43 balls. Cruise-control from here?"
+                            },
+                            "overs_unique": "12.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to de Zorzi, 2 runs",
+                                "message": "Misfield gifts some runs to the batter. de Zorzi sweeps a half volley outside off to deep square leg for two runs. Misfielded by Pretorius. Pressure showing."
+                            },
+                            "overs_unique": "12.04",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, 1 run",
+                                "message": "Wellalage delivers a length ball on middle stump. Jordan Hermann flicks to long on for one run."
+                            },
+                            "overs_unique": "12.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Wellalage to Jordan Hermann, FOUR!",
+                                "message": "Batter gets some charity from the fielder. Jordan Hermann scoops a short ball on leg stump for four. Misfielded by Galiem. Pressure building on the Paarl Royals players, mistakes coming. Batter has hit three fours in this innings."
+                            },
+                            "overs_unique": "12.02",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Wellalage, left-arm spin, comes on.",
+                                "ball_summary_text": "Wellalage to de Zorzi, 1 run",
+                                "message": "Wellalage delivers a length ball outside off. de Zorzi drives to deep extra cover for one run."
+                            },
+                            "overs_unique": "12.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "DN Wellalage",
+                    "extras_off_over": 0,
+                    "over_number": 13,
+                    "run_rate": "11.00",
+                    "runs_off_over": 11,
+                    "team_score": "125/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Jordan Hermann, SIX!",
+                                "message": "Jordan Hermann sweeps a full toss on middle stump for six. WinViz has decreased for Paarl Royals. Jordan Hermann is striking at 132, facing 25 deliveries for these 33 runs."
+                            },
+                            "overs_unique": "11.07",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Jordan Hermann, 5 wides",
+                                "message": "One more ball to come, following the extra. Short ball outside off. Jordan Hermann offers no shot. That is five wides."
+                            },
+                            "overs_unique": "11.06",
+                            "runs": 5,
+                            "scoring": "5ʷᵈ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, 1 run",
+                                "message": "de Zorzi cuts a slower ball outside off to mid off for one run. Run out attempt by Miller but missed the stumps."
+                            },
+                            "overs_unique": "11.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, FOUR!",
+                                "message": "Sunrisers Eastern Cape reach three-figures. Half volley outside off. de Zorzi drives for four. de Zorzi is timing this cricket ball brilliantly. A tenth four for the batter."
+                            },
+                            "overs_unique": "11.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, no run",
+                                "message": "Short ball outside off. de Zorzi misses. Run out attempt by Maphaka but missed the stumps."
+                            },
+                            "overs_unique": "11.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Jordan Hermann, 1 run",
+                                "message": "Jordan Hermann pulls a length ball outside off to fine leg for one run."
+                            },
+                            "overs_unique": "11.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Maphaka returns.",
+                                "ball_summary_text": "Maphaka to Jordan Hermann, no run",
+                                "message": "Half volley outside off. Jordan Hermann drives to mid off. Pegging the run-rate back, this is better by Paarl Royals."
+                            },
+                            "overs_unique": "11.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "KT Maphaka",
+                    "extras_off_over": 5,
+                    "over_number": 12,
+                    "run_rate": "12.00",
+                    "runs_off_over": 17,
+                    "team_score": "114/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, 2 runs",
+                                "message": "de Zorzi pulls a length ball on off stump to deep backward square leg for two runs."
+                            },
+                            "overs_unique": "10.07",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, no run",
+                                "message": "Full toss outside off. de Zorzi misses an attempted drive."
+                            },
+                            "overs_unique": "10.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, FOUR!",
+                                "message": "Pace off.  de Zorzi drives a slower ball outside off for four."
+                            },
+                            "overs_unique": "10.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Free hit coming up.",
+                                "ball_summary_text": "Phehlukwayo to Jordan Hermann, 1 run",
+                                "message": "Jordan Hermann drives a length ball outside off to long off for one run."
+                            },
+                            "overs_unique": "10.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to Jordan Hermann, FOUR!",
+                                "message": "Comfortable for the batting side. Jordan Hermann drives a half volley outside off for four."
+                            },
+                            "overs_unique": "10.03",
+                            "runs": 5,
+                            "scoring": "5ⁿᵇ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, 1 leg bye",
+                                "message": "They run a leg bye. Phehlukwayo bowls a back of a length ball on off stump. de Zorzi misses an attempted pull."
+                            },
+                            "overs_unique": "10.02",
+                            "runs": 1,
+                            "scoring": "1ˡᵇ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Phehlukwayo is on for another over.",
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, FOUR!",
+                                "message": "Short ball outside off. de Zorzi scoops for four. An engine-room knock by de Zorzi who goes to 52 runs from 33 balls."
+                            },
+                            "overs_unique": "10.01",
+                            "runs": 4,
+                            "scoring": "4"
+                        }
+                    ],
+                    "bowling_player_name": "AL Phehlukwayo",
+                    "extras_off_over": 2,
+                    "over_number": 11,
+                    "run_rate": "12.85",
+                    "runs_off_over": 17,
+                    "team_score": "97/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, 1 run",
+                                "message": "de Zorzi pulls a short ball wide outside off to deep mid wicket for one run."
+                            },
+                            "overs_unique": "9.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, no run",
+                                "message": "Length ball wide outside off. de Zorzi misses a cut."
+                            },
+                            "overs_unique": "9.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, 1 run",
+                                "message": "Short ball outside off. Jordan Hermann cuts to long off for one run."
+                            },
+                            "overs_unique": "9.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, 1 run",
+                                "message": "de Zorzi drives a half volley outside off to short third for one run."
+                            },
+                            "overs_unique": "9.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, 1 run",
+                                "message": "This partnership goes to 50 runs. Jordan Hermann flicks a back of a length ball outside off to deep mid wicket for one run."
+                            },
+                            "overs_unique": "9.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Mujeeb Ur Rahman returns into the attack.",
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, 1 run",
+                                "message": "Length ball wide outside off. de Zorzi sweeps to long off for one run."
+                            },
+                            "overs_unique": "9.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "Mujeeb Ur Rahman",
+                    "extras_off_over": 0,
+                    "over_number": 10,
+                    "run_rate": "5.00",
+                    "runs_off_over": 5,
+                    "team_score": "80/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to Jordan Hermann, no run",
+                                "message": "Phehlukwayo delivers a short ball outside off. Jordan Hermann tries a pull but misses."
+                            },
+                            "overs_unique": "8.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to Jordan Hermann, 2 runs",
+                                "message": "Half volley down leg. Jordan Hermann defends to mid on for two runs. Run out attempt by Owen but missed the stumps."
+                            },
+                            "overs_unique": "8.05",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, 1 run",
+                                "message": "de Zorzi pulls a back of a length ball on off stump to deep backward square leg for one run."
+                            },
+                            "overs_unique": "8.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, no run",
+                                "message": "Length ball on off stump. de Zorzi tries a flick but misses."
+                            },
+                            "overs_unique": "8.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Phehlukwayo to de Zorzi, no run",
+                                "message": "de Zorzi drives a length ball wide outside off to wicketkeeper."
+                            },
+                            "overs_unique": "8.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Phehlukwayo, right-arm pace, comes into the attack.",
+                                "ball_summary_text": "Phehlukwayo to Jordan Hermann, 1 run",
+                                "message": "Jordan Hermann pulls a back of a length ball on off stump for one run."
+                            },
+                            "overs_unique": "8.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "AL Phehlukwayo",
+                    "extras_off_over": 0,
+                    "over_number": 9,
+                    "run_rate": "4.00",
+                    "runs_off_over": 4,
+                    "team_score": "75/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Owen to Jordan Hermann, 1 run",
+                                "message": "A single ends the over. Yorker outside off. Jordan Hermann drives to deep extra cover for one run."
+                            },
+                            "overs_unique": "7.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Owen to Jordan Hermann, no run",
+                                "message": "Going with pace off. Jordan Hermann drives a slower ball outside off to mid off."
+                            },
+                            "overs_unique": "7.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Owen to de Zorzi, 1 run",
+                                "message": "de Zorzi steers a back of a length ball down leg to third for one run."
+                            },
+                            "overs_unique": "7.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Owen to de Zorzi, SIX!",
+                                "message": "Short ball on leg stump. de Zorzi pulls for six.  Sunrisers Eastern Cape are scoring at 9.2. They need to score 8.6 runs per over to win."
+                            },
+                            "overs_unique": "7.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Owen to Jordan Hermann, no run",
+                                "message": "Short ball down leg. de Zorzi fails to make contact."
+                            },
+                            "overs_unique": "7.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Owen, right-arm pace, is introduced into the attack.",
+                                "ball_summary_text": "Owen to de Zorzi, 1 run",
+                                "message": "de Zorzi cuts a short ball on leg stump to wicketkeeper for one run.  Sunrisers Eastern Cape are scoring at 8.9 and they require 8.7 runs per over to win."
+                            },
+                            "overs_unique": "7.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "MJ Owen",
+                    "extras_off_over": 0,
+                    "over_number": 8,
+                    "run_rate": "8.00",
+                    "runs_off_over": 8,
+                    "team_score": "71/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, 1 run",
+                                "message": "Back of a length ball outside off. de Zorzi works to deep mid wicket for one run."
+                            },
+                            "overs_unique": "6.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, no run",
+                                "message": "de Zorzi drives a length ball outside off to backward point."
+                            },
+                            "overs_unique": "6.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, FOUR!",
+                                "message": "This is also in the batter's wheelhouse.  Galiem bowls a back of a length ball outside off. de Zorzi cuts for four."
+                            },
+                            "overs_unique": "6.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, FOUR!",
+                                "message": "Pace off.  Slower ball outside off. de Zorzi cuts for four. Quality knock by de Zorzi who goes to 32 runs off 18 deliveries."
+                            },
+                            "overs_unique": "6.03",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, 2 runs",
+                                "message": "Back of a length ball outside off. de Zorzi drives to third for two runs."
+                            },
+                            "overs_unique": "6.02",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Galiem to continue.",
+                                "ball_summary_text": "Galiem to Jordan Hermann, 1 run",
+                                "message": "Back of a length ball outside off. Jordan Hermann goes onto the back foot and defends to backward point for one run. Overthrows to start the over."
+                            },
+                            "overs_unique": "6.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "AD Galiem",
+                    "extras_off_over": 0,
+                    "over_number": 7,
+                    "run_rate": "12.00",
+                    "runs_off_over": 12,
+                    "team_score": "63/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, 1 run",
+                                "message": "Jordan Hermann keeps strike for the next over. Jordan Hermann drives a length ball outside off to extra cover for one run."
+                            },
+                            "overs_unique": "5.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to de Zorzi, 1 run",
+                                "message": "This brings up the fifty for Sunrisers Eastern Cape. de Zorzi defends a length ball outside off to cover for one run. Run out attempt by Pretorius but missed the stumps."
+                            },
+                            "overs_unique": "5.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, 1 run",
+                                "message": "Jordan Hermann cuts a short ball wide outside off to cover for one run."
+                            },
+                            "overs_unique": "5.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, SIX!",
+                                "message": "Jordan Hermann pulls a short ball outside off for six."
+                            },
+                            "overs_unique": "5.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, no run",
+                                "message": "Jordan Hermann defends a length ball outside off to backward point."
+                            },
+                            "overs_unique": "5.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Mujeeb Ur Rahman, right-arm spin, is introduced into the attack.",
+                                "ball_summary_text": "Mujeeb Ur Rahman to Jordan Hermann, FOUR!",
+                                "message": "No one would be confident about picking a winner from here. Jordan Hermann drives a length ball wide outside off for four."
+                            },
+                            "overs_unique": "5.01",
+                            "runs": 4,
+                            "scoring": "4"
+                        }
+                    ],
+                    "bowling_player_name": "Mujeeb Ur Rahman",
+                    "extras_off_over": 0,
+                    "over_number": 6,
+                    "run_rate": "13.00",
+                    "runs_off_over": 13,
+                    "team_score": "51/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, no run",
+                                "message": "Short ball outside off. de Zorzi offers no shot. 6 off the over, 38/1 after 5 overs."
+                            },
+                            "overs_unique": "4.07",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to de Zorzi, FOUR!",
+                                "message": "Galiem bowls a length ball outside off. de Zorzi drives for four. Fifth four for the batter."
+                            },
+                            "overs_unique": "4.06",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to Jordan Hermann, 1 run",
+                                "message": "Mixing it up with pace off. Jordan Hermann drives a slower ball outside off to mid off for one run. Run out attempt by Miller but missed the stumps. A chance for a runout goes begging. Fielder misfires with the throw."
+                            },
+                            "overs_unique": "4.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to Jordan Hermann, no run",
+                                "message": "Jordan Hermann cuts a back of a length ball outside off back to the bowler."
+                            },
+                            "overs_unique": "4.04",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to Jordan Hermann, no run",
+                                "message": "Length ball outside off. Jordan Hermann goes onto the front foot and drives to mid wicket."
+                            },
+                            "overs_unique": "4.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Galiem to Jordan Hermann, no run",
+                                "message": "Galiem bowls a back of a length ball outside off. Jordan Hermann drives to extra cover."
+                            },
+                            "overs_unique": "4.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Galiem, right-arm pace, is introduced into the attack.",
+                                "ball_summary_text": "Galiem to Jordan Hermann, 1 wide",
+                                "message": "That is a wide. Jordan Hermann misses a short ball on middle stump."
+                            },
+                            "overs_unique": "4.01",
+                            "runs": 1,
+                            "scoring": "1ʷᵈ"
+                        }
+                    ],
+                    "bowling_player_name": "AD Galiem",
+                    "extras_off_over": 1,
+                    "over_number": 5,
+                    "run_rate": "5.00",
+                    "runs_off_over": 6,
+                    "team_score": "38/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, no run",
+                                "message": "Short ball outside off. de Zorzi does not play it."
+                            },
+                            "overs_unique": "3.07",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, FOUR!",
+                                "message": "de Zorzi cuts a back of a length ball outside off for four. de Zorzi goes to 21 off 12 deliveries."
+                            },
+                            "overs_unique": "3.06",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Jordan Hermann, 1 run",
+                                "message": "More variation with pace. Jordan Hermann gets in on the chase and is off the mark on ball 3. Maphaka delivers a slower ball outside off. Jordan Hermann defends to mid off for one run."
+                            },
+                            "overs_unique": "3.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Jordan Hermann, no run",
+                                "message": "Short ball outside off. Jordan Hermann tries a cut but misses."
+                            },
+                            "overs_unique": "3.04",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Jordan Hermann, left-handed bat, comes to the middle.",
+                                "ball_summary_text": "Maphaka to Jordan Hermann, no run",
+                                "message": "Back of a length ball outside off. Jordan Hermann misses a backward defensive."
+                            },
+                            "overs_unique": "3.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Bedingham, OUT!",
+                                "message": "That's gone! Paarl Royals with the breakthrough. Bedingham is sent back to the dugout having got to just 9. Length ball outside off. Bedingham drives to wicketkeeper and is caught by Karthik. "
+                            },
+                            "overs_unique": "3.02",
+                            "runs": 0,
+                            "scoring": "W"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Maphaka continues.",
+                                "ball_summary_text": "Maphaka to Bedingham, 1 wide",
+                                "message": "Bedingham misses a length ball down leg. That is a wide."
+                            },
+                            "overs_unique": "3.01",
+                            "runs": 1,
+                            "scoring": "1ʷᵈ"
+                        }
+                    ],
+                    "bowling_player_name": "KT Maphaka",
+                    "extras_off_over": 1,
+                    "over_number": 4,
+                    "run_rate": "5.00",
+                    "runs_off_over": 6,
+                    "team_score": "32/1",
+                    "wickets_off_over": 1
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to de Zorzi, FOUR!",
+                                "message": "More of the same.  de Zorzi cuts a short ball down leg for four. Some attacking cricket seeing out over number 3. de Zorzi's knock has had three fours."
+                            },
+                            "overs_unique": "2.06",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to de Zorzi, FOUR!",
+                                "message": "A lot of pressure on both teams.  de Zorzi sweeps a back of a length ball on middle stump for four."
+                            },
+                            "overs_unique": "2.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Bedingham, 1 run",
+                                "message": "Bedingham pushes a length ball on middle stump to long on for one run."
+                            },
+                            "overs_unique": "2.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to de Zorzi, 1 run",
+                                "message": "Fortuin bowls a short ball on leg stump. de Zorzi goes down the pitch and flicks to deep mid wicket for one run."
+                            },
+                            "overs_unique": "2.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Bedingham, 1 run",
+                                "message": "Bedingham pushes a back of a length ball on off stump to long on for one run."
+                            },
+                            "overs_unique": "2.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Fortuin to continue.",
+                                "ball_summary_text": "Fortuin to Bedingham, FOUR!",
+                                "message": "Length ball on off stump. Bedingham slog-sweeps for four."
+                            },
+                            "overs_unique": "2.01",
+                            "runs": 4,
+                            "scoring": "4"
+                        }
+                    ],
+                    "bowling_player_name": "BC Fortuin",
+                    "extras_off_over": 0,
+                    "over_number": 3,
+                    "run_rate": "15.00",
+                    "runs_off_over": 15,
+                    "team_score": "26/0",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Bedingham, 1 run",
+                                "message": "Batter gets a donation from the fielder. Short ball down leg. Bedingham goes onto the back foot and drives to extra cover for one run. Misfielded by Wellalage."
+                            },
+                            "overs_unique": "1.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to Bedingham, no run",
+                                "message": "Bedingham drives a length ball outside off to short fine leg."
+                            },
+                            "overs_unique": "1.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, 1 run",
+                                "message": "Mistake in the field. Length ball outside off. de Zorzi drives to mid off for one run. Misfielded by Miller."
+                            },
+                            "overs_unique": "1.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, no run",
+                                "message": "Back of a length ball outside off. de Zorzi misses a cut."
+                            },
+                            "overs_unique": "1.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Maphaka to de Zorzi, no run",
+                                "message": "de Zorzi pulls a short ball outside off to mid on."
+                            },
+                            "overs_unique": "1.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Maphaka, left-arm pace, comes into the attack.",
+                                "ball_summary_text": "Maphaka to de Zorzi, no run",
+                                "message": "de Zorzi defends a back of a length ball outside off back to the bowler."
+                            },
+                            "overs_unique": "1.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "KT Maphaka",
+                    "extras_off_over": 0,
+                    "over_number": 2,
+                    "run_rate": "2.00",
+                    "runs_off_over": 2,
+                    "team_score": "11/0",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to de Zorzi, 1 run",
+                                "message": "A single to end the over, 9 runs from it. "
+                            },
+                            "overs_unique": "0.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Bedingham, 1 run",
+                                "message": "Arm ball on off stump. Bedingham flicks to deep mid wicket for one run."
+                            },
+                            "overs_unique": "0.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to de Zorzi, 1 run",
+                                "message": "de Zorzi pushes an arm ball on middle stump to long on for one run."
+                            },
+                            "overs_unique": "0.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to de Zorzi, FOUR!",
+                                "message": "de Zorzi cuts a back of a length ball on off stump for four."
+                            },
+                            "overs_unique": "0.03",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Fortuin to Bedingham, 1 run",
+                                "message": "Batter wastes no time getting off the mark. Bedingham flicks a back of a length ball outside off to long on for one run."
+                            },
+                            "overs_unique": "0.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Fortuin has the new ball in hand. de Zorzi will face the first ball.",
+                                "ball_summary_text": "Fortuin to de Zorzi, 1 run",
+                                "message": "Batter wastes no time getting off the mark. Fortuin delivers a short ball down leg. de Zorzi goes onto the back foot and pushes to deep mid wicket for one run."
+                            },
+                            "overs_unique": "0.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "BC Fortuin",
+                    "extras_off_over": 0,
+                    "over_number": 1,
+                    "run_rate": "9.00",
+                    "runs_off_over": 9,
+                    "team_score": "9/0",
+                    "wickets_off_over": 0
+                }
+            ],
+            "innings_number": 2,
+            "overs": "19.2",
+            "total_ball_count": 124
+        },
+        {
+            "batting_team_abbreviation": "PR",
+            "batting_team_id": 2940,
+            "batting_team_name": "Paarl Royals",
+            "bbb": [
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Phehlukwayo, 1 run",
+                                "message": "Phehlukwayo pulls a short ball down leg to deep backward square leg for one run. And that's that. Paarl Royals finish on 175 runs for the loss of 4 wickets. After the break Sunrisers Eastern Cape will come out confident they can get these runs."
+                            },
+                            "overs_unique": "19.07",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Phehlukwayo, 2 runs",
+                                "message": "Phehlukwayo pulls a short ball down leg to deep mid wicket for two runs. Run out attempt by Abell but the batter is safe."
+                            },
+                            "overs_unique": "19.06",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Phehlukwayo, no run",
+                                "message": "Short ball on middle stump. Phehlukwayo misses a pull."
+                            },
+                            "overs_unique": "19.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Phehlukwayo, FOUR!",
+                                "message": "Bowler needs to change this up. Phehlukwayo drives a half volley outside off for four."
+                            },
+                            "overs_unique": "19.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Phehlukwayo, SIX!",
+                                "message": "Phehlukwayo pulls a back of a length ball on leg stump for six."
+                            },
+                            "overs_unique": "19.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 1 run",
+                                "message": "Half volley wide outside off. Rubin Hermann drives to third for one run."
+                            },
+                            "overs_unique": "19.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Gleeson continues.",
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 1 wide",
+                                "message": "Rubin Hermann leaves a length ball wide outside off. Wide given."
+                            },
+                            "overs_unique": "19.01",
+                            "runs": 1,
+                            "scoring": "1ʷᵈ"
+                        }
+                    ],
+                    "bowling_player_name": "RJ Gleeson",
+                    "extras_off_over": 1,
+                    "over_number": 20,
+                    "run_rate": "14.00",
+                    "runs_off_over": 15,
+                    "team_score": "175/4",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Dawson to Phehlukwayo, SIX!",
+                                "message": "Big shot. Phehlukwayo slog-sweeps a length ball down leg for six."
+                            },
+                            "overs_unique": "18.07",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Dawson to Phehlukwayo, no run",
+                                "message": "Phehlukwayo drives a full toss outside off to extra cover."
+                            },
+                            "overs_unique": "18.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Dawson to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann slog-sweeps a length ball on leg stump to deep mid wicket for one run. Wonderful fielding by Jordan Hermann."
+                            },
+                            "overs_unique": "18.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Dawson to Rubin Hermann, 1 wide",
+                                "message": "Error of judgement in the field. Wide given. Length ball down leg. Rubin Hermann misses a sweep. Misfielded by Stubbs. Paarl Royals won't mind that."
+                            },
+                            "overs_unique": "18.04",
+                            "runs": 1,
+                            "scoring": "1ʷᵈ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Rubin Hermann, SIX!",
+                                "message": "Paarl Royals reach 152 runs in confident fashion. These runs have come at a rate of 8.2 runs per over. Rubin Hermann pulls a slower ball down leg for six."
+                            },
+                            "overs_unique": "18.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Phehlukwayo, 1 run",
+                                "message": "The batters rotate the strike with a single. Half volley on leg stump. Phehlukwayo drives to long off for one run."
+                            },
+                            "overs_unique": "18.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Baartman is back on.",
+                                "ball_summary_text": "Baartman to Phehlukwayo, no run",
+                                "message": "Phehlukwayo drives a slower ball full toss outside off to extra cover. Top class fielding by Dawson. Paarl Royals are behind in the game and these final overs could be significant."
+                            },
+                            "overs_unique": "18.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "OEG Baartman",
+                    "extras_off_over": 1,
+                    "over_number": 19,
+                    "run_rate": "14.00",
+                    "runs_off_over": 15,
+                    "team_score": "160/4",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, no run",
+                                "message": "Gleeson bowls a short ball down leg. Rubin Hermann misses an attempted pull."
+                            },
+                            "overs_unique": "17.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Phehlukwayo, 1 run",
+                                "message": "Length ball down leg. Phehlukwayo flicks to deep square leg for one run."
+                            },
+                            "overs_unique": "17.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann pulls a short ball on leg stump to deep backward square leg for one run."
+                            },
+                            "overs_unique": "17.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, SIX!",
+                                "message": "Rubin Hermann pulls a back of a length ball down leg for six. It's now 72 not-out for Rubin Hermann."
+                            },
+                            "overs_unique": "17.03",
+                            "runs": 6,
+                            "scoring": "6"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, no run",
+                                "message": "Back of a length ball outside off. Rubin Hermann tries a cut but misses."
+                            },
+                            "overs_unique": "17.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Gleeson is back.",
+                                "ball_summary_text": "Gleeson to Rubin Hermann, no run",
+                                "message": "Slower ball down leg. Rubin Hermann defends back to the bowler. This is good by Sunrisers Eastern Cape. Forcing the run-rate back a touch."
+                            },
+                            "overs_unique": "17.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "RJ Gleeson",
+                    "extras_off_over": 0,
+                    "over_number": 18,
+                    "run_rate": "8.00",
+                    "runs_off_over": 8,
+                    "team_score": "145/4",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, 1 run",
+                                "message": "Tries some variety with pace. Slower ball on off stump. Rubin Hermann drives to long on for one run."
+                            },
+                            "overs_unique": "16.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, FOUR!",
+                                "message": "Rubin Hermann pulls a short ball wide outside off for four. Umpire signals again for the boundary. It's now 65 not-out for Rubin Hermann."
+                            },
+                            "overs_unique": "16.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, FOUR!",
+                                "message": "Length ball on off stump. Rubin Hermann goes onto the back foot and pulls in the air. Jordan Hermann drops the catch at deep mid wicket. The ball goes over the rope for four. Batter gets some good fortune."
+                            },
+                            "overs_unique": "16.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, no run",
+                                "message": "Rubin Hermann misses a short ball outside off."
+                            },
+                            "overs_unique": "16.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Phehlukwayo, 1 run",
+                                "message": "Batter's instantly off the mark. Short ball outside off. Phehlukwayo late cuts to backward point for one run."
+                            },
+                            "overs_unique": "16.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Phehlukwayo, left-handed bat, is next in. Jansen is back into the attack.",
+                                "ball_summary_text": "Jansen to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann defends a back of a length ball outside off to cover for one run."
+                            },
+                            "overs_unique": "16.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "M Jansen",
+                    "extras_off_over": 0,
+                    "over_number": 17,
+                    "run_rate": "11.00",
+                    "runs_off_over": 11,
+                    "team_score": "137/4",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Karthik, OUT!",
+                                "message": "Good end to the over for the bowling side. Karthik's part goes no further having got to just 2. Karthik attempts to sweep and misses a back of a length ball outside off and is out leg before wicket. The fielding side get the not out decision overturned. Important role by Baartman with the ball."
+                            },
+                            "overs_unique": "15.06",
+                            "runs": 0,
+                            "scoring": "W"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Rubin Hermann, 1 run",
+                                "message": "Half volley on off stump. Rubin Hermann drives to deep backward square leg for one run."
+                            },
+                            "overs_unique": "15.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Karthik, 1 run",
+                                "message": "Karthik pulls a short ball outside off to square leg for one run."
+                            },
+                            "overs_unique": "15.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Rubin Hermann, 1 run",
+                                "message": "Short ball down leg. Rubin Hermann pulls to long on for one run."
+                            },
+                            "overs_unique": "15.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Karthik, 1 run",
+                                "message": "First ball for the new batter. Karthik drives a length ball outside off to deep cover for one run."
+                            },
+                            "overs_unique": "15.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Karthik, right-handed bat, comes to the middle. Baartman returns.",
+                                "ball_summary_text": "Baartman to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann drives a length ball outside off to extra cover for one run."
+                            },
+                            "overs_unique": "15.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "OEG Baartman",
+                    "extras_off_over": 0,
+                    "over_number": 16,
+                    "run_rate": "5.00",
+                    "runs_off_over": 5,
+                    "team_score": "126/4",
+                    "wickets_off_over": 1
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Miller, OUT!",
+                                "message": "Miller is out having got to just 6. After 15 overs that's 121/3. Miller attempts to sweep and misses a length ball on leg stump and is out leg before wicket. The fielding side get the not out decision overturned. Sunrisers Eastern Cape put paid to an impact player."
+                            },
+                            "overs_unique": "14.06",
+                            "runs": 0,
+                            "scoring": "W"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Miller, no run",
+                                "message": "Markram delivers a length ball on off stump. Miller drives to extra cover."
+                            },
+                            "overs_unique": "14.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann pulls a back of a length ball outside off to long on for one run."
+                            },
+                            "overs_unique": "14.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Miller, 1 leg bye",
+                                "message": "Markram bowls a length ball on leg stump. Miller misses an attempted sweep. They run a leg bye."
+                            },
+                            "overs_unique": "14.03",
+                            "runs": 1,
+                            "scoring": "1ˡᵇ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann drives a length ball on middle stump to long on for one run."
+                            },
+                            "overs_unique": "14.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Markram returns into the attack.",
+                                "ball_summary_text": "Markram to Rubin Hermann, 2 runs",
+                                "message": "Back of a length ball on off stump. Rubin Hermann works to deep mid wicket for two runs. Run out attempt by Jordan Hermann but missed the stumps. Fielder can't capitalise with the throw and a runout chance goes awry. Rubin Hermann goes to 51 off 35 balls."
+                            },
+                            "overs_unique": "14.01",
+                            "runs": 2,
+                            "scoring": "2"
+                        }
+                    ],
+                    "bowling_player_name": "AK Markram",
+                    "extras_off_over": 1,
+                    "over_number": 15,
+                    "run_rate": "4.00",
+                    "runs_off_over": 5,
+                    "team_score": "121/3",
+                    "wickets_off_over": 1
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Miller, no run",
+                                "message": "Back of a length ball down leg. Miller misses the ball. Batting side's predicted score is now 14 runs ahead of where they were at the start of the innings."
+                            },
+                            "overs_unique": "13.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Miller, FOUR!",
+                                "message": "Pace off and a boundary. Slower ball on off stump. Miller drives for four."
+                            },
+                            "overs_unique": "13.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Miller, no run",
+                                "message": "Back of a length ball on off stump. Miller drives to extra cover."
+                            },
+                            "overs_unique": "13.04",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann drives a length ball outside off to mid off for one run."
+                            },
+                            "overs_unique": "13.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, no run",
+                                "message": "Short ball down leg. Rubin Hermann misses a pull."
+                            },
+                            "overs_unique": "13.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Gleeson is back on.",
+                                "ball_summary_text": "Gleeson to Miller, 1 run",
+                                "message": "Miller works a back of a length ball down leg to deep backward square leg for one run."
+                            },
+                            "overs_unique": "13.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "RJ Gleeson",
+                    "extras_off_over": 0,
+                    "over_number": 14,
+                    "run_rate": "6.00",
+                    "runs_off_over": 6,
+                    "team_score": "116/2",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, FOUR!",
+                                "message": "Going with pace off. Boundary to finish the over. Slower ball on leg stump. Rubin Hermann goes onto the back foot and pulls for four."
+                            },
+                            "overs_unique": "12.06",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, no run",
+                                "message": "Pace off. Rubin Hermann misses a slower ball outside off."
+                            },
+                            "overs_unique": "12.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Miller, 1 run",
+                                "message": "Needing 2 balls to get off the mark batter is now amongst the runs. Miller cuts a back of a length ball on leg stump to deep backward point for one run."
+                            },
+                            "overs_unique": "12.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Miller, left-handed bat, is next in.",
+                                "ball_summary_text": "Overton to Miller, no run",
+                                "message": "Short ball on leg stump. Miller drives to extra cover."
+                            },
+                            "overs_unique": "12.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, OUT!",
+                                "message": "Bowler takes pace off. Pretorius goes having looked in great nick for 41 balls to get to 59 runs. Slower ball on middle stump. Pretorius defends to wicketkeeper and is caught by Stubbs. "
+                            },
+                            "overs_unique": "12.02",
+                            "runs": 0,
+                            "scoring": "W"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Overton is back.",
+                                "ball_summary_text": "Overton to Pretorius, FOUR!",
+                                "message": "Pace off. Pretorius drives a slower ball outside off for four."
+                            },
+                            "overs_unique": "12.01",
+                            "runs": 4,
+                            "scoring": "4"
+                        }
+                    ],
+                    "bowling_player_name": "C Overton",
+                    "extras_off_over": 0,
+                    "over_number": 13,
+                    "run_rate": "9.00",
+                    "runs_off_over": 9,
+                    "team_score": "110/2",
+                    "wickets_off_over": 1
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, 1 run",
+                                "message": "Pretorius pulls a back of a length ball outside off to deep mid wicket for one run."
+                            },
+                            "overs_unique": "11.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, FOUR!",
+                                "message": "Paarl Royals reach three-figures. They're going at 8.5 runs per over. Length ball wide outside off. Pretorius drives for four."
+                            },
+                            "overs_unique": "11.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann flicks a full toss down leg to deep backward square leg for one run."
+                            },
+                            "overs_unique": "11.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, FOUR!",
+                                "message": "Rubin Hermann pulls a short ball outside off for four."
+                            },
+                            "overs_unique": "11.03",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, 1 run",
+                                "message": "Short ball outside off. Pretorius pulls to deep backward square leg for one run. That's a 37-ball fifty for Pretorius."
+                            },
+                            "overs_unique": "11.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Jansen is back on.",
+                                "ball_summary_text": "Jansen to Rubin Hermann, 1 run",
+                                "message": "Length ball outside off. Rubin Hermann works to long on for one run."
+                            },
+                            "overs_unique": "11.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "M Jansen",
+                    "extras_off_over": 0,
+                    "over_number": 12,
+                    "run_rate": "12.00",
+                    "runs_off_over": 12,
+                    "team_score": "101/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, 2 runs",
+                                "message": "Pretorius drives a back of a length ball outside off to long off for two runs."
+                            },
+                            "overs_unique": "10.06",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann cuts a back of a length ball outside off to long off for one run."
+                            },
+                            "overs_unique": "10.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, 1 run",
+                                "message": "Pretorius flicks a half volley on off stump to deep square leg for one run."
+                            },
+                            "overs_unique": "10.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann cuts a length ball outside off to deep cover for one run."
+                            },
+                            "overs_unique": "10.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, 1 run",
+                                "message": "Pretorius pushes a short ball outside off to long on for one run."
+                            },
+                            "overs_unique": "10.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Markram resumes.",
+                                "ball_summary_text": "Markram to Pretorius, SIX!",
+                                "message": "Outstanding. Pretorius drives a back of a length ball on off stump for six."
+                            },
+                            "overs_unique": "10.01",
+                            "runs": 6,
+                            "scoring": "6"
+                        }
+                    ],
+                    "bowling_player_name": "AK Markram",
+                    "extras_off_over": 0,
+                    "over_number": 11,
+                    "run_rate": "12.00",
+                    "runs_off_over": 12,
+                    "team_score": "89/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, 1 run",
+                                "message": "Bowler takes pace off. Baartman bowls a slower ball half volley outside off. Pretorius drives to long off for one run."
+                            },
+                            "overs_unique": "9.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, no run",
+                                "message": "Length ball on off stump. Pretorius cuts to backward point."
+                            },
+                            "overs_unique": "9.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, FOUR!",
+                                "message": "Misfield gifts some runs to the batter. Half volley outside off. Pretorius drives to third for four. Misfielded by Jordan Hermann."
+                            },
+                            "overs_unique": "9.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann drives a short ball on leg stump to long off for one run."
+                            },
+                            "overs_unique": "9.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Rubin Hermann, FOUR!",
+                                "message": "Rubin Hermann cuts a back of a length ball outside off for four."
+                            },
+                            "overs_unique": "9.02",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Baartman is back on.",
+                                "ball_summary_text": "Baartman to Pretorius, 1 run",
+                                "message": "Pretorius drives a length ball outside off to deep cover for one run."
+                            },
+                            "overs_unique": "9.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "OEG Baartman",
+                    "extras_off_over": 0,
+                    "over_number": 10,
+                    "run_rate": "11.00",
+                    "runs_off_over": 11,
+                    "team_score": "77/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, 1 run",
+                                "message": "Back of a length ball outside off. Pretorius goes down the pitch and drives to long on for one run."
+                            },
+                            "overs_unique": "8.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann pulls a back of a length ball outside off to deep mid wicket for one run."
+                            },
+                            "overs_unique": "8.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, no run",
+                                "message": "Length ball outside off. Rubin Hermann goes onto the front foot and drives to extra cover."
+                            },
+                            "overs_unique": "8.04",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, 1 run",
+                                "message": "Back of a length ball on off stump. Pretorius works to deep mid wicket for one run."
+                            },
+                            "overs_unique": "8.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Half volley on middle stump. Rubin Hermann flicks to deep mid wicket for one run. Handy innings by Rubin Hermann. Goes to 30 off 21 balls."
+                            },
+                            "overs_unique": "8.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Markram is on for another over.",
+                                "ball_summary_text": "Markram to Pretorius, 1 bye",
+                                "message": "Batter gets a donation from the fielder. They run a bye. Short ball outside off. Pretorius misses. Misfielded by Stubbs."
+                            },
+                            "overs_unique": "8.01",
+                            "runs": 1,
+                            "scoring": "1ᵇ"
+                        }
+                    ],
+                    "bowling_player_name": "AK Markram",
+                    "extras_off_over": 1,
+                    "over_number": 9,
+                    "run_rate": "4.00",
+                    "runs_off_over": 5,
+                    "team_score": "66/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Pretorius, 1 run",
+                                "message": "Throwing in some variety with pace. Pretorius keeps strike for the next over. Pretorius drives a slower ball yorker on off stump to deep backward point for one run."
+                            },
+                            "overs_unique": "7.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 1 run",
+                                "message": "Full toss on leg stump. Rubin Hermann pulls to deep backward square leg for one run."
+                            },
+                            "overs_unique": "7.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 2 runs",
+                                "message": "Rubin Hermann drives a half volley outside off to deep extra cover for two runs."
+                            },
+                            "overs_unique": "7.04",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Pretorius, 1 run",
+                                "message": "Pretorius flicks a slower ball on leg stump to deep backward square leg for one run. Pretorius goes to 30 off 24 deliveries. Good knock this."
+                            },
+                            "overs_unique": "7.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Gleeson to Rubin Hermann, 1 run",
+                                "message": "Back of a length ball on leg stump. Rubin Hermann cuts to deep backward point for one run."
+                            },
+                            "overs_unique": "7.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Gleeson, right-arm pace, comes on.",
+                                "ball_summary_text": "Gleeson to Rubin Hermann, SIX!",
+                                "message": "This brings up the fifty for Paarl Royals in stunning fashion. These runs have come at a rate of 7.7 runs per over. Rubin Hermann pulls a short ball down leg for six. Rubin Hermann goes to 25 off 17 balls."
+                            },
+                            "overs_unique": "7.01",
+                            "runs": 6,
+                            "scoring": "6"
+                        }
+                    ],
+                    "bowling_player_name": "RJ Gleeson",
+                    "extras_off_over": 0,
+                    "over_number": 8,
+                    "run_rate": "12.00",
+                    "runs_off_over": 12,
+                    "team_score": "61/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, no run",
+                                "message": "Pretorius drives a back of a length ball outside off to extra cover."
+                            },
+                            "overs_unique": "6.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Rubin Hermann flicks a back of a length ball on off stump to deep mid wicket for one run."
+                            },
+                            "overs_unique": "6.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Pretorius, 1 run",
+                                "message": "Short ball outside off. Pretorius cuts to deep cover for one run."
+                            },
+                            "overs_unique": "6.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, 1 run",
+                                "message": "Markram delivers a short ball outside off. Rubin Hermann cuts to deep extra cover for one run."
+                            },
+                            "overs_unique": "6.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Markram to Rubin Hermann, no run",
+                                "message": "Short ball outside off. Rubin Hermann drives and is dropped by Markram. Attempted catch is put down. A chance goes begging."
+                            },
+                            "overs_unique": "6.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Markram, right-arm spin, comes into the attack.",
+                                "ball_summary_text": "Markram to Pretorius, 1 run",
+                                "message": "Length ball outside off. Pretorius drives to deep extra cover for one run."
+                            },
+                            "overs_unique": "6.01",
+                            "runs": 1,
+                            "scoring": "1"
+                        }
+                    ],
+                    "bowling_player_name": "AK Markram",
+                    "extras_off_over": 0,
+                    "over_number": 7,
+                    "run_rate": "4.00",
+                    "runs_off_over": 4,
+                    "team_score": "49/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, 1 run",
+                                "message": "Pretorius defends a back of a length ball on middle stump to wicketkeeper for one run."
+                            },
+                            "overs_unique": "5.06",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, FOUR!",
+                                "message": "Four more. Pretorius pulls a back of a length ball down leg for four. This is an adrenaline shot for the run-rate. Paarl Royals need more of this."
+                            },
+                            "overs_unique": "5.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, FOUR!",
+                                "message": "Pretorius drives a length ball outside off for four."
+                            },
+                            "overs_unique": "5.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Pretorius, no run",
+                                "message": "Length ball outside off. Pretorius misses."
+                            },
+                            "overs_unique": "5.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Baartman to Rubin Hermann, 1 run",
+                                "message": "Length ball on off stump. Rubin Hermann drives to mid on for one run. Run out attempt by Markram but missed the stumps."
+                            },
+                            "overs_unique": "5.02",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Baartman, right-arm pace, comes on.",
+                                "ball_summary_text": "Baartman to Rubin Hermann, no run",
+                                "message": "Baartman bowls a length ball on middle stump. Rubin Hermann drives to extra cover."
+                            },
+                            "overs_unique": "5.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "OEG Baartman",
+                    "extras_off_over": 0,
+                    "over_number": 6,
+                    "run_rate": "10.00",
+                    "runs_off_over": 10,
+                    "team_score": "45/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, 1 run",
+                                "message": "Overton bowls a length ball down leg. Rubin Hermann flicks to deep backward square leg for one run."
+                            },
+                            "overs_unique": "4.07",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, 1 wide",
+                                "message": "Rubin Hermann misses a length ball down leg. Wide ball."
+                            },
+                            "overs_unique": "4.06",
+                            "runs": 1,
+                            "scoring": "1ʷᵈ"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, 1 run",
+                                "message": "Slower ball down leg. Pretorius defends to backward point for one run."
+                            },
+                            "overs_unique": "4.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, FOUR!",
+                                "message": "Pretorius pulls a short ball on leg stump for four."
+                            },
+                            "overs_unique": "4.04",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, 1 run",
+                                "message": "Short ball down leg. Rubin Hermann pulls to long on for one run."
+                            },
+                            "overs_unique": "4.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, no run",
+                                "message": "Overton bowls a length ball on leg stump. Rubin Hermann works to mid wicket."
+                            },
+                            "overs_unique": "4.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Overton is on for another over.",
+                                "ball_summary_text": "Overton to Rubin Hermann, no run",
+                                "message": "Rubin Hermann pulls a short ball on middle stump to extra cover. This is better by Sunrisers Eastern Cape. Pulling the run-rate back a touch."
+                            },
+                            "overs_unique": "4.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "C Overton",
+                    "extras_off_over": 1,
+                    "over_number": 5,
+                    "run_rate": "7.00",
+                    "runs_off_over": 8,
+                    "team_score": "35/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, 2 runs",
+                                "message": "Jansen bowls a length ball outside off. Pretorius goes onto the front foot and drives to deep backward point for two runs. Run out attempt by Jordan Hermann, hits the stumps but batter is safe. Solid fielding with an accurate shy at the stumps but batter is safe."
+                            },
+                            "overs_unique": "3.06",
+                            "runs": 2,
+                            "scoring": "2"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, FOUR!",
+                                "message": "Half volley on off stump. Pretorius flicks for four."
+                            },
+                            "overs_unique": "3.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, 1 run",
+                                "message": "Back of a length ball outside off. Rubin Hermann defends to backward point for one run."
+                            },
+                            "overs_unique": "3.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, no run",
+                                "message": "Rubin Hermann drives a back of a length ball outside off back to the bowler."
+                            },
+                            "overs_unique": "3.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, no run",
+                                "message": "Jansen delivers a length ball outside off. Rubin Hermann drives to extra cover."
+                            },
+                            "overs_unique": "3.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Jansen resumes.",
+                                "ball_summary_text": "Jansen to Rubin Hermann, FOUR!",
+                                "message": "Short ball outside off. Rubin Hermann cuts for four. Third four for the batter."
+                            },
+                            "overs_unique": "3.01",
+                            "runs": 4,
+                            "scoring": "4"
+                        }
+                    ],
+                    "bowling_player_name": "M Jansen",
+                    "extras_off_over": 0,
+                    "over_number": 4,
+                    "run_rate": "11.00",
+                    "runs_off_over": 11,
+                    "team_score": "27/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, no run",
+                                "message": "Pretorius drives a length ball outside off to mid off."
+                            },
+                            "overs_unique": "2.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Rubin Hermann, 1 run",
+                                "message": "Back of a length ball on leg stump. Rubin Hermann pushes to deep backward point for one run."
+                            },
+                            "overs_unique": "2.05",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, 1 run",
+                                "message": "Pretorius drives a back of a length ball on middle stump to deep backward point for one run."
+                            },
+                            "overs_unique": "2.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, no run",
+                                "message": "No runs after three deliveries. Dot dot dot so far in this over. Pretorius works a short ball on leg stump to mid on."
+                            },
+                            "overs_unique": "2.03",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, no run",
+                                "message": "Short ball on middle stump. Pretorius misses a pull."
+                            },
+                            "overs_unique": "2.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Overton continues.",
+                                "ball_summary_text": "Overton to Pretorius, no run",
+                                "message": "Short ball on leg stump. Pretorius pulls to mid off."
+                            },
+                            "overs_unique": "2.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "C Overton",
+                    "extras_off_over": 0,
+                    "over_number": 3,
+                    "run_rate": "2.00",
+                    "runs_off_over": 2,
+                    "team_score": "16/1",
+                    "wickets_off_over": 0
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Rubin Hermann, FOUR!",
+                                "message": "Four more. Boundary to end the over means Pretorius will be on strike at start of the next one. Rubin Hermann flicks a length ball on middle stump for four. Runs are flowing. A wicket for 9 runs scored in this over."
+                            },
+                            "overs_unique": "1.06",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Rubin Hermann, left-handed bat, comes to the middle.",
+                                "ball_summary_text": "Jansen to Rubin Hermann, FOUR!",
+                                "message": "New batter comes out with clear intentions, getting into the equation with a boundary. Rubin Hermann flicks a half volley on off stump for four."
+                            },
+                            "overs_unique": "1.05",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Owen, OUT!",
+                                "message": "Terrific quick stuff. This one clocks 142kph. Wicket ball and the batter goes without scoring. Owen departs for 0 runs. Back of a length ball on leg stump. Owen edges to first slip and is caught by Overton.  Paarl Royals have dropped 7% on WinViz and they move to a 31% probability. Expected score for this innings is now 157 runs and Sunrisers Eastern Cape will fancy chasing that down. The batter is unable to help this Paarl Royals campaign. Dismissal number one for Jansen for the loss of 1 run."
+                            },
+                            "overs_unique": "1.04",
+                            "runs": 0,
+                            "scoring": "W"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, 1 run",
+                                "message": "Pretorius pulls a length ball on off stump to fine leg for one run."
+                            },
+                            "overs_unique": "1.03",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Jansen to Pretorius, no run",
+                                "message": "Length ball outside off. Pretorius misses a drive."
+                            },
+                            "overs_unique": "1.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Jansen, left-arm pace, is introduced into the attack.",
+                                "ball_summary_text": "Jansen to Pretorius, no run",
+                                "message": "Length ball outside off. Pretorius drives to extra cover."
+                            },
+                            "overs_unique": "1.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "M Jansen",
+                    "extras_off_over": 0,
+                    "over_number": 2,
+                    "run_rate": "9.00",
+                    "runs_off_over": 9,
+                    "team_score": "14/1",
+                    "wickets_off_over": 1
+                },
+                {
+                    "balls": [
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Owen, no run",
+                                "message": "Short ball outside off. Owen goes onto the back foot and pulls to mid wicket."
+                            },
+                            "overs_unique": "0.06",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Owen, no run",
+                                "message": "Owen misses a length ball outside off."
+                            },
+                            "overs_unique": "0.05",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, 1 run",
+                                "message": "Overton delivers a length ball on middle stump. Pretorius goes onto the front foot and defends to deep backward point for one run."
+                            },
+                            "overs_unique": "0.04",
+                            "runs": 1,
+                            "scoring": "1"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, FOUR!",
+                                "message": "There's runs here. Pretorius cuts a back of a length ball outside off for four."
+                            },
+                            "overs_unique": "0.03",
+                            "runs": 4,
+                            "scoring": "4"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": null,
+                                "ball_summary_text": "Overton to Pretorius, no run",
+                                "message": "Pretorius defends a length ball down leg to mid on."
+                            },
+                            "overs_unique": "0.02",
+                            "runs": 0,
+                            "scoring": "0"
+                        },
+                        {
+                            "commentary": {
+                                "ball_pre_text": "Pretorius and Owen come to the crease. Overton will open the bowling.",
+                                "ball_summary_text": "Overton to Pretorius, no run",
+                                "message": "Match is underway. Paarl Royals need to make a good start to this innings to stop Sunrisers Eastern Cape running away with it. Pretorius defends a back of a length ball on middle stump to mid off. Pre-match talk is done, now they lock horns. Dot balls will be a key part of the required winning formula for Sunrisers Eastern Cape to come out on top."
+                            },
+                            "overs_unique": "0.01",
+                            "runs": 0,
+                            "scoring": "0"
+                        }
+                    ],
+                    "bowling_player_name": "C Overton",
+                    "extras_off_over": 0,
+                    "over_number": 1,
+                    "run_rate": "5.00",
+                    "runs_off_over": 5,
+                    "team_score": "5/0",
+                    "wickets_off_over": 0
+                }
+            ],
+            "innings_number": 1,
+            "overs": "20.0",
+            "total_ball_count": 123
+        }
+    ],
+    "live_status_id": 9,
+    "match_status": "complete",
+    "scheduled_overs": 20,
+    "start_datetime_utc": "2025-02-06 15:30:00",
+    "start_time": "2025-02-06T15:30:00Z",
+    "team1": {
+        "abbreviation": "PR",
+        "id": 2940,
+        "logo": "https://cv-general-images.s3.amazonaws.com/teams/Paarl Royals.png",
+        "name": "Paarl Royals"
+    },
+    "team2": {
+        "abbreviation": "SEC",
+        "id": 2942,
+        "logo": "https://cv-general-images.s3.amazonaws.com/teams/Eastern-cape-sunrisers-logo@2x.png",
+        "name": "Sunrisers Eastern Cape"
+    },
+    "team_batting_first": 2940,
+    "toss_comment": "Paarl Royals won the toss and elected to bat",
+    "video": true
+}

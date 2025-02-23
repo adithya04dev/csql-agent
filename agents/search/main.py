@@ -18,11 +18,9 @@ import uuid
 from langchain_core.rate_limiters import InMemoryRateLimiter
 
 async def arun(state: AgentState):
-    model = ChatMistralAI(
-        model='mistral-large-2411',
+    model = ChatMistralAI(model='mistral-large-2411')
+    # model = ChatMistralAI(      model='mistral-small-latest',    )
 
-    )
-      
     # model=ChatGoogleGenerativeAI(model='gemini-1.5-flash')
 #     rate_limiter = InMemoryRateLimiter(
 #     requests_per_second=0.01,  # <-- Super slow! We can only make a request once every 10 seconds!!
@@ -45,7 +43,7 @@ Your primary role is to help standardize and validate cricket-related terms by m
 
 Database Schema:
 Table: hdata
-Columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot
+Columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style(specifies in detail), bowl_kind(broadly classifies like spin or pace), line, length, shot
 
 Your Process:
 1. Analyze user queries to identify cricket-related terms that need validation
@@ -124,7 +122,7 @@ Remember:
 
     return Command(
         update={'messages':[
-            AIMessage(content=f"Search Agent Response: \n{result["messages"][-1].content}"),
+            AIMessage(content=f"Search Agent Response: \n{result["messages"][-1].content.replace('`', '')}"),
              HumanMessage(content=f"next what should it be done?")
         ],'search_result':result["messages"][-1].content},
         goto='supervisor')

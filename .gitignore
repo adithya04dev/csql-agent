@@ -3,3 +3,6 @@ agents/.env
 __pycache__
 .env
 .cursorrules
+temp.json
+temp.py 
+temp2.py

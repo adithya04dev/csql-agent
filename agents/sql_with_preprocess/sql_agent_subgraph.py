@@ -18,10 +18,16 @@ async def sql_agent_subgraph(state:AgentState)->AgentState:
     state['relevant_sql_queries']=result['relevant_sql_queries']
     state['execution_choice']=result['execution_choice']
 
+    subgraph_result=''
+    for message in result['messages'][length:]:
+        subgraph_result+=f'{message.content}\n'
+    # subgraph_result = '\n'.join(message.content for message in result['messages'][length:])
+
+
 
 
     return Command(
-        update={'messages':[AIMessage(content=f"SQL Agent Response: {result['messages'][length:]}"),
+        update={'messages':[AIMessage(content=f"SQL Agent Response:\n {subgraph_result}"),
                             HumanMessage(content=f"next what should it be done?")],
                 
         'sql_query': result['sql_query'],

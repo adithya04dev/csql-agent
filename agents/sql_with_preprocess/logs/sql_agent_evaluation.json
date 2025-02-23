@@ -443,5 +443,120 @@
     "question": "best bowling averages bowlers in hyderabad",
     "sequence": " search sql __end__",
     "search_result": "In the database, the word \"Hyderabad\" is most closely associated with \"Rajiv Gandhi International Stadium, Uppal, Hyderabad,\" in ground column.\n\nBy \"best bowling averages bowlers,\" the database suggests a few names like  \"Gary Ballance\",\n\"Bhuvneshwar Kumar\",\n\"Qasim Akram\",\n\"Shane Watson\",\n\"Shoaib Ali\",\n\nbut we will consider \"Bhuvneshwar Kumar\" as he plays for the Hyderabad team and has the best average in bowling.\n\nSo the returned json will be\n\n{\n\n\"hyderabad\":[\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"],\n\n\"best bowling averages\":[\"Bhuvneshwar Kumar\",\"player\"]\n\n}"
+  },
+  {
+    "question": "trav head  stats by year",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search search sql __end__",
+    "search_result": "As per my cricket domain knowledge the most appropriate match for the term \"Lord's Cricket Ground\" is \"Lord's, London\".\n\nFinal Output:\n{\n    \"Lord's Cricket Ground\": [\"Lord's, London\",\"ground\"]\n}"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " search sql __end__",
+    "search_result": "The search results indicate that the term \"2023\" does not directly match any country names in the database. Instead, the results include various country names such as \"Singapore,\" \"Qatar,\" \"China,\" and \"Zimbabwe.\"\n\nGiven the context of the user's query, it appears that \"2023\" was intended to represent a year. However, since the search was conducted in the \"country\" column, the results are countries that might have some relevance to the year 2023, possibly due to events or matches held in those countries during that year.\n\nSince the direct match for \"2023\" as a year is not available in the provided search results, I will return the countries that are likely to have hosted significant cricket events or matches in 2023. These countries are:\n\n1. Singapore\n2. Qatar\n3. China\n4. Zimbabwe\n\nHere is the final output in the required JSON format:\n\n```json\n\n{\n    \"2023\": [\"Singapore\", \"Qatar\", \"China\", \"Zimbabwe\",\"country\"]\n}\n\n```"
+  },
+  {
+    "question": "trav head  stats by year",
+    "sequence": " search sql __end__",
+    "search_result": "Based on cricket domain knowledge and the context, the most appropriate match for \"trav head\" is:\n\n\"Travis Head\"\n\nSo the json output is\n\n{\n\"trav head\": [\"Travis Head\",\"player\"]\n}"
+  },
+  {
+    "question": "M Chinnaswamy Stadium batting averages in ipl",
+    "sequence": " search sql __end__",
+    "search_result": "M Chinnaswamy Stadium is located in Bangalore so match found and first value of stadium is selected\nIPL is found in table as well\n\nFinal Output:\n{\n    \"M Chinnaswamy Stadium\": [\"M Chinnaswamy Stadium, Bangalore\",\"ground\" ],\n    \"ipl\": [\"IPL\",\"competition\"]\n}"
+  },
+  {
+    "question": "match statistics at Lord's Cricket Ground",
+    "sequence": " search sql __end__",
+    "search_result": "{\"Lord's Cricket Ground\": [\"Lord's\",\"ground\"]}"
+  },
+  {
+    "question": "highest run-scorers batter in 2023",
+    "sequence": " search __end__",
+    "search_result": "It seems there is a mistake in the database schema. The column names provided in the error message do not match the expected column names for a cricket database. Here are the expected column names based on typical cricket data:\n\n- player\n- team\n- dismissal\n- ground\n- country\n- competition\n- bat_hand\n- bowl_style\n- bowl_kind\n- line\n- length\n- shot\n\nHowever, the error message indicates that the column names in the database schema are different. This discrepancy suggests that the database schema provided earlier might be incorrect or incomplete.\n\nTo proceed, we need to clarify the correct column names in the database schema. Please provide the correct column names or confirm if the expected column names are accurate. This information is crucial for accurately executing the search and providing the requested information."
+  },
+  {
+    "question": "top cover drive players stats in 1-10 overs ",
+    "sequence": " search sql __end__",
+    "search_result": "It seems that the \"overs\" column does not exist in the database. I'll need to adjust the search criteria based on the available columns. Let's focus on finding top cover drive players stats in the first 10 overs. I'll search for relevant terms in the \"player\" and \"shot\" columns.\n\nI'll proceed with the search using the available columns."
+  },
+  {
+    "question": "most caught behind dismissals batters in uppal stadium ",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"caught behind\": [\"\",\"\"]\n}"
+  },
+  {
+    "question": "leg spinners' bowling records against Steve Smith",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"Steve Smith\": [\"Steven Smith\",\"player\"],\n    \"leg spinners'\": [\"LWS\",\"bowl_style\"]\n}"
+  },
+  {
+    "question": "fast bowlers' performance against rohit sharma",
+    "sequence": " search sql __end__",
+    "search_result": "The player mentioned in the query is Rohit Sharma. However, the search results have returned similar values.\n\nI'll choose Rohit Sharma as the most suitable match, as it is the most popular and well-known player among the listed options."
+  },
+  {
+    "question": "david Warner vs Indian bowlers statistics",
+    "sequence": " search sql __end__",
+    "search_result": "{\"david Warner\": [\"David Warner\",\"player\"], \"Indian\": [\"India\",\"team\"]}"
+  },
+  {
+    "question": "v Kohli vs James Anderson head-to-head stats",
+    "sequence": " search sql __end__",
+    "search_result": "Virat Kohli is a popular and well-known term in cricket, especially in the context of head-to-head statistics. While \"James Anderson\" is a common name in cricket, the specific name \"James Anderson\" is a well-known cricket player, making it likely that the user is referring to him.\n\nSo, the results are:\n```json\n{\n    \"V Kohli\": [\"Virat Kohli\",\"player\"],\n    \"James Anderson\": [\"James Anderson\",\"player\"]\n}\n```"
+  },
+  {
+    "question": "steve Smith's batting average by year",
+    "sequence": " search sql __end__",
+    "search_result": "{\"steve\":[\"Ben Stevens\",\"player\"]}"
+  },
+  {
+    "question": "M.S. Dhoni's career performance",
+    "sequence": " search sql __end__",
+    "search_result": "M.S. Dhoni's career performance:\n\n{\n    \"M.S. Dhoni\": [\"MS Dhoni\",\"player\"]\n}\nIn this case, I have standardised the player name and ensured that the term is correctly formatted for database queries and correctly returned the result in json format."
+  },
+  {
+    "question": "fazal haq faroo bowling stats for srh",
+    "sequence": " search sql __end__",
+    "search_result": "I would return the following terms:\n\n{ \"fazal haq faroo\": [\n  \"Fazalhaq Farooqi\",\n  \"player\"\n  ],\n\"srh\": [\n  \"Sunrisers Hyderabad\",\n  \"team\"\n  ]\n}"
+  },
+  {
+    "question": "shadab khan's performance in 2023",
+    "sequence": " search sql __end__",
+    "search_result": "Player \"Shadab Khan\" returns multiple matches:Shadab Khan,Shadnan Khan,Shahab Khan,Samader Shadab,Mohammad Shamshad Khan\n\n→ Select \"Shadab Khan\" (as it's based on the context)"
+  },
+  {
+    "question": "Sydney bowling stats by batter type",
+    "sequence": " search sql __end__",
+    "search_result": "Based on the cricket knowledge and the context of the query,\n- \"Sydney Cricket Ground\" matches Sydney in the ground column.\n- \"RHB\" and \"LHB\" are the similar values of \"batter\"\n- I can't find any appropriate matches for \"execute\"\n\nFinal Output:\n```json\n{\n    \"Sydney\": [\"Sydney Cricket Ground\", \"ground\"],\n    \"batter\": [\"RHB\", \"bat_hand\"],\n    \"execute\":[\"\",\"\"]\n}\n\n```"
+  },
+  {
+    "question": "rcb batting stats",
+    "sequence": " search sql __end__",
+    "search_result": "{\n    \"rcb\": [\"Royal Challengers Bangalore\",\"team\"],\n    \"batting\": [\"bowled\",\"dismissal\"]\n}"
+  },
+  {
+    "question": "Australia vs New Zealand head-to-head record",
+    "sequence": " search sql __end__",
+    "search_result": "Based on the search results and cricket knowledge, the appropriate values for the terms are:\n\n- \"Australia\" should be matched with \"Australia\".\n- \"New Zealand\" should be matched with \"New Zealand\".\n\nSo, the final output is:\n\n{\n    \"Australia\": [\"Australia\",\"team\"],\n    \"New Zealand\": [\"New Zealand\",\"team\"]\n}\n\nI will return the result to supervisor."
+  },
+  {
+    "question": "india win-loss record by venue",
+    "sequence": " sql __end__",
+    "search_result": ""
+  },
+  {
+    "question": "csk bowling stats in cheapuak by year wise",
+    "sequence": " search __end__",
+    "search_result": "It seems like there is a typo in the user query. Since the ground name \"cheapuak\" does not return any relevant match in the search. I will leave it blank."
+  },
+  {
+    "question": "best bowling averages bowlers in hyderabad",
+    "sequence": " search sql __end__",
+    "search_result": "In the context of the query, \"Hyderabad\" is likely referring to the cricket ground in Hyderabad. The most appropriate match from the search results is:\n- \"Rajiv Gandhi International Stadium, Uppal, Hyderabad\"\n\nSo the result is\n\n```json\n{\n   \"hyderabad\":[\"Rajiv Gandhi International Stadium, Uppal, Hyderabad\",\"ground\"]\n}\n```"
   }
 ]

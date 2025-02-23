@@ -96,6 +96,6 @@ Remember:
         goto = response.next
         if goto == "FINISH":
             goto = END
-        return Command(goto=goto,update={'messages':HumanMessage(f"Supervisor routed to {goto} agent"),'sequence':f"{state['sequence']} {goto}"})
+        return Command(goto=goto,update={'messages':HumanMessage(f" Supervisor routed to {goto} agent"),'sequence':f"{state['sequence']} {goto}"})
 
     return supervisor_node

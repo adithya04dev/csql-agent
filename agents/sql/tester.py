@@ -9,21 +9,23 @@ async def sql_query_tester(state: AgentState) -> AgentState:
 
     result=await tool.ainvoke(state['sql_query'])
 
-    state['error']=result['error']
+    state['sql_error']=result['error']
     state['sql_result']=result['sql_result']
     state['attempts']+=1
-    mess=f"""SQL Database Executor:
-
-    Executing query: {state['sql_query']}
-
-    Result: {str(state['sql_result'])}
-
-    Error: {str(state['error'])} (True if error occured else False)
-
-
-    """
-    state['messages'].append(ToolMessage(content=mess))
+    if state['sql_error']:
+        mess="Result: \n"
+    else:
+        mess="</think>Result: \n "
+    
+    mess+=state['sql_result']
+    state['messages'].append(HumanMessage(content=mess))
         
 
-    return AgentState
+    return state
 
+
+# this error
+# 400 Table "hdata" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: hdata, message: Table "hdata" must be qualified with a dataset (e.g. dataset.table).
+
+# Location: US
+# Job ID: 2a674117-99bf-4ebf-88bc-bec2fd3c95f5

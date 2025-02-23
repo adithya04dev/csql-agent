@@ -19,6 +19,7 @@ import { DocumentToolCall, DocumentToolResult } from './document';
 import { CodeEditor } from './code-editor';
 import { useBlock } from '@/hooks/use-block';
 import equal from 'fast-deep-equal';
+import { SpreadsheetEditor } from './sheet-editor';
 import { ImageEditor } from './image-editor';
 
 interface DocumentPreviewProps {
@@ -43,6 +44,7 @@ export function DocumentPreview({
 
   useEffect(() => {
     const boundingBox = hitboxRef.current?.getBoundingClientRect();
+
     if (block.documentId && boundingBox) {
       setBlock((block) => ({
         ...block,
@@ -249,11 +251,17 @@ const DocumentContent = ({ document }: { document: Document }) => {
   return (
     <div className={containerClassName}>
       {document.kind === 'text' ? (
-        <Editor {...commonProps} />
+        <Editor {...commonProps} onSaveContent={() => {}} />
       ) : document.kind === 'code' ? (
         <div className="flex flex-1 relative w-full">
           <div className="absolute inset-0">
-            <CodeEditor {...commonProps} />
+            <CodeEditor {...commonProps} onSaveContent={() => {}} />
+          </div>
+        </div>
+      ) : document.kind === 'sheet' ? (
+        <div className="flex flex-1 relative size-full p-4">
+          <div className="absolute inset-0">
+            <SpreadsheetEditor {...commonProps} />
           </div>
         </div>
       ) : document.kind === 'image' ? (

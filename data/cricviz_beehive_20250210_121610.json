@@ -1,0 +1,28 @@
+{
+    "info": {
+        "class_id": 12,
+        "comp_id": 8378,
+        "comp_name": "India Women in England",
+        "end_date": "2025-07-16",
+        "end_time_utc": "2025-07-16 12:00:00",
+        "ground_id": 1085,
+        "ground_name": "The Rose Bowl, Southampton",
+        "id": 223250,
+        "live_status_id": 0,
+        "match_name": "England Women v India Women at Southampton, 1st ODI, 16 Jul 2025",
+        "match_status": "forthcoming",
+        "start_date": "2025-07-16",
+        "start_time": "2025-07-16T12:00:00Z",
+        "start_time_utc": "2025-07-16 12:00:00",
+        "team1_abbreviation": "ENG",
+        "team1_id": 2510,
+        "team1_logo": "https://img.cricviz.com/logos/teams/England_2x.png",
+        "team1_name": "England Women",
+        "team2_abbreviation": "IND",
+        "team2_id": 2295,
+        "team2_logo": "https://cv-general-images.s3.amazonaws.com/teams/India_2x.png",
+        "team2_name": "India Women"
+    },
+    "teams": [],
+    "tracking_data": []
+}

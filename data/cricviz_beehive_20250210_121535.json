@@ -1,0 +1,241 @@
+{
+    "info": {
+        "class_id": 5,
+        "comp_id": 8295,
+        "comp_name": "Sri Lanka Cricket Major Clubs Limited Overs Tournament",
+        "end_date": "2024-07-30",
+        "end_time_utc": "2024-07-30 05:30:00",
+        "ground_id": 1167,
+        "ground_name": "Welagedara Stadium, Kurunegala",
+        "id": 223000,
+        "live_status_id": 0,
+        "match_name": "Kurunegala Youth CC v Burgher Recreation Club at Kurunegala, Sri Lanka Cricket Major Clubs Limited Overs Tournament, 30 Jul 2024",
+        "match_status": "complete",
+        "start_date": "2024-07-30",
+        "start_time": "2024-07-30T05:30:00Z",
+        "start_time_utc": "2024-07-30 05:30:00",
+        "team1_abbreviation": "Kurun",
+        "team1_id": 1378,
+        "team1_logo": null,
+        "team1_name": "Kurunegala Youth Cricket Club",
+        "team2_abbreviation": "BurRec",
+        "team2_id": 1753,
+        "team2_logo": null,
+        "team2_name": "Burgher Recreation Club"
+    },
+    "teams": [
+        {
+            "id": 1378,
+            "players": [
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 75837,
+                    "name": "Sudheera Weeraratne"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 73065,
+                    "name": "Kamesh Nirmal"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 81435,
+                    "name": "Gayana Weerasinghe"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 75898,
+                    "name": "Rashmika Madushanka"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 67529,
+                    "name": "Tharinda Wijesinghe"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 85891,
+                    "name": "Dimuthu de Silva"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 20464,
+                    "name": "Tharindu Kaushal"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left unorthodox",
+                    "bowling_type_id": 6,
+                    "bowling_type_simple": "spin",
+                    "id": 70611,
+                    "name": "Sanjeewan Priyadharshana"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 39566,
+                    "name": "Wikum Sanjaya"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 56695,
+                    "name": "Neranjana Wanniarachchi"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 70204,
+                    "name": "Kavika Dilshan"
+                }
+            ],
+            "team": "Kurunegala Youth Cricket Club",
+            "team_abbreviation": "Kurun"
+        },
+        {
+            "id": 1753,
+            "players": [
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 85892,
+                    "name": "Tharushka Ashel"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 60607,
+                    "name": "Ravija Sandaruwan"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 65320,
+                    "name": "Dilshan de Soysa"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 17987,
+                    "name": "Dushan Hemantha"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 73061,
+                    "name": "Movin Subasingha"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81449,
+                    "name": "Diniru Abeywickramasingha"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 65419,
+                    "name": "Mohamed Shiraz"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 82226,
+                    "name": "Murvin Abinash"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 74128,
+                    "name": "Dulaj Ashen"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 77759,
+                    "name": "Randunu Ganganath"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left pace",
+                    "bowling_type_id": 2,
+                    "bowling_type_simple": "pace",
+                    "id": 27000,
+                    "name": "Chaminda Bandara"
+                }
+            ],
+            "team": "Burgher Recreation Club",
+            "team_abbreviation": "BurRec"
+        }
+    ],
+    "tracking_data": []
+}

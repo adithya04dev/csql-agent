@@ -1,0 +1,574 @@
+{
+    "class_id": 6,
+    "class_name": "List A Twenty20",
+    "draw": 0,
+    "innings_data": {
+        "1": [
+            {
+                "draw": 0,
+                "over": 1,
+                "score": {
+                    "runs": 5,
+                    "wickets": 0
+                },
+                "value1": 39,
+                "value2": 61,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 2,
+                "score": {
+                    "runs": 14,
+                    "wickets": 1
+                },
+                "value1": 35,
+                "value2": 65,
+                "wickets": [
+                    {
+                        "ball_number": 4,
+                        "batter_balls": 3,
+                        "batter_fours": 0,
+                        "batter_out": "MJ Owen",
+                        "batter_runs": 0,
+                        "batter_sixes": 0,
+                        "dismissal": "c C Overton b M Jansen",
+                        "innings_number": 1,
+                        "legal_ball_number": 4,
+                        "over_number": 2,
+                        "team_runs": 6,
+                        "team_wickets": 1
+                    }
+                ]
+            },
+            {
+                "draw": 0,
+                "over": 3,
+                "score": {
+                    "runs": 16,
+                    "wickets": 1
+                },
+                "value1": 33,
+                "value2": 67,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 4,
+                "score": {
+                    "runs": 27,
+                    "wickets": 1
+                },
+                "value1": 37,
+                "value2": 63,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 5,
+                "score": {
+                    "runs": 35,
+                    "wickets": 1
+                },
+                "value1": 39,
+                "value2": 61,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 6,
+                "score": {
+                    "runs": 45,
+                    "wickets": 1
+                },
+                "value1": 43,
+                "value2": 57,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 7,
+                "score": {
+                    "runs": 49,
+                    "wickets": 1
+                },
+                "value1": 41,
+                "value2": 59,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 8,
+                "score": {
+                    "runs": 61,
+                    "wickets": 1
+                },
+                "value1": 45,
+                "value2": 55,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 9,
+                "score": {
+                    "runs": 66,
+                    "wickets": 1
+                },
+                "value1": 44,
+                "value2": 56,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 10,
+                "score": {
+                    "runs": 77,
+                    "wickets": 1
+                },
+                "value1": 47,
+                "value2": 53,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 11,
+                "score": {
+                    "runs": 89,
+                    "wickets": 1
+                },
+                "value1": 50,
+                "value2": 50,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 12,
+                "score": {
+                    "runs": 101,
+                    "wickets": 1
+                },
+                "value1": 53,
+                "value2": 47,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 13,
+                "score": {
+                    "runs": 110,
+                    "wickets": 2
+                },
+                "value1": 51,
+                "value2": 49,
+                "wickets": [
+                    {
+                        "ball_number": 2,
+                        "batter_balls": 41,
+                        "batter_fours": 8,
+                        "batter_out": "LG Pretorius",
+                        "batter_runs": 59,
+                        "batter_sixes": 1,
+                        "dismissal": "c T Stubbs b C Overton",
+                        "innings_number": 1,
+                        "legal_ball_number": 2,
+                        "over_number": 13,
+                        "team_runs": 105,
+                        "team_wickets": 2
+                    }
+                ]
+            },
+            {
+                "draw": 0,
+                "over": 14,
+                "score": {
+                    "runs": 116,
+                    "wickets": 2
+                },
+                "value1": 49,
+                "value2": 51,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 15,
+                "score": {
+                    "runs": 121,
+                    "wickets": 3
+                },
+                "value1": 44,
+                "value2": 56,
+                "wickets": [
+                    {
+                        "ball_number": 6,
+                        "batter_balls": 9,
+                        "batter_fours": 1,
+                        "batter_out": "DA Miller",
+                        "batter_runs": 6,
+                        "batter_sixes": 0,
+                        "dismissal": "lbw AK Markram",
+                        "innings_number": 1,
+                        "legal_ball_number": 6,
+                        "over_number": 15,
+                        "team_runs": 121,
+                        "team_wickets": 3
+                    }
+                ]
+            },
+            {
+                "draw": 0,
+                "over": 16,
+                "score": {
+                    "runs": 126,
+                    "wickets": 4
+                },
+                "value1": 40,
+                "value2": 60,
+                "wickets": [
+                    {
+                        "ball_number": 6,
+                        "batter_balls": 3,
+                        "batter_fours": 0,
+                        "batter_out": "KD Karthik",
+                        "batter_runs": 2,
+                        "batter_sixes": 0,
+                        "dismissal": "lbw OEG Baartman",
+                        "innings_number": 1,
+                        "legal_ball_number": 6,
+                        "over_number": 16,
+                        "team_runs": 126,
+                        "team_wickets": 4
+                    }
+                ]
+            },
+            {
+                "draw": 0,
+                "over": 17,
+                "score": {
+                    "runs": 137,
+                    "wickets": 4
+                },
+                "value1": 41,
+                "value2": 59,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 18,
+                "score": {
+                    "runs": 145,
+                    "wickets": 4
+                },
+                "value1": 40,
+                "value2": 60,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 19,
+                "score": {
+                    "runs": 160,
+                    "wickets": 4
+                },
+                "value1": 43,
+                "value2": 57,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 20,
+                "score": {
+                    "runs": 175,
+                    "wickets": 4
+                },
+                "value1": 45,
+                "value2": 55,
+                "wickets": []
+            }
+        ],
+        "2": [
+            {
+                "draw": 0,
+                "over": 1,
+                "score": {
+                    "runs": 9,
+                    "wickets": 0
+                },
+                "value1": 45,
+                "value2": 55,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 2,
+                "score": {
+                    "runs": 11,
+                    "wickets": 0
+                },
+                "value1": 50,
+                "value2": 50,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 3,
+                "score": {
+                    "runs": 26,
+                    "wickets": 0
+                },
+                "value1": 43,
+                "value2": 57,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 4,
+                "score": {
+                    "runs": 32,
+                    "wickets": 1
+                },
+                "value1": 52,
+                "value2": 48,
+                "wickets": [
+                    {
+                        "ball_number": 2,
+                        "batter_balls": 8,
+                        "batter_fours": 1,
+                        "batter_out": "DG Bedingham",
+                        "batter_runs": 9,
+                        "batter_sixes": 0,
+                        "dismissal": "c KD Karthik b KT Maphaka",
+                        "innings_number": 2,
+                        "legal_ball_number": 1,
+                        "over_number": 4,
+                        "team_runs": 27,
+                        "team_wickets": 1
+                    }
+                ]
+            },
+            {
+                "draw": 0,
+                "over": 5,
+                "score": {
+                    "runs": 38,
+                    "wickets": 1
+                },
+                "value1": 52,
+                "value2": 48,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 6,
+                "score": {
+                    "runs": 51,
+                    "wickets": 1
+                },
+                "value1": 45,
+                "value2": 55,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 7,
+                "score": {
+                    "runs": 63,
+                    "wickets": 1
+                },
+                "value1": 39,
+                "value2": 61,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 8,
+                "score": {
+                    "runs": 71,
+                    "wickets": 1
+                },
+                "value1": 37,
+                "value2": 63,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 9,
+                "score": {
+                    "runs": 75,
+                    "wickets": 1
+                },
+                "value1": 40,
+                "value2": 60,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 10,
+                "score": {
+                    "runs": 80,
+                    "wickets": 1
+                },
+                "value1": 43,
+                "value2": 57,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 11,
+                "score": {
+                    "runs": 97,
+                    "wickets": 1
+                },
+                "value1": 29,
+                "value2": 71,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 12,
+                "score": {
+                    "runs": 114,
+                    "wickets": 1
+                },
+                "value1": 18,
+                "value2": 82,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 13,
+                "score": {
+                    "runs": 125,
+                    "wickets": 1
+                },
+                "value1": 13,
+                "value2": 87,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 14,
+                "score": {
+                    "runs": 137,
+                    "wickets": 1
+                },
+                "value1": 9,
+                "value2": 91,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 15,
+                "score": {
+                    "runs": 140,
+                    "wickets": 2
+                },
+                "value1": 13,
+                "value2": 87,
+                "wickets": [
+                    {
+                        "ball_number": 2,
+                        "batter_balls": 49,
+                        "batter_fours": 11,
+                        "batter_out": "T de Zorzi",
+                        "batter_runs": 78,
+                        "batter_sixes": 2,
+                        "dismissal": "c MB van Buuren b DN Wellalage",
+                        "innings_number": 2,
+                        "legal_ball_number": 2,
+                        "over_number": 15,
+                        "team_runs": 138,
+                        "team_wickets": 2
+                    }
+                ]
+            },
+            {
+                "draw": 0,
+                "over": 16,
+                "score": {
+                    "runs": 144,
+                    "wickets": 2
+                },
+                "value1": 16,
+                "value2": 84,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 17,
+                "score": {
+                    "runs": 157,
+                    "wickets": 2
+                },
+                "value1": 8,
+                "value2": 92,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 18,
+                "score": {
+                    "runs": 164,
+                    "wickets": 2
+                },
+                "value1": 7,
+                "value2": 93,
+                "wickets": []
+            },
+            {
+                "draw": 2,
+                "over": 19,
+                "score": {
+                    "runs": 173,
+                    "wickets": 2
+                },
+                "value1": 3,
+                "value2": 95,
+                "wickets": []
+            },
+            {
+                "draw": 0,
+                "over": 20,
+                "score": {
+                    "runs": 177,
+                    "wickets": 2
+                },
+                "value1": 0,
+                "value2": 100,
+                "wickets": []
+            }
+        ]
+    },
+    "live_status_id": 9,
+    "match_started": 1,
+    "match_status": "complete",
+    "prematch": {
+        "batting_first_team_win_prob": 39,
+        "batting_second_team_win_prob": 61,
+        "draw": null,
+        "tie": 0
+    },
+    "scheduled_overs": 20,
+    "start_time": "2025-02-06T15:30:00Z",
+    "team1": {
+        "abbreviation": "PR",
+        "colour_primary": "E02C9E",
+        "colour_secondary": "E02C9E",
+        "graphic": "https://cv-general-images.s3.amazonaws.com/teams/Paarl Royals.png",
+        "is_first_to_bat": 1,
+        "is_home_team": null,
+        "name_full": "Paarl Royals",
+        "name_short": "Paarl Royals",
+        "value": 0
+    },
+    "team2": {
+        "abbreviation": "SEC",
+        "colour_primary": "E0782C",
+        "colour_secondary": "E0782C",
+        "graphic": "https://cv-general-images.s3.amazonaws.com/teams/Eastern-cape-sunrisers-logo@2x.png",
+        "is_first_to_bat": 0,
+        "is_home_team": null,
+        "name_full": "Sunrisers Eastern Cape",
+        "name_short": "Sunrisers Eastern Ca",
+        "value": 100
+    }
+}

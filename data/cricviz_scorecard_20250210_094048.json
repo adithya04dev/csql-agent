@@ -1,0 +1,1571 @@
+{
+    "class_id": 6,
+    "class_name": "List A Twenty20",
+    "innings": [
+        {
+            "batted": "yes",
+            "batting": [
+                {
+                    "balls_faced": 41,
+                    "batted": "yes",
+                    "batting_hand": "left",
+                    "batting_position": 1,
+                    "boundary_percentage": "22.0",
+                    "dismissal": [
+                        {
+                            "details": "c †T Stubbs"
+                        },
+                        {
+                            "details": "b C Overton"
+                        }
+                    ],
+                    "dismissal_str": "c †T Stubbs b C Overton",
+                    "dots_faced": 13,
+                    "fours": 8,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 1,
+                    "player_id": 81719,
+                    "player_img": null,
+                    "player_known_as": "Lhuan-dre Pretorius",
+                    "player_name": "LG Pretorius",
+                    "role": "batter",
+                    "runs": 59,
+                    "sixes": 1,
+                    "strike_rate": 144,
+                    "type": null
+                },
+                {
+                    "balls_faced": 3,
+                    "batted": "yes",
+                    "batting_hand": "right",
+                    "batting_position": 2,
+                    "boundary_percentage": "0.0",
+                    "dismissal": [
+                        {
+                            "details": "c C Overton"
+                        },
+                        {
+                            "details": "b M Jansen"
+                        }
+                    ],
+                    "dismissal_str": "c C Overton b M Jansen",
+                    "dots_faced": 3,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 1,
+                    "player_id": 73856,
+                    "player_img": null,
+                    "player_known_as": "Mitch Owen",
+                    "player_name": "MJ Owen",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 53,
+                    "batted": "yes",
+                    "batting_hand": "left",
+                    "batting_position": 3,
+                    "boundary_percentage": "20.8",
+                    "dismissal": [
+                        {
+                            "details": "not out"
+                        }
+                    ],
+                    "dismissal_str": "not out",
+                    "dots_faced": 13,
+                    "fours": 8,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 65800,
+                    "player_img": null,
+                    "player_known_as": "Rubin Hermann",
+                    "player_name": "RA Hermann",
+                    "role": "batter",
+                    "runs": 81,
+                    "sixes": 3,
+                    "strike_rate": 153,
+                    "type": null
+                },
+                {
+                    "balls_faced": 9,
+                    "batted": "yes",
+                    "batting_hand": "left",
+                    "batting_position": 4,
+                    "boundary_percentage": "11.1",
+                    "dismissal": [
+                        {
+                            "details": "lbw AK Markram"
+                        }
+                    ],
+                    "dismissal_str": "lbw AK Markram",
+                    "dots_faced": 6,
+                    "fours": 1,
+                    "is_captain": 1,
+                    "is_keeper": 0,
+                    "is_out": 1,
+                    "player_id": 13575,
+                    "player_img": null,
+                    "player_known_as": "David Miller",
+                    "player_name": "DA Miller",
+                    "role": "batter",
+                    "runs": 6,
+                    "sixes": 0,
+                    "strike_rate": 67,
+                    "type": null
+                },
+                {
+                    "balls_faced": 3,
+                    "batted": "yes",
+                    "batting_hand": "right",
+                    "batting_position": 5,
+                    "boundary_percentage": "0.0",
+                    "dismissal": [
+                        {
+                            "details": "lbw OEG Baartman"
+                        }
+                    ],
+                    "dismissal_str": "lbw OEG Baartman",
+                    "dots_faced": 1,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 1,
+                    "is_out": 1,
+                    "player_id": 14615,
+                    "player_img": null,
+                    "player_known_as": "Dinesh Karthik",
+                    "player_name": "KD Karthik",
+                    "role": "batter",
+                    "runs": 2,
+                    "sixes": 0,
+                    "strike_rate": 67,
+                    "type": null
+                },
+                {
+                    "balls_faced": 11,
+                    "batted": "yes",
+                    "batting_hand": "left",
+                    "batting_position": 6,
+                    "boundary_percentage": "27.3",
+                    "dismissal": [
+                        {
+                            "details": "not out"
+                        }
+                    ],
+                    "dismissal_str": "not out",
+                    "dots_faced": 3,
+                    "fours": 1,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 32357,
+                    "player_img": null,
+                    "player_known_as": "Andile Phehlukwayo",
+                    "player_name": "AL Phehlukwayo",
+                    "role": "all_rounder",
+                    "runs": 22,
+                    "sixes": 2,
+                    "strike_rate": 200,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 7,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 20960,
+                    "player_img": null,
+                    "player_known_as": "Dayyaan Galiem",
+                    "player_name": "AD Galiem",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "left",
+                    "batting_position": 8,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 68283,
+                    "player_img": null,
+                    "player_known_as": "Dunith Wellalage",
+                    "player_name": "DN Wellalage",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 9,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 66734,
+                    "player_img": null,
+                    "player_known_as": "Mujeeb Ur Rahman",
+                    "player_name": "Mujeeb Ur Rahman",
+                    "role": "bowler",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 10,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 21292,
+                    "player_img": null,
+                    "player_known_as": "Bjorn Fortuin",
+                    "player_name": "BC Fortuin",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "left",
+                    "batting_position": 11,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 76217,
+                    "player_img": null,
+                    "player_known_as": "Kwena Maphaka",
+                    "player_name": "KT Maphaka",
+                    "role": "bowler",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                }
+            ],
+            "batting_team_id": 2940,
+            "batting_team_logo": "https://cv-general-images.s3.amazonaws.com/teams/Paarl Royals.png",
+            "batting_team_name": "Paarl Royals",
+            "bowling": [
+                {
+                    "bowler_desc_abbreviation": "RFM",
+                    "bowler_id": 14273,
+                    "bowler_img": null,
+                    "bowler_known_as": "Craig Overton",
+                    "bowler_name": "C Overton",
+                    "bowling_position": 1,
+                    "bowling_type": "pace",
+                    "economy_rate": "6.00",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "4.0",
+                    "runs": 24,
+                    "type": null,
+                    "wickets": 1,
+                    "wides": 1
+                },
+                {
+                    "bowler_desc_abbreviation": "LFM",
+                    "bowler_id": 68021,
+                    "bowler_img": null,
+                    "bowler_known_as": "Marco Jansen",
+                    "bowler_name": "M Jansen",
+                    "bowling_position": 2,
+                    "bowling_type": "pace",
+                    "economy_rate": "10.75",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "4.0",
+                    "runs": 43,
+                    "type": null,
+                    "wickets": 1,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "RFM",
+                    "bowler_id": 18757,
+                    "bowler_img": null,
+                    "bowler_known_as": "Ottneil Baartman",
+                    "bowler_name": "OEG Baartman",
+                    "bowling_position": 3,
+                    "bowling_type": "pace",
+                    "economy_rate": "9.43",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "3.3",
+                    "runs": 33,
+                    "type": null,
+                    "wickets": 1,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "OB",
+                    "bowler_id": 27774,
+                    "bowler_img": null,
+                    "bowler_known_as": "Aiden Markram",
+                    "bowler_name": "AK Markram",
+                    "bowling_position": 4,
+                    "bowling_type": "spin",
+                    "economy_rate": "6.00",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "4.0",
+                    "runs": 24,
+                    "type": null,
+                    "wickets": 1,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "RFM",
+                    "bowler_id": 27711,
+                    "bowler_img": null,
+                    "bowler_known_as": "Richard Gleeson",
+                    "bowler_name": "RJ Gleeson",
+                    "bowling_position": 5,
+                    "bowling_type": "pace",
+                    "economy_rate": "10.25",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "4.0",
+                    "runs": 41,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 1
+                },
+                {
+                    "bowler_desc_abbreviation": "SLA",
+                    "bowler_id": 16494,
+                    "bowler_img": null,
+                    "bowler_known_as": "Liam Dawson",
+                    "bowler_name": "LA Dawson",
+                    "bowling_position": 6,
+                    "bowling_type": "spin",
+                    "economy_rate": "16.00",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "0.3",
+                    "runs": 8,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 1
+                }
+            ],
+            "bowling_team_id": 2942,
+            "bowling_team_name": "Sunrisers Eastern Cape",
+            "closure_id": 5,
+            "closure_name": "complete",
+            "fow": [
+                {
+                    "fow_batter_id": 73856,
+                    "fow_batter_known_as": "Mitch Owen",
+                    "fow_batter_name": "MJ Owen",
+                    "fow_nonstriker_id": 81719,
+                    "fow_nonstriker_known_as": "Lhuan-dre Pretorius",
+                    "fow_nonstriker_name": "LG Pretorius",
+                    "fow_number": 1,
+                    "fow_overs": "1.4",
+                    "fow_runs": 6,
+                    "fow_type": "out"
+                },
+                {
+                    "fow_batter_id": 81719,
+                    "fow_batter_known_as": "Lhuan-dre Pretorius",
+                    "fow_batter_name": "LG Pretorius",
+                    "fow_nonstriker_id": 65800,
+                    "fow_nonstriker_known_as": "Rubin Hermann",
+                    "fow_nonstriker_name": "RA Hermann",
+                    "fow_number": 2,
+                    "fow_overs": "12.2",
+                    "fow_runs": 105,
+                    "fow_type": "out"
+                },
+                {
+                    "fow_batter_id": 13575,
+                    "fow_batter_known_as": "David Miller",
+                    "fow_batter_name": "DA Miller",
+                    "fow_nonstriker_id": 65800,
+                    "fow_nonstriker_known_as": "Rubin Hermann",
+                    "fow_nonstriker_name": "RA Hermann",
+                    "fow_number": 3,
+                    "fow_overs": "14.6",
+                    "fow_runs": 121,
+                    "fow_type": "out"
+                },
+                {
+                    "fow_batter_id": 14615,
+                    "fow_batter_known_as": "Dinesh Karthik",
+                    "fow_batter_name": "KD Karthik",
+                    "fow_nonstriker_id": 65800,
+                    "fow_nonstriker_known_as": "Rubin Hermann",
+                    "fow_nonstriker_name": "RA Hermann",
+                    "fow_number": 4,
+                    "fow_overs": "15.6",
+                    "fow_runs": 126,
+                    "fow_type": "out"
+                }
+            ],
+            "innings_number": 1,
+            "overs": "20.0",
+            "partnerships": [
+                {
+                    "balls": 10,
+                    "extras": 0,
+                    "out_batter": {
+                        "balls_faced": 3,
+                        "known_as": "Mitch Owen",
+                        "name": "MJ Owen",
+                        "runs": 0
+                    },
+                    "p1": {
+                        "balls_faced": 7,
+                        "known_as": "Lhuan-dre Pretorius",
+                        "name": "LG Pretorius",
+                        "runs": 6
+                    },
+                    "p2": {
+                        "balls_faced": 3,
+                        "known_as": "Mitch Owen",
+                        "name": "MJ Owen",
+                        "runs": 0
+                    },
+                    "runs": 6,
+                    "score": {
+                        "overs": "1.4",
+                        "runs": 6,
+                        "wickets": 1
+                    },
+                    "wicket": 1
+                },
+                {
+                    "balls": 64,
+                    "extras": 2,
+                    "out_batter": {
+                        "balls_faced": 41,
+                        "known_as": "Lhuan-dre Pretorius",
+                        "name": "LG Pretorius",
+                        "runs": 59
+                    },
+                    "p1": {
+                        "balls_faced": 34,
+                        "known_as": "Lhuan-dre Pretorius",
+                        "name": "LG Pretorius",
+                        "runs": 53
+                    },
+                    "p2": {
+                        "balls_faced": 30,
+                        "known_as": "Rubin Hermann",
+                        "name": "RA Hermann",
+                        "runs": 44
+                    },
+                    "runs": 99,
+                    "score": {
+                        "overs": "12.2",
+                        "runs": 105,
+                        "wickets": 2
+                    },
+                    "wicket": 2
+                },
+                {
+                    "balls": 16,
+                    "extras": 1,
+                    "out_batter": {
+                        "balls_faced": 9,
+                        "known_as": "David Miller",
+                        "name": "DA Miller",
+                        "runs": 6
+                    },
+                    "p1": {
+                        "balls_faced": 7,
+                        "known_as": "Rubin Hermann",
+                        "name": "RA Hermann",
+                        "runs": 9
+                    },
+                    "p2": {
+                        "balls_faced": 9,
+                        "known_as": "David Miller",
+                        "name": "DA Miller",
+                        "runs": 6
+                    },
+                    "runs": 16,
+                    "score": {
+                        "overs": "14.6",
+                        "runs": 121,
+                        "wickets": 3
+                    },
+                    "wicket": 3
+                },
+                {
+                    "balls": 6,
+                    "extras": 0,
+                    "out_batter": {
+                        "balls_faced": 3,
+                        "known_as": "Dinesh Karthik",
+                        "name": "KD Karthik",
+                        "runs": 2
+                    },
+                    "p1": {
+                        "balls_faced": 3,
+                        "known_as": "Rubin Hermann",
+                        "name": "RA Hermann",
+                        "runs": 3
+                    },
+                    "p2": {
+                        "balls_faced": 3,
+                        "known_as": "Dinesh Karthik",
+                        "name": "KD Karthik",
+                        "runs": 2
+                    },
+                    "runs": 5,
+                    "score": {
+                        "overs": "15.6",
+                        "runs": 126,
+                        "wickets": 4
+                    },
+                    "wicket": 4
+                },
+                {
+                    "balls": 24,
+                    "extras": 2,
+                    "out_batter": {
+                        "balls_faced": null,
+                        "name": null,
+                        "runs": null
+                    },
+                    "p1": {
+                        "balls_faced": 11,
+                        "known_as": "Andile Phehlukwayo",
+                        "name": "AL Phehlukwayo",
+                        "runs": 22
+                    },
+                    "p2": {
+                        "balls_faced": 13,
+                        "known_as": "Rubin Hermann",
+                        "name": "RA Hermann",
+                        "runs": 25
+                    },
+                    "runs": 49,
+                    "score": {
+                        "overs": "20.0",
+                        "runs": 175,
+                        "wickets": 4
+                    },
+                    "wicket": 5
+                }
+            ],
+            "reviews": {
+                "batting": {
+                    "allowed": 2,
+                    "count": 0,
+                    "remaining": 2,
+                    "retained": 0,
+                    "success": 0,
+                    "unsuccessful": 0
+                },
+                "bowling": {
+                    "allowed": 2,
+                    "count": 2,
+                    "remaining": 2,
+                    "retained": 0,
+                    "success": 2,
+                    "unsuccessful": 0
+                }
+            },
+            "score": {
+                "byes": 1,
+                "legbyes": 1,
+                "noballs": 0,
+                "penalties": 0,
+                "run_rate": "8.74",
+                "runs": 175,
+                "total_fours": 18,
+                "total_maidens": 0,
+                "total_sixes": 6,
+                "wickets": 4,
+                "wides": 3
+            },
+            "total_ball_count": 123
+        },
+        {
+            "batted": "yes",
+            "batting": [
+                {
+                    "balls_faced": 49,
+                    "batted": "yes",
+                    "batting_hand": "left",
+                    "batting_position": 1,
+                    "boundary_percentage": "26.5",
+                    "dismissal": [
+                        {
+                            "details": "c sub [MB van Buuren]"
+                        },
+                        {
+                            "details": "b DN Wellalage"
+                        }
+                    ],
+                    "dismissal_str": "c sub [MB van Buuren] b DN Wellalage",
+                    "dots_faced": 17,
+                    "fours": 11,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 1,
+                    "player_id": 20971,
+                    "player_img": null,
+                    "player_known_as": "Tony de Zorzi",
+                    "player_name": "T de Zorzi",
+                    "role": "batter",
+                    "runs": 78,
+                    "sixes": 2,
+                    "strike_rate": 159,
+                    "type": null
+                },
+                {
+                    "balls_faced": 8,
+                    "batted": "yes",
+                    "batting_hand": "right",
+                    "batting_position": 2,
+                    "boundary_percentage": "12.5",
+                    "dismissal": [
+                        {
+                            "details": "c †KD Karthik"
+                        },
+                        {
+                            "details": "b KT Maphaka"
+                        }
+                    ],
+                    "dismissal_str": "c †KD Karthik b KT Maphaka",
+                    "dots_faced": 2,
+                    "fours": 1,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 1,
+                    "player_id": 18758,
+                    "player_img": null,
+                    "player_known_as": "David Bedingham",
+                    "player_name": "DG Bedingham",
+                    "role": "batter",
+                    "runs": 9,
+                    "sixes": 0,
+                    "strike_rate": 113,
+                    "type": null
+                },
+                {
+                    "balls_faced": 48,
+                    "batted": "yes",
+                    "batting_hand": "left",
+                    "batting_position": 3,
+                    "boundary_percentage": "16.7",
+                    "dismissal": [
+                        {
+                            "details": "not out"
+                        }
+                    ],
+                    "dismissal_str": "not out",
+                    "dots_faced": 17,
+                    "fours": 4,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 75418,
+                    "player_img": null,
+                    "player_known_as": "Jordan Hermann",
+                    "player_name": "JG Hermann",
+                    "role": "batter",
+                    "runs": 69,
+                    "sixes": 4,
+                    "strike_rate": 144,
+                    "type": null
+                },
+                {
+                    "balls_faced": 12,
+                    "batted": "yes",
+                    "batting_hand": "right",
+                    "batting_position": 4,
+                    "boundary_percentage": "8.3",
+                    "dismissal": [
+                        {
+                            "details": "not out"
+                        }
+                    ],
+                    "dismissal_str": "not out",
+                    "dots_faced": 4,
+                    "fours": 1,
+                    "is_captain": 1,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 27774,
+                    "player_img": null,
+                    "player_known_as": "Aiden Markram",
+                    "player_name": "AK Markram",
+                    "role": "all_rounder",
+                    "runs": 11,
+                    "sixes": 0,
+                    "strike_rate": 92,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 5,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 20659,
+                    "player_img": null,
+                    "player_known_as": "Tom Abell",
+                    "player_name": "TB Abell",
+                    "role": "batter",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 6,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 1,
+                    "is_out": 0,
+                    "player_id": 73364,
+                    "player_img": null,
+                    "player_known_as": "Tristan Stubbs",
+                    "player_name": "T Stubbs",
+                    "role": "batter",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 7,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 68021,
+                    "player_img": null,
+                    "player_known_as": "Marco Jansen",
+                    "player_name": "M Jansen",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 8,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 14273,
+                    "player_img": null,
+                    "player_known_as": "Craig Overton",
+                    "player_name": "C Overton",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 9,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 16494,
+                    "player_img": null,
+                    "player_known_as": "Liam Dawson",
+                    "player_name": "LA Dawson",
+                    "role": "all_rounder",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 10,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 18757,
+                    "player_img": null,
+                    "player_known_as": "Ottneil Baartman",
+                    "player_name": "OEG Baartman",
+                    "role": "bowler",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                },
+                {
+                    "balls_faced": 0,
+                    "batted": "DNB",
+                    "batting_hand": "right",
+                    "batting_position": 11,
+                    "boundary_percentage": null,
+                    "dismissal": [
+                        {
+                            "details": null
+                        }
+                    ],
+                    "dismissal_str": null,
+                    "dots_faced": 0,
+                    "fours": 0,
+                    "is_captain": 0,
+                    "is_keeper": 0,
+                    "is_out": 0,
+                    "player_id": 27711,
+                    "player_img": null,
+                    "player_known_as": "Richard Gleeson",
+                    "player_name": "RJ Gleeson",
+                    "role": "bowler",
+                    "runs": 0,
+                    "sixes": 0,
+                    "strike_rate": 0,
+                    "type": null
+                }
+            ],
+            "batting_team_id": 2942,
+            "batting_team_logo": "https://cv-general-images.s3.amazonaws.com/teams/Eastern-cape-sunrisers-logo@2x.png",
+            "batting_team_name": "Sunrisers Eastern Cape",
+            "bowling": [
+                {
+                    "bowler_desc_abbreviation": "SLA",
+                    "bowler_id": 21292,
+                    "bowler_img": null,
+                    "bowler_known_as": "Bjorn Fortuin",
+                    "bowler_name": "BC Fortuin",
+                    "bowling_position": 1,
+                    "bowling_type": "spin",
+                    "economy_rate": "8.75",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "4.0",
+                    "runs": 35,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "LF",
+                    "bowler_id": 76217,
+                    "bowler_img": null,
+                    "bowler_known_as": "Kwena Maphaka",
+                    "bowler_name": "KT Maphaka",
+                    "bowling_position": 2,
+                    "bowling_type": "pace",
+                    "economy_rate": "8.70",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "3.2",
+                    "runs": 29,
+                    "type": null,
+                    "wickets": 1,
+                    "wides": 2
+                },
+                {
+                    "bowler_desc_abbreviation": "RFM",
+                    "bowler_id": 20960,
+                    "bowler_img": null,
+                    "bowler_known_as": "Dayyaan Galiem",
+                    "bowler_name": "AD Galiem",
+                    "bowling_position": 3,
+                    "bowling_type": "pace",
+                    "economy_rate": "9.00",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "2.0",
+                    "runs": 18,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 1
+                },
+                {
+                    "bowler_desc_abbreviation": "OB",
+                    "bowler_id": 66734,
+                    "bowler_img": null,
+                    "bowler_known_as": "Mujeeb Ur Rahman",
+                    "bowler_name": "Mujeeb Ur Rahman",
+                    "bowling_position": 4,
+                    "bowling_type": "spin",
+                    "economy_rate": "9.75",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "4.0",
+                    "runs": 39,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "RFM",
+                    "bowler_id": 73856,
+                    "bowler_img": null,
+                    "bowler_known_as": "Mitch Owen",
+                    "bowler_name": "MJ Owen",
+                    "bowling_position": 5,
+                    "bowling_type": "pace",
+                    "economy_rate": "8.00",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "1.0",
+                    "runs": 8,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "RFM",
+                    "bowler_id": 32357,
+                    "bowler_img": null,
+                    "bowler_known_as": "Andile Phehlukwayo",
+                    "bowler_name": "AL Phehlukwayo",
+                    "bowling_position": 6,
+                    "bowling_type": "pace",
+                    "economy_rate": "10.00",
+                    "maidens": 0,
+                    "noballs": 1,
+                    "overs": "2.0",
+                    "runs": 20,
+                    "type": null,
+                    "wickets": 0,
+                    "wides": 0
+                },
+                {
+                    "bowler_desc_abbreviation": "SLA",
+                    "bowler_id": 68283,
+                    "bowler_img": null,
+                    "bowler_known_as": "Dunith Wellalage",
+                    "bowler_name": "DN Wellalage",
+                    "bowling_position": 7,
+                    "bowling_type": "spin",
+                    "economy_rate": "8.67",
+                    "maidens": 0,
+                    "noballs": 0,
+                    "overs": "3.0",
+                    "runs": 26,
+                    "type": null,
+                    "wickets": 1,
+                    "wides": 0
+                }
+            ],
+            "bowling_team_id": 2940,
+            "bowling_team_name": "Paarl Royals",
+            "closure_id": 3,
+            "closure_name": "target reached",
+            "fow": [
+                {
+                    "fow_batter_id": 18758,
+                    "fow_batter_known_as": "David Bedingham",
+                    "fow_batter_name": "DG Bedingham",
+                    "fow_nonstriker_id": 20971,
+                    "fow_nonstriker_known_as": "Tony de Zorzi",
+                    "fow_nonstriker_name": "T de Zorzi",
+                    "fow_number": 1,
+                    "fow_overs": "3.1",
+                    "fow_runs": 27,
+                    "fow_type": "out"
+                },
+                {
+                    "fow_batter_id": 20971,
+                    "fow_batter_known_as": "Tony de Zorzi",
+                    "fow_batter_name": "T de Zorzi",
+                    "fow_nonstriker_id": 75418,
+                    "fow_nonstriker_known_as": "Jordan Hermann",
+                    "fow_nonstriker_name": "JG Hermann",
+                    "fow_number": 2,
+                    "fow_overs": "14.2",
+                    "fow_runs": 138,
+                    "fow_type": "out"
+                }
+            ],
+            "innings_number": 2,
+            "overs": "19.2",
+            "partnerships": [
+                {
+                    "balls": 19,
+                    "extras": 1,
+                    "out_batter": {
+                        "balls_faced": 8,
+                        "known_as": "David Bedingham",
+                        "name": "DG Bedingham",
+                        "runs": 9
+                    },
+                    "p1": {
+                        "balls_faced": 11,
+                        "known_as": "Tony de Zorzi",
+                        "name": "T de Zorzi",
+                        "runs": 17
+                    },
+                    "p2": {
+                        "balls_faced": 8,
+                        "known_as": "David Bedingham",
+                        "name": "DG Bedingham",
+                        "runs": 9
+                    },
+                    "runs": 27,
+                    "score": {
+                        "overs": "3.1",
+                        "runs": 27,
+                        "wickets": 1
+                    },
+                    "wicket": 1
+                },
+                {
+                    "balls": 67,
+                    "extras": 8,
+                    "out_batter": {
+                        "balls_faced": 49,
+                        "known_as": "Tony de Zorzi",
+                        "name": "T de Zorzi",
+                        "runs": 78
+                    },
+                    "p1": {
+                        "balls_faced": 38,
+                        "known_as": "Tony de Zorzi",
+                        "name": "T de Zorzi",
+                        "runs": 61
+                    },
+                    "p2": {
+                        "balls_faced": 30,
+                        "known_as": "Jordan Hermann",
+                        "name": "JG Hermann",
+                        "runs": 42
+                    },
+                    "runs": 111,
+                    "score": {
+                        "overs": "14.2",
+                        "runs": 138,
+                        "wickets": 2
+                    },
+                    "wicket": 2
+                },
+                {
+                    "balls": 30,
+                    "extras": 1,
+                    "out_batter": {
+                        "balls_faced": null,
+                        "name": null,
+                        "runs": null
+                    },
+                    "p1": {
+                        "balls_faced": 12,
+                        "known_as": "Aiden Markram",
+                        "name": "AK Markram",
+                        "runs": 11
+                    },
+                    "p2": {
+                        "balls_faced": 18,
+                        "known_as": "Jordan Hermann",
+                        "name": "JG Hermann",
+                        "runs": 27
+                    },
+                    "runs": 39,
+                    "score": {
+                        "overs": "19.2",
+                        "runs": 177,
+                        "wickets": 2
+                    },
+                    "wicket": 3
+                }
+            ],
+            "reviews": {
+                "batting": {
+                    "allowed": 2,
+                    "count": 1,
+                    "remaining": 2,
+                    "retained": 0,
+                    "success": 1,
+                    "unsuccessful": 0
+                },
+                "bowling": {
+                    "allowed": 2,
+                    "count": 0,
+                    "remaining": 2,
+                    "retained": 0,
+                    "success": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "score": {
+                "byes": 0,
+                "legbyes": 2,
+                "noballs": 1,
+                "penalties": 0,
+                "run_rate": "9.15",
+                "runs": 177,
+                "total_fours": 17,
+                "total_maidens": 0,
+                "total_sixes": 6,
+                "wickets": 2,
+                "wides": 7
+            },
+            "total_ball_count": 124
+        }
+    ],
+    "live_status_id": 9,
+    "match_status": "complete",
+    "scheduled_overs": 20,
+    "start_datetime_utc": "2025-02-06 15:30:00",
+    "start_time": "2025-02-06T15:30:00Z",
+    "team1": {
+        "abbreviation": "PR",
+        "id": 2940,
+        "logo": "https://cv-general-images.s3.amazonaws.com/teams/Paarl Royals.png",
+        "name": "Paarl Royals",
+        "players": [
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 21292,
+                "player_img": null,
+                "player_known_as": "Bjorn Fortuin",
+                "player_name": "BC Fortuin",
+                "player_order": 1,
+                "player_role": "bowling allrounder",
+                "role": "all_rounder",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 20960,
+                "player_img": null,
+                "player_known_as": "Dayyaan Galiem",
+                "player_name": "AD Galiem",
+                "player_order": 2,
+                "player_role": "bowling allrounder",
+                "role": "all_rounder",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 65800,
+                "player_img": null,
+                "player_known_as": "Rubin Hermann",
+                "player_name": "RA Hermann",
+                "player_order": 3,
+                "player_role": "wicketkeeper batsman",
+                "role": "batter",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 1,
+                "player_id": 14615,
+                "player_img": null,
+                "player_known_as": "Dinesh Karthik",
+                "player_name": "KD Karthik",
+                "player_order": 4,
+                "player_role": "wicketkeeper batsman",
+                "role": "batter",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 76217,
+                "player_img": null,
+                "player_known_as": "Kwena Maphaka",
+                "player_name": "KT Maphaka",
+                "player_order": 5,
+                "player_role": "bowler",
+                "role": "bowler",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 1,
+                "is_keeper": 0,
+                "player_id": 13575,
+                "player_img": null,
+                "player_known_as": "David Miller",
+                "player_name": "DA Miller",
+                "player_order": 6,
+                "player_role": "batsman",
+                "role": "batter",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 66734,
+                "player_img": null,
+                "player_known_as": "Mujeeb Ur Rahman",
+                "player_name": "Mujeeb Ur Rahman",
+                "player_order": 7,
+                "player_role": "bowler",
+                "role": "bowler",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 73856,
+                "player_img": null,
+                "player_known_as": "Mitch Owen",
+                "player_name": "MJ Owen",
+                "player_order": 8,
+                "player_role": "allrounder",
+                "role": "all_rounder",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 32357,
+                "player_img": null,
+                "player_known_as": "Andile Phehlukwayo",
+                "player_name": "AL Phehlukwayo",
+                "player_order": 9,
+                "player_role": "bowling allrounder",
+                "role": "all_rounder",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 81719,
+                "player_img": null,
+                "player_known_as": "Lhuan-dre Pretorius",
+                "player_name": "LG Pretorius",
+                "player_order": 10,
+                "player_role": "wicketkeeper batsman",
+                "role": "batter",
+                "team_id": 2940,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 68283,
+                "player_img": null,
+                "player_known_as": "Dunith Wellalage",
+                "player_name": "DN Wellalage",
+                "player_order": 11,
+                "player_role": "allrounder",
+                "role": "all_rounder",
+                "team_id": 2940,
+                "type": null
+            }
+        ]
+    },
+    "team2": {
+        "abbreviation": "SEC",
+        "id": 2942,
+        "logo": "https://cv-general-images.s3.amazonaws.com/teams/Eastern-cape-sunrisers-logo@2x.png",
+        "name": "Sunrisers Eastern Cape",
+        "players": [
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 20659,
+                "player_img": null,
+                "player_known_as": "Tom Abell",
+                "player_name": "TB Abell",
+                "player_order": 1,
+                "player_role": "batsman",
+                "role": "batter",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 18757,
+                "player_img": null,
+                "player_known_as": "Ottneil Baartman",
+                "player_name": "OEG Baartman",
+                "player_order": 2,
+                "player_role": "bowler",
+                "role": "bowler",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 18758,
+                "player_img": null,
+                "player_known_as": "David Bedingham",
+                "player_name": "DG Bedingham",
+                "player_order": 3,
+                "player_role": "batsman",
+                "role": "batter",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 16494,
+                "player_img": null,
+                "player_known_as": "Liam Dawson",
+                "player_name": "LA Dawson",
+                "player_order": 4,
+                "player_role": "bowling allrounder",
+                "role": "all_rounder",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 20971,
+                "player_img": null,
+                "player_known_as": "Tony de Zorzi",
+                "player_name": "T de Zorzi",
+                "player_order": 5,
+                "player_role": "batsman",
+                "role": "batter",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 27711,
+                "player_img": null,
+                "player_known_as": "Richard Gleeson",
+                "player_name": "RJ Gleeson",
+                "player_order": 6,
+                "player_role": "bowler",
+                "role": "bowler",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "left",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 75418,
+                "player_img": null,
+                "player_known_as": "Jordan Hermann",
+                "player_name": "JG Hermann",
+                "player_order": 7,
+                "player_role": "batsman",
+                "role": "batter",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 68021,
+                "player_img": null,
+                "player_known_as": "Marco Jansen",
+                "player_name": "M Jansen",
+                "player_order": 8,
+                "player_role": "bowling allrounder",
+                "role": "all_rounder",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 1,
+                "is_keeper": 0,
+                "player_id": 27774,
+                "player_img": null,
+                "player_known_as": "Aiden Markram",
+                "player_name": "AK Markram",
+                "player_order": 9,
+                "player_role": "batting allrounder",
+                "role": "all_rounder",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 0,
+                "player_id": 14273,
+                "player_img": null,
+                "player_known_as": "Craig Overton",
+                "player_name": "C Overton",
+                "player_order": 10,
+                "player_role": "bowling allrounder",
+                "role": "all_rounder",
+                "team_id": 2942,
+                "type": null
+            },
+            {
+                "batting_hand": "right",
+                "is_captain": 0,
+                "is_keeper": 1,
+                "player_id": 73364,
+                "player_img": null,
+                "player_known_as": "Tristan Stubbs",
+                "player_name": "T Stubbs",
+                "player_order": 11,
+                "player_role": "batsman",
+                "role": "batter",
+                "team_id": 2942,
+                "type": null
+            }
+        ]
+    },
+    "team_batting_first": 2940,
+    "toss_comment": "Paarl Royals won the toss and elected to bat",
+    "video": true
+}

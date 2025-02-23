@@ -1,0 +1,241 @@
+{
+    "info": {
+        "class_id": 12,
+        "comp_id": 2837,
+        "comp_name": "India Women in West Indies",
+        "end_date": "2012-03-02",
+        "end_time_utc": "2012-03-02 14:00:00",
+        "ground_id": 1394,
+        "ground_name": "Warner Park, Basseterre",
+        "id": 103938,
+        "live_status_id": 0,
+        "match_name": "West Indies Women v India Women at Basseterre, 2nd ODI, 2 Mar 2012",
+        "match_status": "complete",
+        "start_date": "2012-03-02",
+        "start_time": "2012-03-02T14:00:00Z",
+        "start_time_utc": "2012-03-02 14:00:00",
+        "team1_abbreviation": "WI",
+        "team1_id": 1949,
+        "team1_logo": "https://img.cricviz.com/logos/teams/West_Indies_2x.png",
+        "team1_name": "West Indies Women",
+        "team2_abbreviation": "IND",
+        "team2_id": 2295,
+        "team2_logo": "https://cv-general-images.s3.amazonaws.com/teams/India_2x.png",
+        "team2_name": "India Women"
+    },
+    "teams": [
+        {
+            "id": 2295,
+            "players": [
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 30890,
+                    "name": "Madhuri Mehta"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 18274,
+                    "name": "Sulakshana Naik"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 18846,
+                    "name": "Anjum Chopra"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 17071,
+                    "name": "Mithali Raj"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 18282,
+                    "name": "Harmanpreet Kaur"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 30888,
+                    "name": "Mamatha Kanojia"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 17077,
+                    "name": "Amita Sharma"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 17065,
+                    "name": "Jhulan Goswami"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 30889,
+                    "name": "Archana Das"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 18284,
+                    "name": "Ekta Bisht"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 18280,
+                    "name": "Gouher Sultana"
+                }
+            ],
+            "team": "India Women",
+            "team_abbreviation": "IND"
+        },
+        {
+            "id": 1949,
+            "players": [
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 17916,
+                    "name": "Stafanie Taylor"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 22430,
+                    "name": "Juliana Nero"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 20562,
+                    "name": "Shanel Daley"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 17917,
+                    "name": "Deandra Dottin"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 20558,
+                    "name": "Merissa Aguilleira"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left pace",
+                    "bowling_type_id": 2,
+                    "bowling_type_simple": "pace",
+                    "id": 17918,
+                    "name": "Stacy-Ann King"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 21818,
+                    "name": "Kycia Knight"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 17923,
+                    "name": "Shemaine Campbelle"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 20557,
+                    "name": "Shakera Selman"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 23312,
+                    "name": "Subrina Munroe"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 17905,
+                    "name": "Anisa Mohammed"
+                }
+            ],
+            "team": "West Indies Women",
+            "team_abbreviation": "WI"
+        }
+    ],
+    "tracking_data": []
+}

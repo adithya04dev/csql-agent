@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Data Widget Implementation</title>
+
+    <!-- 1. Include the required script -->
+    <script type="module" src="https://widgets.cricviz.com/lib/ellipse-data-cricket.js"></script>
+
+    <!-- 2. Add CSP if needed -->
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src widgets.cricviz.com;
+        img-src img.cricviz.com;
+    ">
+
+    <!-- 3. Custom Styling -->
+    <style>
+        ellipse-data-cricket {
+            /* Basic widget styling */
+            --ed-common-font-family: 'Open Sans', sans-serif;
+            --ed-common-background-color: transparent;
+            
+            /* Minimum supported width */
+            min-width: 320px;
+            
+            /* Optional: Custom height */
+            height: 500px;
+        }
+
+        /* Disabled state styling */
+        ellipse-data-cricket[disabled] {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- 4. Basic Implementation -->
+    <ellipse-data-cricket
+        customer-id="QBtr6LqdmK"
+        type="beehive-batter"
+        match="12345"
+        innings="last"
+        include="header,footer,axis-horizontal,axis-vertical,grid-labels"
+        <!-- live-update -->
+        disable-analytics
+        lang="en"
+    ></ellipse-data-cricket>
+    <ellipse-data-cricket
+    type="beehive-batter"
+    customer-id="QBtr6LqdmK"
+    player="12345"
+    comp-type="8387"
+    date-start="2019-01-01"
+    date-end="2023-12-31"
+    grid-metric="runs_pct"
+    overs="all"
+    runs="4,6"
+    include="header,grid-labels,range-markers"
+    title="Boundary Analysis"
+    suffix="2019-2023"
+    disable-analytics
+></ellipse-data-cricket>
+<ellipse-data-cricket
+type="winviz-history"
+customer-id="YOUR_CUSTOMER_ID"
+match="98765"
+layout="donut"
+team-color
+include="header,footer"
+live-update
+title="Match WinViz Analysis"
+suffix="Final Score"
+disable-analytics
+>
+</ellipse-data-cricket>
+    <!-- 5. Example with Event Listener -->
+    <script>
+        const widget = document.querySelector('ellipse-data-cricket');
+        
+        // Event handling
+        widget.addEventListener('ellipse-data-cricket-event', (event) => {
+            const detail = event.detail;
+            const name = detail?.name;
+            const data = detail?.data;
+            console.log(`Widget event: ${name}`, data);
+        });
+
+        // Example of triggering instant update
+        function updateWidget() {
+            widget.instantUpdate();
+        }
+
+        // Example of export snapshot
+        function exportWidgetSnapshot() {
+            widget.exportSnapshot(1200); // width in pixels
+        }
+    </script>
+</body>
+</html>

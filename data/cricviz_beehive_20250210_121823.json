@@ -1,0 +1,241 @@
+{
+    "info": {
+        "class_id": 32,
+        "comp_id": 8314,
+        "comp_name": "West Indies Rising Stars Men's Under-19 2-Day and 50-Overs Championship",
+        "end_date": "2024-07-24",
+        "end_time_utc": "2024-07-24 13:30:00",
+        "ground_id": 3184,
+        "ground_name": "Park Hill Playing Field, Colonarie",
+        "id": 222150,
+        "live_status_id": 9,
+        "match_name": "Leewards U19s Men v Guyana Under-19s Men at Colonarie, West Indies Rising Stars Men's Under-19 2-Day and 50-Overs Championship, 24 Jul 2024",
+        "match_status": "complete",
+        "start_date": "2024-07-24",
+        "start_time": "2024-07-24T13:30:00Z",
+        "start_time_utc": "2024-07-24 13:30:00",
+        "team1_abbreviation": "LIU19M",
+        "team1_id": 3100,
+        "team1_logo": "https://cv-general-images.s3.amazonaws.com/teams/leeward_women.png",
+        "team1_name": "Leeward Islands Under-19s Men",
+        "team2_abbreviation": "GuU19M",
+        "team2_id": 3096,
+        "team2_logo": "https://cv-general-images.s3.amazonaws.com/teams/2733.png",
+        "team2_name": "Guyana Under-19s Men"
+    },
+    "teams": [
+        {
+            "id": 3100,
+            "players": [
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81989,
+                    "name": "Zavio Henry"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81991,
+                    "name": "Devanand Singh"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 81586,
+                    "name": "Michael Palmer"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81584,
+                    "name": "Jewel Andrew"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81588,
+                    "name": "T'yanick Honore"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left pace",
+                    "bowling_type_id": 2,
+                    "bowling_type_simple": "pace",
+                    "id": 75021,
+                    "name": "Nathan Edward"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81992,
+                    "name": "Isra-el Morton"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 80663,
+                    "name": "Matthew Miller"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81585,
+                    "name": "Micah McKenzie"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81994,
+                    "name": "Mekaili Tonge"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 85548,
+                    "name": "Curdel Crooke"
+                }
+            ],
+            "team": "Leeward Islands Under-19s Men",
+            "team_abbreviation": "LIU19M"
+        },
+        {
+            "id": 3096,
+            "players": [
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 81627,
+                    "name": "Rampertab Ramnauth"
+                },
+                {
+                    "batting_hand": null,
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 82005,
+                    "name": "Rampersaud Ramnauth"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 81626,
+                    "name": "Mavendra Dindyal"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 85564,
+                    "name": "Shahid Viera"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 82002,
+                    "name": "Jonathan van Lange"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 85560,
+                    "name": "Riyad Latiff"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 81635,
+                    "name": "Thaddeus Lovell"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 85546,
+                    "name": "Andrew Lim"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 74874,
+                    "name": "Isai Thorne"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 85552,
+                    "name": "Krsna Singh"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 82008,
+                    "name": "Golcharran Chulai"
+                }
+            ],
+            "team": "Guyana Under-19s Men",
+            "team_abbreviation": "GuU19M"
+        }
+    ],
+    "tracking_data": []
+}

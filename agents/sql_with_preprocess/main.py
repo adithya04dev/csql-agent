@@ -24,7 +24,7 @@ async def create_graph()->StateGraph:
 #     check_every_n_seconds=0.30,  # Wake up every 100 ms to check whether allowed to make a request,
 #     max_bucket_size=10,  # Controls the maximum burst size.
 # )
-    # llm=ChatMistralAI(model='mistral-large-2411')
+    # llm=ChatMistralAI(model='mistral-small-latest')
     # Qwen/Qwen2.5-72B-Instruct
     # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
     # llm=ChatGroq(model='llama-3.3-70b-versatile')

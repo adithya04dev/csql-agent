@@ -1,0 +1,250 @@
+{
+    "info": {
+        "class_id": 6,
+        "comp_id": 8371,
+        "comp_name": "Shpageeza T20 Tournament",
+        "end_date": "2024-08-24",
+        "end_time_utc": "2024-08-24 06:30:00",
+        "ground_id": 2821,
+        "ground_name": "Alokozay Kabul International Cricket Stadium, Kabul",
+        "id": 223300,
+        "live_status_id": 0,
+        "match_name": "Amo Sharks v Band-e-Amir Dragons at Kabul, Shpageeza T20 Tournament, Final, 24 Aug 2024",
+        "match_status": "complete",
+        "start_date": "2024-08-24",
+        "start_time": "2024-08-24T06:30:00Z",
+        "start_time_utc": "2024-08-24 06:30:00",
+        "team1_abbreviation": "AmoSh",
+        "team1_id": 2561,
+        "team1_logo": null,
+        "team1_name": "Amo Sharks",
+        "team2_abbreviation": "BeADra",
+        "team2_id": 2563,
+        "team2_logo": null,
+        "team2_name": "Band-e-Amir Dragons"
+    },
+    "teams": [
+        {
+            "id": 2563,
+            "players": [
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 72122,
+                    "name": "Sediqullah Atal"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 42547,
+                    "name": "Karim Janat"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 26579,
+                    "name": "Hashmatullah Shahidi"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 67172,
+                    "name": "Asif Musazai"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 71895,
+                    "name": "Ali Ahmad"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 72125,
+                    "name": "Nangeyalia Kharote"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 66731,
+                    "name": "Shamsurrahman"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 78206,
+                    "name": "Allah Ghazanfar"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 28122,
+                    "name": "Amir Hamza Hotak"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 77978,
+                    "name": "Khalil Ahmad"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 39409,
+                    "name": "Naveen-ul-Haq"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 42549,
+                    "name": "Nijat Masood"
+                }
+            ],
+            "team": "Band-e-Amir Dragons",
+            "team_abbreviation": "BeADra"
+        },
+        {
+            "id": 2561,
+            "players": [
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 67099,
+                    "name": "Abdul Malik"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 68036,
+                    "name": "Zubaid Akbari"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 26580,
+                    "name": "Sharafuddin Ashraf"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left orthodox",
+                    "bowling_type_id": 5,
+                    "bowling_type_simple": "spin",
+                    "id": 47016,
+                    "name": "Shahidullah Kamal"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": null,
+                    "bowling_technique": null,
+                    "bowling_type_id": null,
+                    "bowling_type_simple": null,
+                    "id": 68031,
+                    "name": "Mohammad Ishaq"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 66512,
+                    "name": "Azmatullah Omarzai"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 66571,
+                    "name": "Mohammad Riaz"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "right pace",
+                    "bowling_type_id": 1,
+                    "bowling_type_simple": "pace",
+                    "id": 80541,
+                    "name": "Haroon Khan"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "right",
+                    "bowling_technique": "leg break",
+                    "bowling_type_id": 4,
+                    "bowling_type_simple": "spin",
+                    "id": 66705,
+                    "name": "Qais Ahmad"
+                },
+                {
+                    "batting_hand": "right",
+                    "bowling_hand": "left",
+                    "bowling_technique": "left pace",
+                    "bowling_type_id": 2,
+                    "bowling_type_simple": "pace",
+                    "id": 67208,
+                    "name": "Fazalhaq Farooqi"
+                },
+                {
+                    "batting_hand": "left",
+                    "bowling_hand": "right",
+                    "bowling_technique": "off break",
+                    "bowling_type_id": 3,
+                    "bowling_type_simple": "spin",
+                    "id": 68840,
+                    "name": "Ijaz Ahmad"
+                }
+            ],
+            "team": "Amo Sharks",
+            "team_abbreviation": "AmoSh"
+        }
+    ],
+    "tracking_data": []
+}

@@ -20,11 +20,10 @@ class Query(BaseModel):
     query: str = Field(description="The query for which the AI agent needs to write SQL query based on the given conversation")
     table_name: str = Field(description="The table name based on the given conversation")
     change: bool = Field(description="Indicates if the query needs modification")
-    execution_choice: bool = Field(description="Indicates if the query should be executed based on user choice")
-
+    execution_choice: bool = Field(description="Indicates whether the query should be executed. Defaults to `True` unless the user explicitly states not to execute it in the conversation.")
 
 async def get_query(state:AgentState)->AgentState:
-    llm=ChatGoogleGenerativeAI(model='gemini-1.5-flash')
+    llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
 
     structured_llm = llm.with_structured_output(Query)
     system_prompt = f"""You are an AI assistant analyzing cricket analytics queries. Your role is to extract query parameters from conversations.
@@ -44,7 +43,8 @@ async def get_query(state:AgentState)->AgentState:
     CONTEXT RULES:
     - Previous state query: {state['query']}
     - Previous table: {state['table_name']}
-    -All tables in database are: ['hdata']
+
+    -All tables in database are: ['hdata_0510']
     - Consider full conversation history
     - Focus on cricket statistics context
     """
@@ -70,62 +70,61 @@ async def sql_writer(state:AgentState)->AgentState:
     # write logic for searching relevant queries
 
     # state=await get_query(state)
+    context=''
     if state['change']:
         # Create a SearchPair object with the required fields
         search_pair = SearchPair(
             search_value=state['query'],
             column_name='sql_queries',
-            table_name=state['table_name']
+            table_name='hdata'   #state['table_name']
         )
         state['relevant_sql_queries'] = await tool._arun([search_pair])
-        append_message=f""" Query Parser Agent:
-            Table name :{state['table_name']}
-            Table docs and schema: {state['docs_schema']}
-            Query: {state['query']}
-            Relevant SQL Queries: {state['relevant_sql_queries']}
-            """
-        state['messages'].append(HumanMessage(content=f"{append_message}",tool_call_id='relevant_sql_queries_tool'))
+        append_message=f""" 
 
-    llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+            Some Relevant SQL Queries: {state['relevant_sql_queries']}
+            """
+        context=HumanMessage(content=append_message,tool_call_id='relevant_sql_queries_tool')
+
+    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+    # llm=ChatOpenAI(model='o1-mini',reasoning_effort='medium')
 
 
     # llm=ChatOpenAI(model='Qwen/Qwen2.5-72B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
+    llm=ChatOpenAI(model='accounts/fireworks/models/deepseek-r1',temperature=0,base_url="https://api.fireworks.ai/inference/v1",api_key='fw_3ZZJ7E9uFW97uYw3ZbGvouGR')
 
     # llm=ChatMistralAI(model='mistral-large-2411')
     sys_prompt=[SystemMessage(content=f"""You are a cricket analytics SQL expert. Generate precise SQL queries for cricket statistics analysis.
 
 DATABASE CONTEXT:
 - Schema and documentation: {state['docs_schema']}
-- Current table: {state['table_name']}
+-Current dataset is 'bbbdata' and  table is : {state['table_name']}
 
 REQUIREMENTS:
-1. Generate valid SQL queries
-2. Follow cricket database schema
-3. Handle player/match statistics
-4. Optimize for performance
-
-RULES:
+- Generate valid SQL queries
+-Follow cricket database schema
 -understand the context given in the conversation
 - Use exact column names
-- Include appropriate JOINs
-- Handle NULL values
-- Follow SQL best practices
 
 
-""")]
+Return in markdown format!
 
-    response=await llm.ainvoke(sys_prompt+state['messages'])
+
+""")]+state['messages']
+    if context!='':
+        sys_prompt.append(context)
+
+    response=await llm.ainvoke(sys_prompt)
     parsed_query=await parse_sql_query(response.content)
-    
-    state['messages'].append(AIMessage(content=f"SQL Agent Response : {response.content}"  # Add a default tool_call_id
-))
+    state['sql_query']=parsed_query
+    # state['messages'].append(AIMessage(content=f"SQL Agent Response : {response.content}"  ))
     if parsed_query:
         #add the parsed query to the state message by tool message
-        state['messages'].append(AIMessage(content=f"Final SQL query for user query  : {parsed_query}"# Add a default tool_call_id
-))
-    state['messages'].append(             HumanMessage(content=f"next what should it be done?"))
-    return {
-        'sql_query':parsed_query
-        }
+        state['messages'].append(AIMessage(content=f"SQL Query :\n {parsed_query.replace('`', '')}"# Add a default tool_call_id
+        ))
+    else:
+        state['messages'].append(AIMessage(content='couldnt parse the sql query. Try again by returning sql query in markdown format!.'))
+    
+    state['messages'].append(HumanMessage(content=f"next what should it be done?"))
+    return state
     # return
 
