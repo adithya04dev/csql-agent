@@ -1,6 +1,6 @@
 from langchain_core.messages import SystemMessage
 from langchain_openai.chat_models import ChatOpenAI
-from langgraph.prebuilt.chat_agent_executor import create_tool_calling_executor
+# from langgraph.prebuilt.chat_agent_executor import create_tool_calling_executor
 from langchain_mistralai.chat_models import ChatMistralAI
 from dotenv import load_dotenv
 from agents.tools.search_vectordb import tool
@@ -18,7 +18,7 @@ import uuid
 from langchain_core.rate_limiters import InMemoryRateLimiter
 
 async def arun(state: AgentState):
-    model = ChatMistralAI(model='mistral-large-2411')
+    # model = ChatMistralAI(model='mistral-large-2411')
     # model = ChatMistralAI(      model='mistral-small-latest',    )
 
     # model=ChatGoogleGenerativeAI(model='gemini-1.5-flash')
@@ -27,7 +27,7 @@ async def arun(state: AgentState):
 #     check_every_n_seconds=0.30,  # Wake up every 100 ms to check whether allowed to make a request,
 #     max_bucket_size=10,  # Controls the maximum burst size.
 # )
-    # model=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+    model=ChatGoogleGenerativeAI(model='gemini-2.0-flash')
 
 
     # model=ChatOpenAI(model='gpt-4o-mini')
@@ -40,6 +40,10 @@ async def arun(state: AgentState):
     messages=SystemMessage(
         content="""You are a Search Agent specialized in cricket analytics, working as part of a multi-agent system.
 Your primary role is to help standardize and validate cricket-related terms by matching user inputs to actual database values.
+
+You will be given user conversation based on that u need to interpret and find correct matching values in databse for a query..
+You are just an search agent..
+
 
 Database Schema:
 Table: hdata
@@ -67,8 +71,13 @@ Guidelines:
   -U can also return more than one matches if u find it appropriate.
 - If truly uncertain between multiple matches, return what u think might be most popular ones
 
-Detailed Example:
-User Query: "Show matches where stev smit played a coverdrives against fast bowling at MCG"
+Example:
+
+User Conversation: 
+..
+...
+
+"Show matches where stev smit played a coverdrives against fast bowling at MCG"
 
 Search Process:
 1. First, identify all terms needing validation:
@@ -111,6 +120,8 @@ Final Output:
 
 Remember: 
 -Your role is not just to search, but to intelligently interpret and standardize cricket terms for accurate database queries.
+-Use the necessary tools to search..dont give on your own previous knowledge.
+-you will be given a whole cnversation based on that understad what u need to interpret and search and standardise.
 -another point is to rely solely on the information provided by the user; you cannot communicate with them again.
 """)
         

@@ -4,7 +4,6 @@ langchain-openai
 langchain-google-genai
 langsmith
 pandas
-google-cloud-bigquery[pandas]
 db_dtypes
 python-dotenv
 google-cloud-bigquery-storage
@@ -13,3 +12,4 @@ faiss-cpu
 langchain-mistralai
 rich
 langchain-groq
+google-cloud-bigquery[pandas]

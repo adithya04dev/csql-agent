@@ -67,9 +67,9 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
         if isinstance(list(event.values())[0]['messages'], list):
 
             for msg in list(event.values())[0]['messages']:
-                content += str(msg.content) + '\n\n'
+                content += msg.content + '\n\n'
         else:
-            content += str(list(event.values())[0]['messages'].content) + '\n\n'
+            content += list(event.values())[0]['messages'].content + '\n\n'
         # content+= str(list(event.values())[0]['messages'])+'\n\n'
 
         chunk = {

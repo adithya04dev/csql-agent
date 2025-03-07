@@ -106,7 +106,7 @@ length: STRING
 
 shot: STRING
 
-control: FLOAT
+control: FLOAT  1.0 if controlled 0.0 if uncontrolled..use these for caculating control percentage
 
 predscore: INTEGER
 

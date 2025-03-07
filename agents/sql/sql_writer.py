@@ -51,7 +51,7 @@ async def get_query(state:AgentState)->AgentState:
     
     hum_prompt=f""" Above was the Message conversation history of  AI agent system/state machine.
     The previous state's query paramter was {state['query']} and table_name paramter was {state['table_name']}.
-    Now give what should be the query paramter"""
+    Now give what should be the query,table_name,change,execution_choice(Defaults to `True` unless the user explicitly says) paramter"""
     sys_message=[SystemMessage(content=system_prompt)]
     hum_message=[HumanMessage(content=hum_prompt)]
     result=await structured_llm.ainvoke(sys_message+state['messages']+hum_message)
@@ -90,8 +90,15 @@ async def sql_writer(state:AgentState)->AgentState:
 
 
     # llm=ChatOpenAI(model='Qwen/Qwen2.5-72B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
-    llm=ChatOpenAI(model='accounts/fireworks/models/deepseek-r1',temperature=0,base_url="https://api.fireworks.ai/inference/v1",api_key='fw_3ZZJ7E9uFW97uYw3ZbGvouGR')
-
+    # llm=ChatOpenAI(model='accounts/fireworks/models/deepseek-r1',temperature=0,base_url="https://api.fireworks.ai/inference/v1",api_key='fw_3ZZJ7E9uFW97uYw3ZbGvouGR')
+    # llm=ChatOpenAI(model='DeepSeek-R1',temperature=0,base_url="https://api.sambanova.ai/v1",api_key='2f60038f-453a-4620-ad3e-25fbfda9fcdd')
+    llm=ChatOpenAI(model='deepseek-ai/DeepSeek-R1',temperature=0,base_url="https://api.together.xyz/v1",api_key='29e062d0a46153ddc46e8920e276262852db8028456e8fa5aa47d1bd4724ff33')
+    # llm=ChatOpenAI(
+    #     model='qwen-qwq-32b',
+    #     temperature=0,
+    #     base_url="https://api.groq.com/openai/v1",
+    #     api_key='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'
+    # )
     # llm=ChatMistralAI(model='mistral-large-2411')
     sys_prompt=[SystemMessage(content=f"""You are a cricket analytics SQL expert. Generate precise SQL queries for cricket statistics analysis.
 
@@ -104,6 +111,10 @@ REQUIREMENTS:
 -Follow cricket database schema
 -understand the context given in the conversation
 - Use exact column names
+
+I like:
+-for batting queries i want it to include avg,strike rate for individuals ( or run rate for teams),control percentage,boundary%,dotball%..
+-for bowling queries i want it to include avg,economy,strikerate,dotball%..
 
 
 Return in markdown format!

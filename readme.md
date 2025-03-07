@@ -14,6 +14,15 @@ A sophisticated cricket analytics system that uses multiple AI agents to process
 ![Architecture](./image.png)  
 
 
+### Setup
+backend
+cd C:\Users\adith\Documents\Projects\python-projects\csql-agent
+.\venv\scripts\activate
+uvicorn backend.app.main:app --reload
+
+frontend
+cd chatbot
+npm run dev
 
 
 ### Agents
