@@ -8,7 +8,8 @@ from langchain_core.callbacks import CallbackManagerForToolRun, AsyncCallbackMan
 vector_store = VectorStoreManager()
 
 # Define valid tables and columns
-VALID_TABLE = Literal['hdata']
+VALID_TABLES = ['hdata', 'hdata_2501']
+VALID_TABLE = Literal['hdata','hdata_2501']
 VALID_COLUMNS = Literal[
     'player', 'team', 'dismissal', 'ground', 'country', 'competition',
     'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'
@@ -32,8 +33,8 @@ class SearchPair(BaseModel):
 
     @validator('table_name')
     def validate_table(cls, v):
-        if v != 'hdata':
-            raise ValueError("Only 'hdata' table is supported")
+        if v not in VALID_TABLES:
+            raise ValueError("Only 'hdata','hdata_2501' table is supported")
         return v
 
 class SearchInput(BaseModel):
@@ -55,6 +56,7 @@ class SearchTool(BaseTool):
     async def _arun(
         self,
         search_pairs: List[SearchPair],
+        limit: int=5,
         run_manager: Optional[AsyncCallbackManagerForToolRun] = None
     ) -> list[str]:
         """Execute the search asynchronously."""
@@ -65,7 +67,7 @@ class SearchTool(BaseTool):
                 search_key = f"{pair.table_name}_{pair.column_name}"
                 result = await vector_store.search_similar_queries(
                     pair.search_value, 
-                    search_key
+                    search_key,limit
                 )
                 results.append(result)
             print(results)

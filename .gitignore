@@ -1,4 +1,4 @@
-venv/
+.venv/
 agents/.env
 __pycache__
 .env
@@ -9,3 +9,4 @@ temp2.py
 temp.html
 data/
 env/
+venv/

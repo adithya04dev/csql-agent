@@ -1,0 +1,140 @@
+# 1. Authenticate with Google Cloud
+gcloud auth login
+
+# 2. Set your project ID
+gcloud config set project [PROJECT_ID]
+
+# 3. Upload your CSV file(s) to GCS bucket
+# For a single file:
+gsutil -m cp "C:\Users\adith\Documents\Projects\python-projects\analytics\datasets\odata_2403.csv" gs://cricmetric/
+
+# For better performance with large files (>150MB):
+gsutil -o GSUtil:parallel_composite_upload_threshold=150M cp data.csv gs://[BUCKET_NAME]/
+
+# For multiple CSV files:
+gsutil -m cp *.csv gs://[BUCKET_NAME]/
+
+# For multiple large CSV files (combines parallel upload with multi-threading):
+gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp *.csv gs://[BUCKET_NAME]/
+
+schema of hdata
+1.hdata_2403 
+
+allow jagged rows..
+[
+  {"name": "Unnamed_0", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "p_match", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "inns", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "bat", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "p_bat", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "team_bat", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "bowl", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "p_bowl", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "team_bowl", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "ball", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "ball_id", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "outcome", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "score", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "out", "type": "BOOLEAN", "mode": "NULLABLE"},
+  {"name": "dismissal", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "p_out", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "over", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "noball", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "wide", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "byes", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "legbyes", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "cur_bat_runs", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "cur_bat_bf", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "cur_bowl_ovr", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "cur_bowl_wkts", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "cur_bowl_runs", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "inns_runs", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "inns_wkts", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "inns_balls", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "inns_runs_rem", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "inns_balls_rem", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "inns_rr", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "inns_rrr", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "target", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "max_balls", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "date", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "year", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "ground", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "country", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "winner", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "toss", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "competition", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "bat_hand", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "bowl_style", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "bowl_kind", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "batruns", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "ballfaced", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "bowlruns", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "bat_out", "type": "BOOLEAN", "mode": "NULLABLE"},
+  {"name": "rain", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "daynight", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "gmt_offset", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "wagonX", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "wagonY", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "wagonZone", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "line", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "length", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "shot", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "control", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "predscore", "type": "FLOAT", "mode": "NULLABLE"},
+  {"name": "wprob", "type": "FLOAT", "mode": "NULLABLE"}
+]
+
+2.odata_2403 
+allow quoted lines,jagged rowss,header rows skip 1..
+schema new 
+[
+    {"name": "Unnamed_0", "type": "INTEGER", "mode": "NULLABLE"},
+
+  {"name": "fixtureId", "type": "INTEGER"},
+  {"name": "team1", "type": "STRING"},
+  {"name": "team2", "type": "STRING"},
+  {"name": "matchDate", "type": "STRING"},
+  {"name": "format", "type": "STRING"},
+  {"name": "ground", "type": "STRING"},
+  {"name": "country", "type": "STRING"},
+  {"name": "inns", "type": "INTEGER"},
+  {"name": "battingTeam", "type": "STRING"},
+  {"name": "bowlingTeam", "type": "STRING"},
+  {"name": "batsman", "type": "STRING"},
+  {"name": "bowler", "type": "STRING"},
+  {"name": "batsmanHand", "type": "STRING"},
+  {"name": "bowlerHand", "type": "STRING"},
+  {"name": "bowlerType", "type": "STRING"},
+  {"name": "over", "type": "INTEGER"},
+  {"name": "ball", "type": "INTEGER"},
+  {"name": "dismissalType", "type": "STRING"},
+  {"name": "dismissedPlayer", "type": "STRING"},
+  {"name": "shot_angle", "type": "FLOAT"},
+  {"name": "shot_magnitude", "type": "FLOAT"},
+  {"name": "fielding_position", "type": "STRING"},
+  {"name": "runs_conceded", "type": "FLOAT"},
+  {"name": "runs", "type": "INTEGER"},
+  {"name": "runs_scored", "type": "FLOAT"},
+  {"name": "extras", "type": "INTEGER"},
+  {"name": "is_wicket", "type": "INTEGER"},
+  {"name": "commentary", "type": "STRING"},
+  {"name": "timestamp", "type": "STRING"},
+  {"name": "competition", "type": "STRING"},
+  {"name": "len_var", "type": "STRING"},
+  {"name": "shot", "type": "STRING"},
+  {"name": "zone", "type": "STRING"},
+  {"name": "shot_type", "type": "STRING"},
+  {"name": "variation", "type": "STRING"},
+  {"name": "length", "type": "STRING"},
+  {"name": "area", "type": "STRING"},
+  {"name": "control", "type": "STRING"},
+  {"name": "line", "type": "STRING"},
+  {"name": "foot", "type": "STRING"},
+  {"name": "fielder_action", "type": "STRING"},
+  {"name": "fielder", "type": "STRING"},
+  {"name": "elevation", "type": "STRING"},
+  {"name": "year", "type": "STRING"},
+  {"name": "ctrl", "type": "INTEGER"},
+  {"name": "ballfaced", "type": "INTEGER"}
+]

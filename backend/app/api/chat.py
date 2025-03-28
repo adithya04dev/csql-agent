@@ -8,9 +8,10 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field,validator
 from agents.sql_with_preprocess.main import create_graph
 from langchain_core.messages import HumanMessage
-from agents.sql_with_preprocess.types import AgentState
+from agents.sql_with_preprocess.types1 import AgentState
 from langchain_core.messages import AnyMessage
 from langchain_core.messages import HumanMessage,AIMessage,SystemMessage
+from langchain_core.messages import AnyMessage
 
 router = APIRouter()
 
@@ -53,7 +54,7 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
         
         val,event=chunk
 
-        print(" the chunk is :",chunk)
+        # print(" the chunk is :",chunk)
 
 
 
@@ -63,13 +64,15 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
             first=False
         else:
             content=''
+        response =list(event.values())[0]['messages']
+        if isinstance(response, list):
 
-        if isinstance(list(event.values())[0]['messages'], list):
-
-            for msg in list(event.values())[0]['messages']:
-                content += msg.content + '\n\n'
+            for msg in response:
+                if msg.name!='agent':
+                    content += msg.content + '\n\n'
         else:
-            content += list(event.values())[0]['messages'].content + '\n\n'
+            if response.name!='agent':
+                content += response.content + '\n\n'
         # content+= str(list(event.values())[0]['messages'])+'\n\n'
 
         chunk = {
@@ -113,7 +116,7 @@ async def chat_endpoint(request: ChatRequest):
         # )
         messages=[]
         for message in request.messages:
-            if message.role=='assistant':
+            if message.role=='assistant' :
                 messages.append(AIMessage(content=message.content))
             elif message.role=='user':
                 messages.append(HumanMessage(content=message.content))
@@ -180,6 +183,7 @@ async def chat_endpoint(request: ChatRequest):
             }
 
     except Exception as e:
+        print(str(e))
         raise HTTPException(status_code=500, detail=str(e))
 
 

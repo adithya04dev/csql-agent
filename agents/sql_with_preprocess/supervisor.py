@@ -4,7 +4,7 @@ from langchain_core.language_models.chat_models import BaseChatModel
 from langgraph.graph import StateGraph, MessagesState, START, END
 from langgraph.types import Command
 from langchain_core.messages import HumanMessage, trim_messages
-from agents.sql_with_preprocess.types import AgentState
+from agents.sql_with_preprocess.types1 import AgentState
 from langchain_core.messages import HumanMessage,AIMessage,SystemMessage
 from typing_extensions import Annotated, TypedDict, Literal
 from pydantic import BaseModel, Field
@@ -13,7 +13,8 @@ async def make_supervisor_node(llm: BaseChatModel, members: list[str]) -> str:
     options = ["FINISH"] + members
 
     system_prompt = f"""You are a supervisor orchestrating a multi-turn cricket analytics system with multiple specialized agents.
-Your core function is to interpret the user's queries and conversation state, then select the most relevant agent for the NEXT step, knowing control will return to you after each agent completes.
+Your core function is to interpret the user's queries and conversation state, then select the most relevant agent for the NEXT step, 
+knowing control will return to you after each agent completes.
 
 Here are the agents available for routing:
 {members}
@@ -29,26 +30,32 @@ Below are the agents and their routing guidelines:
 
 1. **search agent**  
    - Route here FIRST when the query requires database lookups of exact values/names/references/enities
-   - After search completes, control returns to you to potentially route to sql for data analysis
+   - After search completes, control returns to you to potentially route to sql for data analysis.
    - Examples of triggers: specific player names, team names, ground names, country names, competition names,  bat_hand, bowl_style, bowl_kind, line, length, shot
 
 2. **sql agent**  
-   - Route here AFTER search has resolved entities
+   - Route here AFTER search has resolved entities 
    - Can route back to search if new terms appear in follow-ups
-   - Examples: "show stats for that player", "compare these two teams" etc.
+   - Examples: for queries that are follow up to previous questions that have search's  aget response in conversation and routing again
+   to the search agent may be redundant..then u can leave.        
+    
+         
 
 3. **chatbot agent**  
    - Handles conversation flow ..if the user is just talking casually that doesnt need any search/sql.
    - Examples: greetings, system questions etc but ready to route elsewhere if cricket queries appear
-
+4.Visualiser Agent:
+   - Route here when the user requests data visualizations or graphical representations. 
+   - Typically used AFTER sql agent has retrieved the data but only if users mentions.
+   - Examples: "show this as a chart", "plot the trends", "create a graph of these stats"
+   - Can route back to sql if additional data processing is needed
 4. **FINISH**  
    - Route here when ALL steps are complete or users response is to be needed.
    - The query has been fully resolved through potentially multiple agent interactions
 
 Multi-Turn Routing Examples:
 
-1. Complex Query Flow:
-   User: "Who was India's best bowler against Australia in 2023?"
+1. User: "Who was India's best bowler against Australia in 2023?"
    -> search (to identify players) 
    -> returns to supervisor
    -> sql (to analyze statistics)
@@ -62,16 +69,19 @@ Multi-Turn Routing Examples:
    -> sql (to analyze statistics)
    -> returns to supervisor
    -> FINISH(shows to user)
-   then
+   Continued in the conversation
    User follows up above question with : break down by year
-   -> sql (query specific stats)
+   -> sql (as we there is existing search agent of previous question  and there is nothing new to lookup we can directly ask sql agent!) 
    -> returns to supervisor
 
-   User: "How does this compare to his overall average?"
-   -> sql (comparative analysis)
+3.   User: "calculate Rahul tripathi's average against pace bowlers and give me plot of avg vs strikerate"
+   -> search (as there are terms that need database lookups)
+   -> returns to supervisor
+   -> sql (so we can calculate stats using sql queries)
    -> returns to supervisor
    -> FINISH(shows to user)
-   
+   ->visualiser(as we need to visualise the stats as mentioned in query )
+   ->Finish(shows to user)
    User: "Thanks, that's all"
    -> FINISH
 
@@ -96,6 +106,6 @@ Remember:
         goto = response.next
         if goto == "FINISH":
             goto = END
-        return Command(goto=goto,update={'messages':HumanMessage(f" Supervisor routed to {goto} agent"),'sequence':f"{state['sequence']} {goto}"})
+        return Command(goto=goto,update={'messages':HumanMessage(f" Supervisor agent: routed to {goto} agent"),'sequence':f"{state['sequence']} {goto}"})
 
     return supervisor_node

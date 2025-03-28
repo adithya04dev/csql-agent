@@ -1,4 +1,4 @@
-from agents.sql_with_preprocess.types import AgentState
+from agents.sql_with_preprocess.types1 import AgentState
 from agents.tools.search_vectordb import tool, SearchPair
 from langchain_mistralai.chat_models import ChatMistralAI
 from typing_extensions import Annotated, TypedDict
@@ -23,7 +23,7 @@ class Query(BaseModel):
     execution_choice: bool = Field(description="Indicates whether the query should be executed. Defaults to `True` unless the user explicitly states not to execute it in the conversation.")
 
 async def get_query(state:AgentState)->AgentState:
-    llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+    llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash')
 
     structured_llm = llm.with_structured_output(Query)
     system_prompt = f"""You are an AI assistant analyzing cricket analytics queries. Your role is to extract query parameters from conversations.
@@ -70,20 +70,20 @@ async def sql_writer(state:AgentState)->AgentState:
     # write logic for searching relevant queries
 
     # state=await get_query(state)
-    context=''
-    if state['change']:
-        # Create a SearchPair object with the required fields
-        search_pair = SearchPair(
-            search_value=state['query'],
-            column_name='sql_queries',
-            table_name='hdata'   #state['table_name']
-        )
-        state['relevant_sql_queries'] = await tool._arun([search_pair])
-        append_message=f""" 
+    # context=''
+    # if state['change']:
+    #     # Create a SearchPair object with the required fields
+    #     search_pair = SearchPair(
+    #         search_value=state['query'],
+    #         column_name='sql_queries',
+    #         table_name='hdata'   #state['table_name']
+    #     )
+    #     state['relevant_sql_queries'] = await tool._arun([search_pair])
+    #     append_message=f""" 
 
-            Some Relevant SQL Queries: {state['relevant_sql_queries']}
-            """
-        context=HumanMessage(content=append_message,tool_call_id='relevant_sql_queries_tool')
+    #         Some Relevant SQL Queries: {state['relevant_sql_queries']}
+    #         """
+    #     context=HumanMessage(content=append_message,tool_call_id='relevant_sql_queries_tool')
 
     # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
     # llm=ChatOpenAI(model='o1-mini',reasoning_effort='medium')
@@ -92,37 +92,50 @@ async def sql_writer(state:AgentState)->AgentState:
     # llm=ChatOpenAI(model='Qwen/Qwen2.5-72B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
     # llm=ChatOpenAI(model='accounts/fireworks/models/deepseek-r1',temperature=0,base_url="https://api.fireworks.ai/inference/v1",api_key='fw_3ZZJ7E9uFW97uYw3ZbGvouGR')
     # llm=ChatOpenAI(model='DeepSeek-R1',temperature=0,base_url="https://api.sambanova.ai/v1",api_key='2f60038f-453a-4620-ad3e-25fbfda9fcdd')
-    llm=ChatOpenAI(model='deepseek-ai/DeepSeek-R1',temperature=0,base_url="https://api.together.xyz/v1",api_key='29e062d0a46153ddc46e8920e276262852db8028456e8fa5aa47d1bd4724ff33')
+    # llm=ChatOpenAI(model='deepseek-ai/DeepSeek-R1',temperature=0,base_url="https://api.together.xyz/v1",api_key='29e062d0a46153ddc46e8920e276262852db8028456e8fa5aa47d1bd4724ff33')
     # llm=ChatOpenAI(
     #     model='qwen-qwq-32b',
     #     temperature=0,
     #     base_url="https://api.groq.com/openai/v1",
     #     api_key='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'
     # )
-    # llm=ChatMistralAI(model='mistral-large-2411')
-    sys_prompt=[SystemMessage(content=f"""You are a cricket analytics SQL expert. Generate precise SQL queries for cricket statistics analysis.
+    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-thinking-exp')
+
+    llm=ChatOpenAI(model='deepseek/deepseek-r1:free',temperature=0,base_url="https://openrouter.ai/api/v1",api_key='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')
+
+    
+    # llm=ChatMistralAI(model='mistral-small')
+    async with aiofiles.open(rf'C:\Users\adith\Documents\Projects\python-projects\csql-agent\agents\utils\schema_docs\hdata_0510_schema.txt','r') as f:
+        state['docs_schema']=await f.read()
+    sys_prompt=[SystemMessage(content=f"""You are a working on an multi-agent system for cricket analytics.
+ You are an expert in writing Bigquery SQL queries for cricket statistics analysis working alognside search agent and visualiser agent.
 
 DATABASE CONTEXT:
 - Schema and documentation: {state['docs_schema']}
--Current dataset is 'bbbdata' and  table is : {state['table_name']}
+-Current dataset is 'bbbdata' and  table is : hdata_2501
 
 REQUIREMENTS:
-- Generate valid SQL queries
+-Understand the context given in the conversation (of other agents responses.)
+-You are required to write Bigquery sql queries for a query thats being asked in the conversation.
 -Follow cricket database schema
--understand the context given in the conversation
 - Use exact column names
 
 I like:
--for batting queries i want it to include avg,strike rate for individuals ( or run rate for teams),control percentage,boundary%,dotball%..
--for bowling queries i want it to include avg,economy,strikerate,dotball%..
+-for batting queries i want it to include average,strike rate for individuals ( or run rate for teams),control percentage,boundary%,dotball%..
+-for bowling queries i want it to include average,economy,strikerate,dotball%..
+-use cte if needed.
+
+I have also attached some similar sql queries for undestanding how some metrcis are calculaated..dont blindly copy those
+..first understand the intent of the query being asked and think detailed what u neeed to calculate and then  write sql code
 
 
-Return in markdown format!
+Return in markdown format like ```sql   (place code here) ```!
 
 
 """)]+state['messages']
-    if context!='':
-        sys_prompt.append(context)
+    # if context!='':
+    #     sys_prompt.append(context)
+    llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
 
     response=await llm.ainvoke(sys_prompt)
     parsed_query=await parse_sql_query(response.content)

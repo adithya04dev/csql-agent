@@ -1,0 +1,16 @@
+short leg
+cover
+fine leg
+back to bowler
+gully
+square leg
+long on
+third man
+mid on
+long off
+slip
+mid off
+point
+left
+mid wicket
+miss

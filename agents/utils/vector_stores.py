@@ -34,7 +34,7 @@ class VectorStoreManager:
                         store_path = os.path.join(table_dir, table_category)
 
                         if os.path.exists(store_path):
-                            print(f"Loading store for category '{table_category}' from '{store_path}'")
+                            # print(f"Loading store for category '{table_category}' from '{store_path}'")
                             self.stores[table_category] = FAISS.load_local(
                                 store_path, self.embeddings, allow_dangerous_deserialization=True
                             )
@@ -51,7 +51,7 @@ class VectorStoreManager:
                         store_path = os.path.join(table_dir, table_category)
 
                         if os.path.exists(store_path):
-                            print(f"Loading store for category '{table_category}' from '{store_path}'")
+                            # print(f"Loading store for category '{table_category}' from '{store_path}'")
                             self.stores[table_category] = FAISS.load_local(
                                 store_path, self.embeddings, allow_dangerous_deserialization=True
                             )
@@ -109,7 +109,7 @@ class VectorStoreManager:
                 file_path = os.path.join(dir_path, filename)
                 self.add_examples_from_file(file_path)
 
-    async def search_similar_queries(self, query: str, table_category: str, k: int = 3) -> str:
+    async def search_similar_queries(self, query: str, table_category: str, k: int = 5) -> str:
         """Search for similar queries in a specific category's vector store"""
         retriever = self.retrievers.get(table_category)
 
@@ -120,12 +120,20 @@ class VectorStoreManager:
         results = await retriever.ainvoke(query)
         
         # Collect results in a list first
-        result_texts = [doc.page_content for doc in results]
+        result_texts = [doc.page_content for doc in results[:k]]
         
         # Join them together in one operation
         return f"similar values of {query} in table are:\n{'\n'.join(result_texts)}"
 
 # Example Usage
 vector_store_manager = VectorStoreManager()
-# vector_store_manager.add_examples_from_directory("C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables\hdata" ) # Still adds from the directory
-# print(vector_store_manager.search_similar_queries("v kohli", "hdata_player")) # Now use table_category in search
+# vector_store_manager.add_examples_from_directory("C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables\odata_2403" ) # Still adds from the directory
+# vector_store_manager.add_examples_from_directory("C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables\hdata_2501" ) # Still adds from the directory
+import asyncio
+
+async def main():
+    print(await vector_store_manager.search_similar_queries("v kohli", "odata_2403_player")) 
+    print(await vector_store_manager.search_similar_queries("kewna maphaka", "odata_2403_player")) 
+    print(await vector_store_manager.search_similar_queries("back length", "odata_2403_length")) 
+
+asyncio.run(main())

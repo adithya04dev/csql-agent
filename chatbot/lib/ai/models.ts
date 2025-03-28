@@ -16,7 +16,11 @@ const provider = createOpenAICompatible({
 });
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': openai('gpt-4o-mini'),
+    // 'chat-model-small': openai('gpt-4o-mini'),
+    'chat-model-small': wrapLanguageModel({
+      model:  provider('sql-agent'),
+      middleware: extractReasoningMiddleware({ tagName: 'think' }),
+    }),
     // 'chat-model-small':provider('sql-agent'),
     'chat-model-large':wrapLanguageModel({
       model:  provider('sql-agent'),
@@ -24,11 +28,15 @@ export const myProvider = customProvider({
     }),
     
    
+    // 'chat-model-reasoning': wrapLanguageModel({
+    //   model: fireworks('accounts/fireworks/models/deepseek-r1'),
+    //   middleware: extractReasoningMiddleware({ tagName: 'think' }),
+    // }),
     'chat-model-reasoning': wrapLanguageModel({
-      model: fireworks('accounts/fireworks/models/deepseek-r1'),
+      model: provider('sql-agent'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
     }),
-    'title-model': openai('gpt-4-turbo'),
+    'title-model': openai('gpt-4o-mini'),
     'block-model': openai('gpt-4o-mini'),
   },
   imageModels: {

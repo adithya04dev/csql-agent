@@ -28,11 +28,13 @@ def execute_query(query: str) -> dict:
         query_job.result()
 
     except Exception as e:
-        print(str(e))
+        print("Error occure man! error!")
 
         return {'sql_result':str(e),'error':True}
-    print(query_job.to_dataframe().head(30).to_markdown(index=False))
-    return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
+    # print(query_job.to_dataframe().head(30).to_markdown(index=False))
+    # return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
+    return {'sql_result':query_job.to_dataframe(),'error':False}
+
 
 async def arun(query: str) -> dict:
     """Async wrapper around BigQuery operations"""

@@ -1,0 +1,47 @@
+[
+  {
+    "query": "How many runs did Sachin baby score at Eden Gardens?",
+    "response": "```json\n{\n    \"Sachin baby\": [\"Sachin Baby\",\"player\"],\n    \"Eden Gardens\": [\"Eden Gardens\",\"ground\"]\n}\n```",
+    "time_taken": 1.17
+  },
+  {
+    "query": "Give me the top 5 players from India who've taken the most wickets.",
+    "response": "I cannot directly provide you with the top 5 players with the most wickets. My current capabilities only allow me to validate and standardize cricket-related terms by matching user inputs to values in the database. I can help you identify the correct database values for terms like player names or countries if you provide them.",
+    "time_taken": 2.24
+  },
+  {
+    "query": "Who has the highest strike rate in T20 matches?",
+    "response": "I cannot directly answer the question of who has the highest strike rate. My role is to validate cricket-related terms. If you provide me with specific player names or terms related to strike rate that you want me to validate, I can use the search tool to find the corresponding values in the database.",
+    "time_taken": 2.25
+  },
+  {
+    "query": "Fetch me the bowlers with the best economy rate in ODIs.",
+    "response": "I cannot directly fulfill your request for bowlers with the best economy rate. My role is to standardize and validate cricket-related terms by matching user inputs to actual database values. I can help you validate terms like player names, teams, or bowling styles if you provide them.",
+    "time_taken": 1.04
+  },
+  {
+    "query": "Find all matches where Kohli was dismissed for a duck.",
+    "response": "```json\n{\n    \"Kohli\": [\"Virat Kohli\",\"player\"],\n    \"duck\": [\"Duck\",\"dismissal\"]\n}\n```",
+    "time_taken": 0.91
+  },
+  {
+    "query": "List the grounds in England where Rohit scored centuries.",
+    "response": "```json\n{\n    \"England\": [\"England\",\"country\"],\n    \"Rohit\": [\"Rohit\",\"player\"],\n    \"centuries\": [\"100\",\"dismissal\"]\n}\n```",
+    "time_taken": 0.93
+  },
+  {
+    "query": "Who are the left-handed batsmen in the database?",
+    "response": "```json\n{\n    \"left-handed\": [\"Left-Hand Bat\",\"bat_hand\"]\n}\n```",
+    "time_taken": 0.92
+  },
+  {
+    "query": "Which teams played in the 2011 World Cup final?",
+    "response": "```json\n{\n    \"2011 World Cup final\": [\"World Cup\",\"competition\"]\n}\n```",
+    "time_taken": 1.93
+  },
+  {
+    "query": "Show me the biggest six-hitters in the IPL.",
+    "response": "```json\n{\n    \"six-hitters\": [\"six\",\"shot\"],\n    \"IPL\": [\"Indian Premier League\",\"competition\"]\n}\n```",
+    "time_taken": 1.08
+  }
+]

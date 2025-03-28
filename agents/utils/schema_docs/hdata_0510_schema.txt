@@ -18,7 +18,6 @@ ball: INTEGER (the ball number in the over like 1, 2, 3, 4, 5, 6)
 
 ball_id: FLOAT (unique identifier for each ball)
 
-outcome: STRING (the outcome of the ball like dot, wicket)
 
 score: INTEGER (the runs scored on the ball)
 
@@ -28,7 +27,7 @@ dismissal: STRING (the way the batter got out)
 
 p_out: INTEGER (the player id of the batter who got out)
 
-over: INTEGER (the over number)
+over: INTEGER (the over number) (like be carefull while using in sql query ..use `over` to avoid errors like over should follow a function )
 
 noball: INTEGER (flag for no ball 1 id yes 0 if no)
 
@@ -113,3 +112,4 @@ predscore: INTEGER
 wprob: FLOAT
 
 variation: STRING
+

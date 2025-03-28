@@ -1,21 +1,21 @@
-from agents.sql_with_preprocess.types import AgentState
+from agents.sql_with_preprocess.types1 import AgentState
 from agents.tools.execute_db import tool
 from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMessage
 
 async def sql_query_tester(state: AgentState) -> AgentState:
 
-    if state['execution_choice']==False:
-        return state
+    # if state['execution_choice']==False:
+    #     return state
 
     result=await tool.ainvoke(state['sql_query'])
-
+    # print("the result of the execution was result['error']")
     state['sql_error']=result['error']
     state['sql_result']=result['sql_result']
     state['attempts']+=1
-    if state['sql_error']:
-        mess="Result: \n"
-    else:
-        mess="</think>Result: \n "
+    # if state['sql_error']:
+    #     mess="Result: \n"
+    # else:
+    mess="</think> Result: \n "
     
     mess+=state['sql_result']
     state['messages'].append(HumanMessage(content=mess))

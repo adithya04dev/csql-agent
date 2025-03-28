@@ -1,102 +1,107 @@
 [
   {
-    "query": "fazal haq faroo bowling stats for srh Show matches where vir Kohli scored runs",
-    "response": "Fazalhaq Farooqi is a left-arm medium-fast bowler who plays for the Sunrisers Hyderabad in the Indian Premier League. He has represented Afghanistan in international cricket.\n\nVirat Kohli is an Indian cricketer and the former captain of the Indian national cricket team. He is widely regarded as one of the greatest batsmen of his generation. Kohli plays for Royal Challengers Bangalore in the IPL and Delhi in domestic cricket.\n\nSo considering these points,\n\n- Fazal haq faroo is Fazalhaq Farooqi\n- srh is Sunrisers Hyderabad\n- vir Kohli is Virat Kohli\n- scored runs is run out\n\n{\n    \"fazal haq faroo\": \"Fazalhaq Farooqi\",\n    \"srh\": \"Sunrisers Hyderabad\",\n    \"vir Kohli\": \"Virat Kohli\",\n    \"scored runs\": \"run out\",\n\n}",
-    "time_taken": 15.2
+    "query": "fazal haq faroo bowling stats for srh ",
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.91
+  },
+  {
+    "query": "Show matches where vir Kohli scored runs",
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.87
   },
   {
     "query": "Find games where M.S. Dhoni played",
-    "response": "For the query \"Find games where M.S. Dhoni played,\"\n\nHere is the validation output:\n\n{\n  \"M.S. Dhoni\": \"MS Dhoni\"\n}\n\nIt appears that there could be many other players listed in the database, but the closest and most relevant match is \"MS Dhoni\".",
-    "time_taken": 5.07
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.82
   },
   {
     "query": "What about stev Smith's performances",
-    "response": "{\n\"stev Smith\": \"Steven Smith\"\n}",
-    "time_taken": 4.14
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.82
   },
   {
     "query": "Show me isha Sharma's batting record",
-    "response": "Error: Error response 429 while fetching https://api.mistral.ai/v1/chat/completions: {\"message\":\"Requests rate limit exceeded\"}",
-    "time_taken": 0.93
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.87
   },
   {
     "query": "Find matches with mitch Johnson bowling",
-    "response": "Based on the search results and the context of the query, the most appropriate match for \"mitch Johnson\" is \"Mitchell Johnson\".\n\nHere is the final output:\n\n```json\n{\n    \"mitch Johnson\": \"Mitchell Johnson\"\n}\n```\n\nThis standardization ensures that the query will accurately reflect the intended player in the database.",
-    "time_taken": 4.7
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.77
   },
   {
     "query": "Games where shadabkhan was playing in lahore",
-    "response": "User Query: \"Games where shadabkhan was playing in lahore\"\n\nSearch Process:\n1. Identified terms needing validation:\n   - Player: \"shadabkhan\"\n   - Ground: \"lahore\"\n2. Search Results Analysis:\n   - Player \"shadabkhan\" returns multiple matches:\n     * \"Shadab Khan\"\n     * \"Shadnan Khan\"\n     * \"Shahab Khan\"\n     * \"Samader Shadab\"\n     * \"Shadab Jakati\"\n     \u2192 Select \"Shadab Khan\" (as it's the most likely correct name based on context)\n\n   - Ground \"lahore\" returns:\n     * \"Gaddafi Stadium, Lahore\"\n     * \"Iqbal Stadium, Faisalabad\"\n     * \"Rawalpindi Cricket Stadium\"\n     * \"Multan Cricket Stadium\"\n     * \"Feroz Shah Kotla, Delhi\"\n     \u2192 Select \"Gaddafi Stadium, Lahore\" (as it's the only ground in Lahore)\n\nFinal Output:\n\n{\n    \"shadabkhan\": \"Shadab Khan\",\n    \"lahore\": \"Gaddafi Stadium, Lahore\"\n}",
-    "time_taken": 10.73
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 2.03
   },
   {
     "query": "Matches at Lords",
-    "response": "The term \"Lords\" in cricket is often associated with the famous cricket ground \"Lord's\" in London, which is known as the \"Home of Cricket.\" It is one of the most iconic and historically significant cricket grounds in the world.\nTherefore, the most likely match based on cricket terminology and context is:\n\n{\n\"Lords\": \"Lord's, London\"\n}",
-    "time_taken": 7.61
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 2.07
   },
   {
     "query": "Games played at Chinnaswamy",
-    "response": "Chinnaswamy in table has multiple similar values:\n   - \"M Chinnaswamy Stadium, Bengaluru\"\n   - \"M Chinnaswamy Stadium, Bangalore\"\n\nThe choice between these values depends on the context.\n   - \"M Chinnaswamy Stadium, Bangalore\" and \"M Chinnaswamy Stadium, Bengaluru\" are essentially the same venue, as Bengaluru is the renamed version of Bangalore.\n   - \"M Chinnaswamy Stadium, Bengaluru\" is likely more up-to-date, so it is preferred.\n\nThe final output is:\n\n```json\n{\n  \"Chinnaswamy\": \"M Chinnaswamy Stadium, Bengaluru\"\n}\n```",
-    "time_taken": 11.48
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.77
   },
   {
     "query": "Matches in MCG",
-    "response": "{\"MCG\": \"Melbourne Cricket Ground\"}",
-    "time_taken": 4.54
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.95
   },
   {
     "query": "Games between Aus and NZ",
-    "response": "{\n  \"Aus\": \"Australia\",\n  \"NZ\": \"New Zealand\"\n}",
-    "time_taken": 6.5
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 2.01
   },
   {
     "query": "Matches where CSK played",
-    "response": "The term \"CSK\" typically refers to \"Chennai Super Kings\" in the context of cricket. However, it is essential to provide accurate information to avoid any confusion.\n\nTherefore, the appropriate value is:\n\n**Chennai Super Kings**",
-    "time_taken": 5.94
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.78
   },
   {
     "query": "Find RCB games",
-    "response": "The term \"RCB\" in cricket typically refers to \"Royal Challengers Bangalore\" which is a well-known team in the Indian Premier League (IPL).\n\nSo the value in the database will be\n\n{\n  \"RCB\": \"Royal Challengers Bangalore\"\n}",
-    "time_taken": 5.96
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.81
   },
   {
     "query": "Show matches where Kohli faced Anderson at Lords",
-    "response": "After carefully comparing the values returned from the database with the user's query, I think the following matches are correct.\n\n1. The name \"Kohli\" in the user's query is likely referring to \"Virat Kohli\" based on the context.\n2. The name \"Anderson\" is likely referring to \"James Anderson\" based on the context.\n3. The ground \"Lords\" in the user's query is likely referring to \"Lord's, London\" based on the context\n\nSo, the final output is:\n\n{\n    \"Kohli\": \"Virat Kohli\",\n    \"Anderson\": \"James Anderson\",\n    \"Lords\": \"Lord's, London\"\n}",
-    "time_taken": 10.73
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.12
   },
   {
     "query": "Find games where Warner played against India at SCG",
-    "response": "After carefully analyzing the user query and the search results, I have standardized the cricket-related terms to match the actual database values. Here are the results:\n\n1. **Player**: The user mentioned \"Warner\". From the search results, the most relevant match is \"David Warner\", a well-known Australian cricketer.\n\n2. **Team**: The user mentioned \"India\". The exact match \"India\" is present in the search results, which is the appropriate choice.\n\n3. **Ground**: The user mentioned \"SCG\". The most relevant match is \"Sydney Cricket Ground\", a well-known venue in Australia.\n\n```json\n{\n  \"Warner\": \"David Warner\",\n  \"India\": \"India\",\n  \"SCG\": \"Sydney Cricket Ground\"\n}\n```",
-    "time_taken": 10.28
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.95
   },
   {
     "query": "Show all caught behind dismissals",
-    "response": "Here are some of the dismissal types in Cricket:\n\n* caught\n* bowled\n* leg before wicket (lbw)\n* stumped\n* run out\n* hit wicket\n* obstructing the field\n* hit the ball twice\n* timed out\n* retired out\n* The most common dismissal is \"caught\", where a fielder catches the ball after it has been hit by the batsman, without the ball touching the ground.\n\nThe term \"caught behind\" typically refers to a dismissal where the batsman edges the ball and it is caught by the wicket-keeper or a slip fielder behind the wicket.\n\nUnfortunately, the database does not contain a specific entry for \"caught behind.\" Instead, it likely records these dismissals under the general category of \"caught.\"\n\nTherefore, to retrieve all instances of \"caught behind\" dismissals, you would need to search for \"caught\" in the database.\n\nHere is how you can standardize the term:\n\n```json\n{\n  \"caught behind\": \"caught\"\n}\n```",
-    "time_taken": 10.82
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.93
   },
   {
     "query": "Find LBW wickets by r Ashwin",
-    "response": "{\n\n\"r Ashwin\": \"Ravichandran Ashwin\",\n\"LBW\": \"leg before wicket\",\n\n}",
-    "time_taken": 7.88
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.95
   },
   {
     "query": "Show cover drives against fast bowling",
-    "response": "{\n  \"cover drives\": \"COVER_DRIVE\",\n  \"fast\": \"pace bowler\"\n}",
-    "time_taken": 10.54
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 0.78
   },
   {
     "query": "Find matches with leg spin bowling",
-    "response": "{\n\"leg spin\": \"spin bowler\"\n}",
-    "time_taken": 5.0
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.88
   },
   {
     "query": "Games where Sachin played",
-    "response": "The name \"Sachin\" in the query could refer to multiple players based on the search results. However, given the context and popularity, the most likely reference is to Sachin Tendulkar, the legendary Indian cricketer. The search tool didn't return \"Sachin Tendulkar\" as a result because it looks for exact matches and \"Sachin Tendulkar\" was not in the database.\n\nFinal Output:\n```json\n{\n  \"Sachin\": \"Sachin Tendulkar\"\n}\n```",
-    "time_taken": 8.42
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.9
   },
   {
     "query": "Matches with Dada batting",
-    "response": "In cricket, \"Dada\" is a widely recognized nickname for the legendary Indian cricketer Sourav Ganguly. Despite the presence of names such as Atharva Taide, Derone Davis, Frederico Carava, Kedar Devdhar, and Dharani Rabha in the table, none of these correspond to the nickname \"Dada.\" Therefore, the database does not contain any relevant information regarding Sourav Ganguly, who is popularly known by this nickname.",
-    "time_taken": 6.49
+    "response": "Error: 'Command' object is not subscriptable",
+    "time_taken": 1.22
   }
 ]

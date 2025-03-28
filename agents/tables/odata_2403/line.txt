@@ -1,0 +1,6 @@
+outside off
+leg
+off
+middle
+down leg
+wide outside off

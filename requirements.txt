@@ -3,8 +3,10 @@ langchain
 langchain-openai
 langchain-google-genai
 langsmith
+fastapi
+uvicorn
 pandas
-db_dtypes
+db-dtypes
 python-dotenv
 google-cloud-bigquery-storage
 langchain-community
@@ -13,3 +15,13 @@ langchain-mistralai
 rich
 langchain-groq
 google-cloud-bigquery[pandas]
+aiofiles
+tabulate
+langchain-together
+langchain_experimental
+quickchart-io
+boto3
+awscli
+langchain_aws
+cloudinary
+matplotlib

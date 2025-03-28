@@ -1,5 +1,5 @@
 
-from agents.sql_with_preprocess.types import AgentState
+from agents.sql_with_preprocess.types1 import AgentState
 from langchain_mistralai.chat_models import ChatMistralAI
 from typing_extensions import Annotated, TypedDict
 from langchain_core.messages import SystemMessage,AIMessage,HumanMessage
@@ -9,7 +9,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 async def get_response(state:AgentState):
 
     # llm=ChatMistralAI(model='mistral-large')
-    llm=ChatGoogleGenerativeAI(model='gemini-1.5-flash-002')
+    llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash')
     sys_prompt=[SystemMessage(content=f"""
     You are an  chatbot agent part of an AI system that is helping an AI SQL agent for cricket analytics.
     Your expertise is aswering in natural language based on the conversation history.
