@@ -4,7 +4,6 @@ from agents.search.main import arun as search
 from agents.sql_with_preprocess.supervisor import make_supervisor_node as supervisor
 from langchain_mistralai.chat_models import ChatMistralAI
 from agents.sql_with_preprocess.sql_agent_subgraph import sql_agent_subgraph
-from agents.chat_agent.main import get_response as chatbot
 from agents.sql_with_preprocess.types1 import AgentState
 from langchain.callbacks.tracers import LangChainTracer
 from langchain_core.messages import HumanMessage,AIMessage,SystemMessage
@@ -12,6 +11,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai.chat_models import ChatOpenAI
 # from agents.visualiser.main import run_visualiser
 from agents.visualiser.main2 import get_response
+from langchain_aws import ChatBedrock
 
 from dotenv import load_dotenv
 
@@ -27,14 +27,18 @@ async def create_graph()->StateGraph:
     check_every_n_seconds=0.1,  # Wake up every 100 ms to check whether allowed to make a request,
     max_bucket_size=100,  # Controls the maximum burst size.
 )
-    # llm=ChatMistralAI(model='mistral-large-2411',rate_limiter=rate_limiter)
+    # llm=ChatMistralAI(model='mistral-large-2411')
     # Qwen/Qwen2.5-72B-Instruct
-    llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp',temperature=0)
+    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp',temperature=0)
     # llm=ChatGroq(model='llama-3.3-70b-versatile')
     # llm=ChatGoogleGenerativeAI(model='gemini-1.5-flash')
     # llm=ChatOpenAI(model='meta-llama/Llama-3.3-70B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
-    # llm=ChatOpenAI(model='gpt-4o-mini')
-    research_supervisor_node = await supervisor(llm, ["search", "sql","chatbot","visualiser"])
+    # llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
+    # llm=ChatOpenAI(model='openrouter/quasar-alpha', base_url="https://openrouter.ai/api/v1",api_key='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')
+    # llm = ChatBedrock(model_id="us.anthropic.claude-3-5-sonnet-20241022-v2:0")
+    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-exp-03-25')
+    # llm = ChatBedrock(model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0")
+    research_supervisor_node = await supervisor(llm, ["search", "sql","visualiser"])
 
 
 
@@ -42,7 +46,7 @@ async def create_graph()->StateGraph:
     workflow.add_node("supervisor", research_supervisor_node)
     workflow.add_node("search", search)
     workflow.add_node("sql", sql_agent_subgraph)
-    workflow.add_node("chatbot",chatbot )
+    # workflow.add_node("chatbot",chatbot )
     # workflow.add_node("visualiser",run_visualiser )
     workflow.add_node("visualiser",get_response )
 

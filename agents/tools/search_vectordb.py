@@ -8,8 +8,8 @@ from langchain_core.callbacks import CallbackManagerForToolRun, AsyncCallbackMan
 vector_store = VectorStoreManager()
 
 # Define valid tables and columns
-VALID_TABLES = ['hdata', 'hdata_2501']
-VALID_TABLE = Literal['hdata','hdata_2501']
+VALID_TABLES = ['hdata', 'hdata_2501','odata_2403','ipl_hawkeye']
+VALID_TABLE = Literal['hdata','hdata_2501','odata_2403','ipl_hawkeye']
 VALID_COLUMNS = Literal[
     'player', 'team', 'dismissal', 'ground', 'country', 'competition',
     'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'
@@ -20,22 +20,6 @@ class SearchPair(BaseModel):
     search_value: str = Field( description="Value to search for")
     column_name: str = Field(description="Column to search in")
     table_name: str = Field(description="Table to search in")
-
-    @validator('column_name')
-    def validate_column(cls, v):
-        valid_columns = [
-            'player', 'team', 'dismissal', 'ground', 'country', 'competition',
-            'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'
-        ]
-        if v not in valid_columns:
-            raise ValueError(f"Invalid column name. Must be one of: {valid_columns}")
-        return v
-
-    @validator('table_name')
-    def validate_table(cls, v):
-        if v not in VALID_TABLES:
-            raise ValueError("Only 'hdata','hdata_2501' table is supported")
-        return v
 
 class SearchInput(BaseModel):
     """Schema for the search tool input"""
@@ -59,9 +43,31 @@ class SearchTool(BaseTool):
         limit: int=5,
         run_manager: Optional[AsyncCallbackManagerForToolRun] = None
     ) -> list[str]:
-        """Execute the search asynchronously."""
+        """Execute the search asynchronously, performing validation checks."""
         try:
             print("search_pairs",search_pairs)
+            
+            validation_errors = []
+            valid_columns_list = [
+                'player', 'team', 'dismissal', 'ground', 'country', 'competition',
+                'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'
+            ] # Re-defined here for clarity, could be class member
+
+            # for i, pair in enumerate(search_pairs):
+            #     if pair.table_name not in VALID_TABLES:
+            #         validation_errors.append(
+            #             f"Error in search pair {i}: Invalid table '{pair.table_name}'. Must be one of: {VALID_TABLES}"
+            #         )
+            #     if pair.column_name not in valid_columns_list:
+            #          validation_errors.append(
+            #             f"Error in search pair {i}: Invalid column '{pair.column_name}'. Must be one of: {valid_columns_list}"
+            #         )
+
+            # # If there are validation errors, return them immediately
+            # if validation_errors:
+            #     return validation_errors
+
+            # Proceed with search if validation passes
             results = []
             for pair in search_pairs:
                 search_key = f"{pair.table_name}_{pair.column_name}"
@@ -70,11 +76,16 @@ class SearchTool(BaseTool):
                     search_key,limit
                 )
                 results.append(result)
-            print(results)
-            return results if results else ["No matches found"]
+            print(results) # Keep for debugging if needed, consider replacing with logging
+            # Ensure consistent return type structure, even if results are complex
+            # This might need adjustment depending on what search_similar_queries actually returns
+            processed_results = [str(r) for r in results] # Example: convert results to strings
+            return processed_results if processed_results else ["No matches found"]
             
         except Exception as e:
-            return [f"Error during search: {str(e)}"]
+            # Log the full exception for debugging
+            # Consider more specific error handling if possible
+            return [f"Error during search execution: {str(e)}"]
 
     def _run(
         self,

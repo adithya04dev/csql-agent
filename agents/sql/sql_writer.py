@@ -60,7 +60,7 @@ async def get_query(state:AgentState)->AgentState:
     state['execution_choice'] = result.execution_choice
     state['table_name'] = result.table_name
 
-    async with aiofiles.open(rf'C:\Users\adith\Documents\Projects\python-projects\csql-agent\agents\utils\schema_docs\{state['table_name']}_schema.txt','r') as f:
+    async with aiofiles.open(f"./agents/utils/schema_docs/{state['table_name']}_schema.txt",'r') as f:
         state['docs_schema']=await f.read()
 
     return state
@@ -105,14 +105,14 @@ async def sql_writer(state:AgentState)->AgentState:
 
     
     # llm=ChatMistralAI(model='mistral-small')
-    async with aiofiles.open(rf'C:\Users\adith\Documents\Projects\python-projects\csql-agent\agents\utils\schema_docs\hdata_0510_schema.txt','r') as f:
+    async with aiofiles.open(f"./agents/utils/schema_docs/{state['table_name']}_schema.txt",'r') as f:
         state['docs_schema']=await f.read()
     sys_prompt=[SystemMessage(content=f"""You are a working on an multi-agent system for cricket analytics.
  You are an expert in writing Bigquery SQL queries for cricket statistics analysis working alognside search agent and visualiser agent.
 
 DATABASE CONTEXT:
 - Schema and documentation: {state['docs_schema']}
--Current dataset is 'bbbdata' and  table is : hdata_2501
+-Current dataset is 'bbbdata' and  table is : {state['table_name']}
 
 REQUIREMENTS:
 -Understand the context given in the conversation (of other agents responses.)
@@ -135,7 +135,8 @@ Return in markdown format like ```sql   (place code here) ```!
 """)]+state['messages']
     # if context!='':
     #     sys_prompt.append(context)
-    llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
+    # llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
+    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-exp-03-25')
 
     response=await llm.ainvoke(sys_prompt)
     parsed_query=await parse_sql_query(response.content)

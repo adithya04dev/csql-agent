@@ -1,3 +1,8 @@
+repomix
+agents/**/tables,agents/**/*.ipynb,,agents/**/*.json,chatbot/**/*
+
+python -m agents.utils.values.py
+python -m agents.utils.vector_stores.py
 # 1. Authenticate with Google Cloud
 gcloud auth login
 

@@ -13,8 +13,8 @@ load_dotenv()
 
 class VectorStoreManager:
     def __init__(self,initial_examples_dir=None):
-        self.embeddings = OpenAIEmbeddings(model='text-embedding-3-small')
-        self.tables_dir = "C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables"    
+        self.embeddings = OpenAIEmbeddings(model='text-embedding-3-large')
+        self.tables_dir = "./agents/tables"
 
         self.stores = {}
         self.retrievers = {}
@@ -24,7 +24,7 @@ class VectorStoreManager:
         """Dynamically creates vector stores based on .txt files in tables/ directory."""
         for table_name in os.listdir(self.tables_dir):
             table_dir = os.path.join(self.tables_dir, table_name)
-            print("in table dir",table_dir)
+            # print("in table dir",table_dir)
             if os.path.isdir(table_dir):
                 for filename in os.listdir(table_dir):
                     # print("in file name",filename)
@@ -127,13 +127,20 @@ class VectorStoreManager:
 
 # Example Usage
 vector_store_manager = VectorStoreManager()
-# vector_store_manager.add_examples_from_directory("C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables\odata_2403" ) # Still adds from the directory
-# vector_store_manager.add_examples_from_directory("C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables\hdata_2501" ) # Still adds from the directory
-import asyncio
+# vector_store_manager.add_examples_from_directory("agents/tables/ipl_hawkeye") # Still adds from the directory
+# vector_store_manager.add_examples_from_directory("agents/tables/hdata_2403") # Still adds from the directory
 
-async def main():
-    print(await vector_store_manager.search_similar_queries("v kohli", "odata_2403_player")) 
-    print(await vector_store_manager.search_similar_queries("kewna maphaka", "odata_2403_player")) 
-    print(await vector_store_manager.search_similar_queries("back length", "odata_2403_length")) 
+# import asyncio
 
-asyncio.run(main())
+# async def main():
+#     # print(await vector_store_manager.search_similar_queries("v kohli", "odata_2403_player")) 
+#     # print(await vector_store_manager.search_similar_queries("kewna maphaka", "odata_2403_player")) 
+#     # print(await vector_store_manager.search_similar_queries("back length", "odata_2403_length")) 
+#     # print(await vector_store_manager.search_similar_queries("kohli", "ipl_hawkeye_player"))
+#     # print(await vector_store_manager.search_similar_queries("back length", "ipl_hawkeye_ball_length")) 
+
+#     print(await vector_store_manager.search_similar_queries("ipl 2024", "hdata_2403_competition"))
+
+
+
+# asyncio.run(main())

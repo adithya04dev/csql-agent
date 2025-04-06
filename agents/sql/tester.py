@@ -15,9 +15,8 @@ async def sql_query_tester(state: AgentState) -> AgentState:
     # if state['sql_error']:
     #     mess="Result: \n"
     # else:
-    mess="</think> Result: \n "
-    
-    mess+=state['sql_result']
+    # mess="</think> Result: \n "
+    mess=f"Result: \n {state['sql_result']}"
     state['messages'].append(HumanMessage(content=mess))
         
 

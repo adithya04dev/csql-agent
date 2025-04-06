@@ -3,7 +3,7 @@ from agents.sql.main import graph
 from agents.sql.types import AgentState
 from langgraph.types import Command
 from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMessage
-
+import uuid
 
 async def sql_agent_subgraph(state:AgentState)->AgentState:
     
@@ -26,11 +26,13 @@ async def sql_agent_subgraph(state:AgentState)->AgentState:
     # subgraph_result = '\n'.join(message.content for message in result['messages'][length:])
     # subgraph_result=subgraph_result.replace('<table>','```')
 
+    tool_call_id = str(uuid.uuid4())
 
 
     return Command(
-        update={'messages':[AIMessage(content=subgraph_result),
-                            HumanMessage(content=f"next what should it be done?")],
+        update={'messages':[HumanMessage(content="SQL Tool/Agent Called"),
+                            AIMessage(content=subgraph_result),
+                            HumanMessage(content=f"SQL Tool/Agent Executed")],
                 
         'sql_query': result['sql_query'],
         'table_name': result['table_name'],

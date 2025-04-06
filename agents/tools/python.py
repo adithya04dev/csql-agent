@@ -70,17 +70,15 @@ def execute_code(code:str)->str:
         else:
             return "Couldn't upload the plot online"
             
-        return python_repl.run(code)
+        # return python_repl.run(code)
     except Exception as e:
         # Catch and return any exceptions that occur during code execution
         return f"Error executing code: {str(e)}"
 
 python = Tool(
-    # func=python_repl.run,
-    func=execute_code,
+    func=python_repl.run,  # Use the standard REPL runner without modifications
     name="Python",
-    description="A Python code interpeter for visualising data that excutes code and uploads the plt to website and gives back url. Use this to execute visualise data.",
-    # coroutine= ... <- you can specify an async method if desired as well
+    description="A Python code interpreter that executes the provided code exactly as written. The code should handle all aspects of visualization creation and image uploading itself.",
 )
 
 def test_execute_code():

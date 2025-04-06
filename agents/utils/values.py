@@ -1,6 +1,6 @@
 from ..tools.execute_db import execute_query
 import os
-
+from vector_stores import VectorStoreManager
 def read_schema_columns(table_name):
     # Hardcoded list of columns from schema
     if table_name.startswith('hdata'):
@@ -11,13 +11,20 @@ def read_schema_columns(table_name):
             'bowl_style', 'bowl_kind', 'bat_out', 
             'line', 'length', 'shot'
         ]
-    else:
+    elif table_name.startswith('odata'):
         return [
             'format', 'ground', 'country',  'battingTeam', 
             'batsman', 'batsmanHand', 'bowlerHand', 'bowlerType', 
             'dismissalType','competition','shot_type', 'variation', 'length',
               'area', 'line', 'foot', 'fielder_action', 
         ]
+    elif table_name.startswith('ipl_hawkeye'):
+        return [
+            'batting_team',  'batsman_name', 
+             'delivery_type', 'ball_type', 'shot_type',
+            'ball_line', 'ball_length', 'wicket_type', 'ground'
+        ]
+
 
 
 def get_unique_values(table_name,column):
@@ -28,8 +35,8 @@ def get_unique_values(table_name,column):
         return []
     return result['sql_result'][column].tolist()
 def save_values_to_files(table_name):
-    # Create values directory based on table name
-    values_dir = os.path.join("C:\\Users\\adith\\Documents\\Projects\\python-projects\\csql-agent\\agents\\tables", table_name)
+    # Change this from Windows-style absolute path to relative path with forward slashes
+    values_dir = os.path.join("./agents/tables", table_name)
     os.makedirs(values_dir, exist_ok=True)
     
     # Get columns from schema
@@ -46,11 +53,16 @@ def save_values_to_files(table_name):
                 unique_values2 = get_unique_values(table_name,'bowl')
             elif column == 'team_bat':
                 unique_values2 = get_unique_values(table_name,'team_bowl')
-        else:
+        elif table_name.startswith('odata'):
             if column == 'batsman':
                 unique_values2 = get_unique_values(table_name,'bowler')
             elif column == 'battingTeam':
                 unique_values2 = get_unique_values(table_name,'bowlingTeam')
+        elif table_name.startswith('ipl_hawkeye'):
+            if column == 'batsman_name':
+                unique_values2 = get_unique_values(table_name,'bowler_name')
+            elif column == 'batting_team':
+                unique_values2 = get_unique_values(table_name,'bowling_team')
 
         unique_values = get_unique_values(table_name,column)
         unique_values = list(set(unique_values2) | set(unique_values))
@@ -72,7 +84,7 @@ def save_values_to_files(table_name):
                 'length': 'length',
                 'shot': 'shot'
             },
-            'other': {
+            'odata': {
                 'batsman': 'player',
                 'battingTeam': 'team',
                 'dismissalType': 'dismissal',
@@ -91,8 +103,19 @@ def save_values_to_files(table_name):
                 'fielder_action': 'fielder_action', 
                 'variation': 'variation',
                 
+            },
+            'ipl_hawkeye': {
+                'batting_team': 'team',
+                'batsman_name': 'player',
+                'delivery_type': 'delivery_type',
+                'ball_type': 'ball_type',
+                'shot_type': 'shot_type',
+                'ball_line': 'ball_line',
+                'ball_length': 'ball_length',
+                'wicket_type': 'wicket_type',
+                'ground': 'ground'
             }
-        }[ 'hdata' if table_name.startswith('hdata') else 'other' ]
+        }[ 'hdata' if table_name.startswith('hdata') else 'odata' if table_name.startswith('odata') else 'ipl_hawkeye' ]
 
         if unique_values:
             file_path = os.path.join(values_dir, f'{mapping[column]}.txt')
@@ -105,5 +128,10 @@ def save_values_to_files(table_name):
                         continue
 
 # Initialize by fetching and saving all values
-# save_values_to_files('hdata_2403')
-save_values_to_files('odata_2403')
+save_values_to_files('hdata_2403')
+save_values_to_files('ipl_hawkeye')
+
+vector_store_manager = VectorStoreManager()
+vector_store_manager.add_examples_from_directory("./agents/tables/ipl_hawkeye")
+vector_store_manager.add_examples_from_directory("./agents/tables/hdata_2501")
+

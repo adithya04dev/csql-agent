@@ -32,8 +32,8 @@ def execute_query(query: str) -> dict:
 
         return {'sql_result':str(e),'error':True}
     # print(query_job.to_dataframe().head(30).to_markdown(index=False))
-    # return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
-    return {'sql_result':query_job.to_dataframe(),'error':False}
+    return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
+    # return {'sql_result':query_job.to_dataframe(),'error':False}
 
 
 async def arun(query: str) -> dict:
