@@ -8,8 +8,8 @@ from langchain_core.callbacks import CallbackManagerForToolRun, AsyncCallbackMan
 vector_store = VectorStoreManager()
 
 # Define valid tables and columns
-VALID_TABLES = ['hdata', 'hdata_2501','odata_2403','ipl_hawkeye']
-VALID_TABLE = Literal['hdata','hdata_2501','odata_2403','ipl_hawkeye']
+VALID_TABLES = ['hdata', 'odata_2403','ipl_hawkeye']
+VALID_TABLE = Literal['hdata','hdata','odata_2403','ipl_hawkeye']
 VALID_COLUMNS = Literal[
     'player', 'team', 'dismissal', 'ground', 'country', 'competition',
     'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'

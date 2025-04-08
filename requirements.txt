@@ -25,3 +25,4 @@ awscli
 langchain_aws
 cloudinary
 matplotlib
+uvicorn[standard]

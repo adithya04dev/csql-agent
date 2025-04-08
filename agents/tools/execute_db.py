@@ -18,7 +18,7 @@ credentials_bytes = base64.b64decode(credentials_b64)
 credentials_dict = json.loads(credentials_bytes)
 credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
-def execute_query(query: str) -> dict:
+def execute_query(query: str,mode:str='sql') -> dict:
     """Synchronous function to execute BigQuery operations"""
     project_id = 'adept-cosine-420005'
     client = bigquery.Client(project=project_id, credentials=credentials)
@@ -32,7 +32,10 @@ def execute_query(query: str) -> dict:
 
         return {'sql_result':str(e),'error':True}
     # print(query_job.to_dataframe().head(30).to_markdown(index=False))
-    return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
+    if mode=='unique_values':
+        return {'sql_result':query_job.to_dataframe(),'error':False}
+    else:
+        return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
     # return {'sql_result':query_job.to_dataframe(),'error':False}
 
 

@@ -52,7 +52,7 @@ async def arun(state: AgentState):
 
 
     table_columns = {
-    'hdata_2403': [
+    'hdata': [
         'player', 'team', 'dismissal', 'ground', 'country', 'competition', 
         'bat_hand', 'bowl_style((specifies in detail)', 'bowl_kind(broadly classifies like spin or pace)', 'line', 'length', 'shot'
     ],

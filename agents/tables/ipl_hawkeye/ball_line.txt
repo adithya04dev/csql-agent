@@ -1,9 +1,9 @@
-Wide outside Off stump
-Outside Off stump
-nan
 Off stump
-Outside Leg stump
-Leg stump
-Middle stump
-Wide outside Leg stump
 0
+Outside Off stump
+Middle stump
+Outside Leg stump
+Wide outside Off stump
+nan
+Wide outside Leg stump
+Leg stump

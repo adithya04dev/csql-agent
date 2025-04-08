@@ -1,4 +1,4 @@
-Medium
 Seam
 nan
+Medium
 Spin

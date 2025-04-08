@@ -1,6 +1,6 @@
 from ..tools.execute_db import execute_query
 import os
-from vector_stores import VectorStoreManager
+from .vector_stores import VectorStoreManager
 def read_schema_columns(table_name):
     # Hardcoded list of columns from schema
     if table_name.startswith('hdata'):
@@ -29,7 +29,7 @@ def read_schema_columns(table_name):
 
 def get_unique_values(table_name,column):
     query = f"SELECT DISTINCT {column} FROM adept-cosine-420005.bbbdata.{table_name} WHERE {column} IS NOT NULL ORDER BY {column}"
-    result = execute_query(query)
+    result = execute_query(query,mode='unique_values')
     if result['error']:
         print(f"error in column {column}")
         return []
@@ -128,10 +128,10 @@ def save_values_to_files(table_name):
                         continue
 
 # Initialize by fetching and saving all values
-save_values_to_files('hdata_2403')
+save_values_to_files('hdata')
 save_values_to_files('ipl_hawkeye')
 
 vector_store_manager = VectorStoreManager()
 vector_store_manager.add_examples_from_directory("./agents/tables/ipl_hawkeye")
-vector_store_manager.add_examples_from_directory("./agents/tables/hdata_2501")
+vector_store_manager.add_examples_from_directory("./agents/tables/hdata")
 

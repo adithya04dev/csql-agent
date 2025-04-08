@@ -12,6 +12,7 @@ gcloud config set project [PROJECT_ID]
 # 3. Upload your CSV file(s) to GCS bucket
 # For a single file:
 gsutil -m cp "C:\Users\adith\Documents\Projects\python-projects\analytics\datasets\odata_2403.csv" gs://cricmetric/
+gsutil -m cp "C:\Users\adith\Documents\Projects\python-projects\analytics\datasets\hdata_0804.csv" gs://cricmetric/
 
 # For better performance with large files (>150MB):
 gsutil -o GSUtil:parallel_composite_upload_threshold=150M cp data.csv gs://[BUCKET_NAME]/

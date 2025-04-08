@@ -49,7 +49,7 @@ CRITICAL WORKFLOW INSTRUCTIONS:
 When routing to the search or sql agents, you must select the appropriate table to query:
 Based on the query think about what table would be more sufficient and robust..
 
-- 'hdata_2403': Primary T20 Ball-By-Ball Database (includes IPL matches) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
+- 'hdata': Primary T20 Ball-By-Ball Database (includes IPL matches) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
 - 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates, and spatial information.Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics or spatial analysis. While slightly less comprehensive in match coverage than hdata_2403, it provides unique metrics not available elsewhere. Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by hdata_2403.
 - 'odata_2403': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20, and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user asks for multi-format analysis (Tests, ODIs, etc.) . 
 
@@ -70,7 +70,7 @@ Remember:
         # think:str=Field(description="Space for structured thinking and reasoning about the user's question. Use this to analyze the query, determine which to  tools are needed, identify entities to look up, plan your approach, and verify that you're following the correct process based on the prompt. ")
         message:str = Field(description="Your message to add to conversation")
         next: Literal[*options] = Field(description="The next worker to route to")
-        table_name: Literal['hdata_2403', 'odata_2403', 'ipl_hawkeye'] = Field(description="The table to query")
+        table_name: Literal['hdata', 'odata_2403', 'ipl_hawkeye'] = Field(description="The table to query")
 
     async def supervisor_node(state: AgentState) -> Command[Literal[*members, "__end__"]]:
         """An LLM-based router."""
