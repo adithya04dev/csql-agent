@@ -126,7 +126,7 @@ class VectorStoreManager:
         return f"similar values of {query} in table are:\n{'\n'.join(result_texts)}"
 
 # Example Usage
-vector_store_manager = VectorStoreManager()
+# vector_store_manager = VectorStoreManager()
 # vector_store_manager.add_examples_from_directory("agents/tables/ipl_hawkeye") # Still adds from the directory
 # vector_store_manager.add_examples_from_directory("agents/tables/hdata_2403") # Still adds from the directory
 

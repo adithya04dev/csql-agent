@@ -127,11 +127,11 @@ def save_values_to_files(table_name):
                         print(f"Error writing value in {column}: {str(e)}")
                         continue
 
-# Initialize by fetching and saving all values
-save_values_to_files('hdata')
-save_values_to_files('ipl_hawkeye')
+# # Initialize by fetching and saving all values
+# save_values_to_files('hdata')
+# save_values_to_files('ipl_hawkeye')
 
-vector_store_manager = VectorStoreManager()
-vector_store_manager.add_examples_from_directory("./agents/tables/ipl_hawkeye")
-vector_store_manager.add_examples_from_directory("./agents/tables/hdata")
+# vector_store_manager = VectorStoreManager()
+# vector_store_manager.add_examples_from_directory("./agents/tables/ipl_hawkeye")
+# vector_store_manager.add_examples_from_directory("./agents/tables/hdata")
 
