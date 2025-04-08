@@ -4,7 +4,7 @@ langchain-openai
 langchain-google-genai
 langsmith
 fastapi
-uvicorn
+# uvicorn
 pandas
 db-dtypes
 python-dotenv
@@ -12,14 +12,14 @@ google-cloud-bigquery-storage
 langchain-community
 faiss-cpu
 langchain-mistralai
-rich
+# rich
 langchain-groq
 google-cloud-bigquery[pandas]
 aiofiles
-tabulate
-langchain-together
+# tabulate
+# langchain-together
 langchain_experimental
-quickchart-io
+# quickchart-io
 boto3
 awscli
 langchain_aws

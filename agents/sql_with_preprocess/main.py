@@ -19,7 +19,7 @@ load_dotenv()
 # tracer = LangChainTracer("pr-charming-advertising-26")
 from langchain_core.rate_limiters import InMemoryRateLimiter
 
-from langchain_groq import ChatGroq
+# from langchain_groq import ChatGroq
 
 async def create_graph()->StateGraph:
     rate_limiter = InMemoryRateLimiter(
