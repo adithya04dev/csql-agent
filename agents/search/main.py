@@ -16,7 +16,7 @@ from langchain.callbacks.manager import CallbackManager
 # Add these near your other environment variable loads
 import uuid
 from langchain_core.rate_limiters import InMemoryRateLimiter
-from langchain_together import ChatTogether
+# from langchain_together import ChatTogether
 from agents.tools.search_vectordb import tool, SearchPair
 from langchain_aws import ChatBedrock
 
