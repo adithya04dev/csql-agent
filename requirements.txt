@@ -16,7 +16,7 @@ langchain-mistralai
 # langchain-groq
 google-cloud-bigquery[pandas]
 aiofiles
-# tabulate
+tabulate
 # langchain-together
 langchain_experimental
 # quickchart-io
