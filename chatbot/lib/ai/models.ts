@@ -11,7 +11,7 @@ import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 const provider = createOpenAICompatible({
   name: 'sql-agent',
   apiKey: "hello",
-  baseURL: 'http://localhost:8000/api/v1/',
+  baseURL: `${process.env.BASE_URL}/api/v1/`,
   
 });
 export const myProvider = customProvider({
