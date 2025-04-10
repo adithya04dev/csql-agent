@@ -10,3 +10,4 @@ temp.html
 data/
 env/
 venv/
+agents/**/*.ipynb
