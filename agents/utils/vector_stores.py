@@ -45,7 +45,7 @@ class VectorStoreManager:
             print(f"Warning: Category '{table_category}' not found in available categories.")
             return None
             
-        table_name, category = table_category.split('_', 1)
+        table_name, category = table_category.rsplit('_', 1)
         table_dir = os.path.join(self.tables_dir, table_name)
         store_path = os.path.join(table_dir, table_category)
         

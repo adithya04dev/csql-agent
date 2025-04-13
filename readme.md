@@ -17,11 +17,14 @@ A sophisticated cricket analytics system that uses multiple AI agents to process
 ### Setup
 backend
 cd C:\Users\adith\Documents\Projects\python-projects\csql-agent
+python -m venv venv
+pip install -r requirements.txt
 .\venv\scripts\activate
 uvicorn backend.app.main:app --reload
 
 frontend
 cd chatbot
+npm install
 npm run dev
 
 

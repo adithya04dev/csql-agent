@@ -13,7 +13,8 @@ from datetime import datetime
 async def make_supervisor_node(llm: BaseChatModel, members: list[str]) -> str:
     options = ["user"] + members
 
-    system_prompt = f"""You are a helpful cricket analytics assistant that can directly answer questions or use specialized tools when needed to analyze cricket data.
+    system_prompt = f"""You are a helpful cricket analytics assistant that can directly answer questions
+     or use specialized tools when needed to analyze cricket data.
 
 You have the following tools available:
 
@@ -26,32 +27,53 @@ You have the following tools available:
    - Use for: calculating averages, finding top performers, comparing stats
    - IMPORTANT: Only use this AFTER confirming entities with the search agent
 
-3. **visualiser agent**(viz tool): Creates charts and graphs from cricket data
-   - Use for: when users specifically ask for visual representation of data
+3. **visualiser agent**(viz tool): Creates charts and graphs from cricket data and returns url of chart.
+   - Use for: when users specifically ask for visual representation of data 
 Today's date is  {datetime.now().strftime('%Y-%m-%d')}
 
 
    
 CRITICAL WORKFLOW INSTRUCTIONS:
-- Prioritize using the **search agent** first whenever the user mentions specific, named cricket entities like players, teams, or venues, especially if they haven't been confirmed recently.
-- **Also consider the search agent** if the user mentions other terms, categories, or filters (like specific  bowler types, fielding positions, data columns etc.) IF:
-    - You are unsure about the exact spelling, validity, or how that term is represented in the **target database table** (`hdata_2403`, `odata_2403`, `ipl_hawkeye`).
-    - The term seems like it might refer to a specific value or category within the database that needs clarification before analysis.
-- **Example:** If the user asks for "leg spin" bowlers using `ipl_hawkeye`, and you're unsure if "leg spin" is the exact category name used in that table, use the search agent to check available bowler types first.
-- NEVER assume the spelling, format, or existence of any specific entity or category name within the target table. Verify first if unsure.
--Think deeply on what values u need to find/lookup ...like think hard motherfucker!
-- **Proceed directly to the SQL agent** ONLY IF:
-    - All mentioned entities/categories have been recently verified OR
-    - The query uses general terms that don't require specific database lookup OR
-    - It's a direct follow-up on already verified terms.
-    -Already the search agent is called for the given user query.
+1. **Entity Verification First:** 
+   - ALWAYS use the **search agent** first when a user mentions specific cricket entities
+   - This includes players, teams, grounds, countries, competitions, and specialized terms..see what all can be searched columns below for a given table
+   - Verify entities before analysis to ensure accuracy
+
+2. **When to Use Search Agent:**
+   - For initial verification of any named entity
+   - When uncertain about exact spelling, format, or existence in the database
+   - When dealing with categories/filters (like bowling styles, shot types)...see what all can be searched columns below for a given table
+   - When you need to confirm how a term is represented in the target table
+
+3. **When to Skip Search and Use SQL Agent Directly:**
+   - All entities have been verified in recent conversation
+   - Query uses only general terms not requiring specific lookups
+   - Direct follow-up questions using previously verified terms
+   - Search agent already called for the current user query
+
+4. **Table Selection Guide:**
+   - Choose the most appropriate table based on query asked and the searchable columns that are given below for each table..think while choosing
+   - Verify specific columns exist in your chosen table
+   - When in doubt about available columns, use search agent first
+
+5. **Example Workflow:**
+   - User asks: "What's Virat Kohli's strike rate against leg spinners?"
+   - First use search agent on 'hdata' to verify "Virat Kohli" and "leg spin" exist
+   - Then use SQL agent to calculate the strike rate
+
+Always verify entities before analysis - accurate data depends on proper identification.
 
 When routing to the search or sql agents, you must select the appropriate table to query:
 Based on the query think about what table would be more sufficient and robust..
 
 - 'hdata': Primary T20 Ball-By-Ball Database (includes IPL matches) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
+    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
+
 - 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates, and spatial information.Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics or spatial analysis. While slightly less comprehensive in match coverage than hdata_2403, it provides unique metrics not available elsewhere. Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by hdata_2403.
+    * Searchable columns: team, player, delivery_type, ball_type, shot_type, ball_line, ball_length, wicket_type, ground.
+
 - 'odata_2403': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20, and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user asks for multi-format analysis (Tests, ODIs, etc.) . 
+        * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
 
 
 
@@ -60,31 +82,48 @@ Remember:
 - Choose "user" when you want to return control to the user with a complete answer
 - When routing to "user", include '</think>' followed by your final response to the user
   * Everything before '</think>' will be hidden in a collapsible section
-  * Everything after '</think>' will be displayed immediately to the user
+  * Everything after '</think>' will be displayed immediately to the user like need to include sql results or visualisation links, or a short messages.
 - For new questions, you may need need to search for entities first
 - For follow-up questions, you may be able to use existing context without searching again
 """
 
     class Router(BaseModel):
         """Worker to route to next. If no workers needed, route to user."""
-        # think:str=Field(description="Space for structured thinking and reasoning about the user's question. Use this to analyze the query, determine which to  tools are needed, identify entities to look up, plan your approach, and verify that you're following the correct process based on the prompt. ")
-        message:str = Field(description="Your message to add to conversation")
-        next: Literal[*options] = Field(description="The next worker to route to")
-        table_name: Literal['hdata', 'odata_2403', 'ipl_hawkeye'] = Field(description="The table to query")
+        # think:str=Field(description="Space for structured thinking and reasoning about the user's question. Use this to analyze the query, determine which tools are needed, identify entities/terms to look up, plan your approach, choose the table, and verify workflow steps.")
+        next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent') or 'user'.")
+        
+        message:str = Field(description="A short message u want to add to conversation.Include </think> before writing to user. U may include SQL results,viz link or a casual message. ")
+        table_name: Optional[Literal['hdata', 'odata_2403', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
 
     async def supervisor_node(state: AgentState) -> Command[Literal[*members, "__end__"]]:
         """An LLM-based router."""
         messages = [
             SystemMessage(content=system_prompt)
         ] + state["messages"]
+        # Trim messages if needed, potentially keeping more history for context
+        # trimmed_messages = trim_messages(messages, max_tokens=...)
         response = await llm.with_structured_output(Router).ainvoke(messages)
-        state['table_name']=response.table_name
+
+        # Basic validation
+        if response.next in ['search_agent', 'sql_agent'] and not response.table_name:
+             # Handle error: LLM failed to provide table name when required
+             # Potentially re-prompt or default, here we raise an error for simplicity
+             raise ValueError(f"Supervisor Error: Table name missing when routing to {response.next}")
+
+        state['table_name'] = response.table_name
         goto = response.next
         if goto == "user":
-            goto = END
-        messages=[]
-        messages.append(AIMessage(f"Supervisor agent: {response.message.replace('`','')} \n\n Working on  {response.table_name}"))
-      #   messages.append(HumanMessage(f"Supervisor agent: routed to {goto} agent"))
-        return Command(goto=goto,update={'messages':messages,'table_name':response.table_name,'sequence':f"{state['sequence']} {goto}"})
+            goto = END # LangGraph convention for ending the flow
+
+        ai_message_content = f"Supervisor Action: Routing to {response.next}."
+        if response.table_name:
+            ai_message_content += f" Target Table: {response.table_name}."
+        # Include the LLM's reasoning/message for clarity if needed for debugging/logging
+        ai_message_content += f"\n\n Message: {response.message.replace('`','')}"
+
+        new_messages = [AIMessage(content=ai_message_content)]
+
+        return Command(goto=goto, update={'messages': new_messages, 'table_name': response.table_name, 'sequence': f"{state.get('sequence', '')} {goto}"})
+
 
     return supervisor_node

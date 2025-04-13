@@ -42,7 +42,7 @@ async def arun(state: AgentState):
 
     model=ChatOpenAI(model='o3-mini',reasoning_effort='medium')
     # model = ChatBedrock(model_id="us.anthropic.claude-3-5-sonnet-20241022-v2:0")
-    model=ChatGoogleGenerativeAI(model='gemini-2.5-pro-exp-03-25')
+    model=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25',temperature=0.1)
     # model=ChatOpenAI(model='meta-llama/Llama-3.3-70B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
 
 
@@ -71,7 +71,7 @@ async def arun(state: AgentState):
 Your primary role is to help standardize and validate cricket-related terms by matching user inputs to actual database values.
 
 You will be given user conversation based on that u need to interpret and find correct matching values in databse for a query..
-You are just an search agent..
+You are just an search agent..and need to return text response
 
 
 Databases and its Schema:
@@ -139,17 +139,19 @@ Search Process:
      * "Medium Fast"
      → Select "Fast" (as query specifically mentioned fast bowling)
   3.Use cricket knowledge understanding to select the most appropriate ones based on the context and return results 
-  in json  format
+  response in text/string response of json
 
-Final Output:
+Final Output(response text/string response of json): 
+```json
 {{
     "stev smit": ["Steve Smith","player" ],
     "MCG": ["Melbourne Cricket Ground","ground"],
     "coverdrives": ["cover drive","shot"],
     "fast": ["Fast","bowl_kind"]
 }}
-
+```
 Remember: 
+-Finally return text/string response of json
 -Your role is not just to search, but to intelligently interpret and standardize cricket terms for accurate database queries.
 -Use the necessary tools to search..dont give on your own previous knowledge.
 -you will be given a whole cnversation based on that understad what u need to interpret and search and standardise.
@@ -169,7 +171,7 @@ Remember:
     # Create a unique tool_call_id for the ToolMessages
     tool_call_id = str(uuid.uuid4())
     
-    response = [  ]
+    response = [HumanMessage(content="Search Tool/Agent Called")  ]
     response.append(AIMessage(content=f"Search Agent Last Response (complete responses ommited to reduce context size): \n{result['messages'][-1].content.replace('`', '')}\n ")),
   #   if len(state['messages'])<3:
         

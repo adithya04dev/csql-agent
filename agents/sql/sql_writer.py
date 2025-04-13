@@ -107,37 +107,41 @@ async def sql_writer(state:AgentState)->AgentState:
     # llm=ChatMistralAI(model='mistral-small')
     async with aiofiles.open(f"./agents/utils/schema_docs/{state['table_name']}_schema.txt",'r') as f:
         state['docs_schema']=await f.read()
-    sys_prompt=[SystemMessage(content=f"""You are a working on an multi-agent system for cricket analytics.
- You are an expert in writing Bigquery SQL queries for cricket statistics analysis working alognside search agent and visualiser agent.
+    sys_prompt=[SystemMessage(content=f"""You are a SQL agent for cricket analytics that works with search and visualizer agents.
 
-DATABASE CONTEXT:
-- Schema and documentation: {state['docs_schema']}
--Current dataset is 'bbbdata' and  table is : {state['table_name']}
+**DATABASE INFO of Bigquery:**
+- Dataset Name : 'bbbdata'
+- Table: {state['table_name']}
+- Schema: {state['docs_schema']}
 
-REQUIREMENTS:
--Understand the context given in the conversation (of other agents responses.)
--You are required to write Bigquery sql queries for a query thats being asked in the conversation.
--Follow cricket database schema
-- Use exact column names
+**YOUR TASK:**
+- Read the conversation context
+- Write precise BigQuery SQL based on user requests
+- Use exact schema column names
+- Calculate cricket metrics accurately
 
-I like:
--for batting queries i want it to include average,strike rate for individuals ( or run rate for teams),control percentage,boundary%,dotball%..
--for bowling queries i want it to include average,economy,strikerate,dotball%..
--use cte if needed.
+**KEY METRICS TO INCLUDE:**
 
-I have also attached some similar sql queries for undestanding how some metrcis are calculaated..dont blindly copy those
-..first understand the intent of the query being asked and think detailed what u neeed to calculate and then  write sql code
+For Batting: Core: Runs, balls faced, dismissals | Standard: Average, strike rate (runs/balls*100), control % | Additional: Boundary %, dot ball %
+For Bowling: Core: Overs/balls, runs conceded, wickets | Standard: Average, economy, strike rate | Additional: Dot ball %, boundary % conceded
 
+**BEST PRACTICES:**
+- Use CTEs for complex calculations
+- Filter appropriately (valid deliveries, match types)
+- Handle edge cases (division by zero, nulls)
+- Structure queries logically
+- Verify entities with search agent results
 
-Return in markdown format like ```sql   (place code here) ```!
-
-
+Return ONLY SQL in markdown format:
+```sql
+YOUR_QUERY_HERE
+```
 """)]+state['messages']
     # if context!='':
     #     sys_prompt.append(context)
     # llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
-    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-exp-03-25')
-
+    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25',temperature=0.1)
+    state['messages'].append(HumanMessage(content='Write Query by understanding the context.'))
     response=await llm.ainvoke(sys_prompt)
     parsed_query=await parse_sql_query(response.content)
     state['sql_query']=parsed_query
@@ -147,9 +151,8 @@ Return in markdown format like ```sql   (place code here) ```!
         state['messages'].append(AIMessage(content=f"SQL Query :\n {parsed_query.replace('`', '')}"# Add a default tool_call_id
         ))
     else:
-        state['messages'].append(AIMessage(content='couldnt parse the sql query. Try again by returning sql query in markdown format!.'))
+        state['messages'].append(AIMessage(content='Couldnt parse/extract the sql query. Try again by returning sql query in markdown format!.'))
     
-    state['messages'].append(HumanMessage(content=f"next what should it be done?"))
     return state
     # return
 

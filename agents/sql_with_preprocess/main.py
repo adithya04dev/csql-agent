@@ -36,7 +36,7 @@ async def create_graph()->StateGraph:
     # llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
     # llm=ChatOpenAI(model='openrouter/quasar-alpha', base_url="https://openrouter.ai/api/v1",api_key='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')
     # llm = ChatBedrock(model_id="us.anthropic.claude-3-5-sonnet-20241022-v2:0")
-    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-exp-03-25')
+    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25',temperature=0.1)
     # llm = ChatBedrock(model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0")
     research_supervisor_node = await supervisor(llm, ["search", "sql","visualiser"])
 
