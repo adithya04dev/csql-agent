@@ -27,7 +27,7 @@ def get_response(state:AgentState):
     # llm = ChatMistralAI(model="mistral-small-latest",rate_limiter=rate_limiter)
 
     # llm = ChatBedrock(model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0")
-    llm=ChatOpenAI(model='o3-mini',reasoning_effort='medium')
+    llm=ChatOpenAI(model='o4-mini',reasoning_effort='medium')
     # llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25')
     # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash')
 
@@ -107,13 +107,14 @@ print(url)  # This will be returned to the user
                                       """)
 
     le=len(state['messages'])
-    print(state['messages'])
+    # print(state['messages'])
     agent = create_react_agent(model=llm, tools=[python],state_modifier=matplotlib_messages)
+    # state['messages'].append(HumanMessage(content="Write the code for visualization based on the conversation history"))
     response= agent.invoke({'messages':state['messages']})
     # print(response)
     tool_call_id = str(uuid.uuid4())
     messages=[HumanMessage(content="Visualiser Tool/Agent Called"),
-              AIMessage(content=f" Visualiser Agent Last Response (complete responses ommited to reduce context size): {response['messages'][-1].content}")]
+              AIMessage(content=f" Visualiser Agent Last Response : {response['messages'][-1].content.replace('</think>','')}")]
 
     # messages=response['messages'][le:]
     # messages = []

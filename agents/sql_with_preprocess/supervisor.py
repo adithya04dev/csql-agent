@@ -16,6 +16,7 @@ async def make_supervisor_node(llm: BaseChatModel, members: list[str]) -> str:
     system_prompt = f"""You are a helpful cricket analytics assistant that can directly answer questions
      or use specialized tools when needed to analyze cricket data.
 
+
 You have the following tools available:
 
 1. **search agent**(lookup tool): Looks up specific entities in the cricket database
@@ -28,7 +29,11 @@ You have the following tools available:
    - IMPORTANT: Only use this AFTER confirming entities with the search agent
 
 3. **visualiser agent**(viz tool): Creates charts and graphs from cricket data and returns url of chart.
-   - Use for: when users specifically ask for visual representation of data 
+   - Use for: when users specifically ask for visual representation of data
+   -After using this tool,return the url of the chart to the user
+- Do NOT call the same tool/agent repeatedly more than 2-3  times consecutively and struck in a loop
+- Do NOT call the same tool/agent repeatedly more than 2-3  times consecutively and struck in a loop
+
 Today's date is  {datetime.now().strftime('%Y-%m-%d')}
 
 
@@ -79,20 +84,23 @@ Based on the query think about what table would be more sufficient and robust..
 
 
 Remember:
-- Choose "user" when you want to return control to the user with a complete answer
+- Choose "user" when you want to return control to the user with a complete answer(like sql result or visualisation link)
 - When routing to "user", include '</think>' followed by your final response to the user
   * Everything before '</think>' will be hidden in a collapsible section
-  * Everything after '</think>' will be displayed immediately to the user like need to include sql results or visualisation links, or a short messages.
+  * Everything after '</think>' will be displayed immediately to the user. 
+  * Thus, u can include the sql results,visualisation link or a casual message after </think> tag
 - For new questions, you may need need to search for entities first
 - For follow-up questions, you may be able to use existing context without searching again
+- Do NOT call the same agent repeatedly more than 2-3  times consecutively
+
 """
 
     class Router(BaseModel):
         """Worker to route to next. If no workers needed, route to user."""
         # think:str=Field(description="Space for structured thinking and reasoning about the user's question. Use this to analyze the query, determine which tools are needed, identify entities/terms to look up, plan your approach, choose the table, and verify workflow steps.")
-        next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent') or 'user'.")
         
-        message:str = Field(description="A short message u want to add to conversation.Include </think> before writing to user. U may include SQL results,viz link or a casual message. ")
+        message:str = Field(description="A short message u want to add to conversation.Include </think> before writing to user. U may include SQL results,visualisation link or a casual message. ")
+        next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent' or 'user'.")
         table_name: Optional[Literal['hdata', 'odata_2403', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
 
     async def supervisor_node(state: AgentState) -> Command[Literal[*members, "__end__"]]:
