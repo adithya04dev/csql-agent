@@ -1,37 +1,19 @@
+import os
 from agents.sql_with_preprocess.types1 import AgentState
 from langchain_mistralai.chat_models import ChatMistralAI
 from typing_extensions import Annotated, TypedDict
 from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMessage
 from langgraph.types import Command
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.rate_limiters import InMemoryRateLimiter
 from agents.tools.python import python
-from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langgraph.prebuilt import create_react_agent
-from langchain_aws import ChatBedrock
 import boto3
-
-from langchain_openai import ChatOpenAI
 import uuid 
-
+from agents.utils.llm_utils import get_llm
 def get_response(state:AgentState):
 
-    # llm=ChatMistralAI(model='mistral-large')
-    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash')
-    rate_limiter = InMemoryRateLimiter(
-    requests_per_second=0.85,  
-    check_every_n_seconds=0.1,  
-    max_bucket_size=1000  
-    )
+    viz_model=os.getenv('VIZ_MODEL')
+    llm=get_llm(viz_model)
 
-    # llm = ChatMistralAI(model="mistral-small-latest",rate_limiter=rate_limiter)
-
-    # llm = ChatBedrock(model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0")
-    llm=ChatOpenAI(model='o4-mini',reasoning_effort='medium')
-    # llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25')
-    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash')
-
-    
 
 
     matplotlib_messages=SystemMessage(content="""

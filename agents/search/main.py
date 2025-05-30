@@ -1,54 +1,24 @@
+import os
 from langchain_core.messages import SystemMessage
 from langchain_openai.chat_models import ChatOpenAI
-# from langgraph.prebuilt.chat_agent_executor import create_tool_calling_executor
-from langchain_mistralai.chat_models import ChatMistralAI
 from dotenv import load_dotenv
 from agents.tools.search_vectordb import tool
 from langgraph.types import Command
 from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMessage
 from agents.sql_with_preprocess.types1 import AgentState
-from langchain_google_genai import ChatGoogleGenerativeAI
 load_dotenv()
 from langgraph.prebuilt import create_react_agent
-from langsmith import Client
-from langchain.callbacks.tracers import LangChainTracer
-from langchain.callbacks.manager import CallbackManager
+
 # Add these near your other environment variable loads
 import uuid
 from langchain_core.rate_limiters import InMemoryRateLimiter
-# from langchain_together import ChatTogether
-from agents.tools.search_vectordb import tool, SearchPair
-from langchain_aws import ChatBedrock
-
+from agents.tools.search_vectordb import tool
+from agents.utils.llm_utils import get_llm
 async def arun(state: AgentState):
-    
-    # model = ChatMistralAI(      model='mistral-small-latest',    )
-
-    # model=ChatGoogleGenerativeAI(model='gemini-1.5-flash')
-    rate_limiter = InMemoryRateLimiter(
-    requests_per_second=1,  # <-- Super slow! We can only make a request once every 10 seconds!!
-    check_every_n_seconds=0.30,  # Wake up every 100 ms to check whether allowed to make a request,
-    max_bucket_size=10,  # Controls the maximum burst size.
-)
-    # model = ChatMistralAI(model='mistral-large-2411')
-    # model = ChatBedrock(model_id="us.anthropic.claude-3-5-haiku-20241022-v1:0")
-
-    model=ChatGoogleGenerativeAI(model='gemini-2.5-pro-exp-03-25')
-#     model = ChatTogether(
-#     # together_api_key="YOUR_API_KEY",
-#     model="Qwen/Qwen2.5-72B-Instruct-Turbo",
-#     api_key='29e062d0a46153ddc46e8920e276262852db8028456e8fa5aa47d1bd4724ff33'
-# )
-
-    model=ChatOpenAI(model='o3-mini',reasoning_effort='medium')
-    # model = ChatBedrock(model_id="us.anthropic.claude-3-5-sonnet-20241022-v2:0")
-    model=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25',temperature=0.1)
-    # model=ChatOpenAI(model='meta-llama/Llama-3.3-70B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
 
 
-    # agent = create_tool_calling_agent(model, tools, prompt)
-    # agent_executor = AgentExecutor(agent=agent, tools=tools)
-
+    search_model=os.getenv('SEARCH_MODEL')
+    model=get_llm(search_model)
 
 
     table_columns = {
@@ -168,25 +138,9 @@ Remember:
     state['messages'].append(HumanMessage(content="Search Tool/Agent Called"))
     result = await agent.ainvoke({'messages':state['messages']})
     
-    # Create a unique tool_call_id for the ToolMessages
-    tool_call_id = str(uuid.uuid4())
     
     response = [HumanMessage(content="Search Tool/Agent Called")  ]
     response.append(AIMessage(content=f"Search Agent Last Response (complete responses ommited to reduce context size): \n{result['messages'][-1].content.replace('`', '')}\n ")),
-  #   if len(state['messages'])<3:
-        
-  #     search_pair = SearchPair(
-  #     search_value=state['messages'][0].content,
-  #     column_name='sql_queries',
-  #     table_name='hdata_2501'  
-  # )
-  #     state['relevant_sql_queries'] = await tool._arun([search_pair],limit=4)
-  #     response.append(HumanMessage(content=f""" 
-
-  #         Some Similar  SQL Queries in database after searching is: {state['relevant_sql_queries']}
-  #         """,name='agent'))
-    
-
 
     # Use the same or a new tool_call_id here
     response.append(HumanMessage(content="Search Tool/Agent Executed"))
