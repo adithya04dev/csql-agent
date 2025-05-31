@@ -15,6 +15,10 @@ async def make_supervisor_node(llm: BaseChatModel, members: list[str]) -> str:
 
     system_prompt = f"""You are a helpful cricket analytics assistant that can directly answer questions
      or use specialized tools when needed to analyze cricket data.
+     
+This system uses a supervisor-agent architecture where you (the supervisor) determine which specialized 
+agent is most appropriate for handling each part of the user's query. Your job is to intelligently route
+requests to the right agent and coordinate the overall analysis workflow to provide accurate cricket insights.
 
 
 You have the following tools available:
@@ -30,9 +34,9 @@ You have the following tools available:
 
 3. **visualiser agent**(viz tool): Creates charts and graphs from cricket data and returns url of chart.
    - Use for: when users specifically ask for visual representation of data
-   -After using this tool,return the url of the chart to the user
-- Do NOT call the same tool/agent repeatedly more than 2-3  times consecutively and struck in a loop
-- Do NOT call the same tool/agent repeatedly more than 2-3  times consecutively and struck in a loop
+   - After using this tool, return the url of the chart to the user
+
+- Do NOT call the same tool/agent repeatedly more than 2-3 times consecutively to avoid getting stuck in a loop
 
 Today's date is  {datetime.now().strftime('%Y-%m-%d')}
 
@@ -69,16 +73,16 @@ CRITICAL WORKFLOW INSTRUCTIONS:
 Always verify entities before analysis - accurate data depends on proper identification.
 
 When routing to the search or sql agents, you must select the appropriate table to query:
-Based on the query think about what table would be more sufficient and robust..
+Based on the query, carefully consider which table would be most appropriate and effective:
 
 - 'hdata': Primary T20 Ball-By-Ball Database (includes IPL matches) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
-    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
+    * Searchable columns: player, team, dismissal, ground, country, competition(doesn't include year so be careful!), bat_hand, bowl_style, bowl_kind, line, length, shot.
 
-- 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates, and spatial information.Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics or spatial analysis. While slightly less comprehensive in match coverage than hdata_2403, it provides unique metrics not available elsewhere. Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by hdata_2403.
+- 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates, and spatial information. Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics or spatial analysis. While slightly less comprehensive in match coverage than hdata, it provides unique metrics not available elsewhere. Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by hdata.
     * Searchable columns: team, player, delivery_type, ball_type, shot_type, ball_line, ball_length, wicket_type, ground.
 
-- 'odata_2403': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20, and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user asks for multi-format analysis (Tests, ODIs, etc.) . 
-        * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
+- 'odata_2403': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20, and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user asks for multi-format analysis (Tests, ODIs, etc.).
+    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
 
 
 
@@ -93,14 +97,13 @@ Remember:
 - For follow-up questions, you may be able to use existing context without searching again
 - Do NOT call the same agent repeatedly more than 2-3  times consecutively
 
+/nothink
 """
 
     class Router(BaseModel):
         """Worker to route to next. If no workers needed, route to user."""
-        # think:str=Field(description="Space for structured thinking and reasoning about the user's question. Use this to analyze the query, determine which tools are needed, identify entities/terms to look up, plan your approach, choose the table, and verify workflow steps.")
-        
-        message:str = Field(description="A short message u want to add to conversation.Include </think> before writing to user. U may include SQL results,visualisation link or a casual message. ")
-        next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent' or 'user'.")
+        message:str = Field(description="A short message you want to add to conversation. Include </think> before writing to user. You may include SQL results, visualisation link or a casual message.")
+        next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent' or 'user').")
         table_name: Optional[Literal['hdata', 'odata_2403', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
 
     async def supervisor_node(state: AgentState) -> Command[Literal[*members, "__end__"]]:
@@ -110,7 +113,15 @@ Remember:
         ] + state["messages"]
         # Trim messages if needed, potentially keeping more history for context
         # trimmed_messages = trim_messages(messages, max_tokens=...)
-        response = await llm.with_structured_output(Router).ainvoke(messages)
+        # model= llm.bind_tools([Router])
+        # response=await model.ainvoke(messages)
+        # response=response.tool_calls[0]["args"]
+
+        try:
+            response = await llm.with_structured_output(Router).ainvoke(messages)
+        except Exception as e:
+            print(e)
+            # response = await llm.with_structured_output(Router).ainvoke(messages)
 
         # Basic validation
         if response.next in ['search_agent', 'sql_agent'] and not response.table_name:

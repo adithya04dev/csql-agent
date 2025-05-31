@@ -86,63 +86,18 @@ print(url)  # This will be returned to the user
 - The Python tool will simply execute your code exactly as written
 - The final Cloudinary URL must be printed at the end of your code
 -Make sure u output correct output for calling tool..dont hallucinate by seeing conversation history.
-                                      """)
+                                   /nothink   """)
 
     le=len(state['messages'])
     # print(state['messages'])
     agent = create_react_agent(model=llm, tools=[python],state_modifier=matplotlib_messages)
     # state['messages'].append(HumanMessage(content="Write the code for visualization based on the conversation history"))
+    # state['messages'].append(HumanMessage(content="Visualiser Tool/Agent Called"))
     response= agent.invoke({'messages':state['messages']})
-    # print(response)
-    tool_call_id = str(uuid.uuid4())
-    messages=[HumanMessage(content="Visualiser Tool/Agent Called"),
-              AIMessage(content=f" Visualiser Agent Last Response : {response['messages'][-1].content.replace('</think>','')}")]
+    messages=response['messages'][le:]
+    # messages.append(HumanMessage(content=f"Visualiser Tool/Agent Ended"))
 
-    # messages=response['messages'][le:]
-    # messages = []
-    # for msg in response['messages'][le:]:
-        # if msg.content =='':
-        #     msg.content+='tool'
-
-        # if hasattr(msg, 'tool_calls') and len(msg.tool_calls) > 0:
-        #     # msg.tool_calls[0]['args']['__arg1'].split()
-        #     content = '\n'.join(
-        #              line for line in msg.tool_calls[0]['args']['__arg1'].split('\n')
-        #              if not line.strip().startswith('#')
-        #          ).strip()
-        #     msg.content +=f"\n{content}"
-        #     print("tool calls appended")
-        # messages.append(msg)
-    # messages = []
-    # for msg in response['messages'][le:]:
-    #     if msg.content == '':
-    #         # Try to parse arguments if it's a string
-    #         try:
-    #             import json
-    #             arguments = json.loads(msg.additional_kwargs.get('function_call', {}).get('arguments', '{}'))
-    #             # Remove commented lines from the extracted Python code
-    #             content = '\n'.join(
-    #                 line for line in arguments.get('__arg1', '').split('\n') 
-    #                 if not line.strip().startswith('#')
-    #             ).strip()
-    #         except (json.JSONDecodeError, TypeError):
-    #             content = ''
-    #     else:
-    #         content = msg.content
-        
-    #     if content:  # Only add non-empty messages
-    #         messages.append(AIMessage(content=content, additional_kwargs=msg.additional_kwargs))
-
-    # if content =''  AIMessage(content='', additional_kwargs={'function_call': {'name': 'Python', 'arguments': '{"__arg1": "\\nimport 
-    # add the __arg1 one into ai message as content
-    # if len(messages)>1:
-    #     messages[-2].content+=' </think>  '
-    #     print("think added")
-    # else:
-    #    messages.append(AIMessage(content=' </think> '))
-    # Create new messages with only content, no other attributes
-
-    messages.append( HumanMessage(content=f"Visualiser Tool/Agent Executed"))
+    # messages.append( HumanMessage(content=f"Visualiser Tool/Agent Executed"))
     
     return Command(
         update={'messages':messages},

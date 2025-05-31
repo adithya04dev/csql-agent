@@ -18,7 +18,7 @@ credentials_bytes = base64.b64decode(credentials_b64)
 credentials_dict = json.loads(credentials_bytes)
 credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
-def execute_query(query: str,mode:str='sql') -> dict:
+def execute_query(query: str,mode:str='sql'):
     """Synchronous function to execute BigQuery operations"""
     project_id = 'adept-cosine-420005'
     client = bigquery.Client(project=project_id, credentials=credentials)
@@ -30,12 +30,18 @@ def execute_query(query: str,mode:str='sql') -> dict:
     except Exception as e:
         print("Error occure man! error!")
 
-        return {'sql_result':str(e),'error':True}
+        # return {'sql_result':str(e),'error':True}
+        #instead of json return a string 
+        result_str=f"Error: {str(e)}"
+        return result_str
     # print(query_job.to_dataframe().head(30).to_markdown(index=False))
     if mode=='unique_values':
         return {'sql_result':query_job.to_dataframe(),'error':False}
     else:
-        return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
+        # return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
+        #instead of json return a string 
+        result_str=f"Result: \n {query_job.to_dataframe().head(30).to_markdown(index=False)}\n Error: False"
+        return result_str
     # return {'sql_result':query_job.to_dataframe(),'error':False}
 
 
@@ -47,7 +53,8 @@ async def arun(query: str) -> dict:
 
 tool = StructuredTool.from_function(
     func=execute_query,
-    name="SQL Query Executor",
+    # name="SQL Query Executor",
+    name="execute_db",
     description="useful to execute the sql query and return back the result",
     coroutine=arun,
 )

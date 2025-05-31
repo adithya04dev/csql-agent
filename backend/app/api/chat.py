@@ -1,5 +1,3 @@
-
-
 import json
 import uuid
 from typing import AsyncGenerator, List, Optional,Dict
@@ -69,10 +67,18 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
 
             for msg in response:
                 if msg.name!='agent':
-                    content += msg.content + '\n\n'
+                    if isinstance(msg.content, list):
+                        # Handle the case when content is a list
+                        content += '\n\n'.join(msg.content) + '\n\n'
+                    else:
+                        content += msg.content + '\n\n'
         else:
             if response.name!='agent':
-                content += response.content + '\n\n'
+                if isinstance(response.content, list):
+                    # Handle the case when content is a list
+                    content += '\n\n'.join(response.content) + '\n\n'
+                else:
+                    content += response.content + '\n\n'
         # content+= str(list(event.values())[0]['messages'])+'\n\n'
 
         chunk = {
@@ -158,9 +164,17 @@ async def chat_endpoint(request: ChatRequest):
             async for values,event in app.astream(initial_state, stream_mode=["updates"]):
                 if isinstance(list(event.values())[0]['messages'], list):
                     for msg in list(event.values())[0]['messages']:
-                        response_text += str(msg.content) + '\n\n'
+                        if isinstance(msg.content, list):
+                            # Handle the case when content is a list
+                            response_text += '\n\n'.join(msg.content) + '\n\n'
+                        else:
+                            response_text += str(msg.content) + '\n\n'
                 else:
-                    response_text += str(list(event.values())[0]['messages'].content) + '\n\n'
+                    if isinstance(list(event.values())[0]['messages'].content, list):
+                        # Handle the case when content is a list
+                        response_text += '\n\n'.join(list(event.values())[0]['messages'].content) + '\n\n'
+                    else:
+                        response_text += str(list(event.values())[0]['messages'].content) + '\n\n'
 
             return {
                 "id": f"chatcmpl-{uuid.uuid4()}",

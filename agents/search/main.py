@@ -134,20 +134,17 @@ Remember:
 """)
         
     agent = create_react_agent(model=model, tools=[tool],state_modifier=messages)
+    le=len(state['messages'])
 
-    state['messages'].append(HumanMessage(content="Search Tool/Agent Called"))
+    # state['messages'].append(HumanMessage(content="Search Tool/Agent Called"))
     result = await agent.ainvoke({'messages':state['messages']})
-    
-    
-    response = [HumanMessage(content="Search Tool/Agent Called")  ]
-    response.append(AIMessage(content=f"Search Agent Last Response (complete responses ommited to reduce context size): \n{result['messages'][-1].content.replace('`', '')}\n ")),
-
+    responses=result['messages'][le:]    
+    # responses.append(HumanMessage(content=f"Search Tool/Agent Ended"))
     # Use the same or a new tool_call_id here
-    response.append(HumanMessage(content="Search Tool/Agent Executed"))
       
 
     return Command(
-        update={'messages':response,'search_result':result["messages"][-1].content},
+        update={'messages':responses,'search_result':result["messages"][-1].content},
         goto='supervisor')
     # return result
 

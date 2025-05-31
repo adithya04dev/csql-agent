@@ -1,5 +1,6 @@
 from agents.sql_with_preprocess.types1 import AgentState
 from agents.tools.search_vectordb import tool, SearchPair
+from agents.utils.llm_utils import get_llm
 from langchain_mistralai.chat_models import ChatMistralAI
 from typing_extensions import Annotated, TypedDict
 from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMessage
@@ -12,8 +13,10 @@ from langchain_openai.chat_models import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from typing import Optional
 from pydantic import BaseModel, Field
-
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+sql_model=os.getenv('SQL_MODEL')
 class Query(BaseModel):
     """ Query for the AI agent to write sql query based on the given conversation """
 
@@ -101,7 +104,7 @@ async def sql_writer(state:AgentState)->AgentState:
     # )
     # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-thinking-exp')
 
-    llm=ChatOpenAI(model='deepseek/deepseek-r1:free',temperature=0,base_url="https://openrouter.ai/api/v1",api_key='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')
+    # llm=ChatOpenAI(model='deepseek/deepseek-r1:free',temperature=0,base_url="https://openrouter.ai/api/v1",api_key='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')
 
     
     # llm=ChatMistralAI(model='mistral-small')
@@ -140,7 +143,7 @@ YOUR_QUERY_HERE
     # if context!='':
     #     sys_prompt.append(context)
     # llm=ChatOpenAI(model='o3-mini',reasoning_effort='high')
-    llm=ChatGoogleGenerativeAI(model='gemini-2.5-pro-preview-03-25',temperature=0.1)
+    llm=get_llm(sql_model)
     state['messages'].append(HumanMessage(content='Write Query by understanding the context.'))
     response=await llm.ainvoke(sys_prompt)
     parsed_query=await parse_sql_query(response.content)

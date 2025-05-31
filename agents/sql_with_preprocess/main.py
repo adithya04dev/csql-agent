@@ -1,5 +1,6 @@
 from langgraph.graph import END, START, StateGraph, MessagesState
 from agents.search.main import arun as search
+from agents.sql.main2 import arun as sql
 from agents.sql_with_preprocess.supervisor import make_supervisor_node as supervisor
 from langchain_mistralai.chat_models import ChatMistralAI
 from agents.sql_with_preprocess.sql_agent_subgraph import sql_agent_subgraph
@@ -30,7 +31,8 @@ async def create_graph()->StateGraph:
     workflow = StateGraph(AgentState)
     workflow.add_node("supervisor", research_supervisor_node)
     workflow.add_node("search", search)
-    workflow.add_node("sql", sql_agent_subgraph)
+    workflow.add_node("sql", sql)
+    # workflow.add_node("sql", sql_agent_subgraph)
     # workflow.add_node("chatbot",chatbot )
     # workflow.add_node("visualiser",run_visualiser )
     workflow.add_node("visualiser",get_response )
