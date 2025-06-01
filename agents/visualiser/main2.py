@@ -90,7 +90,7 @@ print(url)  # This will be returned to the user
 
     le=len(state['messages'])
     # print(state['messages'])
-    agent = create_react_agent(model=llm, tools=[python],state_modifier=matplotlib_messages)
+    agent = create_react_agent(model=llm, tools=[python],prompt=matplotlib_messages)
     # state['messages'].append(HumanMessage(content="Write the code for visualization based on the conversation history"))
     # state['messages'].append(HumanMessage(content="Visualiser Tool/Agent Called"))
     response= agent.invoke({'messages':state['messages']})

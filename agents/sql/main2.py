@@ -63,7 +63,7 @@ IMPORTANT: The SQL Query Executor tool already includes the results in its outpu
     )
 
     # Create a ReAct agent with the SQL execution tool
-    agent = create_react_agent(model=model, tools=[execute_tool], state_modifier=messages)
+    agent = create_react_agent(model=model, tools=[execute_tool],prompt=messages)
     
     # Store the starting message index to track new messages
     le = len(state['messages'])
@@ -75,6 +75,7 @@ IMPORTANT: The SQL Query Executor tool already includes the results in its outpu
     # Extract just the new messages added by this agent
     responses = result['messages'][le:]
     # responses.append(HumanMessage(content=f"SQL Agent Ended"))
+    #hey iterate through messagesaand if any assistant message has 
     # Return command to update state and go to supervisor
     return Command(
         update={

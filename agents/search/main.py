@@ -133,7 +133,7 @@ Remember:
 
 """)
         
-    agent = create_react_agent(model=model, tools=[tool],state_modifier=messages)
+    agent = create_react_agent(model=model, tools=[tool],prompt=messages)
     le=len(state['messages'])
 
     # state['messages'].append(HumanMessage(content="Search Tool/Agent Called"))

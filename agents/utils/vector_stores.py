@@ -141,24 +141,21 @@ class VectorStoreManager:
         result_texts = [doc.page_content for doc in results[:k]]
         
         # Join them together in one operation
-        return f"similar values of {query} in table are:\n{'\n'.join(result_texts)}"
-
+        return f"Tool Response: similar values of {query} in table are:\n{'\n'.join(result_texts)}"
 # Example Usage
-# vector_store_manager = VectorStoreManager()
-# vector_store_manager.add_examples_from_directory("agents/tables/ipl_hawkeye") # Still adds from the directory
-# vector_store_manager.add_examples_from_directory("agents/tables/hdata_2403") # Still adds from the directory
-
-# import asyncio
-
-# async def main():
-#     # print(await vector_store_manager.search_similar_queries("v kohli", "odata_2403_player")) 
-#     # print(await vector_store_manager.search_similar_queries("kewna maphaka", "odata_2403_player")) 
-#     # print(await vector_store_manager.search_similar_queries("back length", "odata_2403_length")) 
-#     # print(await vector_store_manager.search_similar_queries("kohli", "ipl_hawkeye_player"))
-#     # print(await vector_store_manager.search_similar_queries("back length", "ipl_hawkeye_ball_length")) 
-
-#     print(await vector_store_manager.search_similar_queries("ipl 2024", "hdata_2403_competition"))
-
-
-
-# asyncio.run(main())
+if __name__ == "__main__":
+    import asyncio
+    
+    vector_store_manager = VectorStoreManager()
+    vector_store_manager.add_examples_from_directory("agents/tables/ipl_hawkeye")
+    vector_store_manager.add_examples_from_directory("./agents/tables/hdata")
+    
+    async def main():
+        print(await vector_store_manager.search_similar_queries("Indian premier league", "hdata_competition"))
+        # print(await vector_store_manager.search_similar_queries("kewna maphaka", "hdata_player"))
+        # print(await vector_store_manager.search_similar_queries("back length", "hdata_length"))
+        # print(await vector_store_manager.search_similar_queries("kohli", "ipl_hawkeye_player"))
+        # print(await vector_store_manager.search_similar_queries("back length", "ipl_hawkeye_ball_length"))
+        print(await vector_store_manager.search_similar_queries("ipl 2024", "hdata_2403_competition"))
+    
+    asyncio.run(main())

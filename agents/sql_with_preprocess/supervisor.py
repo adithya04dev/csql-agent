@@ -120,7 +120,9 @@ Remember:
         try:
             response = await llm.with_structured_output(Router).ainvoke(messages)
         except Exception as e:
+
             print(e)
+            raise e
             # response = await llm.with_structured_output(Router).ainvoke(messages)
 
         # Basic validation
