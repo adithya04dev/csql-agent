@@ -88,26 +88,7 @@ async def sql_writer(state:AgentState)->AgentState:
     #         """
     #     context=HumanMessage(content=append_message,tool_call_id='relevant_sql_queries_tool')
 
-    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
-    # llm=ChatOpenAI(model='o1-mini',reasoning_effort='medium')
 
-
-    # llm=ChatOpenAI(model='Qwen/Qwen2.5-72B-Instruct',temperature=0,base_url="https://api.hyperbolic.xyz/v1",api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZGl0aHlhYmFsYWdvbmkxMUBnbWFpbC5jb20ifQ.3kzGb2_LJoBucaEvozUIc8WGa5ud9W92GtDTQm9lZI4')
-    # llm=ChatOpenAI(model='accounts/fireworks/models/deepseek-r1',temperature=0,base_url="https://api.fireworks.ai/inference/v1",api_key='fw_3ZZJ7E9uFW97uYw3ZbGvouGR')
-    # llm=ChatOpenAI(model='DeepSeek-R1',temperature=0,base_url="https://api.sambanova.ai/v1",api_key='2f60038f-453a-4620-ad3e-25fbfda9fcdd')
-    # llm=ChatOpenAI(model='deepseek-ai/DeepSeek-R1',temperature=0,base_url="https://api.together.xyz/v1",api_key='29e062d0a46153ddc46e8920e276262852db8028456e8fa5aa47d1bd4724ff33')
-    # llm=ChatOpenAI(
-    #     model='qwen-qwq-32b',
-    #     temperature=0,
-    #     base_url="https://api.groq.com/openai/v1",
-    #     api_key='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'
-    # )
-    # llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash-thinking-exp')
-
-    # llm=ChatOpenAI(model='deepseek/deepseek-r1:free',temperature=0,base_url="https://openrouter.ai/api/v1",api_key='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')
-
-    
-    # llm=ChatMistralAI(model='mistral-small')
     async with aiofiles.open(f"./agents/utils/schema_docs/{state['table_name']}_schema.txt",'r') as f:
         state['docs_schema']=await f.read()
     sys_prompt=[SystemMessage(content=f"""You are a SQL agent for cricket analytics that works with search and visualizer agents.

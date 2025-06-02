@@ -15,7 +15,7 @@ def parse(code):
 
 def visualise(state:VisualiserState)->VisualiserState:
     #initialse chatopen with blank url that I will change..
-    llm=ChatOpenAI(model='deepseek/deepseek-r1:free',temperature=0,base_url="https://openrouter.ai/api/v1",api_key='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')
+    llm=ChatOpenAI(model='deepseek/deepseek-r1:free',temperature=0,base_url="https://openrouter.ai/api/v1")
 
     prompts=[SystemMessage(content="""
     You are an Advanced Cricket Data Visualization Agent specialized in creating insightful visual representations using QuickChart API.

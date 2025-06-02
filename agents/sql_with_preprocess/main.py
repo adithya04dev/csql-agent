@@ -14,7 +14,6 @@ from agents.utils.llm_utils import get_llm
 
 load_dotenv()   
 # tracer = LangChainTracer("pr-charming-advertising-26")
-from langchain_core.rate_limiters import InMemoryRateLimiter
 
 # from langchain_groq import ChatGroq
 from langchain.chat_models import init_chat_model

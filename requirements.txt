@@ -26,3 +26,4 @@ langchain_aws
 cloudinary
 matplotlib
 uvicorn[standard]
+langchain_qdrant

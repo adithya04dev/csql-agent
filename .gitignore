@@ -11,3 +11,6 @@ data/
 env/
 venv/
 agents/**/*.ipynb
+
+evals.txt
+.env.sample

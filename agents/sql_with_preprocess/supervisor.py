@@ -102,7 +102,7 @@ Remember:
 
     class Router(BaseModel):
         """Worker to route to next. If no workers needed, route to user."""
-        message:str = Field(description="A short message you want to add to conversation. Include </think> before writing to user. You may include SQL results, visualisation link or a casual message.")
+        message:str = Field(description="A short message you want to add to conversation. Include </think> before writing to user. Include a casual message.")
         next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent' or 'user').")
         table_name: Optional[Literal['hdata', 'odata_2403', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
 
