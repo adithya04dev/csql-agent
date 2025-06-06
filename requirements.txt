@@ -27,3 +27,4 @@ cloudinary
 matplotlib
 uvicorn[standard]
 langchain_qdrant
+langgraph-codeact

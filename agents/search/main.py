@@ -26,10 +26,11 @@ async def arun(state: AgentState):
         'player', 'team', 'dismissal', 'ground', 'country', 'competition', 
         'bat_hand', 'bowl_style((specifies in detail)', 'bowl_kind(broadly classifies like spin or pace)', 'line', 'length', 'shot'
     ],
-    'odata_2403': [
-        'format', 'ground', 'country', 'team', 'player', 'batsmanHand', 
-        'bowlerHand', 'bowlerType', 'dismissalType', 'competition', 'shot_type', 
-        'variation', 'length', 'area', 'line', 'foot', 'fielder_action'
+
+    'aucb_bbb': [
+        'ground', 'competition', 'team', 'player', 'country', 'dismissalType', 'fieldingPosition',
+        'noBallReasonId', 'battingShotTypeId', 'battingFeetId', 'battingHandId', 'bowlingTypeId(spin,pace,offspin etc)',
+        'bowlingFromId', 'bowlingDetailId(variations of bowling like slower ball etc)', 'appealDismissalTypeId', 'referralOutcomeId'
     ],
     'ipl_hawkeye': [
         'team', 'player', 'delivery_type(seam,spin etc)', 'ball_type(the variation of the ball)', 'shot_type', 'ball_line', 'ball_length', 
@@ -70,7 +71,7 @@ Guidelines:
   -U may also reject and leave blank , if u dont find appropriate match.
   -U can also return more than one matches if u find it appropriate.
 - If truly uncertain between multiple matches, return what u think might be most popular ones.
--If no specific valueS is mentioned of a column type dont search..
+-If no specific values is mentioned of a column type and just said to be grouped or grouped by we do not need to search.
   it will be handled by sql agent dont worry about it
 
 Examples:
@@ -126,8 +127,7 @@ Remember:
 -Use the necessary tools to search..dont give on your own previous knowledge.
 -you will be given a whole cnversation based on that understad what u need to interpret and search and standardise.
 -another point is to rely solely on the information provided by the user; you cannot communicate with them again.
--If no specific valueS is mentioned of a column type dont search..
-  it will be handled by sql agent dont worry about it
+  -If no specific valueS is mentioned of a column type dont search..
 -You are just an search agent part of an ai multi-agents system..u just need to search and add to conversation and not write sql queries that will be handled by sql agent dont worry about it!   
 
 

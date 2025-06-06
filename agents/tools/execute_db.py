@@ -40,7 +40,7 @@ def execute_query(query: str,mode:str='sql'):
     else:
         # return {'sql_result':query_job.to_dataframe().head(30).to_markdown(index=False),'error':False}
         #instead of json return a string 
-        result_str=f"Result: \n {query_job.to_dataframe().head(30).to_markdown(index=False)}\n Error: False"
+        result_str=f"Result: \n {query_job.to_dataframe().head(100).to_markdown(index=False)}\n Error: False"
         return result_str
     # return {'sql_result':query_job.to_dataframe(),'error':False}
 

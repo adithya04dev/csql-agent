@@ -6,6 +6,7 @@ from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMes
 from langgraph.types import Command
 from agents.tools.python import python
 from langgraph.prebuilt import create_react_agent
+# from langgraph_codeact import create_codeact
 import boto3
 import uuid 
 from agents.utils.llm_utils import get_llm
@@ -80,7 +81,7 @@ result = cloudinary.uploader.upload(
 url = result['secure_url']
 print(url)  # This will be returned to the user
 4. After getting the URL of the visualization as a result:
-   - Return the URL to the user in a markdown format.
+   - Return the URL to the user in a markdown format so that image can be displayed.
 
 ## IMPORTANT GUIDELINES:
 - Never use plt.show() - it will crash the server
@@ -89,20 +90,21 @@ print(url)  # This will be returned to the user
 - You must implement the full process: visualization creation → saving to buffer → Cloudinary upload → URL retrieval
 - Always include the Cloudinary configuration and upload code as shown above
 - Make the visualization informative and relevant to the cricket data being analyzed
-- Return only the Cloudinary URL (through the print statement) and a one-line description
+- Return only the Cloudinary URL (in markdown format) and a one-line description
 -For tool calling , DO NOT try to imitate or reference previous responses in the conversation history. 
  ALWAYS follow this EXACT format for tool calling .
                                        
 
 ## REMEMBER:
 - The Python tool will simply execute your code exactly as written
-- The final Cloudinary URL must be printed at the end of your code
+- The final Cloudinary URL must be printed at the end of your code so that the tool can use it.
 -Make sure u output correct output for calling tool..dont hallucinate by seeing conversation history.
-                                   /nothink   """)
+                                      /nothink
+ """)
 
     le=len(state['messages'])
     # print(state['messages'])
-    agent = create_react_agent(model=llm, tools=[python],prompt=matplotlib_messages)
+    agent = create_react_agent(model=llm, tools=[python],prompt=matplotlib_messages.content)
     # state['messages'].append(HumanMessage(content="Write the code for visualization based on the conversation history"))
     # state['messages'].append(HumanMessage(content="Visualiser Tool/Agent Called"))
     response= agent.invoke({'messages':state['messages']})

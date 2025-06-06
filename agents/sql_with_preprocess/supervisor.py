@@ -81,30 +81,25 @@ Based on the query, carefully consider which table would be most appropriate and
 - 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates, and spatial information. Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics or spatial analysis. While slightly less comprehensive in match coverage than hdata, it provides unique metrics not available elsewhere. Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by hdata.
     * Searchable columns: team, player, delivery_type, ball_type, shot_type, ball_line, ball_length, wicket_type, ground.
 
-- 'odata_2403': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20, and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user asks for multi-format analysis (Tests, ODIs, etc.).
+
+- 'aucb_bbb': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20(includes IPL,BBL), and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user as aucb or something like that.It  contains BBB data, shot type, shot area, shot angle, foot movement, granular control and other cricket related data.
     * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
-
-
 
 
 Remember:
 - Choose "user" when you want to return control to the user with a complete answer(like sql result or visualisation link)
-- When routing to "user", include '</think>' followed by your final response to the user
-  * Everything before '</think>' will be hidden in a collapsible section
-  * Everything after '</think>' will be displayed immediately to the user. 
-  * Thus, u can include the sql results,visualisation link or a casual message after </think> tag
+
 - For new questions, you may need need to search for entities first
 - For follow-up questions, you may be able to use existing context without searching again
 - Do NOT call the same agent repeatedly more than 2-3  times consecutively
 
-/nothink
 """
 
     class Router(BaseModel):
         """Worker to route to next. If no workers needed, route to user."""
-        message:str = Field(description="A short message you want to add to conversation. Include </think> before writing to user. Include a casual message.")
+        message:str = Field(description="A short message(1-2 lines only) you want to add to conversation.  Include a casual message(1-2 lines only).")
         next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent' or 'user').")
-        table_name: Optional[Literal['hdata', 'odata_2403', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
+        table_name: Optional[Literal['hdata', 'aucb_bbb', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
 
     async def supervisor_node(state: AgentState) -> Command[Literal[*members, "__end__"]]:
         """An LLM-based router."""

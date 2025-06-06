@@ -1,0 +1,114 @@
+table_name: aucb_bbb
+
+# Match and Fixture Details
+fixtureId INTEGER (Unique identifier for each match fixture)
+competition STRING (Name of the competition or tournament)
+format STRING (Format of the match, e.g., ODI, T20, Test)
+matchDate DATE (Date when the match was played)
+ground STRING (Name of the ground or stadium)
+home_team STRING (Name of the home team)
+away_team STRING (Name of the away team)
+team1 STRING (One of the two teams playing the match)
+team2 STRING (The other team playing the match)
+tossWinner STRING (Team that won the toss)
+tossDecision STRING (Decision made by the toss-winning team, e.g., bat or bowl)
+matchWinner STRING (Team that won the match)
+winMargin INTEGER (Margin by which the match was won, number of runs or wickets)
+winType STRING (Type of win, e.g., by runs, by wickets)
+
+# Inning and Over Details
+inningNumber INTEGER (The inning number, e.g., 1 for first innings)
+overNumber INTEGER (The over number within the inning)
+ballNumber INTEGER (The ball number within the over)
+totalBallNumber INTEGER (Cumulative ball number in the match)
+isNewBall BOOLEAN (Whether a new ball was used, true/false)
+
+# Batting Details
+battingTeam STRING (Team currently batting)
+battingPlayer STRING (Name of the batter on strike)
+battingPlayerId INTEGER (Unique identifier for the batter)
+battingPlayerCountry STRING (Country of the batter)
+battingPlayerDob DATE (Date of birth of the batter)
+battingConnectionId STRING (Connection or relationship ID for the batter, context-specific)
+battingShotTypeId STRING (Type of shot played)
+battingFeetId STRING (Footwork type used by the batter)
+battingHandId STRING (Batting hand, right/left)
+runs INTEGER (Runs scored on the ball)
+runsScored INTEGER (Runs scored by the batter, may duplicate runs)
+extras INTEGER (Extra runs, wides, no balls, byes, leg byes)
+teamRuns INTEGER (Total runs for the batting team at this point)
+shotMagnitude INTEGER (Magnitude of the shot, context-specific)
+shotAngle INTEGER (Angle at which the shot was played)
+lengthTypeId STRING (Type of delivery length, e.g., short, good, full)
+lineTypeId STRING (Line of the delivery, e.g., off, leg, middle)
+
+# Non-Striker Details
+nonStrikerPlayer STRING (Name of the non-striker batter)
+nonStrikeBattingPlayerId INTEGER (Player ID of the non-striker)
+nonStrikerPlayerCountry STRING (Country of the non-striker)
+nonStrikerPlayerDob DATE (Date of birth of the non-striker)
+
+# Bowling Details
+bowlingTeam STRING (Team currently bowling)
+bowlingPlayer STRING (Name of the bowler)
+bowlerPlayerId INTEGER (Unique identifier for the bowler)
+bowlingPlayerCountry STRING (Country of the bowler)
+bowlingPlayerDob DATE (Date of birth of the bowler)
+bowlingHandId STRING (Bowling hand, right/left)
+bowlingTypeId STRING (Type of bowler, e.g., Fast, Spin)
+bowlingFromId STRING (Bowling action, e.g., Over, Round)
+bowlingDetailId STRING (Specific bowling variation like Slower ball etc..)
+
+# Ball Event Details
+ballDateTime TIMESTAMP (Timestamp of the ball event)
+runsConceded INTEGER (Runs conceded by the bowler on this ball)
+runsWide INTEGER (Number of wides bowled on this ball)
+isWide BOOLEAN (Whether the ball was a wide, true/false)
+isByes BOOLEAN (Whether byes were scored, true/false)
+isNoBall BOOLEAN (Whether the ball was a no-ball, true/false)
+noBallReasonId STRING (Reason for the no-ball)
+
+# Wicket and Dismissal Details
+isWicket BOOLEAN (Whether a wicket fell on this ball, true/false)
+dismissalType STRING (Type of dismissal)
+dismissedPlayer STRING (Name of the dismissed player)
+appealDismissalTypeId STRING (Type of dismissal appealed)
+isAppeal BOOLEAN (Whether there was an appeal, true/false)
+fieldingPosition STRING (Fielding position involved)
+catchDifficulty INTEGER (Difficulty rating of the catch, numeric)
+referralOutcomeId STRING (Outcome of referral/review)
+
+
+sample_queries: [
+    {
+        "query": "individual_batting_statistics",
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM `adept-cosine-420005.bbbdata_csql.aucb_bbb`\n  WHERE insert_condition_here\n),\n\nindividual_innings AS (\n  SELECT \n    fixtureId,\n    battingPlayerId,\n    battingPlayer,\n    SUM(runsScored) AS runs,\n    COUNTIF(NOT isWide AND NOT isNoBall) AS balls,\n    SUM(CASE WHEN isWicket AND dismissedPlayer = battingPlayer THEN 1 ELSE 0 END) AS outs,\n    COUNTIF(runsScored = 4) AS fours,\n    COUNTIF(runsScored = 6) AS sixes,\n    COUNTIF(runsScored = 0 AND NOT isWide AND NOT isNoBall) AS dots\n  FROM filtered_balls\n  GROUP BY fixtureId, battingPlayerId, battingPlayer\n),\n\nindividual_batting_stats AS (\n  SELECT \n    battingPlayer AS player_name,\n    battingPlayerId AS player_id,\n    COUNT(DISTINCT fixtureId) AS innings,\n    SUM(runs) AS total_runs,\n    SUM(balls) AS total_balls,\n    SUM(outs) AS total_outs,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(runs) * 100.0 / SUM(balls)) \n    END AS strike_rate,\n    CASE \n      WHEN SUM(outs) = 0 THEN NULL \n      ELSE SUM(runs) * 1.0 / SUM(outs) \n    END AS batting_average,\n    MAX(runs) AS highest_score,\n    SUM(CASE WHEN runs >= 50 AND runs < 100 THEN 1 ELSE 0 END) AS fifties,\n    SUM(CASE WHEN runs >= 100 THEN 1 ELSE 0 END) AS hundreds,\n    SUM(fours) AS total_fours,\n    SUM(sixes) AS total_sixes,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(dots) * 100.0 / SUM(balls)) \n    END AS dot_percentage\n  FROM individual_innings\n  GROUP BY battingPlayer, battingPlayerId\n)\n\nSELECT \n  player_name,\n  player_id,\n  innings,\n  total_runs,\n  total_balls,\n  total_outs,\n  ROUND(batting_average, 2) AS average,\n  ROUND(strike_rate, 2) AS strike_rate,\n  ROUND(dot_percentage, 2) AS dot_percentage,\n  highest_score AS hs,\n  fifties,\n  hundreds,\n  total_fours,\n  total_sixes\nFROM individual_batting_stats\nORDER BY total_runs DESC;",
+        "sql_description": "Aggregates individual batting stats across all teams"
+    },
+    {
+        "query": "team_batting_statistics",
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM `adept-cosine-420005.bbbdata_csql.aucb_bbb`\n  WHERE insert_condition_here\n),\n\nteam_innings AS (\n  SELECT \n    fixtureId,\n    battingTeam,\n    SUM(runs) AS runs,\n    COUNTIF(NOT isWide AND NOT isNoBall) AS balls,\n    SUM(CASE WHEN isWicket THEN 1 ELSE 0 END) AS outs\n  FROM filtered_balls\n  GROUP BY fixtureId, battingTeam\n),\n\nteam_batting_stats AS (\n  SELECT \n    battingTeam,\n    COUNT(DISTINCT fixtureId) AS matches,\n    SUM(runs) AS total_runs,\n    SUM(balls) AS total_balls,\n    SUM(outs) AS total_outs,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(runs) * 100.0 / SUM(balls)) \n    END AS team_strike_rate,\n    CASE \n      WHEN SUM(outs) = 0 THEN NULL \n      ELSE SUM(runs) * 1.0 / SUM(outs) \n    END AS team_batting_average,\n    MAX(runs) AS highest_team_score\n  FROM team_innings\n  GROUP BY battingTeam\n)\n\nSELECT \n  battingTeam,\n  matches,\n  total_runs,\n  total_balls,\n  total_outs,\n  ROUND(team_batting_average, 2) AS team_average,\n  ROUND(team_strike_rate, 2) AS team_strike_rate,\n  highest_team_score AS highest_score\nFROM team_batting_stats\nORDER BY total_runs DESC;",
+        "sql_description": "Team-specific batting stats"
+    },
+    {
+        "query": "individual_bowling_statistics",
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM `adept-cosine-420005.bbbdata_csql.aucb_bbb`\n  WHERE insert_condition_here\n),\n\nindividual_bowling AS (\n  SELECT \n    fixtureId,\n    bowlingPlayer,\n    bowlerPlayerId,\n    SUM(CASE WHEN isWicket THEN 1 ELSE 0 END) AS wickets,\n    SUM(runsConceded) AS runs_conceded,\n    COUNTIF(NOT isWide AND NOT isNoBall) AS balls_bowled,\n    COUNTIF(runsConceded = 0 AND NOT isWide AND NOT isNoBall) AS dot_balls,\n    COUNTIF( (runsConceded=4 OR runsConceded=6) AND NOT isWide AND NOT isNoBall ) AS boundary_balls\n  FROM filtered_balls\n  GROUP BY fixtureId, bowlingPlayer, bowlerPlayerId\n),\n\nindividual_bowling_stats AS (\n  SELECT \n    bowlingPlayer AS bowler_name,\n    bowlerPlayerId AS bowler_id,\n    COUNT(DISTINCT fixtureId) AS innings,\n    SUM(wickets) AS total_wickets,\n    SUM(runs_conceded) AS total_runs_conceded,\n    SUM(balls_bowled) AS total_balls_bowled,\n    SUM(dot_balls) AS total_dot_balls,\n    SUM(boundary_balls) AS total_boundary_balls,\n    CASE \n      WHEN SUM(wickets) = 0 THEN NULL \n      ELSE SUM(runs_conceded) * 1.0 / SUM(wickets) \n    END AS bowling_average,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(runs_conceded) * 6.0 / SUM(balls_bowled)) \n    END AS economy_rate,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(dot_balls) * 100.0 / SUM(balls_bowled)) \n    END AS dot_ball_percentage,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(boundary_balls) * 100.0 / SUM(balls_bowled)) \n    END AS boundary_percentage\n  FROM individual_bowling\n  GROUP BY bowlingPlayer, bowlerPlayerId\n)\n\nSELECT \n  bowler_name,\n  bowler_id,\n  innings,\n  total_wickets,\n  total_runs_conceded,\n  total_balls_bowled,\n  ROUND(bowling_average, 2) AS average,\n  ROUND(economy_rate, 2) AS economy_rate,\n  ROUND(dot_ball_percentage, 2) AS dot_ball_percentage,\n  ROUND(boundary_percentage, 2) AS boundary_percentage\nFROM individual_bowling_stats\nORDER BY total_wickets DESC;",
+        "sql_description": "Aggregates individual bowling stats across all teams"
+    },
+    {
+        "query": "team_bowling_statistics",
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM `adept-cosine-420005.bbbdata_csql.aucb_bbb`\n  WHERE insert_condition_here\n),\n\nteam_bowling AS (\n  SELECT \n    fixtureId,\n    bowlingTeam,\n    SUM(CASE WHEN isWicket THEN 1 ELSE 0 END) AS wickets,\n    SUM(runsConceded) AS runs_conceded,\n    COUNTIF(NOT isWide AND NOT isNoBall) AS balls_bowled,\n    COUNTIF(runsConceded = 0 AND NOT isWide AND NOT isNoBall) AS dot_balls,\n    COUNTIF( (runsConceded=4 OR runsConceded=6) AND NOT isWide AND NOT isNoBall ) AS boundary_balls\n  FROM filtered_balls\n  GROUP BY fixtureId, bowlingTeam\n),\n\nteam_bowling_stats AS (\n  SELECT \n    bowlingTeam,\n    COUNT(DISTINCT fixtureId) AS matches,\n    SUM(wickets) AS total_wickets,\n    SUM(runs_conceded) AS total_runs_conceded,\n    SUM(balls_bowled) AS total_balls_bowled,\n    SUM(dot_balls) AS total_dot_balls,\n    SUM(boundary_balls) AS total_boundary_balls,\n    CASE \n      WHEN SUM(wickets) = 0 THEN NULL \n      ELSE SUM(runs_conceded) * 1.0 / SUM(wickets) \n    END AS team_bowling_average,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(runs_conceded) * 6.0 / SUM(balls_bowled)) \n    END AS team_economy_rate,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(dot_balls) * 100.0 / SUM(balls_bowled)) \n    END AS team_dot_ball_percentage,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(boundary_balls) * 100.0 / SUM(balls_bowled)) \n    END AS team_boundary_percentage\n  FROM team_bowling\n  GROUP BY bowlingTeam\n)\n\nSELECT \n  bowlingTeam,\n  matches,\n  total_wickets,\n  total_runs_conceded,\n  total_balls_bowled,\n  ROUND(team_bowling_average, 2) AS team_average,\n  ROUND(team_economy_rate, 2) AS team_economy_rate,\n  ROUND(team_dot_ball_percentage, 2) AS team_dot_ball_percentage,\n  ROUND(team_boundary_percentage, 2) AS team_boundary_percentage\nFROM team_bowling_stats\nORDER BY total_wickets DESC;",
+        "sql_description": "Team-specific bowling stats"
+    }
+]
+
+        "query": "bowling_performance_per_player",
+        "sql_code": "SELECT bowlingPlayer AS player, bowlerPlayerId AS player_id, SUM(CASE WHEN isWicket THEN 1 ELSE 0 END) AS total_wickets, SUM(runsConceded) AS total_runs_conceded, SUM(CASE WHEN isWide THEN 1 ELSE 0 END) + SUM(CASE WHEN isNoBall THEN 1 ELSE 0 END) AS no_ball_and_wide_count FROM `adept-cosine-420005.bbbdata_csql.aucb_bbb` GROUP BY bowlingPlayer, bowlerPlayerId ORDER BY total_wickets DESC;",
+        "sql_description": "Aggregates wickets, runs conceded, and no-ball/wide count for each bowler."
+    },
+    {
+        "query": "recent_fixtures",
+        "sql_code": "SELECT fixtureId, matchDate, home_team, away_team, tossDecision, matchWinner FROM `adept-cosine-420005.bbbdata_csql.aucb_bbb` ORDER BY matchDate DESC LIMIT 10;",
+        "sql_description": "Lists the 10 most recent fixtures with basic match details."
+    }
+]

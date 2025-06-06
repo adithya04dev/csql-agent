@@ -1,0 +1,12 @@
+CaughtAndBowled
+NotOut
+CaughtSub
+Lbw
+ObstructingField
+Bowled
+Stumped
+RunOutSub
+Caught
+RunOut
+StumpedSub
+HitWicket

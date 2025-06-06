@@ -8,8 +8,8 @@ from langchain_core.callbacks import CallbackManagerForToolRun, AsyncCallbackMan
 vector_store = VectorStoreManager()
 
 # Define valid tables and columns
-VALID_TABLES = ['hdata', 'odata_2403','ipl_hawkeye']
-VALID_TABLE = Literal['hdata','hdata','odata_2403','ipl_hawkeye']
+VALID_TABLES = ['hdata', 'odata_2403','ipl_hawkeye','aucb_bbb']
+VALID_TABLE = Literal['hdata','hdata','odata_2403','ipl_hawkeye','aucb_bbb']
 VALID_COLUMNS = Literal[
     'player', 'team', 'dismissal', 'ground', 'country', 'competition',
     'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'
@@ -46,26 +46,6 @@ class SearchTool(BaseTool):
         """Execute the search asynchronously, performing validation checks."""
         try:
             print("search_pairs",search_pairs)
-            
-            validation_errors = []
-            valid_columns_list = [
-                'player', 'team', 'dismissal', 'ground', 'country', 'competition',
-                'bat_hand', 'bowl_style', 'bowl_kind', 'bat_out', 'line', 'length', 'shot','sql_queries'
-            ] # Re-defined here for clarity, could be class member
-
-            # for i, pair in enumerate(search_pairs):
-            #     if pair.table_name not in VALID_TABLES:
-            #         validation_errors.append(
-            #             f"Error in search pair {i}: Invalid table '{pair.table_name}'. Must be one of: {VALID_TABLES}"
-            #         )
-            #     if pair.column_name not in valid_columns_list:
-            #          validation_errors.append(
-            #             f"Error in search pair {i}: Invalid column '{pair.column_name}'. Must be one of: {valid_columns_list}"
-            #         )
-
-            # # If there are validation errors, return them immediately
-            # if validation_errors:
-            #     return validation_errors
 
             # Proceed with search if validation passes
             results = []

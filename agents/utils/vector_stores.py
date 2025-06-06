@@ -407,18 +407,26 @@ if __name__ == "__main__":
         # vector_store_manager.add_examples_from_directory(
         #     "./agents/tables/ipl_hawkeye", 
         #     override=True,
+
         #     indexing_strategy=IndexingStrategy.MEMORY_EFFICIENT
         # )
+        # vector_store_manager.add_examples_from_directory(
+        #     "./agents/tables/aucb_bbb", 
+        #     override=True,
+        #     indexing_strategy=IndexingStrategy.FAST
+        # )
 
-
+        
         # print(vector_store_manager.available_categories)
         # vector_store_manager.add_examples_from_directory("./agents/tables/ipl_hawkeye", override=True)
         # vector_store_manager.add_examples_from_directory("./agents/tables/hdata", override=True)
 
-
+        # print(await vector_store_manager.search_similar_queries("v kohli", "aucb_bbb_player"))
+        # print(await vector_store_manager.search_similar_queries("ipl", "aucb_bbb_competition"))
+        # print(await vector_store_manager.search_similar_queries("bharat", "aucb_bbb_country"))
         # print(await vector_store_manager.search_similar_queries("Indian premier league", "hdata_competition"))
         # print(await vector_store_manager.search_similar_queries("virat kohli", "hdata_player"))
-        print(await vector_store_manager.search_similar_queries("v kohli", "hdata_player"))
+        # print(await vector_store_manager.search_similar_queries("v kohli", "hdata_player"))
         # print(await vector_store_manager.search_similar_queries("bumrah toe crusher", "hdata_length"))
         # print(await vector_store_manager.search_similar_queries("kohi", "ipl_hawkeye_player"))
         # print(await vector_store_manager.search_similar_queries("back length", "ipl_hawkeye_ball_length"))

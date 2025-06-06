@@ -11,6 +11,8 @@ data/
 env/
 venv/
 agents/**/*.ipynb
-
+t.py
 evals.txt
 .env.sample
+.vscode/
+
