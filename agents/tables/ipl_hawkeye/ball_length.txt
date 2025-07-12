@@ -1,8 +1,8 @@
-Full Toss
-0
+Short Length
 Yorker
 nan
-Full Length
 Short of Good Length
+Full Toss
+Full Length
+0
 Good Length
-Short Length

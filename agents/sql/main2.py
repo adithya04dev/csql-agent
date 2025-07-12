@@ -31,8 +31,9 @@ async def arun(state: AgentState):
 Your primary role is to generate precise BigQuery SQL queries based on user requests and execute them.
 
 **DATABASE INFO:**
-- Dataset Name: 'bbbdata'
-- Table: {state['table_name']}
+- Dataset Name: 'bbbdata_csql'
+- Table: {state['table_name']} 
+This is a ball by ball dataset of cricket matches. 
 - Schema: {state['docs_schema']}
 
 **YOUR TASK:**

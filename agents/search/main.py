@@ -22,7 +22,7 @@ async def arun(state: AgentState):
 
 
     table_columns = {
-    'hdata': [
+    'cricinfo_bbb': [
         'player', 'team', 'dismissal', 'ground', 'country', 'competition', 
         'bat_hand', 'bowl_style((specifies in detail)', 'bowl_kind(broadly classifies like spin or pace)', 'line', 'length', 'shot'
     ],
@@ -126,9 +126,12 @@ Remember:
 -Your role is not just to search, but to intelligently interpret and standardize cricket terms for accurate database queries.
 -Use the necessary tools to search..dont give on your own previous knowledge.
 -you will be given a whole cnversation based on that understad what u need to interpret and search and standardise.
--another point is to rely solely on the information provided by the user; you cannot communicate with them again.
   -If no specific valueS is mentioned of a column type dont search..
 -You are just an search agent part of an ai multi-agents system..u just need to search and add to conversation and not write sql queries that will be handled by sql agent dont worry about it!   
+
+
+
+-another point is to rely solely on the information provided by the user; you cannot communicate with them again.
 
 
 """)

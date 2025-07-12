@@ -1,11 +1,11 @@
-Hit Wicket
-Caught
-Retired out
 Run Out
 Stumped
 Obstructing the Field
-Retired Hurt
-nan
-Leg Before Wicket
 Caught & Bowled
+Leg Before Wicket
+Retired out
+nan
 Bowled
+Hit Wicket
+Retired Hurt
+Caught

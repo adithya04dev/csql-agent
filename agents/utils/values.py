@@ -3,12 +3,12 @@ import os
 from .vector_stores import VectorStoreManager
 def read_schema_columns(table_name):
     # Hardcoded list of columns from schema
-    if table_name.startswith('hdata'):
+    if table_name.startswith('hdata') or table_name.startswith('cricinfo'):
         return [
             'bat', 'team_bat', 
             'dismissal',
             'ground','country','competition', 'bat_hand',
-            'bowl_style', 'bowl_kind', 'bat_out', 
+            'bowl_style', 'bowl_kind', 
             'line', 'length', 'shot'
         ]
     elif table_name.startswith('odata'):
@@ -58,7 +58,7 @@ def save_values_to_files(table_name):
         unique_values2 = []
         
         # Handle different column mappings based on table type
-        if table_name.startswith('hdata'):
+        if table_name.startswith('hdata') or table_name.startswith('cricinfo'):
             if column == 'bat':
                 unique_values2 = get_unique_values(table_name,'bowl')
             elif column == 'team_bat':
@@ -150,7 +150,7 @@ def save_values_to_files(table_name):
                 'wicket_type': 'wicket_type',
                 'ground': 'ground'
             }
-        }[ 'hdata' if table_name.startswith('hdata') else 'odata' if table_name.startswith('odata') else 'aucb' if table_name.startswith('aucb') else 'ipl_hawkeye' ]
+        }[ 'hdata' if table_name.startswith('hdata') or table_name.startswith('cricinfo') else 'odata' if table_name.startswith('odata') else 'aucb' if table_name.startswith('aucb') else 'ipl_hawkeye' ]
 
         if unique_values:
             file_path = os.path.join(values_dir, f'{mapping[column]}.txt')
@@ -162,10 +162,10 @@ def save_values_to_files(table_name):
                         print(f"Error writing value in {column}: {str(e)}")
                         continue
 if __name__ == "__main__":
-    save_values_to_files('aucb_bbb')
+    # save_values_to_files('aucb_bbb')
     # # Initialize by fetching and saving all values
-    # save_values_to_files('hdata')
-    # save_values_to_files('ipl_hawkeye')
+    # save_values_to_files('cricinfo_bbb')
+    save_values_to_files('ipl_hawkeye')
     # save_values_to_files('aucb_bbb')
 
     # vector_store_manager = VectorStoreManager()

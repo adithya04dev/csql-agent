@@ -67,7 +67,7 @@ CRITICAL WORKFLOW INSTRUCTIONS:
 
 5. **Example Workflow:**
    - User asks: "What's Virat Kohli's strike rate against leg spinners?"
-   - First use search agent on 'hdata' to verify "Virat Kohli" and "leg spin" exist
+   - First use search agent on 'cricinfo_bbb' to verify "Virat Kohli" and "leg spin" exist
    - Then use SQL agent to calculate the strike rate
 
 Always verify entities before analysis - accurate data depends on proper identification.
@@ -75,15 +75,28 @@ Always verify entities before analysis - accurate data depends on proper identif
 When routing to the search or sql agents, you must select the appropriate table to query:
 Based on the query, carefully consider which table would be most appropriate and effective:
 
-- 'hdata': Primary T20 Ball-By-Ball Database (includes IPL matches) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
-    * Searchable columns: player, team, dismissal, ground, country, competition(doesn't include year so be careful!), bat_hand, bowl_style, bowl_kind, line, length, shot.
+- 'cricinfo_bbb': Primary T20 Ball-By-Ball Database (includes IPL matches and all t20 tournamanets) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
+    * Searchable columns: player, team, dismissal, ground, country, competition(may or maynot include year so dont confuse,date is also there so no worries), bat_hand, bowl_style, bowl_kind, line, length, shot.
 
-- 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates, and spatial information. Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics or spatial analysis. While slightly less comprehensive in match coverage than hdata, it provides unique metrics not available elsewhere. Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by hdata.
+- 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates. Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics like ball speed,deviation etc... Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by cricinfo_bbb.
     * Searchable columns: team, player, delivery_type, ball_type, shot_type, ball_line, ball_length, wicket_type, ground.
 
 
-- 'aucb_bbb': Mixed Format Ball-By-Ball Data: contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20(includes IPL,BBL), and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user as aucb or something like that.It  contains BBB data, shot type, shot area, shot angle, foot movement, granular control and other cricket related data.
-    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot.
+- 'aucb_bbb': Mixed Format Ball-By-Ball Data(include odi,t20i and ipl only): contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20(includes IPL,BBL), and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user as aucb or something like that.It  contains BBB data, shot type, shot area, shot angle, foot movement, granular control and other cricket related data.
+    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot,variation.
+
+Here are some table selection guidelines and examples:
+
+- For ODI and T20 International matches, always use the `aucb_bbb` table. (Note: While `aucb_bbb` also contains IPL data, do not use it as the default for IPL queries.)
+- For general T20 tournaments queries, use the `cricinfo_bbb` table. However, if the query requires advanced details like variations:
+    - If the user asks about specific bowling variations (e.g., "slow ball", "googly", "off-cutter"), prefer `aucb_bbb` for its detailed bowl type/variation columns.
+    - If the query requires ball tracking metrics such as ball speed, deviation, swing, or spatial/trajectory data, use `ipl_hawkeye` (only for IPL matches from 2022 onwards).
+- For IPL queries:
+    - Use `cricinfo_bbb` for most general IPL analysis.
+    - Use `ipl_hawkeye` only if the question specifically requires ball tracking or spatial data not available in `cricinfo_bbb`.
+    - Use `aucb_bbb` if the question is about detailed bowling variations in IPL and `cricinfo_bbb` does not suffice.
+
+Always match the user's question to the table that best supports the required level of detail and data type.
 
 
 Remember:
@@ -99,7 +112,7 @@ Remember:
         """Worker to route to next. If no workers needed, route to user."""
         message:str = Field(description="A short message(1-2 lines only) you want to add to conversation.  Include a casual message(1-2 lines only).")
         next: Literal[*options] = Field(description="The next worker ('search_agent', 'sql_agent', 'visualiser_agent' or 'user').")
-        table_name: Optional[Literal['hdata', 'aucb_bbb', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
+        table_name: Optional[Literal['cricinfo_bbb', 'aucb_bbb', 'ipl_hawkeye','']] = Field(description="The table to query (MUST be provided if next is 'search_agent' or 'sql_agent').")
 
     async def supervisor_node(state: AgentState) -> Command[Literal[*members, "__end__"]]:
         """An LLM-based router."""

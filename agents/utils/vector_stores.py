@@ -382,8 +382,9 @@ class VectorStoreManager:
         # Collect results in a list first
         result_texts = [doc.page_content for doc in results[:k]]
         
-        # Join them together in one operation
-        return f"Tool Response: similar values of {query} in table are:\n{'\n'.join(result_texts)}"
+        # Join them together in one operation - Fixed f-string syntax error
+        joined_results = '\n'.join(result_texts)
+        return f"Tool Response: similar values of {query} in table are:\n{joined_results}"
 
 # Example Usage
 if __name__ == "__main__":
@@ -397,11 +398,11 @@ if __name__ == "__main__":
         vector_store_manager = VectorStoreManager()
 # Fast upload (high RAM usage)
 # Fast upload with automatic indexing
-        # vector_store_manager.add_examples_from_directory(
-        #     "./agents/tables/hdata", 
-        #     override=True,
-        #     indexing_strategy=IndexingStrategy.FAST
-        # )
+        vector_store_manager.add_examples_from_directory(
+            "./agents/tables/ipl_hawkeye", 
+            override=True,
+            indexing_strategy=IndexingStrategy.FAST
+        )
 
         # Memory efficient mode with automatic indexing
         # vector_store_manager.add_examples_from_directory(
@@ -410,11 +411,11 @@ if __name__ == "__main__":
 
         #     indexing_strategy=IndexingStrategy.MEMORY_EFFICIENT
         # )
-        # vector_store_manager.add_examples_from_directory(
-        #     "./agents/tables/aucb_bbb", 
-        #     override=True,
-        #     indexing_strategy=IndexingStrategy.FAST
-        # )
+        vector_store_manager.add_examples_from_directory(
+            "./agents/tables/cricinfo_bbb", 
+            override=True,
+            indexing_strategy=IndexingStrategy.FAST
+        )
 
         
         # print(vector_store_manager.available_categories)
@@ -431,5 +432,9 @@ if __name__ == "__main__":
         # print(await vector_store_manager.search_similar_queries("kohi", "ipl_hawkeye_player"))
         # print(await vector_store_manager.search_similar_queries("back length", "ipl_hawkeye_ball_length"))
         # print(await vector_store_manager.search_similar_queries("ipl 2024", "hdata_2403_competition"))
+        print(await vector_store_manager.search_similar_queries("virat kohli", "cricinfo_bbb_player"))
+        print(await vector_store_manager.search_similar_queries("ipl 2024", "cricinfo_bbb_competition"))
+        print(await vector_store_manager.search_similar_queries("india", "cricinfo_bbb_country"))
+        print(await vector_store_manager.search_similar_queries("ipl 2024", "cricinfo_bbb_competition"))
     
     asyncio.run(main())

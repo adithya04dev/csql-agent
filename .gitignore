@@ -15,4 +15,8 @@ t.py
 evals.txt
 .env.sample
 .vscode/
-
+test_bbb*.csv 
+ht.ipynb
+task.md
+setup.txt
+setup.txt

@@ -93,6 +93,7 @@ async def sql_writer(state:AgentState)->AgentState:
         state['docs_schema']=await f.read()
     sys_prompt=[SystemMessage(content=f"""You are a SQL agent for cricket analytics that works with search and visualizer agents.
 
+**CONTEXT: I have a ball by ball dataset of cricket matches. I want you to write sql queries to analyze the data.**
 **DATABASE INFO of Bigquery:**
 - Dataset Name : 'bbbdata'
 - Table: {state['table_name']}
@@ -114,7 +115,7 @@ For Bowling: Core: Overs/balls, runs conceded, wickets | Standard: Average, econ
 - Filter appropriately (valid deliveries, match types)
 - Handle edge cases (division by zero, nulls)
 - Structure queries logically
-- Verify entities with search agent results
+- Use the search agent results as it has verified entities
 
 Return ONLY SQL in markdown format:
 ```sql

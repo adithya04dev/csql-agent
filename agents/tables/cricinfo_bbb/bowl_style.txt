@@ -1,0 +1,21 @@
+left-arm bowler
+(unknown arm) bowler
+left-arm fast-medium
+left-arm medium-fast
+right-arm medium
+legbreak googly
+left-arm slow
+right-arm medium-fast
+right-arm slow
+left-arm fast
+left-arm slow-medium
+right-arm slow-medium
+slow left-arm orthodox
+right-arm offbreak
+(unknown arm) fast
+right-arm fast-medium
+right-arm bowler
+legbreak
+left-arm medium
+right-arm fast
+left-arm wrist-spin
