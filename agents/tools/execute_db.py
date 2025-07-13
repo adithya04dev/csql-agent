@@ -19,7 +19,14 @@ credentials_dict = json.loads(credentials_bytes)
 credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
 def execute_query(query: str,mode:str='sql'):
-    """Synchronous function to execute BigQuery operations"""
+    """
+    Execute a BigQuery SQL query and return the results.
+    
+    Args:
+        query (str): The SQL query to execute
+        mode (str, optional)..its already defaulted,dont set it...
+
+    """
     project_id = 'adept-cosine-420005'
     client = bigquery.Client(project=project_id, credentials=credentials)
 
@@ -45,11 +52,15 @@ def execute_query(query: str,mode:str='sql'):
     # return {'sql_result':query_job.to_dataframe(),'error':False}
 
 
-async def arun(query: str) -> dict:
-    """Async wrapper around BigQuery operations"""
+async def arun(query: str,mode:str='sql') -> dict:
+    """
+    Async wrapper around BigQuery operations
+    Args:
+        query (str): The SQL query to execute
+    """
     # Run the synchronous function in a thread pool to avoid blocking
     loop = asyncio.get_running_loop()
-    return await loop.run_in_executor(None, execute_query, query)
+    return await loop.run_in_executor(None, execute_query, query,mode)
 
 tool = StructuredTool.from_function(
     func=execute_query,
