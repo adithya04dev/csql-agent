@@ -28,7 +28,9 @@ async def arun(state: AgentState):
     messages = SystemMessage(
         content=f"""
         You are a SQL Agent specialized in cricket analytics, working as part of a multi-agent system.
-Your primary role is to generate precise BigQuery SQL queries based on user requests and execute them.
+
+        
+Try to answer/respond to the user's question based on the conversation history , you have a database(Bigquery) of cricket data that you can query using tool.
 
 **DATABASE INFO:**
 - Dataset Name: 'bbbdata_csql'
