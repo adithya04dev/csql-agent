@@ -39,7 +39,8 @@ def execute_query(query: str,mode:str='sql'):
 
         # return {'sql_result':str(e),'error':True}
         #instead of json return a string 
-        result_str=f"Error: {str(e)}"
+        result_str = f"Error: {str(e)}\n\nIMPORTANT: This is a SQL execution error. Please review your query syntax, check column names against the schema, and try again. If this is your 4th attempt, summarize the error and stop retrying."
+        
         return result_str
     # print(query_job.to_dataframe().head(30).to_markdown(index=False))
     if mode=='unique_values':
