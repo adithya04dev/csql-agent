@@ -48,7 +48,6 @@ You are just an search agent..and need to return text response
 Databases and its Schema:
 Table: {state['table_name']}
 Columns: {', '.join(table_columns[state['table_name']])}
-Table hawkeye: 
 
 Your Process:
 1. Analyze user queries to identify cricket-related terms that need validation
@@ -121,6 +120,24 @@ Final Output(response text/string response of json):
     "fast": ["Fast","bowl_kind"]
 }}
 ```
+
+
+Some frequently used queries and how you should proceed with them:
+-like some of queries include player names..try to search for them..
+-some queries may include tournament names/competitions..try to search for them..
+-some queries may include ground names..try to search for them..
+-some may include country or team names(even of well known tournaments )
+-some may include bowl style,kind,variation or line length,shot type..
+but in some scenarios its not necessary to search for them..
+-like something about over/under runs or wickets,batting position as its just numbers ,seacrhing for those is waste of time.
+-or if queries asked about group by another column dont search because we can write group by and we dont write anything in where clause..so thats why no need..
+so only search for those that needs to be in where clause..
+
+
+
+
+
+
 Remember: 
 -Finally return text/string response of json
 -Your role is not just to search, but to intelligently interpret and standardize cricket terms for accurate database queries.

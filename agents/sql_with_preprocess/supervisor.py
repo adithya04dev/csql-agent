@@ -77,13 +77,14 @@ Based on the query, carefully consider which table would be most appropriate and
 
 - 'cricinfo_bbb': Primary T20 Ball-By-Ball Database (includes IPL matches and all t20 tournamanets) containing detailed ball-by-ball information such as line/length, control percentage, shot type, shot angle, and shot zone. Covers T20 matches from 2015 onwards. This is the most recent, reliable, and comprehensive dataset, making it the recommended choice for most queries requiring T20 analysis.
     * Searchable columns: player, team, dismissal, ground, country, competition(may or maynot include year so dont confuse,date is also there so no worries), bat_hand, bowl_style, bowl_kind, line, length, shot.
+- 'aucb_bbb': Mixed Format Ball-By-Ball Data(include odi,t20i and ipl only): contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20(includes IPL,BBL), and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user as aucb or something like that.It  contains BBB data, shot type, shot area, shot angle, foot movement, granular control and other cricket related data.
+    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot,variation.
 
+    
 - 'ipl_hawkeye': IPL Hawkeye Data: contains detailed tracking data for IPL matches including BBB data, ball speed, trajectory, deviation, swing, pitch, ball type, shot type coordinates. Covers IPL matches from 2022 onwards. Use this table specifically when analyzing IPL matches that require detailed ball tracking metrics like ball speed,deviation etc... Only select this when the query explicitly requires IPL-specific tracking data that cannot be satisfied by cricinfo_bbb.
     * Searchable columns: team, player, delivery_type, ball_type, shot_type, ball_line, ball_length, wicket_type, ground.
 
 
-- 'aucb_bbb': Mixed Format Ball-By-Ball Data(include odi,t20i and ipl only): contains BBB data, shot type, shot area, shot angle, foot movement, granular control for Tests, FC, List A, ODI, T20(includes IPL,BBL), and T20I. Covers games mainly from 2019 onwards. This is a slightly older dataset - use it specifically when the user as aucb or something like that.It  contains BBB data, shot type, shot area, shot angle, foot movement, granular control and other cricket related data.
-    * Searchable columns: player, team, dismissal, ground, country, competition, bat_hand, bowl_style, bowl_kind, line, length, shot,variation.
 
 Here are some table selection guidelines and examples:
 
