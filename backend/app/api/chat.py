@@ -4,7 +4,6 @@ from typing import AsyncGenerator, List, Optional,Dict
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field,validator
-from agents.sql_with_preprocess.main import create_graph
 from langchain_core.messages import HumanMessage
 from agents.sql_with_preprocess.types1 import AgentState
 from langchain_core.messages import AnyMessage
@@ -115,7 +114,10 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
 @router.post("/v1/chat/completions")  # Match OpenAI's endpoint path
 async def chat_endpoint(request: ChatRequest):
     try:
-        app = await create_graph()
+        # Use cached graph instead of creating new one each time
+        from backend.app.main import get_cached_graph
+        app = await get_cached_graph()
+        
         # print("messages are: ")
         # print(request.messages)
         # Get the last user message from the conversation
