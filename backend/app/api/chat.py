@@ -114,9 +114,9 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
 @router.post("/v1/chat/completions")  # Match OpenAI's endpoint path
 async def chat_endpoint(request: ChatRequest):
     try:
-        # Use cached graph instead of creating new one each time
-        from backend.app.main import get_cached_graph
-        app = await get_cached_graph()
+        # Create fresh graph instance for each request to avoid callback corruption
+        from agents.sql_with_preprocess.main import create_graph
+        app = await create_graph()
         
         # print("messages are: ")
         # print(request.messages)
