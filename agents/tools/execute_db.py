@@ -17,9 +17,9 @@ credentials_bytes = base64.b64decode(credentials_b64)
 credentials_dict = json.loads(credentials_bytes)
 credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
-async def execute_query(query: str, mode: str = 'sql'):
+def execute_query_sync(query: str, mode: str = 'sql'):
     """
-    Execute a BigQuery SQL query and return the results asynchronously.
+    Execute a BigQuery SQL query synchronously.
     
     Args:
         query (str): The SQL query to execute
@@ -28,18 +28,11 @@ async def execute_query(query: str, mode: str = 'sql'):
     project_id = 'adept-cosine-420005'
     
     try:
-        # Create client in async context
+        # Create client and execute query synchronously
         client = bigquery.Client(project=project_id, credentials=credentials)
-        
-        # Execute query asynchronously
-        loop = asyncio.get_running_loop()
-        query_job = await loop.run_in_executor(None, client.query, query)
-        
-        # Wait for results asynchronously
-        await loop.run_in_executor(None, query_job.result)
-        
-        # Get dataframe asynchronously
-        df = await loop.run_in_executor(None, query_job.to_dataframe)
+        query_job = client.query(query)
+        query_job.result()  # Wait for completion
+        df = query_job.to_dataframe()
         
     except Exception as e:
         print("Error occurred in BigQuery execution!")
@@ -53,9 +46,21 @@ async def execute_query(query: str, mode: str = 'sql'):
         result_str = f"Result: \n {df.head(100).to_markdown(index=False)}\n Error: False"
         return result_str
 
+async def execute_query_async(query: str, mode: str = 'sql'):
+    """
+    Execute a BigQuery SQL query asynchronously using sync function in executor.
+    
+    Args:
+        query (str): The SQL query to execute
+        mode (str, optional): Mode of execution, defaults to 'sql'
+    """
+    loop = asyncio.get_running_loop()
+    return await loop.run_in_executor(None, execute_query_sync, query, mode)
+
+# Create tool with proper sync/async separation
 tool = StructuredTool.from_function(
-    func=execute_query,
+    func=execute_query_sync,  # Sync version for compatibility
     name="execute_db", 
     description="useful to execute the sql query and return back the result",
-    coroutine=execute_query,  # This should point to the async function
+    coroutine=execute_query_async,  # Async version for LangGraph
 )
