@@ -41,7 +41,7 @@ async def create_graph()->StateGraph:
     workflow.add_edge(START, "supervisor")
     workflow.set_entry_point("supervisor")
 
-    graph = workflow.compile(debug=True)
+    graph = workflow.compile(debug=False)
     return graph
 
 async def runworkflow(query: str)->AgentState:
