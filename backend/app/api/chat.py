@@ -48,13 +48,16 @@ async def stream_response(app, initial_state) -> AsyncGenerator[str, None]:
 
     # async for event in app.astream_events(initial_state, version='v1'):
     first=True
-    async for chunk in app.astream(initial_state, stream_mode=["updates"]):
+    async for chunk in app.astream(initial_state, 
+                                   subgraphs=True,
+                                   stream_mode=["updates"]):
         
-        val,event=chunk
+        val,upd,event=chunk
 
         # print(" the chunk is :",chunk)
 
-
+        if 'search' in event or 'sql' in event or 'visualiser' in event: 
+            continue
 
 
         if first:

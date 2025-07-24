@@ -59,8 +59,15 @@ The system works with multiple cricket databases:
 
 ### Running the Application
 
+Frontend
+cd chatbot
+npm run dev
+
+Backend
+.\venv\scripts\activate
+
 ```bash
-uvicorn backend.app.main:app --host=0.0.0.0 --port=8000
+uvicorn backend.app.main:app --host=0.0.0.0 --port=8000 --reload
 ```
 
 Or use the provided Procfile for deployment:

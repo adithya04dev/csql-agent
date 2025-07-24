@@ -1,0 +1,59 @@
+# Major Issues/Changes Addressed in SQL Agent Chat Session
+
+## 1. ASYNC TIMEOUT ISSUE (execute_db.py)
+**Problem:** 
+- SQL queries were timing out with CancelledError
+- Agent would make tool calls but get null output
+- BigQuery queries executed successfully but results never returned to agent
+- Issue was in async wrapper using run_in_executor() causing thread executor timeouts
+
+**Solution:** 
+- Refactored execute_query() to be directly async instead of using sync + wrapper
+- Removed arun() wrapper function that used run_in_executor()
+- Made execute_query() handle BigQuery operations asynchronously with proper await calls
+- Updated tool definition to use execute_query as both func and coroutine
+
+**Files Changed:** agents/tools/execute_db.py
+
+## 2. SQL AGENT PROMPT OPTIMIZATION (main2.py)
+**Problem:**
+- Overly verbose and confusing prompt
+- Complex sample queries in schema docs were misleading the agent
+- No clear error handling guidelines or retry limits
+- Missing BigQuery-specific syntax guidance
+- Unclear success/failure criteria leading to infinite retry loops
+
+**Solution:**
+- Simplified opening from verbose multi-paragraph to single clear sentence
+- Changed from "Generate and execute BigQuery SQL" to more organic "Answer user questions using tools available"
+- Added "BEFORE WRITING SQL" planning step to catch logic errors early
+- Set clear retry limits (MAX 3 attempts)
+- Added BigQuery-specific syntax notes and common gotchas
+- Removed confusing sample queries from schema display
+- Streamlined response format with clear success/error criteria
+
+**Files Changed:** agents/sql/main2.py
+
+## 3. AGENT CONTAMINATION ISSUE (Multi-agent behavior)
+**Problem:**
+- Search agent was mimicking SQL agent's response format
+- Agents seeing shared conversation history and copying patterns from other agents
+- Search agent saying "Results successfully gathered" when it only did searches
+- Loss of distinct agent identities due to pattern reinforcement in shared context
+
+**Solution Identified (Not Yet Implemented):**
+- Add distinct response format constraints for each agent type
+- Search agent: Must start with "Search complete:" or "Found:"
+- SQL agent: Must start with "SQL Results obtained:"
+- Visualiser: Must start with "Visualization created:"
+- Add agent identity enforcement in supervisor prompt
+- Create strong behavioral anchors that resist contamination
+
+**Files to Change:** 
+- agents/search/main.py
+- agents/sql/main2.py  
+- agents/visualiser/main2.py
+- agents/sql_with_preprocess/supervisor.py
+
+## Summary
+These changes address: (1) Technical async execution issues, (2) Prompt engineering for better SQL generation, and (3) Multi-agent system behavioral consistency to prevent role confusion. 
