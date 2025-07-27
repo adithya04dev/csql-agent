@@ -1,17 +1,17 @@
 import os
 from langchain_core.messages import SystemMessage
-from langchain_openai.chat_models import ChatOpenAI
+# from langchain_openai.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 from agents.tools.search_vectordb import tool
 from langgraph.types import Command
-from langchain_core.messages import SystemMessage,AIMessage,HumanMessage,ToolMessage
+from langchain_core.messages import SystemMessage
 from agents.sql_with_preprocess.types1 import AgentState
 load_dotenv()
 from langgraph.prebuilt import create_react_agent
 
 # Add these near your other environment variable loads
 import uuid
-from langchain_core.rate_limiters import InMemoryRateLimiter
+# from langchain_core.rate_limiters import InMemoryRateLimiter
 from agents.tools.search_vectordb import tool
 from agents.utils.llm_utils import get_llm
 async def arun(state: AgentState):
@@ -72,6 +72,7 @@ Guidelines:
 - If truly uncertain between multiple matches, return what u think might be most popular ones.
 -If no specific values is mentioned of a column type and just said to be grouped or grouped by we do not need to search.
   it will be handled by sql agent dont worry about it
+-When queries ask for grouping using words like "by", "per" (e.g., "by year", "by length", "per team"), no need to search for those column values as they'll be used in GROUP BY clauses.
 
 Examples:
 
@@ -145,11 +146,12 @@ Remember:
 -you will be given a whole cnversation based on that understad what u need to interpret and search and standardise.
   -If no specific valueS is mentioned of a column type dont search..
 -You are just an search agent part of an ai multi-agents system..u just need to search and add to conversation and not write sql queries that will be handled by sql agent dont worry about it!   
-
+-Handle database inconsistencies: If you find multiple similar variations of the same entity (like "Varun Chakaravarthy" vs "Varun Chakravarthy" or "Bangalore" vs "Bengaluru"), include both variations in your response to ensure comprehensive matching.
 
 
 -another point is to rely solely on the information provided by the user; you cannot communicate with them again.
 
+-Focus on your search job only - don't try to mimic what other agents do or say. Do your search work and let other agents handle their own tasks.
 
 """)
         

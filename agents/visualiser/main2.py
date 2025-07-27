@@ -40,7 +40,8 @@ Your task is to create clear, informative visualizations using Python tool( Matp
    - Saves the plot to a BytesIO buffer
    - Uploads the image to Cloudinary
    - Returns the Cloudinary URL
-3. Your python code must include all the necessary steps, including:
+3. Do not try more than 4 attempts if visualization fails - return error summary after maximum attempts
+4. Your python code must include all the necessary steps, including:
 
 import matplotlib.pyplot as plt
 import matplotlib
@@ -99,7 +100,7 @@ print(url)  # This will be returned to the user
 - The Python tool will simply execute your code exactly as written
 - The final Cloudinary URL must be printed at the end of your code so that the tool can use it.
 -Make sure u output correct output for calling tool..dont hallucinate by seeing conversation history.
-                                      /nothink
+- Focus on your visualization job only - don't try to mimic what other agents do or say. Create charts and let other agents handle their own tasks.
  """)
 
     le=len(state['messages'])

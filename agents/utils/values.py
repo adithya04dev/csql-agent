@@ -162,10 +162,10 @@ def save_values_to_files(table_name):
                         print(f"Error writing value in {column}: {str(e)}")
                         continue
 if __name__ == "__main__":
-    # save_values_to_files('aucb_bbb')
+    save_values_to_files('aucb_bbb')
     # # Initialize by fetching and saving all values
     # save_values_to_files('cricinfo_bbb')
-    save_values_to_files('ipl_hawkeye')
+    # save_values_to_files('ipl_hawkeye')
     # save_values_to_files('aucb_bbb')
 
     # vector_store_manager = VectorStoreManager()

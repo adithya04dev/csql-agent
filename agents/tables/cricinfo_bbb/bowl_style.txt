@@ -19,3 +19,72 @@ legbreak
 left-arm medium
 right-arm fast
 left-arm wrist-spin
+
+
+[{
+  "bowl_style": "slow left-arm orthodox",
+  "cnt": "340593"
+}, {
+  "bowl_style": "right-arm medium-fast",
+  "cnt": "312610"
+}, {
+  "bowl_style": "right-arm medium",
+  "cnt": "308499"
+}, {
+  "bowl_style": "right-arm offbreak",
+  "cnt": "299463"
+}, {
+  "bowl_style": "right-arm fast-medium",
+  "cnt": "295382"
+}, {
+  "bowl_style": "right-arm fast",
+  "cnt": "159629"
+}, {
+  "bowl_style": "legbreak",
+  "cnt": "137604"
+}, {
+  "bowl_style": "left-arm fast-medium",
+  "cnt": "116305"
+}, {
+  "bowl_style": "legbreak googly",
+  "cnt": "91527"
+}, {
+  "bowl_style": "left-arm medium-fast",
+  "cnt": "69773"
+}, {
+  "bowl_style": null,
+  "cnt": "64168"
+}, {
+  "bowl_style": "left-arm medium",
+  "cnt": "46928"
+}, {
+  "bowl_style": "left-arm fast",
+  "cnt": "40346"
+}, {
+  "bowl_style": "left-arm wrist-spin",
+  "cnt": "31646"
+}, {
+  "bowl_style": "left-arm slow",
+  "cnt": "1281"
+}, {
+  "bowl_style": "right-arm bowler",
+  "cnt": "737"
+}, {
+  "bowl_style": "right-arm slow-medium",
+  "cnt": "413"
+}, {
+  "bowl_style": "(unknown arm) fast",
+  "cnt": "321"
+}, {
+  "bowl_style": "left-arm slow-medium",
+  "cnt": "166"
+}, {
+  "bowl_style": "left-arm bowler",
+  "cnt": "138"
+}, {
+  "bowl_style": "right-arm slow",
+  "cnt": "134"
+}, {
+  "bowl_style": "(unknown arm) bowler",
+  "cnt": "26"
+}]

@@ -3,7 +3,7 @@ from langchain_core.messages import SystemMessage
 from dotenv import load_dotenv
 from agents.tools.execute_db import tool as execute_tool
 from langgraph.types import Command
-from langchain_core.messages import SystemMessage, AIMessage, HumanMessage
+from langchain_core.messages import SystemMessage
 from agents.sql_with_preprocess.types1 import AgentState
 load_dotenv()
 from langgraph.prebuilt import create_react_agent
@@ -13,7 +13,7 @@ from agents.utils.llm_utils import get_llm
 async def arun(state: AgentState):
     # Get the appropriate model from environment variables
     sql_model = os.getenv('SQL_MODEL')
-    model = get_llm(sql_model)
+    model = get_llm(sql_model,reasoning='high')
 
     # Load the database schema for the current table
     try:
@@ -32,6 +32,8 @@ You are a SQL Agent for cricket analytics. Answer/respond to user questions abou
 **DATABASE INFO:**
 - Dataset: 'bbbdata_csql'
 - Table: {state['table_name']}
+- SCHEMA and docs: 
+{state['docs_schema']}
 - Ball-by-ball cricket data
 
 **BEFORE WRITING SQL:**
@@ -46,11 +48,20 @@ You are a SQL Agent for cricket analytics. Answer/respond to user questions abou
 4. MAX 3 retry attempts if errors occur
 5. If still failing after 2 attempts, return error summary
 
+**HANDLE DATABASE INCONSISTENCIES:**
+- When using WHERE clauses with names/entities, be aware of potential spelling variations
+- If search results provided multiple variations of the same entity (like "Varun Chakaravarthy" vs "Varun Chakravarthy"), use OR conditions to match all variations
+- Example: WHERE player_name IN ('Bangalore', 'Bengaluru') OR WHERE player_name IN ('Varun Chakaravarthy', 'Varun Chakravarthy')
+
 **BIGQUERY SYNTAX NOTES:**
 - Use `bbbdata_csql.{state['table_name']}` format
 - Window functions: ROW_NUMBER() OVER (PARTITION BY col ORDER BY col)
 - Exclude invalid deliveries: WHERE wide = 0 AND noball = 0
 - Use backticks around `over` column: `over`
+
+**KEY CRICKET METRICS TO INCLUDE:**
+For Batting: Runs, balls faced, dismissals, Average, strike rate, boundary %, dot ball %, control % (if available)
+For Bowling: Overs/balls, runs conceded, wickets, Average, economy, strike rate, control % (if available)
 
 **VALIDATE RESULTS:**
 - Check if result size makes sense for the question
@@ -61,9 +72,9 @@ You are a SQL Agent for cricket analytics. Answer/respond to user questions abou
 - Success: "Results obtained: [one-line query description]"
 - Error after 3 attempts: "Query failed: [brief error summary]"
 - Let tool results display automatically - don't reformat them
+- Focus on your SQL job only - don't try to mimic what other agents do or say. Write queries and let other agents handle their own tasks.
 
-**SCHEMA:**
-{state['docs_schema'].split('docs and some sample queries')[0].strip()}
+
 """
     )
 

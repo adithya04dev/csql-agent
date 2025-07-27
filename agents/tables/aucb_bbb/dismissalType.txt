@@ -1,11 +1,11 @@
-Stumped (sub)
-Run out (sub)
-LBW
-Caught (sub)
-Run out
-Caught and bowled
 Obstructing field
-Bowled
-Stumped
+Run out (sub)
 Caught
 Hit wicket
+Caught and bowled
+Stumped (sub)
+Stumped
+LBW
+Caught (sub)
+Bowled
+Run out

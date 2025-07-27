@@ -1,5 +1,5 @@
 table_name: aucb_bbb
-
+- 'aucb_bbb': Mixed Format Ball-By-Ball Data(includes test,odi,t20i and some other t20 leagues like ipl,bbl,the hundred only)
 # Match and Fixture Details
 fixtureId INTEGER (Unique identifier for each match fixture)
 competition STRING (Name of the competition or tournament)
@@ -77,7 +77,7 @@ isAppeal BOOLEAN (Whether there was an appeal, true/false)
 fieldingPosition STRING (Fielding position involved)
 catchDifficulty INTEGER (Difficulty rating of the catch, numeric)
 referralOutcomeId STRING (Outcome of referral/review)
-
+control INTEGER (Control of batter like if it was controlled shot or not ,0 for not controlled and 1 for controlled) can be useful for batter stats for calculating control%  as its more granular than just runs scored..and also for bowling stats for calculating control% the more control the batter has the less control the bowler has
 
 sample_queries: [
     {
@@ -112,3 +112,6 @@ sample_queries: [
         "sql_description": "Lists the 10 most recent fixtures with basic match details."
     }
 ]
+
+Some points..
+-if query asked like by,per..like by year,by length,type or something u can just do group by and no need for search results of those columns as its asked like that only

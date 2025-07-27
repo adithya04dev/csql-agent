@@ -4,8 +4,15 @@ from pydantic import BaseModel, Field, validator
 from agents.utils.vector_stores import VectorStoreManager
 from langchain_core.callbacks import CallbackManagerForToolRun, AsyncCallbackManagerForToolRun
 
-# Initialize vector store
-vector_store = VectorStoreManager()
+# Global variable for singleton pattern
+_vector_store = None
+# vector_store = VectorStoreManager()
+def get_vector_store():
+    """Get the singleton VectorStoreManager instance."""
+    global _vector_store
+    if _vector_store is None:
+        _vector_store = VectorStoreManager()
+    return _vector_store
 
 # Define valid tables and columns
 VALID_TABLES = ['hdata', 'odata_2403','ipl_hawkeye','aucb_bbb']
@@ -48,6 +55,7 @@ class SearchTool(BaseTool):
             print("search_pairs",search_pairs)
 
             # Proceed with search if validation passes
+            vector_store = get_vector_store()
             results = []
             for pair in search_pairs:
                 search_key = f"{pair.table_name}_{pair.column_name}"
@@ -60,6 +68,14 @@ class SearchTool(BaseTool):
             # Ensure consistent return type structure, even if results are complex
             # This might need adjustment depending on what search_similar_queries actually returns
             processed_results = [str(r) for r in results] # Example: convert results to strings
+            
+            # Monitor total process memory usage
+            import psutil
+            import os
+            process = psutil.Process(os.getpid())
+            total_memory_mb = process.memory_info().rss / (1024 * 1024)
+            print(f"Total process memory after search: {total_memory_mb:.2f} MB")
+            
             return processed_results if processed_results else ["No matches found"]
             
         except Exception as e:

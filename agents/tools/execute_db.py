@@ -92,3 +92,17 @@ class ExecuteDatabaseTool(BaseTool):
 
 # Create an instance of the tool
 tool = ExecuteDatabaseTool()
+
+def execute_query(query: str, mode: str = 'sql'):
+    """
+    Standalone function to execute BigQuery SQL queries.
+    This function can be imported and used by other modules.
+    
+    Args:
+        query (str): The SQL query to execute
+        mode (str, optional): Mode of execution, defaults to 'sql'
+    
+    Returns:
+        Result of the query execution
+    """
+    return tool._execute_query_sync(query, mode)

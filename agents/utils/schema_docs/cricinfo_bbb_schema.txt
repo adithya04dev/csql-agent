@@ -1,3 +1,5 @@
+table name 'cricinfo_bbb': Primary T20 Ball-By-Ball Database (includes IPL matches and all t20 tournamanets) containing detailed ball-by-ball
+
 p_match: INTEGER(identifier) (use this to count different matches) 
 
 inns: INTEGER (innings number like 1 or 2 or 3 or 4)
@@ -39,7 +41,7 @@ legbyes: INTEGER (the number of leg byes scored on this ball)
 
 cur_bat_runs: INTEGER (the  runs scored by the batter till this ball of innings)
 
-cur_bat_bf: INTEGER (the balls faced by the batter till this ball of innings)
+cur_bat_bf: INTEGER (the balls faced by the batter till this ball of innings can be useful to calculate first n balls stats of batters like that..or  can calculate yourself..)
 
 cur_bowl_ovr: FLOAT (the overs bowled by the bowler till this ball of innings)
 
@@ -73,7 +75,7 @@ ground: STRING
 
 country: STRING
 
-winner: STRING
+winner: STRING the winner of the match,if null then it may be in no result
 
 toss: STRING
 
@@ -137,3 +139,5 @@ docs and some sample queries
         "sql_description": "Team-specific bowling stats (unchanged as team grouping is correct here). "
     }
 ]
+Some points..
+-if query asked like by,per..like by year,by length,type or something u can just do group by and no need for search results of those columns as its asked like that only

@@ -1,6 +1,6 @@
-LegSpin
-OffSpin
-Fast
 Orthodox
+Fast
 Unorthodox
+LegSpin
 Medium
+OffSpin

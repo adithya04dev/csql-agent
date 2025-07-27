@@ -1,10 +1,10 @@
 FrontFoot
-MovesInfront
-0
-BackFoot
-DeepInCrease
-Ducked
-NoMovement
 DownTheTrack
+BackFoot
+Ducked
 BacksAway
 SwayedAway
+0
+NoMovement
+DeepInCrease
+MovesInfront

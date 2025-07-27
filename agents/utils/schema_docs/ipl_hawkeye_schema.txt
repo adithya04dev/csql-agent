@@ -104,3 +104,6 @@ docs and some sample queries
         "sql_description": "Aggregates team bowling stats grouped by 'bowling_team'. Uses 'runs' (including all extras) for runs conceded. Counts legal deliveries bowled. Calculates team average, economy, dot%, boundary%. Does not use team IDs."
     }
 ]
+
+Some points..
+-if query asked like by,per..like by year,by length,type or something u can just do group by and no need for search results of those columns as its asked like that only
