@@ -70,11 +70,11 @@ class SearchTool(BaseTool):
             processed_results = [str(r) for r in results] # Example: convert results to strings
             
             # Monitor total process memory usage
-            import psutil
-            import os
-            process = psutil.Process(os.getpid())
-            total_memory_mb = process.memory_info().rss / (1024 * 1024)
-            print(f"Total process memory after search: {total_memory_mb:.2f} MB")
+            # import psutil
+            # import os
+            # process = psutil.Process(os.getpid())
+            # total_memory_mb = process.memory_info().rss / (1024 * 1024)
+            # print(f"Total process memory after search: {total_memory_mb:.2f} MB")
             
             return processed_results if processed_results else ["No matches found"]
             
