@@ -1,39 +1,39 @@
 
-Fine Leg
-Leg Gully
+Short Mid Wicket
+Square Leg
+Cover
+Short Extra Cover
+Short Fine Leg
 Fourth Slip
 Short Third Man
-Deep Extra Cover
-Backward Point
-Backward Square Leg
-Short Mid Wicket
-Point
-Cover
-Leg Slip
-Wicketkeeper
-Mid On
+Deep Cover
+Deep Mid Wicket
 Extra Cover
 Bowler
-First Slip
-Short Leg
-Deep Point
-Mid Off
-Long Off
-Long On
-Silly Mid Off
-Square Leg
-Short Extra Cover
-Deep Backward Point
-Mid Wicket
-Deep Square Leg
-Silly Mid On
-Deep Cover
-Silly Point
 Third Man
-Deep Mid Wicket
-Gully
--
 Second Slip
+Gully
+Mid Off
+Deep Square Leg
+First Slip
 Deep Backward Square Leg
+Long On
+Silly Mid On
+Point
+Leg Gully
+Silly Point
+Silly Mid Off
+Backward Point
+-
+Backward Square Leg
+Deep Point
+Mid Wicket
+Mid On
+Short Leg
+Long Off
 Third Slip
-Short Fine Leg
+Wicketkeeper
+Deep Backward Point
+Deep Extra Cover
+Leg Slip
+Fine Leg

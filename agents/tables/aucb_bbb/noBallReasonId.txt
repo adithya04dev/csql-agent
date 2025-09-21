@@ -1,8 +1,8 @@
-FrontFoot
+Null
 BreakingWicket
-BackFoot
-OverWaistHeight
 BehindSquare
 Overhead
-Null
+BackFoot
+OverWaistHeight
+FrontFoot
 Other

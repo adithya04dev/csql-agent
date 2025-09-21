@@ -1,90 +1,16 @@
-left-arm bowler
-(unknown arm) bowler
-left-arm fast-medium
-left-arm medium-fast
-right-arm medium
-legbreak googly
-left-arm slow
-right-arm medium-fast
-right-arm slow
-left-arm fast
-left-arm slow-medium
-right-arm slow-medium
-slow left-arm orthodox
-right-arm offbreak
-(unknown arm) fast
-right-arm fast-medium
-right-arm bowler
-legbreak
-left-arm medium
-right-arm fast
-left-arm wrist-spin
 
-
-[{
-  "bowl_style": "slow left-arm orthodox",
-  "cnt": "340593"
-}, {
-  "bowl_style": "right-arm medium-fast",
-  "cnt": "312610"
-}, {
-  "bowl_style": "right-arm medium",
-  "cnt": "308499"
-}, {
-  "bowl_style": "right-arm offbreak",
-  "cnt": "299463"
-}, {
-  "bowl_style": "right-arm fast-medium",
-  "cnt": "295382"
-}, {
-  "bowl_style": "right-arm fast",
-  "cnt": "159629"
-}, {
-  "bowl_style": "legbreak",
-  "cnt": "137604"
-}, {
-  "bowl_style": "left-arm fast-medium",
-  "cnt": "116305"
-}, {
-  "bowl_style": "legbreak googly",
-  "cnt": "91527"
-}, {
-  "bowl_style": "left-arm medium-fast",
-  "cnt": "69773"
-}, {
-  "bowl_style": null,
-  "cnt": "64168"
-}, {
-  "bowl_style": "left-arm medium",
-  "cnt": "46928"
-}, {
-  "bowl_style": "left-arm fast",
-  "cnt": "40346"
-}, {
-  "bowl_style": "left-arm wrist-spin",
-  "cnt": "31646"
-}, {
-  "bowl_style": "left-arm slow",
-  "cnt": "1281"
-}, {
-  "bowl_style": "right-arm bowler",
-  "cnt": "737"
-}, {
-  "bowl_style": "right-arm slow-medium",
-  "cnt": "413"
-}, {
-  "bowl_style": "(unknown arm) fast",
-  "cnt": "321"
-}, {
-  "bowl_style": "left-arm slow-medium",
-  "cnt": "166"
-}, {
-  "bowl_style": "left-arm bowler",
-  "cnt": "138"
-}, {
-  "bowl_style": "right-arm slow",
-  "cnt": "134"
-}, {
-  "bowl_style": "(unknown arm) bowler",
-  "cnt": "26"
-}]
+Left Arm Wrist Spin
+Off Spin/Leg Spin
+Right Arm Pace/Off Spin/Leg Spin
+Slow Left Arm Spinner
+Left Arm Pace
+Off Spin/Slow Left Arm Spinner
+Right Arm Pace/Right Arm Pace
+Right Arm Pace/Off Spin
+Leg Spin
+Slow Left Arm Spinner/Slow Left Arm Spinner
+Right Arm Pace/Leg Spin
+Left Arm Pace/Slow Left Arm Spinner
+Off Spin
+Right Arm Pace
+Slow Left Arm Spinner/Left Arm Wrist Spin

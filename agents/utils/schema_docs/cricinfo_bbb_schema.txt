@@ -26,6 +26,8 @@ score: INTEGER (the runs scored on the ball)
 out: BOOLEAN (if the batter is out or not)
 
 dismissal: STRING (the way the batter got out)
+    - Bowler wickets (credited to bowler): 'caught', 'lbw', 'hit wicket', 'stumped', 'bowled'
+    - Non-bowler wickets (not credited to bowler): 'run out', 'obstruct field', 'retired hurt', 'retired out', 'hit ball twice', 'handled ball'
 
 p_out: INTEGER (the player id of the batter who got out)
 
@@ -83,9 +85,9 @@ competition: STRING
 
 bat_hand: STRING
 
-bowl_style: STRING
+bowl_style: STRING 
 
-bowl_kind: STRING
+bowl_kind: STRING (can be spin bowler or pace bowler)
 
 batruns: INTEGER
 
@@ -113,30 +115,76 @@ predscore: INTEGER
 
 wprob: FLOAT
 
-variation: STRING
+
+team1: STRING (the first team name, mostly the home team)
+team2: STRING (the second team name)
+
+bat_date_of_birth: DATE (batter’s date of birth)
+bat_age: INTEGER (batter’s age on match day)
+bat_pos: INTEGER (batting position)
+bat_is_wicket_keeper: BOOLEAN (if batter is wicketkeeper)
+bat_is_captain: BOOLEAN (if batter is captain)
+bat_playing_role: STRING (batter playing role)
+bat_is_overseas: BOOLEAN (if batter is overseas player, majorly its used this for t20 leagues,use when its asked.. )
+
+p_non_striker: INTEGER (non-striker player id)
+non_striker: STRING (non-striker name)
+non_striker_date_of_birth: DATE (non-striker DOB)
+non_striker_country: STRING (non-striker country)
+non_striker_age: INTEGER (non-striker age on match day)
+non_striker_pos: INTEGER (non-striker batting position)
+non_striker_is_wicket_keeper: BOOLEAN (if non-striker is wicketkeeper)
+non_striker_is_captain: BOOLEAN (if non-striker is captain)
+non_striker_playing_role: STRING (non-striker role)
+non_striker_is_overseas: BOOLEAN (if non-striker is overseas, majorly its used this for t20 leagues,use when its asked..)
+
+bowl_date_of_birth: DATE (bowler DOB)
+bowl_age: INTEGER (bowler age on match day)
+bowl_pos: INTEGER (bowler position in lineup)
+bowl_is_wicket_keeper: BOOLEAN (if bowler is wicketkeeper)
+bowl_is_captain: BOOLEAN (if bowler is captain)
+bowl_playing_role: STRING (bowler role)
+bowl_is_overseas: BOOLEAN (if bowler is overseas)
+
+
+match_title: STRING (title of the match/series)
+season: STRING (season name/year of series)
+
+format: STRING (match format e.g. T20, ODI, Test,T20I)
+
+is_international: BOOLEAN (if match is international)
+is_trophy: BOOLEAN (if match is part of a trophy/tournament)
+
+floodlit: BOOLEAN (whether match is day/night)
+city: STRING (city of ground)
+ground_capacity: INTEGER (ground capacity)
+
+toss_decision: STRING (bat or field)
+win_type: STRING (victory type: wickets or runs)
+
 
 
 docs and some sample queries
 [
     {
         "query": "individual_batting_statistics",
-        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n  WHERE insert_condition_here\n),\n\nindividual_innings AS (\n  SELECT \n    p_match,\n    p_bat,\n    bat,\n    SUM(batruns) AS runs,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls,\n    SUM(CASE WHEN out THEN 1 ELSE 0 END) AS outs,\n    SUM(CASE WHEN batruns = 4 THEN 1 ELSE 0 END) AS fours,\n    SUM(CASE WHEN batruns = 6 THEN 1 ELSE 0 END) AS sixes,\n    SUM(CASE WHEN batruns = 0 THEN 1 ELSE 0 END) AS dots\n  FROM filtered_balls\n  GROUP BY p_match, p_bat, bat\n),\n\nindividual_batting_stats AS (\n  SELECT \n    bat AS player_name,\n    p_bat AS player_id,\n    COUNT(DISTINCT p_match) AS innings,\n    SUM(runs) AS total_runs,\n    SUM(balls) AS total_balls,\n    SUM(outs) AS total_outs,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(runs) * 100.0 / SUM(balls)) \n    END AS strike_rate,\n    CASE \n      WHEN SUM(outs) = 0 THEN NULL \n      ELSE SUM(runs) * 1.0 / SUM(outs) \n    END AS batting_average,\n    MAX(runs) AS highest_score,\n    SUM(CASE WHEN runs >= 50 AND runs < 100 THEN 1 ELSE 0 END) AS fifties,\n    SUM(CASE WHEN runs >= 100 THEN 1 ELSE 0 END) AS hundreds,\n    SUM(fours) AS total_fours,\n    SUM(sixes) AS total_sixes,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(dots) * 100.0 / SUM(balls)) \n    END AS dot_percentage\n  FROM individual_innings\n  GROUP BY bat, p_bat\n)\n\nSELECT \n  player_name,\n  player_id,\n  innings,\n  total_runs,\n  total_balls,\n  total_outs,\n  ROUND(batting_average, 2) AS average,\n  ROUND(strike_rate, 2) AS strike_rate,\n  ROUND(dot_percentage, 2) AS dot_percentage,\n  highest_score AS hs,\n  fifties,\n  hundreds,\n  total_fours,\n  total_sixes\nFROM individual_batting_stats\nORDER BY total_runs DESC;",
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n  WHERE insert_condition_here like year,competiion,and others=...\n),\n\nindividual_innings AS (\n  SELECT \n    p_match,\n    p_bat,\n    bat,\n    SUM(batruns) AS runs,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls,\n    SUM(CASE WHEN out THEN 1 ELSE 0 END) AS outs,\n    SUM(CASE WHEN batruns = 4 THEN 1 ELSE 0 END) AS fours,\n    SUM(CASE WHEN batruns = 6 THEN 1 ELSE 0 END) AS sixes,\n    SUM(CASE WHEN batruns = 0 THEN 1 ELSE 0 END) AS dots\n  FROM filtered_balls\n  GROUP BY p_match, p_bat, bat\n),\n\nindividual_batting_stats AS (\n  SELECT \n    bat AS player_name,\n    p_bat AS player_id,\n    COUNT(DISTINCT p_match) AS innings,\n    SUM(runs) AS total_runs,\n    SUM(balls) AS total_balls,\n    SUM(outs) AS total_outs,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(runs) * 100.0 / SUM(balls)) \n    END AS strike_rate,\n    CASE \n      WHEN SUM(outs) = 0 THEN NULL \n      ELSE SUM(runs) * 1.0 / SUM(outs) \n    END AS batting_average,\n    MAX(runs) AS highest_score,\n    SUM(CASE WHEN runs >= 50 AND runs < 100 THEN 1 ELSE 0 END) AS fifties,\n    SUM(CASE WHEN runs >= 100 THEN 1 ELSE 0 END) AS hundreds,\n    SUM(fours) AS total_fours,\n    SUM(sixes) AS total_sixes,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(dots) * 100.0 / SUM(balls)) \n    END AS dot_percentage\n  FROM individual_innings\n  GROUP BY bat, p_bat\n)\n\nSELECT \n  player_name,\n  player_id,\n  innings,\n  total_runs,\n  total_balls,\n  total_outs,\n  ROUND(batting_average, 2) AS average,\n  ROUND(strike_rate, 2) AS strike_rate,\n  ROUND(dot_percentage, 2) AS dot_percentage,\n  highest_score AS hs,\n  fifties,\n  hundreds,\n  total_fours,\n  total_sixes\nFROM individual_batting_stats\nORDER BY total_runs DESC;",
         "sql_description": "Aggregates individual batting stats across all teams. Uses batruns for batter-specific calculations."
     },
     {
         "query": "team_batting_statistics",
-        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n  WHERE insert_condition_here\n),\n\nteam_innings AS (\n  SELECT \n    p_match,\n    team_bat,\n    SUM(score) AS runs,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls,\n    SUM(CASE WHEN out THEN 1 ELSE 0 END) AS outs,\n    SUM(CASE WHEN score = 4 THEN 1 ELSE 0 END) AS fours,\n    SUM(CASE WHEN score = 6 THEN 1 ELSE 0 END) AS sixes,\n    SUM(CASE WHEN score = 0 THEN 1 ELSE 0 END) AS dots\n  FROM filtered_balls\n  GROUP BY p_match, team_bat\n),\n\nteam_batting_stats AS (\n  SELECT \n    team_bat,\n    COUNT(DISTINCT p_match) AS matches,\n    SUM(runs) AS total_runs,\n    SUM(balls) AS total_balls,\n    SUM(outs) AS total_outs,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(runs) * 100.0 / SUM(balls)) \n    END AS team_strike_rate,\n    CASE \n      WHEN SUM(outs) = 0 THEN NULL \n      ELSE SUM(runs) * 1.0 / SUM(outs) \n    END AS team_batting_average,\n    MAX(runs) AS highest_team_score,\n    SUM(fours) AS total_fours,\n    SUM(sixes) AS total_sixes,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(dots) * 100.0 / SUM(balls)) \n    END AS dot_percentage\n  FROM team_innings\n  GROUP BY team_bat\n)\n\nSELECT \n  team_bat,\n  matches,\n  total_runs,\n  total_balls,\n  total_outs,\n  ROUND(team_batting_average, 2) AS team_average,\n  ROUND(team_strike_rate, 2) AS team_strike_rate,\n  ROUND(dot_percentage, 2) AS dot_percentage,\n  highest_team_score AS highest_score,\n  total_fours,\n  total_sixes\nFROM team_batting_stats\nORDER BY total_runs DESC;",
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n WHERE insert_condition_here like year,competiion,and others=...\n),\n\nteam_innings AS (\n  SELECT \n    p_match,\n    team_bat,\n    SUM(score) AS runs,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls,\n    SUM(CASE WHEN out THEN 1 ELSE 0 END) AS outs,\n    SUM(CASE WHEN score = 4 THEN 1 ELSE 0 END) AS fours,\n    SUM(CASE WHEN score = 6 THEN 1 ELSE 0 END) AS sixes,\n    SUM(CASE WHEN score = 0 THEN 1 ELSE 0 END) AS dots\n  FROM filtered_balls\n  GROUP BY p_match, team_bat\n),\n\nteam_batting_stats AS (\n  SELECT \n    team_bat,\n    COUNT(DISTINCT p_match) AS matches,\n    SUM(runs) AS total_runs,\n    SUM(balls) AS total_balls,\n    SUM(outs) AS total_outs,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(runs) * 100.0 / SUM(balls)) \n    END AS team_strike_rate,\n    CASE \n      WHEN SUM(outs) = 0 THEN NULL \n      ELSE SUM(runs) * 1.0 / SUM(outs) \n    END AS team_batting_average,\n    MAX(runs) AS highest_team_score,\n    SUM(fours) AS total_fours,\n    SUM(sixes) AS total_sixes,\n    CASE \n      WHEN SUM(balls) = 0 THEN NULL \n      ELSE (SUM(dots) * 100.0 / SUM(balls)) \n    END AS dot_percentage\n  FROM team_innings\n  GROUP BY team_bat\n)\n\nSELECT \n  team_bat,\n  matches,\n  total_runs,\n  total_balls,\n  total_outs,\n  ROUND(team_batting_average, 2) AS team_average,\n  ROUND(team_strike_rate, 2) AS team_strike_rate,\n  ROUND(dot_percentage, 2) AS dot_percentage,\n  highest_team_score AS highest_score,\n  total_fours,\n  total_sixes\nFROM team_batting_stats\nORDER BY total_runs DESC;",
         "sql_description": "Team-specific batting stats (unchanged as team grouping is correct here). Maintains team_bat grouping for per-team analysis."
     },
     {
         "query": "individual_bowling_statistics",
-        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n  WHERE insert_condition_here\n),\n\nindividual_bowling AS (\n  SELECT \n    p_match,\n    bowl,\n    p_bowl,\n    SUM(CASE WHEN out THEN 1 ELSE 0 END) AS wickets,\n    SUM(bowlruns) AS runs_conceded,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls_bowled,\n    SUM(CASE WHEN score = 0 THEN 1 ELSE 0 END) AS dot_balls,\n    SUM(CASE WHEN score IN (4, 6) THEN 1 ELSE 0 END) AS boundary_balls\n  FROM filtered_balls\n  GROUP BY p_match, bowl, p_bowl\n),\n\nindividual_bowling_stats AS (\n  SELECT \n    bowl AS bowler_name,\n    p_bowl AS bowler_id,\n    COUNT(DISTINCT p_match) AS innings,\n    SUM(wickets) AS total_wickets,\n    SUM(runs_conceded) AS total_runs_conceded,\n    SUM(balls_bowled) AS total_balls_bowled,\n    SUM(dot_balls) AS total_dot_balls,\n    SUM(boundary_balls) AS total_boundary_balls,\n    CASE \n      WHEN SUM(wickets) = 0 THEN NULL \n      ELSE SUM(runs_conceded) * 1.0 / SUM(wickets) \n    END AS bowling_average,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(runs_conceded) * 6.0 / SUM(balls_bowled)) \n    END AS economy_rate,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(dot_balls) * 100.0 / SUM(balls_bowled)) \n    END AS dot_ball_percentage,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(boundary_balls) * 100.0 / SUM(balls_bowled)) \n    END AS boundary_percentage\n  FROM individual_bowling\n  GROUP BY bowl, p_bowl\n)\n\nSELECT \n  bowler_name,\n  bowler_id,\n  innings,\n  total_wickets,\n  total_runs_conceded,\n  total_balls_bowled,\n  ROUND(bowling_average, 2) AS average,\n  ROUND(economy_rate, 2) AS economy_rate,\n  ROUND(dot_ball_percentage, 2) AS dot_ball_percentage,\n  ROUND(boundary_percentage, 2) AS boundary_percentage\nFROM individual_bowling_stats\nORDER BY total_wickets DESC;",
-        "sql_description": "Aggregates individual bowling stats across all teams. Uses bowlruns for bowler-specific calculations."
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n WHERE insert_condition_here like year,competiion,and others=...\n),\n\nindividual_bowling AS (\n  SELECT \n    p_match,\n    bowl,\n    p_bowl,\n    SUM(CASE WHEN out AND dismissal IN ('caught', 'lbw', 'hit wicket', 'stumped', 'bowled') THEN 1 ELSE 0 END) AS wickets,\n    SUM(bowlruns) AS runs_conceded,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls_bowled,\n    SUM(CASE WHEN score = 0 THEN 1 ELSE 0 END) AS dot_balls,\n    SUM(CASE WHEN score IN (4, 6) THEN 1 ELSE 0 END) AS boundary_balls\n  FROM filtered_balls\n  GROUP BY p_match, bowl, p_bowl\n),\n\nindividual_bowling_stats AS (\n  SELECT \n    bowl AS bowler_name,\n    p_bowl AS bowler_id,\n    COUNT(DISTINCT p_match) AS innings,\n    SUM(wickets) AS total_wickets,\n    SUM(runs_conceded) AS total_runs_conceded,\n    SUM(balls_bowled) AS total_balls_bowled,\n    SUM(dot_balls) AS total_dot_balls,\n    SUM(boundary_balls) AS total_boundary_balls,\n    CASE \n      WHEN SUM(wickets) = 0 THEN NULL \n      ELSE SUM(runs_conceded) * 1.0 / SUM(wickets) \n    END AS bowling_average,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(runs_conceded) * 6.0 / SUM(balls_bowled)) \n    END AS economy_rate,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(dot_balls) * 100.0 / SUM(balls_bowled)) \n    END AS dot_ball_percentage,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(boundary_balls) * 100.0 / SUM(balls_bowled)) \n    END AS boundary_percentage\n  FROM individual_bowling\n  GROUP BY bowl, p_bowl\n)\n\nSELECT \n  bowler_name,\n  bowler_id,\n  innings,\n  total_wickets,\n  total_runs_conceded,\n  total_balls_bowled,\n  ROUND(bowling_average, 2) AS average,\n  ROUND(economy_rate, 2) AS economy_rate,\n  ROUND(dot_ball_percentage, 2) AS dot_ball_percentage,\n  ROUND(boundary_percentage, 2) AS boundary_percentage\nFROM individual_bowling_stats\nORDER BY total_wickets DESC;",
+        "sql_description": "Aggregates individual bowling stats across all teams. Uses bowlruns for bowler-specific calculations. Only counts bowler wickets (caught, lbw, hit wicket, stumped, bowled) - excludes run outs and other non-bowler dismissals."
     },
     {
         "query": "team_bowling_statistics",
-        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n  WHERE insert_condition_here\n),\n\nteam_bowling AS (\n  SELECT \n    p_match,\n    team_bowl,\n    SUM(CASE WHEN out THEN 1 ELSE 0 END) AS wickets,\n    SUM(score) AS runs_conceded,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls_bowled,\n    SUM(CASE WHEN score = 0 THEN 1 ELSE 0 END) AS dot_balls,\n    SUM(CASE WHEN score IN (4, 6) THEN 1 ELSE 0 END) AS boundary_balls\n  FROM filtered_balls\n  GROUP BY p_match, team_bowl\n),\n\nteam_bowling_stats AS (\n  SELECT \n    team_bowl,\n    COUNT(DISTINCT p_match) AS matches,\n    SUM(wickets) AS total_wickets,\n    SUM(runs_conceded) AS total_runs_conceded,\n    SUM(balls_bowled) AS total_balls_bowled,\n    SUM(dot_balls) AS total_dot_balls,\n    SUM(boundary_balls) AS total_boundary_balls,\n    CASE \n      WHEN SUM(wickets) = 0 THEN NULL \n      ELSE SUM(runs_conceded) * 1.0 / SUM(wickets) \n    END AS team_bowling_average,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(runs_conceded) * 6.0 / SUM(balls_bowled)) \n    END AS team_economy_rate,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(dot_balls) * 100.0 / SUM(balls_bowled)) \n    END AS team_dot_ball_percentage,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(boundary_balls) * 100.0 / SUM(balls_bowled)) \n    END AS team_boundary_percentage\n  FROM team_bowling\n  GROUP BY team_bowl\n)\n\nSELECT \n  team_bowl,\n  matches,\n  total_wickets,\n  total_runs_conceded,\n  total_balls_bowled,\n  ROUND(team_bowling_average, 2) AS team_average,\n  ROUND(team_economy_rate, 2) AS team_economy_rate,\n  ROUND(team_dot_ball_percentage, 2) AS team_dot_ball_percentage,\n  ROUND(team_boundary_percentage, 2) AS team_boundary_percentage\nFROM team_bowling_stats\nORDER BY total_wickets DESC;",
-        "sql_description": "Team-specific bowling stats (unchanged as team grouping is correct here). "
+        "sql_code": "WITH filtered_balls AS (\n  SELECT *\n  FROM cricinfo_bbb_schema\n  WHERE insert_condition_here like year,competiion,and others=...\n),\n\nteam_bowling AS (\n  SELECT \n    p_match,\n    team_bowl,\n    SUM(CASE WHEN out AND dismissal IN ('caught', 'lbw', 'hit wicket', 'stumped', 'bowled') THEN 1 ELSE 0 END) AS wickets,\n    SUM(score) AS runs_conceded,\n    sum(case when wide=1 or  noball=1 then 0 else 1 end) AS balls_bowled,\n    SUM(CASE WHEN score = 0 THEN 1 ELSE 0 END) AS dot_balls,\n    SUM(CASE WHEN score IN (4, 6) THEN 1 ELSE 0 END) AS boundary_balls\n  FROM filtered_balls\n  GROUP BY p_match, team_bowl\n),\n\nteam_bowling_stats AS (\n  SELECT \n    team_bowl,\n    COUNT(DISTINCT p_match) AS matches,\n    SUM(wickets) AS total_wickets,\n    SUM(runs_conceded) AS total_runs_conceded,\n    SUM(balls_bowled) AS total_balls_bowled,\n    SUM(dot_balls) AS total_dot_balls,\n    SUM(boundary_balls) AS total_boundary_balls,\n    CASE \n      WHEN SUM(wickets) = 0 THEN NULL \n      ELSE SUM(runs_conceded) * 1.0 / SUM(wickets) \n    END AS team_bowling_average,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(runs_conceded) * 6.0 / SUM(balls_bowled)) \n    END AS team_economy_rate,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(dot_balls) * 100.0 / SUM(balls_bowled)) \n    END AS team_dot_ball_percentage,\n    CASE \n      WHEN SUM(balls_bowled) = 0 THEN NULL \n      ELSE (SUM(boundary_balls) * 100.0 / SUM(balls_bowled)) \n    END AS team_boundary_percentage\n  FROM team_bowling\n  GROUP BY team_bowl\n)\n\nSELECT \n  team_bowl,\n  matches,\n  total_wickets,\n  total_runs_conceded,\n  total_balls_bowled,\n  ROUND(team_bowling_average, 2) AS team_average,\n  ROUND(team_economy_rate, 2) AS team_economy_rate,\n  ROUND(team_dot_ball_percentage, 2) AS team_dot_ball_percentage,\n  ROUND(team_boundary_percentage, 2) AS team_boundary_percentage\nFROM team_bowling_stats\nORDER BY total_wickets DESC;",
+        "sql_description": "Team-specific bowling stats. Only counts bowler wickets (caught, lbw, hit wicket, stumped, bowled) - excludes run outs and other non-bowler dismissals."
     }
 ]
 Some points..

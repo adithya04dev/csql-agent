@@ -1,12 +1,12 @@
-run out
-obstruct field
-caught
 undefined
-retired hurt
-lbw
-hit wicket
-stumped
-bowled
-retired out
 hit ball twice
+run out
+retired out
+hit wicket
+retired hurt
 handled ball
+caught
+lbw
+stumped
+obstruct field
+bowled

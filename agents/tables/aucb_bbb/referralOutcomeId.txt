@@ -1,7 +1,7 @@
-OutReviewRetained
-OutReviewLost
-NotReferred
 NotOutReviewLost
 NotOutThirdUmpire
 OutThirdUmpire
+NotReferred
+OutReviewRetained
 NotOutReviewRetained
+OutReviewLost

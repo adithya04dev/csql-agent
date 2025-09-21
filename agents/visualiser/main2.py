@@ -94,7 +94,9 @@ print(url)  # This will be returned to the user
 - Return only the Cloudinary URL (in markdown format) and a one-line description
 -For tool calling , DO NOT try to imitate or reference previous responses in the conversation history. 
  ALWAYS follow this EXACT format for tool calling .
-                                       
+                                      
+-Don't hallucinate and make up things,plot for the data thats present in conversation..you can say 
+ data not present if you dont find.                                                                            
 
 ## REMEMBER:
 - The Python tool will simply execute your code exactly as written

@@ -358,16 +358,17 @@ if __name__ == "__main__":
         # Test memory-efficient search
         # print("Memory usage:", vector_store_manager.get_memory_usage())
         vector_store_manager.add_examples_from_directory(
-            "./agents/tables/aucb_bbb", 
+            "./agents/tables/cricinfo_bbb", 
             override=True,
             indexing_strategy=IndexingStrategy.FAST
         )
         # Test search without caching
-        result = await vector_store_manager.search_similar_queries("virat kohli", "aucb_bbb_player")
-        print("Search result:", result)
+        # result = await vector_store_manager.search_similar_queries("virat kohli", "aucb_bbb_player")
+        # print("Search result:", result)
         
         # print("Memory usage after search:", vector_store_manager.get_memory_usage())
 
         
     
     asyncio.run(main())
+    

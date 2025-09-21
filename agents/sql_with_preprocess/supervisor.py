@@ -88,7 +88,7 @@ Based on the query, carefully consider which table would be most appropriate and
 
 Here are some table selection guidelines and examples:
 
-- For TEST,ODI and T20 International matches, always use the `aucb_bbb` table. (Note: While `aucb_bbb` also contains IPL data, do not use it as the default for IPL queries,cricinfo one can do most of job except the ball varitaions,speed,deviations,foot movement.)
+- For TEST,ODI and T20 International matches ,  use the `aucb_bbb` table(it has from 2021 onwards). (Note: While `aucb_bbb` also contains IPL data, do not use it as the default for IPL queries,cricinfo one can do most of job except the ball varitaions,speed,deviations,foot movement.)
 - For general T20 tournaments queries, use the `cricinfo_bbb` table. However, if the query requires advanced details like variations:
     - If the user asks about specific bowling variations (e.g., "slow ball", "googly", "off-cutter"), prefer `aucb_bbb` for its detailed bowl type/variation columns.
     - If the query requires ball tracking metrics such as ball speed, deviation, swing, or spatial/trajectory data, use `ipl_hawkeye` (only for IPL matches from 2022 onwards).
@@ -105,8 +105,10 @@ Remember:
 
 - For new questions, you may need need to search for entities first
 - For follow-up questions, you may be able to use existing context without searching again
-- Do NOT call the same agent repeatedly more than 2-3  times consecutively
 - Make sure each agent focuses on their own job and doesn't try to copy what other agents do or say
+
+
+- Do NOT call the same agent repeatedly more than 2-3  times consecutively
 
 """
 

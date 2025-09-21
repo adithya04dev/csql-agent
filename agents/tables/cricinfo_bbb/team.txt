@@ -1,956 +1,1183 @@
-Paarl Boys High School
-Jaffna Central College
-Vanuatu
-Boston Cricket Jhapa
-North-West Warriors
-Delhi
-Gemini Arabians
-St Lucia Stars
-Kathmandu Golden Warriors
-Northamptonshire
-Aboriginal XI
-Kandahar Knights
-Biratnagar Kings (NPL)
-Western Province Under-15s
-Boland Under-17s
-New Jersey Triton's
-Northern Cape Under-15s
-Colts Cricket Club
-Rawalpindi Rams
-Cumilla Warriors
-Sri Lanka
-Free State Under-19s
-Lahore Region Blues
-Emirates Cricket Board XI
-SKM Salem Spartans
-Delhi Kings
-Western Province
-New Zealand Legends
-Barbados Royals
-Bulawayo Braves
-Central Districts
-India Legends
-Jaffna Kings
-Nagaland
-B-Love Kandy
-Mpumalanga Under-13s
-Royal Challengers Bengaluru
-Hindukush Strikers
-Mangalore Dragons
-Biratnagar Super Kings
-Nondescripts Cricket Club
-Narayani
-Sialkot Stallions
-Mpumalanga
-India Maharajas
-Swami Shraddhanand College (India)
-Toronto Nationals
-Cyprus
-Kat Queens Kathmandu
-Wellington
-Siechem Madurai Panthers
-Border Under-17s
-Badureliya Sports Club
-Rajshahi Kings
-Zimbabwe Cricket Academy
-KwaZulu-Natal Inland
-Shaheed Mushtaque XI
-Mongolia
-Grand Cayman Jaguars
-Northern Districts
-Brampton Wolves
-Leinster Lightning
-Kantipur Gurkhas
-Udaipur Mewar Royals
-Cara Diamonds
-Band-e Amir Stars
-Jaipur Pink City Royals
-Kerala Super Kings
-Jaisalmer Jaguars
-Serbia
-Gazi Group Cricketers
-Gulf Giants
-Zimbabwe Under-17s
-Harare Hurricanes
-Gujarat Giants
-Band-e-Amir Dragons
-Indore Knights
-India Capitals
-Dambulla Giants
-Burgher Recreation Club
-Gambia
-Quetta Gladiators
-Ajman Bolts
-Trailblazers
-Ba11sy Trichy
-Mountaineers
-Israel
-Bloomfield Cricket and Athletic Club
-Karnataka Tuskers
-Vancouver Knights
-West Indies Legends
-Western Australia XI
-Kings XI Punjab
-Rawalpindi Raiders
-Barisal Bulls
-Speen Ghar Eagles
-Kandy Customs Cricket Club
-Bangladesh Legends
-Auckland
-Bangla Tigers Mississauga
-Multan Sultans
-Northerns
-South Africa A
-Libra Legends
-Peshawar Panthers
-New York Warriors
-Dhaka Capital
-Pakistan
-United Arab Emirates XI
-Afghanistan Disable
-Alfalah University Men
-Jaffna Combine Schools
-Guyana Amazon Warriors
-Mis Ainak Region
-North West University
-Dindigul Dragons
-Saracens Sports Club
-Tamil Union Cricket and Athletic Club
-Italy
-Sebastianites Cricket and Athletic Club
-Saudi Arabia
-Miami Lions
-Rajasthan
-Victoria Waves
-Moors Sports Club
-Kabul Zalmi
-Durban Heat
-Surrey Jaguars
-Up Country Combined Schools
-Surrey
-Sydney Sixers
-Limpopo
-Tigers Of Kolkata
-North West Under-19s
-University of Cape Town
-Ponting XI
-Sydney Thunder
-Western Province Under-17s
-Surrey Shines
-UP Nawabs
-Northern Knights
-Patna Warriors
-Richmond College
-Durban Qalandars
-Kuwait
-England Legends
-Expert Dhangadi
-Hindukush Stars
-Partex Sporting Club
-Faisalabad
-Emirates Cricket Board
-Wonders Club Noida
-New Horizon Butwal
-Pakhtoons
-Oman A
-Zimbabwe Chairman's XI
-Jammu & Kashmir
-Oxford University
-Cricket Excellence Center Kathmandu
-East Central Railway (India)
-Province Number 2
-Arabian Rangers
-Norway
-Legends of Rupganj
-Southern Vipers
-Amo Region
-Northerns Under-17s
-Shakthi Ladies
-Limpopo Under-17s
-Malaysia Under-23s
-Kowloon Cricket Club
-Brothers Union
-Beximco Dhaka
-Tamil Nadu
-Nigeria
-Dambulla Sixers
-Kabul Kings
-Zimbabwe
-International Schools Combined
-Team Morgan
-St. Joseph's College
-South Africa Legends
-Galle
-Sachin's Blasters
-Multan Region
-Tulsipur Royals
-Pakistan Shaheens
-Chepauk Super Gillies
-Panchakanya Tej
-Indonesia
-Lions (Zimbabwe)
-TUKS (South Africa)
-West Indies A
-Nepal
-Rajasthan Royals
-Zimbabwe Select XI
-Abu Dhabi
-Sri Lanka Navy Sports Club
-Old DOHS Sports Club
-Chandigarh Cheetaas
-King Price Kings
-Manipal Tigers
-Lesotho
-Assupol TUKS
-Pakistan A
-Belize
-Negeri Sembilan
-United States of America
-Trinco-Batti Combined Schools
-Washington Freedom
-Baharain Bravehearts
-Srinagar Ke Veer
-Eastern Province
-West Indies
-Zimbabwe Over-50s
-Dubai Capitals
-Trinbago Knight Riders
-Hong Kong A
-Swaziland
-Kabul Cricket Club
-Kalutara Town Club
-Lumbini All Stars
-Mumbai
-Team Abu Dhabi
-Supernovas
-Kabul Eagles
-South Africans
-Delhi Capitals
-Limpopo Under-15s
-Biratnagar Titans
-Jaipur Jaguars
-Northerns Under-19s
-Gauteng Under-13s
-India Disable
-Himachal Pradesh
-Minister Rajshahi
-Sudur Paschim Province
-Mid West Rhinos
-Kathmandu Kings XI
-Northern Cape Under-19s
-Japan
-Thailand
-Jones TUTI Patriots
-Lahore Qalandars
-VB Kanchi Veerans
-Desert Vipers
+Tuskers XI
+Trent Rockets (Men)
+Arunachal Pradesh
+Chennai Super Kings
+Madhesh Province Women
+Australia
 Namibia Over-50s
-Gurugram Spartans
-Federally Administered Tribal Areas
-Hobart Hurricanes
-Peshawar Region
-Shaheen Hunters
-Faisalabad Wolves
-Winnipeg Hawks
-Nepal Army Club
-Kandy Falcons
-Dhaka Dynamites
-Prime Minister's XI
-Debarawewa Central College
-Uganda
-Hulas Kathmandu Royals
-Cameroon
-Lucknow Super Giants
-Menlopark High School
-City Kaitak
-Montreal Tigers
-Warriors
-Canada
-Kandy Crusaders
-Bombay Deccan
-Karachi Whites
-MI New York
-Punjabi Legends
-Leo Lions
-Panadura Sports Club
-Gauteng
-Marylebone Cricket Club
-United Services Recreation Club
-Island Warriors
-Chattogram Challengers
-India
-Gujarat Lions
-Armed Police Force Club
-Ruby Kanchi Warriors
-Trinidad & Tobago Red Steel
-West Indies B
-Mashonaland Eagles
-Sri Lankans
-Lankan Cricket Club
-Badulla Ladies
-DS Senanayake College
-Nepal A
+Sri Lanka A Women
+Burgher Recreation Club
+Czech Republic
+Barbados Royals Women
+Partex Sporting Club
+Madhya Pradesh
+Tigers XI
+Zimbabwe Under-19s
+Southern Brave (Men)
+Abasin Defenders
+Guernsey Women
+Kolkata Knight Riders
+MR24/7 Emergency Services
+King Price
+Northerns Under-17s
+University of Western Cape
+Kantipur Gurkhas
+Matale Ladies
+Kanchanpur Iconic
+Australia Women
+Ajman Bolts
+Mahendranagar United
+Hyderabad Region
+Kathmandu Knights
+Kerala
+St Helena
+Team Buttler
+TNCA City Juniors
+South Western Districts Under-19s
+Hong Kong Islanders
+VB Kanchi Veerans
+Gibraltar
+India Legends
+Namibia Eagles
+Oxford University Women
+Hong Kong Cricket Club Women
+Madurai Super Giant
+Mongolia
+South Korea Women
+Maharashtra
+Hong Kong Cricket Club
+Harare Hurricanes
+Monaragala Combined
+Eastern Province Under-13s
+Jodhpur Jodhana Royals
+Lahore Region Whites
+Southerns Women
+Colts Cricket Club
+Emirates Hurricane
+Gulf Giants
+Vishal Warriors
+Expert Dhangadi
+Sunrisers Speen Ghar
+Pokhara Paltan
+Faisalabad Region
+North West Under-17s
+Border
+Bangladesh XI
+DCA Dhangadhi
+Karnali Province
+Australia Legends
+Israel
+Mizoram
+Negombo Cricket Club
+Gauteng Under-15s
+Zimbabwe Emerging Players
+Bagmati Province Women Under-19s
+South Africa Champions
+United States of America Women Under-19s
+Sachin's Blasters
+Wellington Women
+Hampshire
+Kuala Lumpur
+Puducherry
+Haryana
+Far West United
+Maldives
+Cayman Bay Stingrays
+Mardan Warriors
+Mangalore United
 Rupani Riders
 Chandigarh
-Limpopo Under-13s
-Marylebone Cricket Club World XI
-Free State Under-15s
-Terra Defenders
-Melbourne Stars
-Border Under-13s
-Czech Republic
-Nottinghamshire
-Rockstars
-Bangla Tigers
-Speen Ghar Region
-World XI
-Sylhet Sunrisers
-New Zealand
-Northern Cape Under-17s
-Gwadar Sharks
-Peshawar
-Central Punjab (Pakistan)
-Team Buttler
-Sri Lanka Army
-Kandy Warriors
-Shaheed Jewel XI
-Urbanrisers Hyderabad
-Virgo Super Kings
-Botswana
-Ragama Cricket Club
-Royal Challengers Bangalore
-ICC World XI
-Pakistanis
-Cricket Association of Rupandehi XI
-Western Province Under-19s
-Sinhalese Sports Club
-Romania
-Andhra
-Sindhis
-Kathmandu Gurkhas (NPL)
-Majhi Mumbai
-Dhaka Dominators
-Mpumalanga Under-19s
-Nittabuwa Ladies
-Sylhet Strikers
-Hung Hom Jaguars
-Sri Lanka Legends
-Vidarbha
-Jinnah Degree College Karachi (Pakistan)
-Mangalore United
-Bangladesh Cricket Board Red
-Colombo Stars
-Karnali Province
-Bulgaria
-Abasin Defenders
-Mpumalanga Under-17s
-Palace Diamonds
-Seenigama Combined Schools
-St Johns College Jaffna
-Biratnagar Kings
-Kabul Knight Riders
-Greece
-Hyderabad (India)
-Odisha
-Gauteng Under-19s
-Border
-Northerns Under-15s
-Polonnaruwa Ladies
-Ajman
-KwaZulu-Natal Inland Under-15s
-Sri Lanka Air Force Sports Club
-Sudur Paschim Royals (NPL)
-South Western Districts
-Pamir Riders
-Baroda
-Gloucestershire
-Afghanistan A
-Balan Bihul Super Kings
-Tigers XI
-Gauteng Under-15s
-KwaZulu-Natal Inland Under-13s
-Punjab
-Pakistan Under-16s
-Rwanda
-Karnataka
-Lumbini Province
-Shamshad Eagles
-Belagavi Panthers
-Myanmar
-Nelson Mandela Bay Giants
-Rajbiraj The King
-Australia
-Sharjah
-Mafuko Mavericks
-Pokhara Avengers
-Lahore Whites
-Sussex
-West Indies Champions
-Namibia Under-15s
-St Aloysius College (Ratnapura)
-Sylhet Thunder
-Faisalabad Region
-Bangladesh A
-Asia Lions
-Richelieu Eagles
-Dehradun Devils
-South East Stars
-San Francisco Unicorns
-Essex
-Cambridge University
-Province Number 1
-Perth Scorchers
-France
-Canterbury
-Rising Pune Supergiant
-Eastern Province Under-15s
-Haryana
-Sagittarius Strikers
-Bangladesh Under-19s
-Tripura
-University of Free State
-Pamir Zalmi
-Sunrisers Eastern Cape
 Worcestershire
-Khelaghar Samaj Kallyan Samity
-Zimbabwe Emerging Players
-Prestige College
-Galle Titans
-Bahrain
-Rangpur Rangers
+Biratnagar Kings (NPL)
+Otago Women
+Karaikal Kniights
+Singapore CA Presidents's XI
+Nondescripts Cricket Club
+Kathmandu Kings XI
 Bangladesh Krira Shikkha Protisthan
+Guyana Amazon Warriors
+Kandahar Knights
+Sindh
+Lumbini Lions (NPL)
+Uttar Pradesh
+Emirates Cricket Board XI
 England XI
-Hong Kong Island United
-Sharks XI
-Janakpur Bolts (NPL)
-Singapore
-Kurunegala Youth Cricket Club
-Boland Under-15s
-Himachal Pradesh Cricket Association XI
-Dashrath Chand Academy Baitadi
-Boost Defenders
-Purple Dot Ndovus
-Cambodia
-Sri Lanka Under-23s
-Lions XI
-North-East Combined Ladies
-Kowloon Cantons
-Sheikh Jamal Dhanmondi Club
-Northerns (Zimbabwe)
-England Lions
-Speen Ghar Tigers
-India A
-Mysuru Warriors
-Namibia
-Jozi Stars
-SLC Reds
-Eastern Province Under-19s
-Rajputs
-Maiwand Champions
-University of Pretoria
-Tribhuwan Army Club
+Uttarakhand
+Assam
+Gilchrist XI
+Sri Lanka Navy Sports Club
+Northerns Under-15s
+Faisalabad
+Cyprus
+Sierra Leone
+Bagmati Province Women
+Turks and Caicos Island
+Perak
+Sudur Paschim Province Women
+Prime Bank Cricket Club
+Colombo Stars
+Samoa Women Under-19s
+Leo Lions
+Delhi Daredevils
+BA Blasting
+Mafuko Mavericks
+Sudur Paschim Province
+Malawi
+Namibia A
+SLC Greens
+Dhaka Dominators
+Pakistan Shaheens
+Abahani Limited
+Antigua and Barbuda Falcons
+Myanmar
+Chilaw Marians Cricket Club
+Jones TUTI Patriots
+Boca Raton Trailblazers
+Heriot-Watt University Dubai (UAE)
+Winnipeg Hawks
+Khyber Pakhtunkhwa
+Malaysia Women
+Netherlands Women
+Singapore Women
+Amo Region
+Speen Ghar Eagles
+Monaragala Ladies Academy
+Jamaica Tallawahs
+Mpumalanga Under-13s
+Western Australia XI
+Northern Districts Women
+New Horizon Butwal
+Moors Sports Club
+Pakistan Under-19s
+Oman Avengers
+Griqualand West
+Bangladesh High Performance XI
+Zimbabwe XI
+Otago
+Caribbean Tigers
+Northern Knights
+Fiji
+Tripura
+Chitwan Rhinos (NPL)
+Federally Administered Tribal Areas
+Denmark
+Australia Women Under-19s
+Kuwait Crusaders
+Badureliya Sports Club
+Chicago Kingsmen
+Northerns Women (Zimbabwe)
+Chepauk Super Gillies
+Capricorn Commanders
+East Central Railway (India)
 Shivamogga Lions
+Sri Lanka Women
+North-West Warriors
+Ruby Kanchi Warriors
+Border Under-19s
+Bangladesh Emerging Team
+Afghanistan Disable
+Pakistan Women
+KwaZulu-Natal Under-15s
+Rajasthan
+Qalandars
+KwaZulu-Natal Under-19s
+Sri Lanka
+University of Technology Sydney (Australia)
+Gulbarga Mystics
+University of Central Punjab Lahore
+Italy
+Kabul Eagles
+Jozi Stars
+Rajasthan Royals
+St Johns College Jaffna
+Uganda Women
+Prime Doleshwar Sporting Club
+Mis Ainak Region
+Western Province Under-17s
+Pokhara Paltan Women
+Mis Ainak Knights
+Salem Spartans
+Paarl Rocks
+Galle Titans
+SLC Blues
+Galle Marvels
+Islamia University Bahawalpur
+Kings XI Punjab
+Rockstars
+Prime Minister's XI
+UP Nawabs
+Jaffna Kings
+Durham
 Panthers XI
 Bhilwara Kings
-Kanchenjunga Warriors
-Butwal Blasters
-Shinepukur Cricket Club
-CYC Attariya
-Galle Gladiators
-Free State
-BA Blasting Namibia
-Ananda College
-MI Emirates
-Kuwait Crusaders
-Oman
-Afghanistan
-Uttar Pradesh Club XI
-Rawalpindi Region
-Bhairahawa Gladiators
-Idream Karaikudi Kaalai
-MECC Cricket Club
-Lalitpur Patriots
-Namibia A
-KwaZulu-Natal Inland Under-19s
-ICBT Campus (Sri Lanka)
-Friends Youth Club Dadeldhura
-Dharmaraja College
-Lightning
-Seattle Orcas
-Dhangadhi Team Chauraha
-Kenya
-Sylhet Sixers
-Dambulla Viiking
-Uttar Pradesh
-Malaysia Club XI
-Sri Lanka Army Sports Club
-Atlanta Riders
-Kaluthara Maha Vidyalaya
-Zimbabwe President's XI
-Khyber Pakhtunkhwa
-Sialkot Region
-Yorkshire Diamonds
-Hampshire
-Albert TUTI Patriots
-India Champions
-Chinnamasta Lions
-Vietnam
-Rapti
-University of Central Punjab Lahore
-St Lucia Zouks
-Goltay Cricket Academy
-Bijapur Bulls
-Bulls XI
-Bangladesh XI
-Barrackpore Bashers
-Belgium
-Warne's Warriors
-Chittagong Vikings
-Mohammedan Sporting Club
-Islamia University Bahawalpur
-KwaZulu-Natal Under-13s
-Guernsey
-Malaysia
-Mumbai Indians
-Qatar
-MR24-7 Namspire
-Durbar Rajshahi
-MAF Howithzer
-Northern Diamonds
-Railways
-Easterns Under-19s
-Nepal Police Club
-Bagmati
-Balochistan
-Vishal Warriors
-Deccan Gladiators
-Play Master Warriors
-Madan Bhandari Sports Academy Red
-Nalanda College
-Galaxy Gladiators Lantau
-Dambulla Aura
-Lions
-Namma Shivamogga
-Rawalpindi
-Free State Under-17s
-North West Under-15s
-Jagdamba Rhinos
-Jaffna Stallions
-Bahawalpur Royals
-European University of Bangladesh
-P De S Kularatne College
-Nugegoda Sports Welfare Club
-Surrey XI
-Cape Town Samp Army
-Janakpur Royals
-Abu Dhabi Knight Riders
-SLC Yellow
-Dangali Lions
-Zimbabwe Under-25s
-Ireland A
-Sulimangar Lions
-Jharkhand
-Minister Group Dhaka
-DCA Dhangadhi
-Thunder
-Ajmer Meru Warriors
-Mardan Warriors
-Team Sri Lanka
-Fujairah
-Loughborough Marylebone Cricket Club University (England)
-Singapore CA Presidents's XI
-Abahani Limited
-Salem Spartans
-Limpopo Under-19s
-Brisbane Heat
-California Knights
-Adelaide Strikers
-Islamabad Region
-Colors X-Factors
-Goa
-Emirates Hurricane
-Durgapur Dazzlers
-Prime Doleshwar Sporting Club
-Morrisville Samp Army
-Joburg Super Kings
-Selborne College
-Southern Superstars
-Malawi
-Chennai Braves
-Lalitpur Falcons
-Galle Cricket Club
-Free State Under-13s
-Namibia Eagles
-Saurashtra
-Sultans Of Surat
-Chilaw Marians Cricket Club
-North West
-Assam
-Mannar-Vavuniya Combined Schools
-Paktia Panthers
-Amo Sharks
-IDream Tiruppur Tamizhans
-Hari Om Titans
-Push Sports Delhi
-Pune Devils
-Knights
-Maratha Arabians
-Lahore Lions
-Khulna Titans
-Balkh Legends
-Wynberg Boys' High School
-World Giants
-Bagmati Province
-Surrey Stars
-Easterns
-Dolphins
-Khulna Tigers
-Dambulla
-Bhutan
-Band-e-Amir Region
-Paarl Royals
-Texas Super Kings
-Lahore Region Whites
-Oman Avengers
-Comilla Victorians
-Gazi Group Chattogram
-Pokhara Paltan
-Bermuda
-Pretoria Capitals
-Mizoram
-KwaZulu-Natal Under-17s
-Chandigarh Champs
-Vizag Titans
-Northern (Pakistan)
-Hong Kong Dragons
-TUTI Patriots
-Islamabad United
-Lumbini Lions (NPL)
-SLC Greens
-Tanzania
-Kanchanrup Rhinos
-Pamir Stars
-Sylhet Super Stars
-Mahadev Strikers
-Johannesburg Buffaloes
-Philippines
-Tshwane Spartans
-Germany
-Lancashire
-South Korea
-Madhesh Province
-Rangpur Riders
-University of Technology Sydney (Australia)
-Chitwan Tigers
+Gauteng Under-19s
+Nepal Army Club
+Rizvi College Women
 Edmonton Royals
-Mombasa Cement Giants
-Karachi Region Whites
-Northerns Under-13s
-Pakistan Under-19s
-University of Johannesburg
-Kathmandu Goldens
-Victoria
-Western Storm
-Durdanto Dhaka
-Scotland
-Kingswood College (Kandy)
-Cape Town Blitz
-KwaZulu-Natal Inland Under-17s
-FOG-Seenigama Ladies
-Diasqua Little Sai Wan Cricket Club
-Gujarat Titans
-Northern Cape Under-13s
 Finland
-Services
-Sunrisers Hyderabad
-Northern Cape
-Talent Hunt Cricket Academy
-Derbyshire
-Mahendranagar United
-Madhya Pradesh
-St. Anthony's College (Watthala)
-Dubai
-Pamir Legends
-Delhi Daredevils
-South Africa Under-19s
-Samp Army
-Southerns
-Texas Chargers
-Tirhut Tigers
-Pakistan Association of Hong Kong
-Bengal Tigers
-South Western Districts Under-19s
-New LJ College Men
-Centurion Hoerskool
-Combined Girls Schools
-Ghana
-Sunrisers Speen Ghar
-Rajkot Thunders
-Karachi Kings
-Karachi Region Blues
-Chennai Singams
-Capricorn Commanders
-Heriot-Watt University Dubai (UAE)
-Royals
-Gandaki Province
-Mpumalanga Under-15s
-Kent
-Uttara Sporting Club
-Spain
-Gibraltar
-Middlesex
-Sindh
-Denmark
-Galle Guardians
-The Blaze
-BC Champions
-Kolkata Knight Riders
-Monaragala Combined
-Hoer Volkskool
-Grey College
-Hilton College
-Zahira College
-Abbottabad Region
-Sharjah Warriorz
-Warwickshire
-Seychelles
-Chhattisgarh
-SLC Blues
-Sri Lanka Cricket Development XI
-Papua New Guinea
-Chitwan Rhinos (NPL)
-Delhi Bulls
-China
-KwaZulu-Natal Under-15s
-Kota Chambal Tigers
-St Andrew's School
-Puducherry
-Colombo
-Meghalaya
-Qalandars
-Panama
-Gemcon Khulna
-MR24/7 Emergency Services
-Mahinda College
-Matale Ladies
-South Africa
-Colombo Strikers
-Karaikudi Kaalai
-Kerala Knights
-University of Western Cape
-Galle Marvels
-Bihar
-Jodhpur Jodhana Royals
-Boca Raton Trailblazers
-Sweden
-Kerala Kings
-Sri Lanka Ports Authority Cricket Club
-Southern Rocks
-Hong Kong Cricket Club
-St Kitts and Nevis Patriots
-Police Sports Club
-Caribbean Tigers
-Border Under-19s
-Kolkata Heroes
-Hambantota Troopers
-Sri Lanka A
-Austria
-Shivamogga Strikers
-Hong Kong
-Punjab Kings
-World-XI
-Gulbarga Mystics
-Australia Champions
-Portugal
-Chitwan Rhinos
-Tuskers XI
-Hong Kong Islanders
-Ace Capital Cricket Club
-Nepal XI
-Bikaner Desert Challengers
-Quetta Region
-South Western Districts Under-13s
-Noida Warriors
-Jersey
-Isle of Man
-Namibia Under-19s
-VB Thiruvallur Veerans
-M&M Signs Strikers
-Cricket Australia XI
-Australia Legends
-Lyca Kovai Kings
-K & M Combined Schools
-KwaZulu-Natal Under-19s
-South Africa Emerging Players
-Rising Pune Supergiants
-Zimbabwe XI
-North West Under-13s
-Lancashire Thunder
-MI Cape Town
-Ireland
-Kanchanpur Iconic
-Samoa
-Monaragala Ladies Academy
-King Price
-Pokhara Avengers (NPL)
-England
-Indians
-Northern Warriors
-North West Under-17s
-Biratnagar Warriors
-Pakistan Champions
-Border Under-15s
-KwaZulu-Natal
-Negombo Cricket Club
-Bangladesh Cricket Board Green
-St Helena
-Ghodaghodi-11 Sukhad
-New York Strikers
-Paarl Rocks
-Ruby Trichy Warriors
-BA Blasting
-Durham
-Loughborough Lightning
-Southern Punjab (Pakistan)
-Speenghar Warriors
-Sharjah Warriors
-Maharashtra
-Nagpur Ninjas
-Hubli Tigers
-Mozambique
-New Territories Tigers
-Bengal
-Rajshahi Royals
-Chittagong Kings
-Antigua and Barbuda Falcons
-Matabeleland Tuskers
-Wazirai Champion
-Kowloon Lions
-Bangladesh
-Kandy
-Glenwood High School
-St Stithians College
-Mississauga Panthers
-Morrisville Unity
-Netherlands
-Dubai Destroyers
-Griqualand West
-Gauteng Under-17s
-Nellai Royal Kings
-Mah-e-Par Stars
-Falcon Risers Hyderabad
-Dhruv Cricket Academy
-Gujarat
-Peshawar Zalmi
-Gilchrist XI
-Royal College
-St Andrew's College
-Fortune Barishal
-Madurai Super Giant
-Bellary Tuskers
-Kurunegala Warriors
-Sri Lanka Board President's XI
-Cape Cobras
-Colombo Commandos
-Munster Reds
-Zimbabwe Under-19s
-Bajaj Khadak Warriors
-Boost Region
-Uttarakhand
-Dhaka Platoon
-Colombo Cricket Club
-Madan Bhandari Sports Academy Blue
-University Sport South Africa
-St Lucia Kings
-Kerala
-Boland
-Nelson Mandela Metropolitan University
-Dhangadhi Stars
-Manipur
-Boland Under-19s
-Boland Under-13s
-Arunachal Pradesh
-Birmingham Bears
-Nangarhar Leopards
-Sierra Leone
-Chittors Chetak
-Sagarmatha Legends
-Western Province Under-13s
-Koshi Province
-Guwahati Avengers
-MAF Hawks
-Zimbabwe Under-13s
-Far West United
-Nottinghamshire XI
-Rupandehi Challengers
-Miwand Rangers
-Karachi Blues
-Los Angeles Knight Riders
-New Zealand XI
-University of Stellenbosch
-Vancouver Vibes
-MCA President's XI
-Colombo Kings
-Jamaica Tallawahs
-Yorkshire
-Karachi Dolphins
-Prime Bank Cricket Club
-Glamorgan
-Velocity
-Australia Under-16s
-Mumbai Cricket Association XI
-Durban's Super Giants
-New Zealand A
-Lantau Galaxy Riders
-Easterns Under-17s
-Lahore Blues
-Derbyshire XI
-Bangalore Strikers
-Leicestershire
-Chennai Braves Jaguars
-University of Sargodha
-Eastern Province Under-13s
-Abbottabad Falcons
-Otago
-Hudson Park
-Sunrisers
-SLC Greys
-South Western Districts Under-15s
-Barbados Tridents
-Kathmandu Knights
-Perak
-XCO-M&M Signs
-Islamabad
-Bangladesh Under-23s
-PARSA Club XI
-DAVV University Men
-Mis Ainak Knights
-Chennai Super Kings
-Bahawalpur Region
-Kuala Lumpur
-Bengaluru Blasters
-Negambo Cricket Club
-Kings 11 Kelowna
-Hyderabad Region
-Kabul Zwanan
-Maliyadeva College
-South Western Districts Under-17s
-United Arab Emirates
-Zimbabwe A
-Trichy Grand Cholas
-Somerset
-Kandy Tuskers
-Easterns Under-15s
-Multan Tigers
-Eastern Province Under-17s
-Karnali Yaks (NPL)
-North West Warriors
-Maldives
-Easterns Under-13s
+SLC Yellow
+Malaysia
+Mpumalanga
+Fujairah
 Melbourne Renegades
-Pokhara Rhinos
-Dhangadhi XI
-Titans
-Fiji
+Cambridge University Women
+New Zealand Legends
+United Arab Emirates Women
+Lantau Cricket Club Women
+Libra Legends
+Legends of Rupganj
+Zimbabwe Under-17s
+Saurashtra
+Birmingham Bears
+South Africa Legends
+Chennai Braves Jaguars
+Albert TUTI Patriots
+Dambulla Aura
+Yanam Royals
+Boland
+Trinidad & Tobago Red Steel
+Sri Lanka Army
+Nigeria Women Under-19s
+Rising Pune Supergiants
+Railways
+Gujarat Titans
+Marylebone Cricket Club Women
+ANZAC Barbarians Women
+Delhi Capitals
+Rupandehi Challengers
+Trinco-Batti Combined Schools
+Dubai
+Chittagong Vikings
+Bangla Tigers
+Limpopo Under-19s
+Sunrisers Hyderabad
+Pakistan A Women
+Gandaki Province
+Northern Cape Under-17s
+China Women
+Kat Queens Kathmandu
+Tanzania Women
+Loughborough Marylebone Cricket Club University (England)
+Baroda
+Sri Lanka Masters
+Talent Hunt Cricket Academy
+Biratnagar Kings
+Madan Bhandari Sports Academy Blue
+Kenya Women
+University of Stellenbosch
+England Academy Women
+Bangladesh
+Kandy Tuskers
+Kohalpur Mayor XI Women Under-19s
+Shaheen Hunters
+Palace Diamonds
+Munster Reds
+Lalitpur Falcons
+Wynberg Boys' High School
+England Women Under-19s
+Bangladesh Under-23s
+Kurunegala Warriors
+KwaZulu-Natal
+Free State Under-19s
+Bezawada Tigers
+Hyderabad (India)
+Kaluthara Maha Vidyalaya
+Free State
+DS Senanayake College
+Pokhara Avengers (NPL)
+Ivory Coast
+KwaZulu-Natal Under-17s
+Negeri Sembilan
+Thailand Women
+Hong Kong Women
+Galle Gladiators
+Jaipur Jaguars
+Punjab Kings
+Eagles Women
+Cara Diamonds
+New Zealand Women Under-19s
+TUTI Patriots
+Zimbabwe Women XI
+Washington Freedom
+Sapphires Women
+Durban Qalandars
+Barmy Army Women
+England Development Squad Women
+Emirates Cricket Board
+Jaisalmer Jaguars
+Luxembourg
+Nepal
+Perth Scorchers Academy
+South Africa
+Cricket Association of Rupandehi XI
+Maliyadeva College
+Sri Lanka Under-23s
+Royal College
+KwaZulu-Natal Inland Under-19s
+Northern Cape Under-15s
+Karnali Yaks (NPL)
+Namibia Under-15s
+Lumbini All Stars
+Australian Capital Territory
+Lahore Whites
+South Africa Masters
+South Korea
+Swaziland
+Desert Vipers
+West Indies
+North-East Combined Ladies
+Sri Lanka Air Force Sports Club
 Central Sparks
+Northern Districts
+Colombo
+Glenwood High School
+North West Under-15s
+Oxford University
+Lightning
+Eswatini
+Surrey Jaguars
+Mali
+Malta
+Mannar-Vavuniya Combined Schools
+Bauhinia Stars Women
+Lions (Zimbabwe)
+Thunder
+Richelieu Eagles
+Kandy Crusaders
+Gauteng Under-13s
+Ireland Women
+Dhangadhi Stars
+India A
+Sierra Leone Women
+Gurugram Spartans
+Falcon Risers Hyderabad
+United States of America Women
+Zimbabwe Chairman's XI
+Nottinghamshire XI
+Tasmania
+Scotland Women Under-19s
+Madhesh Province
+Pune Devils
+Nugegoda Sports Welfare Club
+MI New York
+Zimbabwe A
+Mpumalanga Under-19s
+New Zealand A
+Virgo Super Kings
+Nepal Women
+Sweden Women
+Easterns Under-15s
+Warne's Warriors
+Lesotho
+Falcons Women
+South Africa Emerging Players Women
+Panchakanya Tej
+Japan Women
+Dambulla Viiking
+Birmingham Phoenix (Men)
+Durgapur Dazzlers
+West Indies Legends
+Sri Lanka Legends
+Belgium
+Chittors Chetak
+Eastern Province
+Kandy Customs Cricket Club
+Sri Lanka Army Sports Club
+Sweden
+Surrey Stars
+Sunrise 11 Tilathi Koilari
+Southerns
+Zimbabwe Women High Performance XI
+Bagmati Province
+Multan Sultans
+Karachi Region Whites
+St Lucia Zouks
+Northern Cape
+Nittabuwa Ladies
+India Women Under-19s
+Sri Lanka Cricket Development XI
+Andhra
+Kolkata Heroes
+Tribhuwan Army Club
+Germany
+Galle Guardians
+England Champions
+Australia Under-19s Women
+Guwahati Avengers
+Team Morgan
+West Indies Champions
+Easterns Under-17s
+Delhi Bulls
+Bulawayo Braves
+Northern Diamonds
+Romania
+San Francisco Unicorns
+BA Blasting Namibia
+Nagpur Ninjas
+Grey College
+European University of Bangladesh
+Dindigul Dragons
+West Indies Masters
+Greece Women
+CYC Attariya
+Kowloon Cantons
+Peshawar
+Kandy Falcons
+City Kaitak
+Peshawar Zalmi
+Janakpur Royals
+Delhi Kings
+Lucknow Super Giants
+St Andrew's School
+New LJ College Men
+Rawalpindi Raiders
+Kowloon Cricket Club Women
+South East Stars
+South Africa Women Under-19s
+Border Under-13s
+Northern Cape Under-19s
+Sharjah Warriorz
+Zimbabwe Select XI
+Lankan Cricket Club
+Mpumalanga Under-17s
+England Women
+Southern Rocks
+Assupol TUKS
+India Masters
+Jharkhand
+Speenghar Warriors
+Saracens Sports Club
+Tuskers Women
+Wazirai Champion
+Bengal Tigers
+India Disable
+Spirit Women
+Uttara Sporting Club
+Dhaka Dynamites
+Mangalore Dragons
+Nelson Mandela Bay Giants
+Rapti
+Somerset
+Super Women
+Bloomfield Cricket and Athletic Club
+Trailblazers
+VB Thiruvallur Veerans
+Hung Hom Jaguars
+Rawalpindi
+Kabul Knight Riders
+Karnali Province Women
+Canterbury
+Sheikh Jamal Dhanmondi Club
+University Sport South Africa
+Tribhuwan Army Club Women
+Quetta Gladiators
+Trinbago Knight Riders
+Jaipur Pink City Royals
+Bangladesh A Women
+Northerns Under-13s
+Gemini Arabians
+ANZAC Barbarians
+Barisal Bulls
+Tirhut Tigers
+Karachi Region Blues
+Welsh Fire (Men)
+Belize
+Zahira College
+Vizag Warriors
+Durham Women
+Galle
+Leinster Lightning
+Finland Women
+Bhutan
+Province Number 2 Women
+Hilton College
+Namibia
+Kalutara Town Club
+World-XI
+Bangladesh Cricket Board Green
+South Western Districts Under-13s
+Polonnaruwa Ladies
+Jagdamba Rhinos
+Papua New Guinea
+Cape Town Blitz
+Mississauga Panthers
+Tanzania
+Coastal Riders
+Kerala Knights
+Gambia
+Brisbane Heat
+Los Angeles Knight Riders
+Koshi Province
+Asia Lions
+Durbar Rajshahi
+Ruby Trichy Warriors
+Delhi
+Essex
+MI Emirates
+Trinbago Knight Riders Women
+Limpopo Under-15s
+Namma Shivamogga
+Nalanda College
+Province Number 1
+Seychelles
+MAF Hawks
+Australia Champions
+Greece
+Adelaide Strikers Academy
+Central Punjab (Pakistan)
+Tornadoes Women
+India Women
+Up Country Combined Schools
+Bikaner Desert Challengers
+Royals
+Pakistan Association of Hong Kong
+Kanchanrup Rhinos
+Negambo Cricket Club
+Central Districts
+Cricket Australia XI
+St Aloysius College (Ratnapura)
+Ananda College
+Noida Warriors
+Mumbai
+Free State Under-17s
+Samp Army
+Nepal Police Club
+Ragama Cricket Club
+Hubli Tigers
+Sri Lanka Women Under-19s
+Trichy Grand Cholas
+England
+Menlopark High School
+Border Under-15s
+Mozambique
+Mahe Megalo Strikers
+Northern (Pakistan)
+Wonders Club Noida
+Siechem Madurai Panthers
+Ireland
+Nepal Women Under-19s
+Purandhara Challengers
+Abbottabad Region
+Team Abu Dhabi
+Jaffna Stallions
+South Western Districts
+Quetta Region
+Yorkshire
+Sunrisers
+Joburg Super Kings
+University of Cape Town
+Cameroon
+United States of America
+Chhattisgarh
+Fiji Women
+Dharmaraja College
+Hong Kong Dragons
+Bermuda
+Colombo Commandos
+Vegas Vikings
+World XI
+Hoer Volkskool
+Northern Territory
+Rangpur Riders
+Rajshahi Royals
+Sydney Sixers
+Zimbabwe Under-13s
+Bulls XI
+Arabian Rangers
+Bangladesh Women
+MI Cape Town
+Purple Dot Ndovus
+Chitwan Rhinos Women
+Papua New Guinea Women
+Island Warriors
+Dhruv Cricket Academy
+Goa
+Sharks XI
+Easterns Under-19s
+Punjab
+Khelaghar Samaj Kallyan Samity
+St Stithians College
+Lumbini Province Women
+Isle of Man Women
+Madhesh Province Women Under-19s
+TUKS (South Africa)
+India Champions
+Sri Lanka A
+North West
+Surrey
+South Africa A
+Bahawalpur Royals
+Chandigarh Champs
+Godavari Titans
+Northerns (Zimbabwe)
+Bhairahawa Gladiators
+Northern Superchargers (Men)
+White Town Dropthought Giants
+Durban's Super Giants
+Province Number 2
+Sylhet Thunder
+Argentina
+Boost Defenders
+Easterns Under-13s
+England Masters
+Pakistan Champions
+Udaipur Mewar Royals
+Miami Blaze
+Brothers Union
+Grand Cayman Jaguars
+New Jersey Triton's
+Peshawar Panthers
+Kuwait
+Limpopo Under-13s
+Rajbiraj The King
+Debarawewa Central College
+Mysuru Warriors
+Papua New Guinea XI
+Gauteng
+Estonia
+ICC World XI
+Middlesex
+Slovenia
+Durban Heat
+Barrackpore Bashers
+Bahamas
+St Andrew's College
+Sinhalese Sports Club
+Titans
+Australia Governor-General's XI
+Dhaka Capital
+Australia Under-16s
+Limpopo
+Biratnagar Warriors
+Victoria
+Biratnagar Titans Women
+Botswana Women
+Madan Bhandari Sports Academy Red
+Southern Vipers
+Hulas Kathmandu Royals
+Scotland
+Texas Chargers
+Cayman Islands
+Multan Region
+King Price Kings
+Australia Masters
+Pakistan Under-16s
+Saudi Arabia
+North West Warriors
+Bangladesh Cricket Board Red
+Bagmati
+Uganda
+Serbia Women
+Lions
+Netherlands
+Vancouver Vibes
+Pamir Stars
+Afghanistan
+Ossudu Accord Warriors
+Cape Cobras
+Zimbabwe Under-25s
+Karachi Whites
+India
+Nagaland
+Rawalpindi Rams
+Sharjah Warriors
+Ba11sy Trichy
+Eastern Province Under-15s
+West Indies Women Under-19s
+XCO-M&M Signs
+Atlanta Riders
+Maratha Arabians
+Vanuatu
+Brazil Women
+Sagittarius Strikers
+Karachi Kings
+SLC Reds
+Rajshahi Kings
+Zimbabwe A Women
+Samoa
+Vancouver Knights
+Seattle Orcas
+Hobart Hurricanes
+Dolphins
+Morrisville Unity
+Police Sports Club
+Dhaka Platoon
+Samoa Women
+United Arab Emirates XI
+Panama
+ICBT Campus (Sri Lanka)
+Afghanistan A
+Colombo Kings
+Bahrain
+Lalitpur Patriots
+Bangladesh Women Under-19s
+Miwand Rangers
+Lahore Region Blues
+Gloucestershire
+South Africa Women
+Gujarat Giants
+Bahawalpur Region
+India Capitals
+KwaZulu-Natal Under-13s
+BC Champions
+Singapore
+Loughborough Lightning
+University of Johannesburg
+Islamabad United
+North West Under-19s
+Panadura Sports Club
+Perth Scorchers
+Texas Super Kings
+M&M Signs Strikers
+St. Anthony's College (Watthala)
+Gazi Group Cricketers
+Southern Punjab (Pakistan)
+Cambodia
+Pamir Riders
+Comilla Victorians
+Old DOHS Sports Club
+United Services RC Lantau Women
+Gazi Group Chattogram
+Grand Cayman Falcons
+Kings 11 Kelowna
+Dambulla Sixers
+Switzerland
+Vietnam
+Manipal Tigers
+Amo Sharks
+United Arab Emirates
+Namibia Under-19s
+St Lucia Stars
+Oman A
+Mombasa Cement Giants
+Indonesia Women
+Hari Om Titans
+Mountaineers
+Butwal Blasters
+Kathmandu Goldens
+Norway
+Sindhis
+Armed Police Force Club
+Kathmandu Gurkhas (NPL)
+St. Joseph's College
+Chattogram Challengers
+Knights
+Paarl Royals
+Surrey XI
+Malaysia Club XI
+ICC Women's Global Development Squad
+West Indies Women
+New Territories Tigers
+Ghorahi Tigers
+Vizag Titans
+Brazil
+Meghalaya
+Sylhet Super Stars
+Melbourne Renegades Academy
+Karaikudi Kaalai
+Lyca Kovai Kings
+Glamorgan
+Gujarat
+Matabeleland Tuskers
+Spain
+KwaZulu-Natal Inland Under-15s
+Urbanrisers Hyderabad
+Wellington
+Eastern Province Under-17s
+Pamir Zalmi
+Maldives Women
+Sylhet Sunrisers
+Hobart Hurricanes Academy
+Johannesburg Buffaloes
+London Spirit (Men)
+Rwanda Women
+Zimbabwe
+Bajaj Khadak Warriors
+Tshwane Spartans
+Uttarandhra Lions
+Isle of Man
+Team Sri Lanka
+Miami Lions
+Zimbabwe Cricket Academy
+Mohammedan Sporting Club
+Melbourne Stars
+Kerala Super Kings
+Barbados Royals
+Sylhet Sixers
+DAVV University Men
+Chennai Singams
+IDream Tiruppur Tamizhans
+Thailand
+MAF Howithzer
+Romania A
+Seenigama Combined Schools
+Pakistanis
+Northern Cape Under-13s
+Lumbini Province
+England A Women
+Lantau Galaxy Riders
+Peshawar Region
+Border Under-17s
+Craigengower Cricket Club Women
+Durdanto Dhaka
+Odisha
+Colombo Cricket Club
+Biratnagar Titans
+Yorkshire Diamonds
+Selborne College
+Jade Jets Women
+Gwadar Sharks
+Philippines
+Malaysia Women Under-19s
+Adelaide Strikers
+Malaysia Under-23s
+Morrisville Samp Army
+Koshi Province Women
+Canterbury Women
+Botswana
+Rajkot Thunders
+Ajmer Meru Warriors
+Uganda A
+Kota Chambal Tigers
+Jinnah Degree College Karachi (Pakistan)
+Centurion Hoerskool
+Dhangadhi Team Chauraha
+St Kitts and Nevis Patriots
+Tigers Of Kolkata
+California Knights
+Amazons
+Western Storm
+Patna Warriors
+Lions XI
+Kandy
+Khulna Titans
+Northerns
+Nepal Police Club Women
+Kerala Kings
+Islamabad Region
+Dehradun Devils
+Namibia Women
+Northern Warriors
+Oman
+Dambulla
+Lahore Lions
+Nangarhar Leopards
+Shaheed Jewel XI
+North West University
+Western Province
+Hudson Park
+International Schools Combined
+Malawi Women
+Lalitpur Mayor's XI Women
+Cricket Excellence Center Kathmandu
+P De S Kularatne College
+Zimbabwe Women Under-19s
+Serbia
+University of Free State
+Warriors
+Manipur
+Hong Kong
+Karachi Dolphins
+Bangladesh A
+Bombay Deccan
+Shakthi Ladies
+Abbottabad Falcons
+Ghodaghodi-11 Sukhad
+Guyana Amazon Warriors Women
+Beximco Dhaka
+Hungary
+Prestige College
+Sri Lankans
+St Lucia Kings
+Mumbai Indians
+Rhinos Women
+Lancashire Thunder
+United Services Recreation Club
+Dubai Destroyers
+Bengaluru Blasters
+Punjabi Legends
+Friends Youth Club Dadeldhura
+Sylhet Strikers
+Bulgaria
+SKM Salem Spartans
+Band-e-Amir Dragons
+Nigeria Women
+Qatar
+Koshi Province Women Under-19s
+New Zealand Women
+Unichela Sports Club
+Ponting XI
+Pakistan A
+Bangladesh Cricket Board XI
+Boston Cricket Jhapa
+Marylebone Cricket Club World XI
+Malta Women
+Jammu & Kashmir
+Villianur Mohit Kings
+Nigeria
+Jaffna Central College
+Kabul Cricket Club
+Barbados Tridents
+Kandy Warriors
+Boost Region
+Austria
+Victoria Waves
+Pakistan Women Under-19s
+United Arab Emirates Women Under-19s
+Northamptonshire
+Scorchers Women
+Dashrath Chand Academy Baitadi
+Chandigarh Cheetaas
+France
+Goltay Cricket Academy
+Canada
+Tamil Union Cricket and Athletic Club
+Supernovas
+England Legends
+Cook Islands
+Marwari College Women
+Western Province Under-15s
+Cape Town Samp Army
+Auckland Women
+Velocity
+Nepal XI
+Armed Police Force Women
+Paarl Boys High School
+New Zealand XI
+Bangladesh Legends
+KwaZulu-Natal Inland
+Terra Defenders
+Sri Lanka Board President's XI
+Aboriginal XI
+Cambridge University
+MECC Cricket Club
+Abu Dhabi
+Balan Bihul Super Kings
+Deukhuri Warriors
+Rayalaseema Kings
+Sagarmatha Legends
+Gandaki Province Women
+PARSA Club XI
+Chitwan Tigers
+Bengal
+Lumbini Province Women Under-19s
+Dhangadhi XI
+England Lions
+Fortune Barishal
+Services
+Kurunegala Youth Cricket Club
+Free State Under-13s
+Limpopo Under-17s
+North West Under-13s
+Sialkot Stallions
+Boland Under-13s
+India Maharajas
+Nellai Royal Kings
+Zimbabwe Over-50s
+South Africa Emerging Players
+Denmark A
+SLC Greys
+Kabul Kings
+The Blaze
+Mountaineers Women
+Ireland Women Under-19s
+Derbyshire
+Bijapur Bulls
+Tamil Nadu
+Indore Knights
+Biratnagar Super Kings
+Dambulla Giants
+MCA President's XI
+Mumbai Cricket Association XI
+Rajbiraj Rajdevi 11
+Ireland A
+Belagavi Panthers
+Leicestershire
+Karnataka
+FOG-Seenigama Ladies
+Hindukush Stars
+Mashonaland Eagles
+Sultans Of Surat
+Himachal Pradesh Cricket Association XI
+Sudur Paschim Royals (NPL)
+Denmark Women
+South Africa Under-19s
+Surrey Shines
+Hong Kong Island United
+Nottinghamshire
+Speen Ghar Region
+Sebastianites Cricket and Athletic Club
+Indonesia
+Majhi Mumbai
+Rising Pune Supergiant
+Kenya
+Western Province Under-19s
+Ace Capital Cricket Club
+Royal Challengers Bangalore
+Karnataka Tuskers
+Shivamogga Strikers
+Nelson Mandela Metropolitan University
+Hambantota Troopers
+Srinagar Ke Veer
+Narayani
+Zimbabwe President's XI
+Rawalpindi Region
+Japan
+Turkey
+Shamshad Eagles
+MR24-7 Namspire
+Bangla Tigers Mississauga
+West Indies B
+Badulla Ladies
+Pokhara Avengers
+Estonia Women
+Gandaki Province Women Under-19s
+Chennai Braves
+Auckland
+Bellary Tuskers
+Minister Rajshahi
+University of Pretoria
+Brampton Wolves
+Gujarat Lions
+Sunrisers Eastern Cape
+Idream Karaikudi Kaalai
+Easterns
+Iran
+Khulna Tigers
+Sulimangar Lions
+Kingswood College (Kandy)
+Florida Lions
+Kathmandu Golden Warriors
+Band-e Amir Stars
+Pakistan
+Balkh Legends
+Portugal
+Royal Challengers Bengaluru
+Karachi Blues
+Central Districts Women
+Speen Ghar Tigers
+B-Love Kandy
+Mahadev Strikers
+KwaZulu-Natal Inland Under-17s
+New Zealand
+Derbyshire XI
+Zimbabwe Women
+Guernsey
+Islamabad
+Montreal Tigers
+Sudur Paschim Province Women Under-19s
+Galaxy Gladiators Lantau
+Croatia
+Ghana
+Oman Development XI
+Swami Shraddhanand College (India)
+Shinepukur Cricket Club
+Typhoons Women
+Vidarbha
+World Giants
+Gauteng Under-17s
+Pokhara Rhinos
+South Western Districts Under-15s
+Sri Lanka Ports Authority Cricket Club
+Kabul Zalmi
+New York Strikers
+Southern Superstars
+Kabul Zwanan
+Diasqua Little Sai Wan CC Women
+Baharain Bravehearts
+Dangali Lions
+Boland Under-19s
+Lancashire
+Hong Kong A
+Suriname
+Himachal Pradesh
+South Western Districts Under-17s
+Zambia
+Vanuatu Women
+Mid West Rhinos
+K & M Combined Schools
+Toronto Nationals
+Western Province Under-13s
+Manchester Originals (Men)
+Richmond College
+Northern Territory Strike
+Gemcon Khulna
+Deccan Gladiators
+Melbourne Stars Academy
+Eastern Province Under-19s
+Lahore Blues
+Warriors Women
+New York Warriors
+Multan Tigers
+Colors X-Factors
+Costa Rica
+Indonesia Women Under-19s
+Karnali Province Women Under-19s
+Jaffna Combine Schools
+Rwanda Women Under-19s
+Oval Invincibles (Men)
+Sialkot Region
+Boland Under-17s
+Alfalah University Men
+Bangladesh Women Emerging Players
+Kowloon Lions
+Northerns Under-19s
+South Africans
+Sussex
+Galle Cricket Club
+Jersey
+Balochistan
+Ajman
+Chittagong Kings
+Finland XI Women
+Free State Under-15s
+India A Women
+West Indies A
+Bangladesh Under-19s
+Uttar Pradesh Club XI
+Kanchenjunga Warriors
+Bihar
+Warwickshire
+Kowloon Cricket Club
+Kent
+Nepal A
+Boland Under-15s
+Scotland Women
+Indians
+Rangpur Rangers
+Paktia Panthers
+University of Sargodha
+Abu Dhabi Knight Riders
+Mpumalanga Under-15s
+China
+Chinnamasta Lions
+Norway Women
+Rajputs
+Cameroon Women
+Tulsipur Royals
+Marylebone Cricket Club
 NRNA Sports Academy
+Sharjah
+Band-e-Amir Region
+Lahore Qalandars
+Sydney Thunder
+Chitwan Rhinos
+Pakhtoons
+Mexico
+Minister Group Dhaka
+Push Sports Delhi
+Janakpur Bolts (NPL)
+Mahinda College
+Province Number 1 Women
+Dubai Capitals
+Cumilla Warriors
+Combined Girls Schools
+Play Master Warriors
+Diasqua Little Sai Wan Cricket Club
+Faisalabad Wolves
+Rwanda
+KwaZulu-Natal Inland Under-13s
+Pretoria Capitals
+Bangalore Strikers
+Colombo Strikers
+Shaheed Mushtaque XI
