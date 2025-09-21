@@ -55,7 +55,7 @@ bowlerPlayerId INTEGER (Unique identifier for the bowler)
 bowlingPlayerCountry STRING (Country of the bowler)
 bowlingPlayerDob DATE (Date of birth of the bowler)
 bowlingHandId STRING (Bowling hand, right/left)
-bowlingTypeId STRING (Type of bowler, e.g., Fast, LegSpin)
+bowlingTypeId STRING (Type of bowler, e.g., Fast, LegSpin and others..)
 bowlingFromId STRING (Bowling action, e.g., Over, Round)
 bowlingDetailId STRING (Specific bowling variation like Slower ball etc..)
 
@@ -117,3 +117,4 @@ sample_queries: [
 
 Some points..
 -if query asked like by,per..like by year,by length,type or something u can just do group by and no need for search results of those columns as its asked like that only
+-and also bowlingTypeId has Fast,Medium is categorised as Pace/Seam bowler and   Unorthodox,LegSpin,Orthodox ( this is like slow left arm orthodox/bowler),OffSpin categorised as spinner
